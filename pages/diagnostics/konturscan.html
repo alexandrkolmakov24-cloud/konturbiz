@@ -767,6 +767,30 @@ main > .page-hero:first-child { margin-top: 0 !important; }
 <meta property="og:site_name" content="KONTURBIZ">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://konturbiz.ru/images/hero.webp">
+<style id="konturscan-hero-p0">
+/* P0: compact hero content and keep the eyebrow sized to its text */
+.page-hero--scan > .page-hero__body { justify-content: flex-start; padding-top: 34px; padding-bottom: 24px; }
+.page-hero--scan .page-hero__inner { max-width: 460px; }
+.page-hero--scan .eyebrow {
+  display: inline-flex !important;
+  width: fit-content !important;
+  max-width: 100%;
+  align-self: flex-start;
+  padding: 5px 10px !important;
+  margin: 0 0 10px !important;
+  background: rgba(1,9,28,.35);
+  border: 1px solid rgba(200,162,74,.32);
+  border-radius: 999px;
+  line-height: 1.35;
+}
+.page-hero--scan .kb-breadcrumbs { margin-bottom: 8px; }
+.page-hero--scan .page-hero__actions { display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.page-hero--scan .page-hero__actions .button { min-height: 42px; }
+@media (max-width: 768px) {
+  .page-hero--scan > .page-hero__body { padding-top: 26px !important; padding-bottom: 24px !important; }
+  .page-hero--scan .eyebrow { display: inline-flex !important; width: fit-content !important; }
+}
+</style>
 </head>
 <body>
 <header class="header" role="banner">
