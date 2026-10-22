@@ -1,0 +1,25 @@
+{
+  "version":"1.0",
+  "categoryWeights":{
+    "loyalty":{"repeat_sales":{"low":5,"none":6},"customer_base":{"partial":3,"no":5,"unknown":2},"customer_feedback":{"partial":2,"no":3},"digital_channels":{"partial":1,"no":3}},
+    "brand":{"brand_system":{"partial":3,"logo":5,"no":6},"brand_recognition":{"medium":2,"low":4,"no":5}},
+    "processes":{"process_automation":{"medium":2,"low":4,"none":6},"lead_flow":{"partial":2,"manual":4,"lost":6}},
+    "analytics":{"data_quality":{"partial":2,"no":5,"unknown":3},"kpi":{"partial":2,"no":4,"unknown":2}},
+    "kontur":{"documents":{"mixed":3,"email":4,"paper":6},"reporting":{"partial":2,"manual":5,"unknown":2},"cash_retail":{"partial":2,"manual":5,"unknown":2}},
+    "security":{"security_backup":{"partial":2,"no":5,"unknown":2}},
+    "improvement":{"improvement":{"partial":2,"no":4,"unknown":2}}
+  },
+  "konturRules":[
+    {"product":"diadoc","when":[["documents","email",3],["documents","paper",5],["documents","mixed",2]],"min":3},
+    {"product":"extern","when":[["reporting","manual",3],["reporting","partial",1]],"min":3},
+    {"product":"market","when":[["business_type","retail",4],["cash_retail","manual",3],["cash_retail","partial",1]],"min":5},
+    {"product":"ofd","when":[["business_type","retail",2],["business_type","horeca",2],["cash_retail","manual",2]],"min":4},
+    {"product":"focus","when":[["business_type","b2b",3],["lead_flow","lost",1]],"min":3},
+    {"product":"poisk-klientov","when":[["business_type","b2b",3],["lead_flow","lost",2]],"min":4}
+  ],
+  "brandingRules":[
+    {"product":"brand-audit","when":[["brand_system","logo",4],["brand_recognition","low",2]],"min":4},
+    {"product":"branding","when":[["brand_system","no",5],["brand_recognition","no",2]],"min":5},
+    {"product":"visual-system","when":[["brand_system","partial",4],["brand_recognition","medium",1]],"min":4}
+  ]
+}

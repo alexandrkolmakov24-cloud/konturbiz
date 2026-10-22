@@ -1,0 +1,415 @@
+/* footer 5-col lock */
+.footer__grid {
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 18px 12px !important;
+  align-items: start !important;
+}
+.footer__grid > div { min-width: 0 !important; }
+.footer__title {
+  font-size: 11px !important;
+  letter-spacing: 0.06em !important;
+  margin-bottom: 12px !important;
+}
+.footer__menu { margin: 0; padding: 0; list-style: none; }
+.footer__menu li { margin: 0 0 6px; }
+.footer__menu a,
+.footer__link {
+  font-size: 12px !important;
+  line-height: 1.35 !important;
+}
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+@media (max-width: 1024px) {
+  .footer__grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 720px) {
+  .footer__grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 480px) {
+  .footer__grid { grid-template-columns: 1fr !important; }
+}
+
+/* assets/css/footer.css
+   ФУТЕР KONTURBIZ v2.9-PREMIUM
+   4 колонки · отрасли · CTA · соцсети · реквизиты
+   ======================================== */
+
+.footer {
+    background: var(--color-footer, #0A1420);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 64px 0 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    margin-top: auto;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    width: 100%;
+}
+
+.footer__grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 20px 16px;
+    align-items: start;
+}
+
+.footer__title {
+    font-family: var(--font-headers, 'Montserrat', sans-serif);
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 16px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.footer__menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer__menu a,
+.footer__link {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.2s ease;
+    display: inline-block;
+}
+
+.footer__menu a:hover,
+.footer__link:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Отрасли */
+.footer__industries {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer__industries-label {
+    font-family: var(--font-headers, 'Montserrat', sans-serif);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    flex-shrink: 0;
+}
+
+.footer__industries-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.footer__industries-list .footer__link {
+    font-size: 13px;
+}
+
+/* CTA-полоса */
+.footer__cta-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px 24px;
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer__phone {
+    font-family: var(--font-headers, 'Montserrat', sans-serif);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer__phone:hover {
+    color: var(--color-gold-bus, #C8A24A);
+}
+
+.footer__cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer__cta-actions .button {
+    min-height: 40px;
+    padding: 10px 20px;
+    font-size: 10px;
+}
+
+/* Meta: лого + соцсети + описание */
+.footer__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px 32px;
+    padding: 28px 0 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer__meta-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer__logo-link {
+    display: inline-block;
+    line-height: 0;
+}
+
+.footer__logo-link img {
+    height: 30px;
+    width: auto;
+}
+
+.footer__social {
+    display: flex;
+    gap: 12px;
+}
+
+.footer__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.footer__social-link:hover {
+    background: var(--color-gold-bus, #C8A24A);
+    color: var(--color-on-gold, #091322);
+    transform: translateY(-2px);
+}
+
+/* MAX — читаемая буква, не чужой логотип */
+.footer__social-max {
+    font-family: var(--font-headers, 'Montserrat', sans-serif);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.02em;
+}
+
+.footer__description {
+    font-size: 13px;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.45);
+    max-width: 420px;
+    margin: 0;
+    flex: 1 1 240px;
+}
+
+/* Низ */
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    padding-top: 16px;
+}
+
+.footer__legal-block {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footer__copyright {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.3);
+    margin: 0;
+}
+
+.footer__requisites {
+    font-size: 11px;
+    line-height: 1.45;
+    color: rgba(255, 255, 255, 0.35);
+    margin: 0;
+    max-width: 520px;
+}
+
+.footer__legal {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.footer__legal a {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer__legal a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Адаптив */
+@media (max-width: 1024px) {
+    .footer__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px 24px;
+    }
+    .footer .container {
+        padding: 0 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 0 16px;
+    }
+    .footer__grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding-bottom: 28px;
+        text-align: center;
+    }
+    .footer__menu {
+        align-items: center;
+    }
+    .footer__title {
+        text-align: center;
+    }
+    .footer__industries {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+    .footer__industries-list {
+        justify-content: center;
+    }
+    .footer__cta-bar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer__cta-actions {
+        justify-content: center;
+        width: 100%;
+    }
+    .footer__cta-actions .button {
+        flex: 1 1 auto;
+        min-width: 140px;
+    }
+    .footer__meta {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 24px 0 16px;
+    }
+    .footer__meta-brand {
+        align-items: center;
+    }
+    .footer__social {
+        justify-content: center;
+    }
+    .footer__description {
+        max-width: 100%;
+        text-align: center;
+    }
+    .footer__bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+    }
+    .footer__legal-block {
+        align-items: center;
+    }
+    .footer__requisites {
+        text-align: center;
+    }
+    .footer__legal {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+    .footer .container {
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer__logo-link img {
+        height: 26px;
+    }
+    .footer__title {
+        font-size: 12px;
+    }
+    .footer__menu a,
+    .footer__link {
+        font-size: 13px;
+    }
+    .footer__phone {
+        font-size: 16px;
+    }
+    .footer__description {
+        font-size: 12px;
+    }
+    .footer__copyright,
+    .footer__legal a {
+        font-size: 11px;
+    }
+    .footer__requisites {
+        font-size: 10px;
+    }
+    .footer__social-link {
+        width: 34px;
+        height: 34px;
+    }
+    .footer .container {
+        padding: 0 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .footer__social-link,
+    .footer__menu a,
+    .footer__link,
+    .footer__phone {
+        transition: none;
+    }
+    .footer__social-link:hover {
+        transform: none;
+    }
+}

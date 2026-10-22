@@ -1,0 +1,438 @@
+/* KONTURBIZ design system: shared component rules for public desktop and mobile pages.
+   Keep page-specific layouts in their page stylesheets; this file standardizes tokens,
+   controls, cards, FAQ behavior, hero rhythm and motion only. */
+:root {
+  --kb-ds-navy: #01091c;
+  --kb-ds-ink: #112b4a;
+  --kb-ds-blue: #295d8a;
+  --kb-ds-gold: #c8a24a;
+  --kb-ds-paper: #fff;
+  --kb-ds-canvas: #f4f6fa;
+  --kb-ds-panel: #edf2f7;
+  --kb-ds-line: #dfe6ef;
+  --kb-ds-muted: #5a6b80;
+  --kb-ds-radius: 12px;
+  --kb-ds-shadow: 0 10px 28px rgba(13, 35, 59, .08);
+  --kb-ds-ease: cubic-bezier(.2, .75, .25, 1);
+  --kb-ds-motion: 180ms;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 108px; }
+body {
+  color: var(--kb-ds-ink);
+  background: var(--kb-ds-canvas);
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+main { color: var(--kb-ds-ink); }
+main :is(h1, h2, h3, h4) {
+  color: var(--kb-ds-ink);
+  font-family: Montserrat, Inter, "Segoe UI", sans-serif;
+  letter-spacing: -.02em;
+  text-wrap: balance;
+}
+main h2 { font-size: clamp(1.7rem, 3vw, 2.45rem); line-height: 1.2; }
+main h3 { font-size: clamp(1.1rem, 1.6vw, 1.4rem); line-height: 1.3; }
+.container, .footer .container {
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+.section, .sec, .kb-sec { padding-block: clamp(52px, 6vw, 80px); }
+
+/* Shared page frame. Hero photography stays clear on the right; the navy blend
+   covers the text column and fades only across the final 14% of the 1200px art. */
+.page-hero {
+  height: auto !important;
+  min-height: 400px !important;
+  max-height: none !important;
+  overflow: hidden !important;
+  background-color: var(--kb-ds-navy) !important;
+}
+.page-hero > .container,
+.page-hero > .page-hero__shell {
+  height: auto !important;
+  min-height: 400px !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+.page-hero__body {
+  box-sizing: border-box;
+  width: min(100%, 1200px) !important;
+  min-height: 400px !important;
+  height: auto !important;
+  margin-inline: auto !important;
+  padding: 34px clamp(22px, 4vw, 48px) 38px !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  overflow: visible !important;
+}
+.page-hero__body > .kb-breadcrumbs,
+.page-hero__body > .kb-breadcrumb { order: -1; }
+.page-hero .page-hero__title,
+.page-hero h1 {
+  max-width: 19ch;
+  margin: 0 !important;
+  font-size: clamp(2rem, 3.6vw, 3.15rem) !important;
+  line-height: 1.12 !important;
+  text-wrap: balance;
+}
+.page-hero h1 :is(strong, .hero-gold),
+.page-hero__title :is(strong, .hero-gold) { color: var(--kb-ds-gold) !important; }
+.page-hero__lead,
+.page-hero .lead,
+.page-hero__body > p {
+  max-width: 54ch;
+  margin-block: 0 !important;
+  line-height: 1.55;
+}
+.page-hero__body .button-group,
+.page-hero__body .page-hero__actions {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center;
+  gap: 12px !important;
+  width: auto !important;
+  margin-top: 8px !important;
+}
+.page-hero__overlay,
+.kb-hero__grad {
+  background: linear-gradient(90deg,
+    #01091c 0%, #01091c 36%, rgba(1, 9, 28, .96) 40%,
+    rgba(1, 9, 28, .72) 44%, rgba(1, 9, 28, .24) 48%, transparent 50%) !important;
+}
+.hero::after {
+  background: linear-gradient(90deg,
+    #01091c 0%, #01091c 36%, rgba(1, 9, 28, .96) 40%,
+    rgba(1, 9, 28, .72) 44%, rgba(1, 9, 28, .24) 48%, transparent 50%) !important;
+}
+.page-hero__media img,
+.kb-hero__media img { filter: none !important; }
+
+/* Shared header frame and type. Existing menu/mobile behavior remains page-owned. */
+.header {
+  height: var(--header-height, 90px) !important;
+  background: var(--kb-ds-navy) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, .08) !important;
+  box-shadow: none !important;
+}
+.header__inner {
+  box-sizing: border-box;
+  width: min(100%, 1200px);
+  max-width: 1200px !important;
+  margin-inline: auto !important;
+  padding-inline: clamp(20px, 3vw, 40px) !important;
+  gap: clamp(16px, 2.4vw, 32px);
+}
+.header__nav-link {
+  font-family: Inter, "Segoe UI", Arial, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 650 !important;
+  letter-spacing: .035em;
+}
+.header__logo-link img { max-width: 100%; height: auto; }
+.dropdown-menu {
+  border: 1px solid rgba(255, 255, 255, .1) !important;
+  border-radius: 10px !important;
+  background: var(--kb-ds-navy) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, .3) !important;
+}
+body:has(.header) { padding-top: var(--header-height, 90px) !important; }
+
+/* The older product hero uses a separate class family. Keep it on the same
+   1200×400 canvas and let longer content grow instead of clipping its CTAs. */
+.kb-hero {
+  height: auto !important;
+  min-height: 400px !important;
+  max-height: none !important;
+  overflow: hidden !important;
+  background-color: var(--kb-ds-navy) !important;
+}
+.kb-hero__inner {
+  height: auto !important;
+  min-height: 400px !important;
+  max-height: none !important;
+}
+.kb-hero .container {
+  box-sizing: border-box;
+  height: auto !important;
+  min-height: 400px !important;
+  max-height: none !important;
+  align-items: center !important;
+  padding-block: 30px !important;
+}
+.kb-hero__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  width: min(100%, 600px);
+  max-width: 600px !important;
+  min-height: 340px;
+}
+.kb-hero__content > :is(.eyebrow, .kb-breadcrumbs, .kb-breadcrumb, h1, .lead, p, ul, .button-group) {
+  margin-block: 0 !important;
+}
+.kb-hero__content > .kb-breadcrumbs,
+.kb-hero__content > .kb-breadcrumb { order: -1; }
+.kb-hero h1 {
+  max-width: 19ch;
+  font-size: clamp(2rem, 3.6vw, 3.15rem) !important;
+  line-height: 1.12 !important;
+}
+.kb-hero .lead { max-width: 54ch; }
+.kb-hero .button-group { margin-top: 8px !important; gap: 12px !important; }
+.kb-hero .bullets { gap: 5px !important; }
+
+/* One button scale and one focus treatment. Variants retain their page colors. */
+:is(.button, .btn, .btn-primary, .btn-secondary, .cta-button,
+    button[type="submit"], input[type="submit"], .widget button) {
+  box-sizing: border-box;
+  min-height: 48px !important;
+  padding: 12px 22px !important;
+  border-radius: 8px !important;
+  font: 650 14px/1.2 Inter, "Segoe UI", Arial, sans-serif !important;
+  letter-spacing: .025em;
+  transition: color var(--kb-ds-motion) var(--kb-ds-ease),
+    background-color var(--kb-ds-motion) var(--kb-ds-ease),
+    border-color var(--kb-ds-motion) var(--kb-ds-ease),
+    box-shadow var(--kb-ds-motion) var(--kb-ds-ease),
+    transform var(--kb-ds-motion) var(--kb-ds-ease);
+}
+:is(.button, .btn, .btn-primary, .btn-secondary, .cta-button,
+    button[type="submit"], input[type="submit"]):hover { transform: translateY(-1px); }
+:is(.button, .btn, .btn-primary, .btn-secondary, .cta-button,
+    button[type="submit"], input[type="submit"]):focus-visible,
+a:focus-visible, button:focus-visible, summary:focus-visible {
+  outline: 3px solid rgba(201, 162, 78, .7) !important;
+  outline-offset: 3px;
+}
+
+/* Cards share shape, border and shadow. Only cards that act as links lift on hover. */
+:is(.card, .p-card, .card-link, .kb-card, .kb-card--interactive,
+    .service-card, .solution-card, .partner-card, .case-card,
+    .knowledge-card, .feature-card, .product-card, .benefit-card,
+    .adv-card, .stat-card, .tariff-card, .price-card, .sc-card,
+    .phase-card, .competency-card, .card--left, .feature-icon-card) {
+  border-radius: var(--kb-ds-radius) !important;
+  border-color: var(--kb-ds-line) !important;
+  box-shadow: 0 4px 16px rgba(13, 35, 59, .045);
+  transition: transform var(--kb-ds-motion) var(--kb-ds-ease),
+    border-color var(--kb-ds-motion) var(--kb-ds-ease),
+    box-shadow var(--kb-ds-motion) var(--kb-ds-ease);
+}
+:is(.card--interactive, .card-link, .kb-card--interactive,
+    a.card, a.p-card, a.product-card, a.feature-card,
+    .card:has(a), .p-card:has(a), .sc-card:has(a), .tariff-card:has(a),
+    .price-card:has(a), .feature-icon-card:has(a), .service-card:has(a),
+    .solution-card:has(a), .partner-card:has(a), .case-card:has(a),
+    .knowledge-card:has(a), .product-card:has(a), .benefit-card:has(a), .adv-card:has(a)) {
+  cursor: pointer;
+}
+@media (hover: hover) and (pointer: fine) {
+  :is(.card--interactive, .card-link, .kb-card--interactive,
+      a.card, a.p-card, a.product-card, a.feature-card,
+      .card:has(a), .p-card:has(a), .sc-card:has(a), .tariff-card:has(a),
+      .price-card:has(a), .feature-icon-card:has(a), .service-card:has(a),
+      .solution-card:has(a), .partner-card:has(a), .case-card:has(a),
+      .knowledge-card:has(a), .product-card:has(a), .benefit-card:has(a), .adv-card:has(a)):hover {
+    transform: translateY(-3px) !important;
+    border-color: #c8a24a !important;
+    box-shadow: var(--kb-ds-shadow) !important;
+  }
+}
+/* Center the final row of card collections and keep card widths readable. */
+:is(.card-grid, .cards-grid, .product-cards, .card-list) {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: stretch;
+  gap: clamp(16px, 2vw, 24px) !important;
+}
+:is(.card-grid, .cards-grid, .product-cards, .card-list) > :is(
+  .card, .p-card, .service-card, .solution-card, .partner-card, .case-card,
+  .knowledge-card, .feature-card, .product-card, .benefit-card, .adv-card,
+  .stat-card, .tariff-card, .price-card, .sc-card, .phase-card,
+  .feature-icon-card, article, li, a) {
+  box-sizing: border-box;
+  flex: 1 1 200px;
+  width: auto !important;
+  max-width: 380px;
+  min-width: 0;
+}
+/* Keep one restrained gold sweep, and only on cards explicitly marked for it. */
+.card-grid .card::after { content: none !important; display: none !important; }
+.card--flame { position: relative; overflow: hidden; }
+.card--flame::before {
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 40%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(200,162,74,.18), #c8a24a, #f0d78c, #c8a24a, transparent);
+  opacity: 0;
+  z-index: 4;
+  box-shadow: 0 0 12px rgba(200,162,74,.4);
+}
+@media (hover: hover) and (pointer: fine) {
+  .card--flame:hover::before {
+    opacity: 1;
+    animation: kbDsGoldSweep .85s ease-out 1 forwards !important;
+  }
+}
+.card-grid--depth:hover .card--flame:hover::before,
+.card-grid--depth-dark:hover .card--dark.card--flame:hover::before {
+  animation: kbDsGoldSweep .85s ease-out 1 forwards !important;
+}
+@keyframes kbDsGoldSweep {
+  0% { left: -40%; opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+.feature-icon-card__icon,
+.card-icon,
+.p-card__icon,
+.feature-icon { transition: color var(--kb-ds-motion) var(--kb-ds-ease), transform var(--kb-ds-motion) var(--kb-ds-ease); }
+:is(.card--interactive, .card-link, .kb-card--interactive,
+    .card:has(a), .p-card:has(a), .sc-card:has(a), .feature-icon-card:has(a),
+    .tariff-card:has(a), .price-card:has(a), .service-card:has(a), .solution-card:has(a),
+    .partner-card:has(a), .case-card:has(a), .knowledge-card:has(a), .product-card:has(a),
+    .benefit-card:has(a), .adv-card:has(a)):hover
+  :is(.feature-icon-card__icon, .card-icon, .p-card__icon, .feature-icon) {
+  color: var(--kb-ds-gold);
+  transform: translateY(-1px) scale(1.04);
+}
+/* Replace the exaggerated scale/depth effect with the shared card lift. */
+.card-grid--depth:hover .card:hover,
+.card-grid--depth-dark:hover .card--dark:hover {
+  transform: translateY(-3px) scale(1) !important;
+}
+.card--dark { border-color: rgba(255, 255, 255, .14) !important; }
+.card--flame::before { pointer-events: none; }
+
+/* FAQ / accordions: consistent light backing and closed-row height.
+   Native details remain collapsed by default and answers stay in the document. */
+.faq-section,
+.faq-wrap,
+.faq-panel,
+main section.faq,
+main section:has(.faq-list),
+main section:has(.faq) {
+  background-color: var(--kb-ds-panel);
+}
+.faq-list { width: min(800px, calc(100% - 32px)); margin-inline: auto !important; }
+:is(.faq-item, .faq-list > details, .faq > details,
+    .accordion-list > .accordion, .accordion-list > .faq-item) {
+  overflow: hidden;
+  border: 1px solid var(--kb-ds-line) !important;
+  border-radius: 12px !important;
+  background: var(--kb-ds-paper) !important;
+  box-shadow: 0 3px 12px rgba(13, 35, 59, .035) !important;
+  transition: border-color var(--kb-ds-motion) var(--kb-ds-ease),
+    box-shadow var(--kb-ds-motion) var(--kb-ds-ease);
+}
+:is(.faq-item, .faq-list > details, .faq > details,
+    .accordion-list > .accordion, .accordion-list > .faq-item) > summary {
+  box-sizing: border-box;
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  padding: 16px 60px 16px 22px !important;
+  font: 650 16px/1.4 Inter, "Segoe UI", Arial, sans-serif !important;
+}
+.faq-answer,
+.faq-a,
+.faq__a,
+.faq-item__body,
+.faq-item > :not(summary) {
+  color: var(--kb-ds-muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+:is(.faq-item, .faq-list > details, .faq > details,
+    .accordion-list > .accordion, .accordion-list > .faq-item)[open] {
+  border-color: rgba(41, 93, 138, .32) !important;
+  box-shadow: 0 6px 18px rgba(13, 35, 59, .07) !important;
+}
+:is(.faq-item, .faq-list > details, .faq > details,
+    .accordion-list > .accordion, .accordion-list > .faq-item) > :not(summary) {
+  animation: none !important;
+}
+
+/* Motion is purposeful and restrained; no hover expansion for accordions. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+  :is(.card--interactive, .card-link, .kb-card--interactive,
+      a.card, a.p-card, a.product-card, a.feature-card,
+      .card:has(a), .p-card:has(a), .sc-card:has(a)):hover,
+  .card-grid--depth:hover .card:hover,
+  .card-grid--depth-dark:hover .card--dark:hover { transform: none !important; }
+}
+
+/* Compact first screen on phones: retain the navy identity and real content,
+   hide decorative hero photography and keep CTAs within the viewport width. */
+@media (max-width: 900px) {
+  .header { height: var(--header-height-tablet, 72px) !important; }
+  body:has(.header) { padding-top: var(--header-height-tablet, 72px) !important; }
+  .hero {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  .hero .container,
+  .hero__grid { height: auto !important; min-height: 0 !important; max-height: none !important; }
+  .hero::before,
+  .hero::after { display: none !important; background-image: none !important; }
+  .page-hero { min-height: 0 !important; }
+  .page-hero > .container,
+  .page-hero > .page-hero__shell { min-height: 0 !important; }
+  .page-hero__body {
+    min-height: 0 !important;
+    padding: 28px 20px 32px !important;
+  }
+  .page-hero__media,
+  .kb-hero__media,
+  .hero__visual,
+  .hero__img { display: none !important; }
+  .kb-hero,
+  .kb-hero__inner,
+  .kb-hero .container { min-height: 0 !important; }
+  .kb-hero__content { min-height: 0; width: 100%; }
+  .kb-hero__grad { background: var(--kb-ds-navy) !important; }
+  .page-hero__overlay,
+  .kb-hero__grad { display: none !important; }
+  .page-hero__body .button-group,
+  .page-hero__body .page-hero__actions { width: 100% !important; }
+}
+@media (max-width: 560px) {
+  .header { height: var(--header-height-mobile, 64px) !important; }
+  body:has(.header) { padding-top: var(--header-height-mobile, 64px) !important; }
+  .page-hero h1,
+  .page-hero .page-hero__title { font-size: clamp(1.8rem, 8vw, 2.35rem) !important; }
+  .page-hero__body .button-group,
+  .page-hero__body .page-hero__actions { align-items: stretch; }
+  .page-hero__body .button-group > :is(.button, .btn),
+  .page-hero__body .page-hero__actions > :is(.button, .btn) { flex: 1 1 100%; }
+  :is(.card-grid, .cards-grid, .product-cards, .card-list) > :is(
+    .card, .p-card, .service-card, .solution-card, .partner-card, .case-card,
+    .knowledge-card, .feature-card, .product-card, .benefit-card, .adv-card,
+    .stat-card, .tariff-card, .price-card, .sc-card, .phase-card,
+    .feature-icon-card, article, li, a) {
+    flex-basis: min(100%, 320px);
+    max-width: 100%;
+  }
+  :is(.faq-item, .faq-list > details, .faq > details,
+      .accordion-list > .accordion, .accordion-list > .faq-item) > summary {
+    min-height: 68px;
+    padding: 14px 52px 14px 16px !important;
+    font-size: 15px !important;
+  }
+}

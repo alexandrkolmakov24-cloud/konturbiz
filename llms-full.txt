@@ -1,0 +1,406 @@
+# KONTURBIZ — центр цифровых решений для бизнеса
+# Специализированный партнёр экосистемы «Русский цифровой»
+
+URL: https://konturbiz.ru/
+Type: WebPage
+H1: KONTURBIZ — центр цифровых решений для бизнеса
+Description: Диагностика, брендинг, сайты, CRM, автоматизация, аналитика, программа лояльности RC CITY и партнёрство ПРОФИ/ПРОФИ+. Специализированный партнёр экосистемы «Русский цифровой».
+Products: RC CITY, RC PAY, RC OFFICE, САМО, KONTURSCAN
+Ecosystem: https://xn--b1aladcb5ablegayu2a.xn--p1ai/
+RegionalPartner: https://rcagent.ru/
+
+# ——— Главные страницы ———
+
+URL: https://konturbiz.ru/pages/partners/rcbiz/
+Type: WebPage
+H1: Русский цифровой — экосистема для бизнеса, клиентов и партнёров
+Description: Партнёрская страница экосистемы: 12 продуктов (RC PAY, RC CITY, RC MARKET, RC KASSA, RC PROCESSING, САМО, RC OFFICE, RC WIKI, ИнФинТех, RC HOME, RC SHOW, Курсир, РДО), 830K+ клиентов, 20K+ торговых точек. Программа лояльности, платежи, обучение, кейсы.
+Products: RC PAY, RC CITY, RC MARKET, RC KASSA, RC PROCESSING, САМО, RC OFFICE, RC WIKI, ИнФинТех, RC HOME, RC SHOW, Курсир, РДО
+FAQ: Что такое Русский цифровой, Что такое RC CITY, Что такое RC PAY, Нужно ли менять кассовое оборудование, Сколько времени занимает запуск, Что такое оцифровка трафика, Чем RC CITY отличается от обычной карты, Как войти в личный кабинет, Как стать партнёром, Сколько стоит подключить RC CITY, Можно ли использовать RC PAY без RC CITY, РЦБ и Русский цифровой одно и то же
+
+URL: https://konturbiz.ru/pages/partners/rc-franchise/
+Type: WebPage
+H1: Свой бизнес. Готовая экосистема.
+Description: Партнёрская модель ПРОФИ и ПРОФИ+ — доступ к готовой цифровой инфраструктуре, продуктам, обучению и модели вознаграждения. Без создания IT-платформы с нуля.
+Offers: ПРОФИ — 250000 RUB, ПРОФИ+ — 450000 RUB
+FAQ: Чем ПРОФИ отличается от ПРОФИ+, Нужно ли иметь опыт в IT, Что получает партнёр, Как формируется вознаграждение, Гарантируется ли доход, Что происходит после заявки
+
+URL: https://konturbiz.ru/pages/diagnostics/konturscan.html
+Type: WebPage
+H1: Диагностика бизнеса KONTURSCAN
+Description: Цифровой портрет по стандарту Минцифры: 59 практик, уровень зрелости по 5 направлениям, приоритеты развития. Бесплатно.
+
+URL: https://konturbiz.ru/pages/diagnostics/digital-portrait.html
+Type: WebPage
+H1: Цифровой портрет бизнеса
+Description: Оценка уровня цифровой зрелости компании по направлениям: продажи, маркетинг, операции, финансы, управление.
+
+# ——— Услуги ———
+
+URL: https://konturbiz.ru/pages/services/loyalty.html
+Type: Service
+H1: Программа лояльности
+Description: Внедрение RC CITY: привлечение клиентов, удержание, рост среднего чека, оцифровка трафика через QR. Пошаговый план за 7–14 дней.
+Features: RC CITY, RC PAY, QR-идентификация, статистика, повторные покупки
+Related: https://konturbiz.ru/pages/services/loyalty-calculator.html
+
+URL: https://konturbiz.ru/pages/services/loyalty-calculator.html
+Type: WebApplication
+H1: Калькулятор ROI программы лояльности
+Description: Расчёт окупаемости программы лояльности RC CITY: выручка, средний чек, процент возврата, ROI.
+
+URL: https://konturbiz.ru/pages/services/digital-audit.html
+Type: Service
+H1: Цифровой аудит
+Description: Аудит цифрового присутствия: сайт, соцсети, карты, отзывы, аналитика. Рекомендации по улучшению.
+
+URL: https://konturbiz.ru/pages/services/web-development.html
+Type: Service
+H1: Разработка сайтов
+Description: Сайты для малого и среднего бизнеса: лендинги, многостраничники, интернет-магазины. Адаптив, SEO-структура, микроразметка.
+
+URL: https://konturbiz.ru/pages/services/crm.html
+Type: Service
+H1: Внедрение CRM
+Description: Настройка CRM для бизнеса: воронки продаж, автоматизация задач, интеграции с телефонией и почтой.
+
+URL: https://konturbiz.ru/pages/services/branding.html
+Type: Service
+H1: Брендинг
+Description: Айдентика, логотип, фирменный стиль, брендбук. Позиционирование и визуальная система.
+
+URL: https://konturbiz.ru/pages/services/account-opening.html
+Type: Service
+H1: Открытие расчётного счёта
+Description: Помощь в выборе РКО: сравнение тарифов, подача заявки, сопровождение.
+
+URL: https://konturbiz.ru/pages/services/bank-comparison.html
+Type: Service
+H1: Сравнение тарифов РКО
+Description: Сравнительная таблица тарифов на расчётно-кассовое обслуживание в банках-партнёрах.
+
+URL: https://konturbiz.ru/pages/services/business-plan.html
+Type: Service
+H1: Бизнес-план
+Description: Подготовка и оформление бизнес-плана для банков, инвесторов и госпрограмм.
+
+URL: https://konturbiz.ru/pages/services/grants.html
+Type: Service
+H1: Гранты и господдержка
+Description: Подбор и оформление заявок на гранты цифровизации: Минцифры, региональные программы.
+
+URL: https://konturbiz.ru/pages/services/tariffs.html
+Type: Service
+H1: Тарифы KONTURBIZ
+Description: Стоимость услуг: диагностика, аудит, разработка, брендинг, лояльность, автоматизация.
+
+URL: https://konturbiz.ru/pages/services/graphic-design.html
+Type: Service
+H1: Графический дизайн
+Description: Полиграфия, упаковка, рекламные материалы, оформление точек.
+
+URL: https://konturbiz.ru/pages/services/telegram-bots.html
+Type: Service
+H1: Telegram-боты
+Description: Автоматизация в Telegram: боты для продаж, поддержки, рассылок, записи.
+
+URL: https://konturbiz.ru/pages/services/integration.html
+Type: Service
+H1: Интеграции
+Description: Связка сервисов: CRM, телефония, кассы, платёжные системы, аналитика.
+
+URL: https://konturbiz.ru/pages/services/location-assessment.html
+Type: Service
+H1: Аудит локации
+Description: Оценка торговой точки: трафик, конкурентная среда, потенциал.
+
+URL: https://konturbiz.ru/pages/services/geo-audit.html
+Type: Service
+H1: Гео-аудит
+Description: Анализ территории: плотность населения, конкуренты, видимость точки.
+
+URL: https://konturbiz.ru/pages/services/loyalty-calculator-guide.html
+Type: WebPage
+H1: Руководство по калькулятору лояльности
+Description: Как пользоваться калькулятором ROI программы лояльности RC CITY.
+
+# ——— Решения ———
+
+URL: https://konturbiz.ru/pages/solutions/
+Type: CollectionPage
+H1: Решения для бизнеса
+Description: Направления: привлечение, удержание, автоматизация, аналитика, инфраструктура.
+
+URL: https://konturbiz.ru/pages/solutions/acquisition.html
+Type: WebPage
+H1: Привлечение клиентов
+Description: Каналы и инструменты привлечения: RC PAY, гео-маркетинг, сайт, реклама.
+
+URL: https://konturbiz.ru/pages/solutions/retention.html
+Type: WebPage
+H1: Удержание клиентов
+Description: Программа лояльности RC CITY, повторные покупки, оцифровка трафика.
+
+URL: https://konturbiz.ru/pages/solutions/automation.html
+Type: WebPage
+H1: Автоматизация
+Description: CRM, интеграции, Telegram-боты, кассы, платёжные системы.
+
+URL: https://konturbiz.ru/pages/solutions/analytics.html
+Type: WebPage
+H1: Аналитика
+Description: Данные, отчётность, дашборды, метрики бизнеса.
+
+URL: https://konturbiz.ru/pages/solutions/infrastructure.html
+Type: WebPage
+H1: Инфраструктура
+Description: Экосистема Русский цифровой: 12 продуктов, партнёрский кабинет, обучение.
+
+# ——— Партнёры и продукты ———
+
+URL: https://konturbiz.ru/pages/partners/
+Type: CollectionPage
+H1: Партнёры и продукты
+Description: Каталог партнёрских сервисов и продуктов экосистемы.
+
+URL: https://konturbiz.ru/pages/partners/kontur/
+Type: WebPage
+H1: Сервисы Контур
+Description: Эльба (бухгалтерия), Диадок (электронный документооборот), Фокус (проверка контрагентов), Контур.Банк (РКО), Контур.Закупки, Контур.Эдо для самозанятых.
+Products: Эльба, Диадок, Фокус, Контур.Банк, Контур.Закупки
+
+URL: https://konturbiz.ru/pages/partners/kontur/elba/
+Type: WebPage
+H1: Контур.Эльба
+Description: Онлайн-бухгалтерия для ИП и малого бизнеса: налоги, отчётность, счета.
+
+URL: https://konturbiz.ru/pages/partners/kontur/diadoc/
+Type: WebPage
+H1: Контур.Диадок
+Description: Электронный документооборот: отправка и приём документов онлайн.
+
+URL: https://konturbiz.ru/pages/partners/kontur/focus/
+Type: WebPage
+H1: Контур.Фокус
+Description: Проверка контрагентов: финансовая устойчивость, риски, связи.
+
+URL: https://konturbiz.ru/pages/partners/kontur/bank/
+Type: WebPage
+H1: Контур.Банк
+Description: Расчётно-кассовое обслуживание для бизнеса: тарифы, заявка.
+
+URL: https://konturbiz.ru/pages/partners/kontur/client-search/
+Type: WebPage
+H1: Контур.Поиск клиентов
+Description: Сервис поиска потенциальных клиентов по базе компаний.
+
+URL: https://konturbiz.ru/pages/partners/kontur/edo-selfemployed/
+Type: WebPage
+H1: ЭДО для самозанятых
+Description: Электронный документооборот для самозанятых и ИП без сотрудников.
+
+URL: https://konturbiz.ru/pages/partners/kontur/hotel/
+Type: WebPage
+H1: Контур.Отель
+Description: Управление гостиницей: бронирования, тарифы, отчётность.
+
+URL: https://konturbiz.ru/pages/partners/kontur/logistics/
+Type: WebPage
+H1: Контур.Логистика
+Description: Управление перевозками, маршруты, документы.
+
+URL: https://konturbiz.ru/pages/partners/kontur/procurement/
+Type: WebPage
+H1: Контур.Закупки
+Description: Автоматизация закупок: тендеры, поставщики, договоры.
+
+URL: https://konturbiz.ru/pages/partners/kontur/power-of-attorney/
+Type: WebPage
+H1: Электронная доверенность
+Description: Оформление и управление электронными доверенностями.
+
+URL: https://konturbiz.ru/pages/partners/rc-pay/
+Type: WebPage
+H1: RC PAY — клиентский сервис
+Description: Приложение экосистемы для покупателей: покупки, баллы RC, история, рекомендации.
+
+URL: https://konturbiz.ru/pages/partners/rdo/
+Type: WebPage
+H1: РДО — Русское деловое общество
+Description: Сообщество предпринимателей: бизнес-университет, мероприятия, нетворкинг.
+
+URL: https://konturbiz.ru/pages/partners/samo/
+Type: WebPage
+H1: САМО — учёт для бизнеса
+Description: Сервис учёта: счета, платежи, показатели. Для ИП и компаний.
+
+URL: https://konturbiz.ru/pages/partners/ip-registration/
+Type: WebPage
+H1: Регистрация ИП
+Description: Помощь в регистрации ИП: документы, налоговая, счёт.
+
+URL: https://konturbiz.ru/pages/partners/loyalty-platform/
+Type: WebPage
+H1: Платформа лояльности
+Description: Программа лояльности для торговых сетей и franchises.
+
+URL: https://konturbiz.ru/pages/partners/payment-terminals/
+Type: WebPage
+H1: Платёжные терминалы
+Description: RC KASSA и RC PROCESSING: приём карт, начисление баллов, кассовое ПО.
+
+URL: https://konturbiz.ru/pages/partners/sovcombank/
+Type: WebPage
+H1: Совкомбанк
+Description: РКО, кредитование, факторинг для бизнеса.
+
+URL: https://konturbiz.ru/pages/partners/rc/
+Type: WebPage
+H1: RC — экосистема
+Description: Обзор продуктов экосистемы Русский цифровой.
+
+URL: https://konturbiz.ru/pages/partners/client-service/
+Type: WebPage
+H1: Клиентский сервис
+Description: Поддержка клиентов экосистемы: RC PAY, баллы, операции.
+
+# ——— Кейсы ———
+
+URL: https://konturbiz.ru/pages/cases/
+Type: CollectionPage
+H1: Кейсы
+Description: Примеры внедрения: лояльность, автоматизация, брендинг, сайты.
+
+# ——— Отрасли ———
+
+URL: https://konturbiz.ru/pages/industries/
+Type: CollectionPage
+H1: Отрасли
+Description: Решения по отраслям: розница, общепит, услуги, малый бизнес.
+
+# ——— База знаний ———
+
+URL: https://konturbiz.ru/pages/knowledge/
+Type: CollectionPage
+H1: База знаний
+Description: Статьи и гайды: цифровизация, лояльность, финансы, гранты, маркетинг, менеджмент, розница.
+
+# ——— О компании ———
+
+URL: https://konturbiz.ru/pages/about/
+Type: AboutPage
+H1: О компании KONTURBIZ
+Description: Центр цифровых решений, специализированный партнёр экосистемы «Русский цифровой».
+
+URL: https://konturbiz.ru/pages/about/contacts.html
+Type: ContactPage
+H1: Контакты
+Description: Email, Telegram, телефон. Партнёр — Александр Колмаков.
+Email: info@konturbiz.ru
+Telegram: https://t.me/rcbbusiness
+
+URL: https://konturbiz.ru/pages/about/team.html
+Type: WebPage
+H1: Команда
+Description: Команда KONTURBIZ.
+
+URL: https://konturbiz.ru/pages/about/partners.html
+Type: WebPage
+H1: Партнёры
+Description: Партнёрские компании и сервисы.
+
+URL: https://konturbiz.ru/pages/about/legal.html
+Type: WebPage
+H1: Правовая информация
+Description: Документы, политика, реквизиты.
+
+URL: https://konturbiz.ru/pages/contour/
+Type: WebPage
+H1: Контур
+Description: Информация о партнёрстве с продуктами Контур.
+
+# ——— Внешние сервисы экосистемы ———
+
+URL: https://rcpay.ru/r/I502UWJA
+Type: WebApplication
+Name: RC PAY
+Description: Приложение для покупателей: покупки, баллы RC, история, рекомендации.
+
+URL: https://rc.city/register-code?code=LYHHKKRK
+Type: WebApplication
+Name: RC CITY
+Description: Программа лояльности для бизнеса: подключение к сети RC PAY, статистика, повторные покупки.
+
+URL: https://panel.rc.company/registration?promocode=LYHHKKRK
+Type: WebApplication
+Name: RC OFFICE
+Description: Личный кабинет партнёра: аналитика, обучение, управление точками.
+
+URL: https://rcgroup.wiki/
+Type: WebSite
+Name: RC WIKI
+Description: База знаний: документы, инструкции, новости.
+
+URL: https://rc.show/
+Type: WebSite
+Name: RC SHOW
+Description: Эфиры, вебинары и обучение онлайн.
+
+URL: https://coorser.ru/
+Type: WebSite
+Name: Курсир
+Description: Конструктор онлайн-курсов и каталог.
+
+URL: https://rc.shopping/
+Type: WebSite
+Name: RC MARKET
+Description: Магазин, где баллы RC превращаются в покупки.
+
+URL: https://samo.business/auth/register/LYHHKKRK
+Type: WebApplication
+Name: САМО
+Description: Учёт для бизнеса: счета, платежи, показатели.
+
+# ——— Кросс-доменные связи ———
+
+# Экосистема
+URL: https://xn--b1aladcb5ablegayu2a.xn--p1ai/
+Type: WebPage
+H1: Русский цифровой — экосистема для бизнеса, клиентов и партнёров
+Description: Цифровая экосистема: 12 продуктов, 830K+ клиентов, 20K+ торговых точек. Покупки, лояльность, платежи, обучение, сообщество.
+
+URL: https://xn--b1aladcb5ablegayu2a.xn--p1ai/docs/
+Type: WebPage
+H1: Документы
+Description: Правовые документы экосистемы «Русский цифровой».
+
+# Региональный партнёр
+URL: https://rcagent.ru/
+Type: WebPage
+H1: Программа лояльности для бизнеса — RC CITY, официальный партнёр
+Description: Внедрение RC CITY и RC PAY в Сибири и на Дальнем Востоке. Партнёр — Александр Колмаков. Кейсы: Строй Маркет, Urban Coffee, Beauty Room.
+
+# ——— Тарифы партнёрства ———
+
+URL: https://konturbiz.ru/pages/partners/rc-franchise/
+Type: Service
+Name: ПРОФИ
+Price: 250000 RUB
+Description: Старт работы с бизнес-клиентами. Доступ к продуктам, обучению, кабинету RC OFFICE. Один офис.
+
+URL: https://konturbiz.ru/pages/partners/rc-franchise/
+Type: Service
+Name: ПРОФИ+
+Price: 450000 RUB
+Description: Расширенный уровень. Масштаб, команда, партнёрская структура. Несколько точек.
+
+# ——— Cross-domain relationships ———
+konturbiz.ru → xn--b1aladcb5ablegayu2a.xn--p1ai (экосистема, продукты, метрики)
+konturbiz.ru → rcagent.ru (региональный партнёр, Сибирь)
+xn--b1aladcb5ablegayu2a.xn--p1ai → konturbiz.ru (специализированный партнёр, услуги, диагностика)
+xn--b1aladcb5ablegayu2a.xn--p1ai → rcagent.ru (региональный партнёр)
+rcagent.ru → konturbiz.ru (партнёрство, услуги, диагностика)
+rcagent.ru → xn--b1aladcb5ablegayu2a.xn--p1ai (экосистема)
+
+# ——— Summary for AI ———
+KONTURBIZ (konturbiz.ru) — центр цифровых решений для бизнеса и специализированный партнёр экосистемы «Русский цифровой» (xn--b1aladcb5ablegayu2a.xn--p1ai). Услуги: диагностика KONTURSCAN, программа лояльности RC CITY, разработка сайтов, CRM, брендинг, автоматизация, аналитика, открытие счёта, гранты. Партнёрство на двух уровнях: ПРОФИ (250 000 ₽) и ПРОФИ+ (450 000 ₽) — через konturbiz.ru/pages/partners/rc-franchise/. Экосистема: 12 продуктов, 830K+ клиентов, 20K+ торговых точек. Региональный партнёр в Сибири: rcagent.ru (кейсы: Строй Маркет, Urban Coffee, Beauty Room). Контакты: info@konturbiz.ru, Telegram @rcbbusiness, партнёр Александр Колмаков, промокод LYHHKKRK.

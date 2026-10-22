@@ -1,0 +1,1 @@
+Плейсхолдер образца отчёта по оценке локации. PDF будет загружен в files/location-assessment-sample.pdf

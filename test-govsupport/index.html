@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>КонтурГрант — подбор мер господдержки по ИНН | KONTURBIZ</title>
+<meta name="description" content="КонтурГрант — подбор мер господдержки и льготного финансирования по ИНН. Субсидии, гранты, займы из реестра МСП, Минфина и ГИСП. Бесплатно.">
+<meta name="keywords" content="господдержка по ИНН, подбор субсидий, гранты для МСП, меры поддержки бизнеса, реестр МСП, ОКВЭД">
+<link rel="canonical" href="https://konturbiz.ru/test-govsupport/">
+<meta property="og:title" content="Подбор мер господдержки по ИНН | KONTURBIZ">
+<meta property="og:description" content="Введите ИНН — получите список подходящих субсидий, грантов и мер поддержки из официальных источников.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<style>
+:root {
+  --navy: #0A192F;
+  --navy-mid: #0D3156;
+  --navy-soft: #1a3a5c;
+  --gold: #C9A24E;
+  --gold-hover: #d4b05e;
+  --tx: #0f172a;
+  --mut: #5A6B80;
+  --bd: #E2E8F1;
+  --bg: #F5F7FA;
+  --card: #fff;
+  --acc: #2563eb;
+  --ok: #059669;
+  --err: #dc2626;
+  --fed: #7c3aed;
+  --reg: #0891b2;
+  --r: 14px;
+  --sh: 0 1px 3px rgba(10,25,47,.06), 0 8px 28px rgba(10,25,47,.07);
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-d: "Montserrat", var(--font);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font: 15px/1.6 var(--font);
+  color: var(--tx);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--navy-mid); }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px 72px; }
+
+/* HERO KONTURBIZ premium */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: #01091C;
+  color: #fff;
+}
+.hero__shell {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  padding: 48px 28px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.hero__media {
+  position: absolute;
+  inset: 0;
+  background: url("grants.webp") center right / cover no-repeat;
+  opacity: 1;
+  pointer-events: none;
+}
+/* левый контейнер: глубокий градиент navy → soft edge к картинке */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  /* картинка на всю ширину; градиент 100%→0 поверх — без линии среза */
+  background: linear-gradient(
+    90deg,
+    #01091C 0%,
+    rgba(1, 9, 28, 0.98) 12%,
+    rgba(1, 9, 28, 0.92) 22%,
+    rgba(1, 9, 28, 0.82) 32%,
+    rgba(1, 9, 28, 0.68) 40%,
+    rgba(1, 9, 28, 0.52) 48%,
+    rgba(1, 9, 28, 0.36) 56%,
+    rgba(1, 9, 28, 0.22) 64%,
+    rgba(1, 9, 28, 0.12) 72%,
+    rgba(1, 9, 28, 0.05) 80%,
+    rgba(1, 9, 28, 0) 90%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+.hero__body {
+  position: relative;
+  z-index: 2;
+  max-width: 460px;
+  width: 100%;
+}
+.hero__eyebrow {
+  display: inline-block;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #C9A24E;
+  margin: 0 0 14px;
+}
+.hero__product {
+  display: inline-block;
+  font-family: Montserrat, Inter, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,.55);
+  margin: 0 0 10px;
+  letter-spacing: .02em;
+}
+.hero__product strong {
+  color: #C9A24E;
+  font-weight: 600;
+}
+.hero h1 {
+  margin: 0 0 14px;
+  font-family: Montserrat, Inter, sans-serif;
+  font-size: clamp(26px, 3.4vw, 36px);
+  font-weight: 400;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+  color: #fff;
+  max-width: 14em;
+}
+.hero__lead {
+  margin: 0 0 26px;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(255,255,255,.72);
+  max-width: 34em;
+}
+.search {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  flex-wrap: wrap;
+  max-width: 440px;
+}
+.search input {
+  flex: 1;
+  min-width: 180px;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 12px 16px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 8px;
+  background: rgba(255,255,255,.97);
+  color: #0A192F;
+  box-shadow: 0 1px 2px rgba(0,0,0,.06);
+}
+.search input::placeholder {
+  color: #94A3B8;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-size: 14px;
+}
+.search input:focus {
+  outline: none;
+  border-color: #C9A24E;
+  box-shadow: 0 0 0 3px rgba(201,162,78,.28);
+}
+.search button {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 8px;
+  background: #C9A24E;
+  color: #0A192F;
+  cursor: pointer;
+  transition: background .15s, transform .1s;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+.search button:hover { background: #d4b05e; }
+.search button:active { transform: translateY(1px); }
+.search button:disabled { opacity: .55; cursor: default; transform: none; }
+.hero__links {
+  margin-top: 16px;
+  font-size: 13px;
+  color: rgba(255,255,255,.5);
+}
+.hero__links a {
+  color: rgba(255,255,255,.85);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(201,162,78,.45);
+  transition: color .15s, border-color .15s;
+}
+.hero__links a:hover {
+  color: #C9A24E;
+  border-bottom-color: #C9A24E;
+}
+.hero__err {
+  margin-top: 14px;
+  max-width: 440px;
+  background: rgba(254,226,226,.95);
+  color: #991b1b;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13.5px;
+}
+.hero__err[hidden] { display: none; }
+
+/* SECTIONS */
+.section { margin-top: 48px; }
+.section__h {
+  font-family: var(--font-d);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0 0 8px;
+}
+.section__lead {
+  margin: 0 0 24px;
+  color: var(--mut);
+  font-size: 15px;
+  max-width: 40em;
+}
+
+/* STEPS */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.step {
+  background: var(--card);
+  border: 1px solid var(--bd);
+  border-radius: var(--r);
+  padding: 22px 20px;
+  box-shadow: var(--sh);
+}
+.step__n {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.step h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-family: var(--font-d);
+  color: var(--navy);
+}
+.step p { margin: 0; font-size: 14px; color: var(--mut); line-height: 1.55; }
+
+/* SOURCES */
+.sources {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+.source {
+  background: var(--card);
+  border: 1px solid var(--bd);
+  border-radius: var(--r);
+  padding: 18px 18px 16px;
+  box-shadow: var(--sh);
+}
+.source h3 {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-family: var(--font-d);
+  color: var(--navy);
+}
+.source p { margin: 0 0 10px; font-size: 13.5px; color: var(--mut); line-height: 1.55; }
+.source__meta {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: .02em;
+}
+
+
+/* SUPPORT MEASURES */
+.sup-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+  margin: 20px 0 28px;
+}
+.sup-nav a {
+  display: block;
+  background: #fff;
+  border: 1px solid var(--bd);
+  border-radius: 10px;
+  padding: 16px 18px;
+  text-decoration: none;
+  color: var(--tx);
+  box-shadow: var(--sh);
+  transition: border-color .15s, box-shadow .15s;
+}
+.sup-nav a:hover { border-color: #C9A24E; box-shadow: 0 4px 16px rgba(10,25,47,.08); }
+.sup-nav strong { display: block; font-size: 14px; color: var(--navy); margin-bottom: 4px; font-family: var(--font-d); }
+.sup-nav span { font-size: 12.5px; color: var(--mut); line-height: 1.4; }
+.sup-nav em { display: block; margin-top: 8px; font-style: normal; font-size: 12px; font-weight: 600; color: var(--gold); }
+
+.sup-block { margin-top: 32px; }
+.sup-block > h3 {
+  font-family: var(--font-d);
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--navy);
+  margin: 0 0 6px;
+}
+.sup-block > p.sup-intro { color: var(--mut); font-size: 14px; margin: 0 0 16px; }
+
+.sup-item {
+  background: #fff;
+  border: 1px solid var(--bd);
+  border-radius: 4px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.sup-item > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 16px 44px 16px 18px;
+  font-family: var(--font-d);
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--navy);
+  position: relative;
+  line-height: 1.4;
+}
+.sup-item > summary::-webkit-details-marker { display: none; }
+.sup-item > summary::after {
+  content: "+";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gold);
+  font-size: 18px;
+  font-weight: 300;
+}
+.sup-item[open] > summary { color: var(--gold); border-bottom: 1px solid var(--bd); }
+.sup-item[open] > summary::after { content: "−"; }
+.sup-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 22px;
+  padding: 0 6px;
+  margin-right: 8px;
+  border-radius: 4px;
+  background: #EEF2F7;
+  color: #5A6B80;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: Inter, sans-serif;
+  vertical-align: middle;
+}
+.sup-body { padding: 16px 18px 18px; font-size: 14px; color: #334155; line-height: 1.6; }
+.sup-body h4 {
+  margin: 14px 0 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: #5A6B80;
+  font-family: Inter, sans-serif;
+}
+.sup-body h4:first-child { margin-top: 0; }
+.sup-body ul { margin: 0 0 8px; padding-left: 18px; }
+.sup-body li { margin-bottom: 4px; }
+.sup-body p { margin: 0 0 8px; }
+.sup-body a { color: var(--acc); }
+.sup-meta {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--bd);
+  font-size: 12.5px;
+  color: var(--mut);
+}
+.sup-region {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 8px;
+  margin-top: 8px;
+}
+.sup-region span {
+  background: #F3F6FA;
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 13px;
+  color: var(--navy);
+}
+
+/* FAQ */
+.faq details {
+  background: var(--card);
+  border: 1px solid var(--bd);
+  border-radius: 12px;
+  margin-bottom: 10px;
+  padding: 0 18px;
+  box-shadow: 0 1px 2px rgba(10,25,47,.04);
+}
+.faq summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 16px 0;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--navy);
+  position: relative;
+  padding-right: 28px;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: var(--gold);
+  font-weight: 400;
+}
+.faq details[open] summary::after { content: "−"; }
+.faq-answer {
+  padding: 0 0 16px;
+  font-size: 14.5px;
+  color: #334155;
+  line-height: 1.6;
+}
+.faq-answer p { margin: 0 0 8px; }
+.faq-answer a { color: var(--acc); }
+
+/* COMPANY + RESULTS (from original) */
+.co {
+  background: var(--card);
+  border-radius: var(--r);
+  box-shadow: var(--sh);
+  margin-top: 24px;
+  padding: 22px 24px;
+  border: 1px solid var(--bd);
+}
+.co__kind {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--navy-mid);
+  background: #eef4fb;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+.co__name { font-size: 18px; font-weight: 700; margin: 0 0 4px; font-family: var(--font-d); color: var(--navy); }
+.co__sub { color: var(--mut); font-size: 13px; margin-bottom: 16px; }
+.co__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px 24px;
+}
+.co__grid dt {
+  font-size: 11px;
+  color: var(--mut);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  margin-bottom: 3px;
+}
+.co__grid dd { margin: 0; font-size: 14.5px; }
+.co__code {
+  display: inline-block;
+  background: #f1f5f9;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-family: ui-monospace, monospace;
+  font-size: 13px;
+  margin-right: 6px;
+}
+.co__foot {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--bd);
+  color: var(--mut);
+  font-size: 12.5px;
+}
+
+.res { margin-top: 28px; }
+.res__t { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
+.res__t h2 { font-size: 22px; margin: 0; font-family: var(--font-d); color: var(--navy); }
+.res__c { color: var(--mut); font-size: 14px; }
+.res__d { color: var(--mut); font-size: 13px; margin: 6px 0 0; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 4px; }
+.chip {
+  font: inherit;
+  font-size: 13.5px;
+  padding: 7px 14px;
+  border: 1px solid var(--bd);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--tx);
+  cursor: pointer;
+  transition: .15s;
+}
+.chip:hover { border-color: #94a3b8; }
+.chip[aria-pressed="true"] {
+  background: var(--navy);
+  color: #fff;
+  border-color: var(--navy);
+}
+.row2 {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 10px 0 18px;
+}
+.row2 label {
+  font-size: 13.5px;
+  color: var(--mut);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+.sep { width: 1px; height: 20px; background: var(--bd); }
+
+.sec { margin-top: 24px; }
+.sec__h {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--navy);
+  font-family: var(--font-d);
+}
+.sec__h span { color: var(--mut); font-weight: 500; font-size: 14px; }
+.sec__empty {
+  color: var(--mut);
+  font-size: 14px;
+  padding: 14px;
+  background: #fff;
+  border: 1px dashed var(--bd);
+  border-radius: var(--r);
+  text-align: center;
+}
+
+.m {
+  background: var(--card);
+  border-radius: var(--r);
+  box-shadow: var(--sh);
+  padding: 18px 20px;
+  margin-bottom: 12px;
+  border: 1px solid var(--bd);
+  border-left: 3px solid transparent;
+}
+.m--fed { border-left-color: var(--fed); }
+.m--reg { border-left-color: var(--reg); }
+.m--any { border-left-color: #64748b; }
+.m__tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.tag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #475569;
+}
+.tag--fed { background: #ede9fe; color: #5b21b6; }
+.tag--reg { background: #cffafe; color: #155e75; }
+.tag--open { background: #d1fae5; color: #065f46; }
+.tag--soon { background: #fef3c7; color: #92400e; }
+.m h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--navy);
+}
+.m__sum {
+  display: inline-block;
+  font-weight: 700;
+  color: var(--navy-mid);
+  background: #eef4fb;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.m__why {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 13.5px;
+  color: #334155;
+  margin-bottom: 10px;
+}
+.m__why b {
+  color: #0f172a;
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+}
+.m__why span { display: block; margin-top: 3px; }
+.m__src {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--bd);
+  padding-top: 12px;
+  font-size: 12.5px;
+  color: var(--mut);
+}
+.m__src a { color: var(--acc); text-decoration: none; font-weight: 600; }
+.m__src a:hover { text-decoration: underline; }
+
+.more { text-align: center; margin: 6px 0 20px; }
+.more button {
+  font: inherit;
+  font-weight: 600;
+  padding: 11px 22px;
+  border: 1px solid var(--bd);
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  color: var(--navy-mid);
+}
+.more button:hover { background: #eef4fb; border-color: #93c5fd; }
+
+/* MANUAL */
+.manual-box {
+  background: var(--card);
+  border-radius: var(--r);
+  padding: 20px;
+  box-shadow: var(--sh);
+  margin-top: 18px;
+  border: 1px solid var(--bd);
+}
+.manual-box__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.manual-box select {
+  font: inherit;
+  padding: 12px;
+  border: 1px solid var(--bd);
+  border-radius: 10px;
+  width: 100%;
+  background: #fff;
+}
+
+@media (max-width: 720px) {
+  .hero__shell { min-height: 0; padding: 32px 16px; }
+  .hero__media { opacity: 1; background-position: center center; }
+  .hero__overlay {
+    background: linear-gradient(180deg,
+      rgba(1,9,28,1) 0%,
+      rgba(1,9,28,0.92) 35%,
+      rgba(1,9,28,0.75) 55%,
+      rgba(1,9,28,0.55) 75%,
+      rgba(1,9,28,0.35) 100%);
+  }
+
+  .steps { grid-template-columns: 1fr; }
+  .manual-box__grid { grid-template-columns: 1fr; }
+  .hero__body { padding: 36px 16px 40px; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "КонтурГрант — подбор мер господдержки по ИНН",
+  "description": "Бесплатный подбор субсидий, грантов и мер поддержки МСП по ИНН из реестра ФНС, портала Минфина и ГИСП Минпромторга.",
+  "url": "https://konturbiz.ru/test-govsupport/",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "RUB" },
+  "provider": {
+    "@type": "Organization",
+    "name": "KONTURBIZ",
+    "url": "https://konturbiz.ru"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Почему подбор мер господдержки идёт по основному ОКВЭД?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Основной код ОКВЭД отражает фактический вид деятельности. Многие субсидии и гранты требуют именно его. Меры по дополнительным кодам показываются отдельно, с пометкой."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Что делать, если компании нет в реестре МСП?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "В реестре нет крупных компаний и НКО; новые организации появляются 10-го числа следующего месяца. Выберите вид деятельности и регион вручную — подбор сработает так же."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Сохраняется ли введённый ИНН?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Нет. ИНН используется только для запроса к открытому реестру ФНС. Данные не хранятся и не передаются третьим лицам."
+      }
+    }
+  ]
+}
+</script>
+    <link rel="stylesheet" href="/assets/css/konturbiz-redesign.css?v=20261020-hero">
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero" aria-label="Подбор мер господдержки">
+  <div class="hero__shell">
+  <div class="hero__media" role="img" aria-label="Подбор субсидий и грантов"></div>
+  <div class="hero__overlay"></div>
+  <div class="hero__body">
+    <span class="hero__eyebrow">Господдержка · МСП · 2026</span>
+    <p class="hero__product"><strong>КонтурГрант</strong> — сервис подбора мер господдержки и льготного финансирования</p>
+    <h1>Подбор мер государственной поддержки по ИНН</h1>
+    <p class="hero__lead">
+      Введите ИНН организации или ИП — сервис сверит вид деятельности, регион и размер бизнеса
+      с условиями субсидий, грантов и мер поддержки из официальных каталогов.
+    </p>
+    <form class="search" id="form" autocomplete="off">
+      <input id="inn" type="text" inputmode="numeric" maxlength="24" placeholder="10 или 12 цифр" required aria-label="ИНН">
+      <button type="submit" id="go">Подобрать</button>
+    </form>
+    <div class="hero__links">
+      <a href="#manual" id="manual-link">Нет ИНН? Выбрать ОКВЭД и регион вручную</a>
+    </div>
+    <div class="hero__err" id="err" hidden></div>
+  </div>
+  </div>
+</section>
+
+<div class="wrap">
+
+  <!-- MANUAL -->
+  <div id="manual" class="manual-box" hidden>
+    <div class="manual-box__grid">
+      <select id="okved" aria-label="Вид деятельности">
+        <option value="">Вид деятельности (ОКВЭД)</option>
+      </select>
+      <select id="region" aria-label="Регион">
+        <option value="">Регион</option>
+      </select>
+    </div>
+    <div style="margin-top:14px">
+      <button id="manual-go" class="chip" style="background:var(--navy);color:#fff;border-color:var(--navy);padding:11px 22px">Подобрать</button>
+    </div>
+  </div>
+
+  <div id="company" hidden></div>
+
+  <div class="res" id="res" hidden>
+    <div class="res__t"><h2 id="res-title"></h2></div>
+    <p class="res__c" id="res-count"></p>
+    <div class="chips" id="chips"></div>
+    <div class="row2">
+      <label><input type="checkbox" id="open-only"> Только с открытым приёмом заявок</label>
+      <div class="sep"></div>
+      <label id="kinds-wrap" hidden>Тип:
+        <select id="kind" style="font:inherit;border:1px solid var(--bd);border-radius:8px;padding:4px 8px">
+          <option value="">все</option>
+        </select>
+      </label>
+    </div>
+    <div id="list"></div>
+    <div class="more" id="more-wrap" hidden><button type="button" id="more">Показать ещё</button></div>
+    <p class="res__d" id="updated" hidden></p>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" id="how" aria-labelledby="how-title">
+    <h2 class="section__h" id="how-title">Как работает <span style="color:var(--gold)">КонтурГрант</span></h2>
+    <p class="section__lead">Три шага без анкет и регистрации. Результат — список мер со ссылками на официальные страницы подачи.</p>
+    <div class="steps">
+      <article class="step">
+        <div class="step__n">1</div>
+        <h3>Находим компанию в реестре</h3>
+        <p>По ИНН запрашиваем Единый реестр МСП ФНС: основной ОКВЭД, регион и категорию бизнеса. Вручную эти поля заполнять не нужно.</p>
+      </article>
+      <article class="step">
+        <div class="step__n">2</div>
+        <h3>Сверяем с условиями мер</h3>
+        <p>Сопоставляем код ОКВЭД, регион, форму и размер организации с требованиями федеральных, региональных и муниципальных мер поддержки.</p>
+      </article>
+      <article class="step">
+        <div class="step__n">3</div>
+        <h3>Показываем, куда подавать</h3>
+        <p>У каждой меры — ориентир по сумме, статус приёма заявок и ссылка на страницу источника, где принимают документы.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- SOURCES -->
+  <section class="section" id="sources" aria-labelledby="src-title">
+    <h2 class="section__h" id="src-title">Откуда берутся данные</h2>
+    <p class="section__lead">Только открытые государственные источники. Условия не пересказываем и не оцениваем шансы одобрения.</p>
+    <div class="sources">
+      <article class="source">
+        <h3>ФНС России · реестр МСП</h3>
+        <p>Единый реестр субъектов малого и среднего предпринимательства: вид деятельности, регион, категория бизнеса.</p>
+        <div class="source__meta">Обновление · раз в месяц</div>
+      </article>
+      <article class="source">
+        <h3>Минфин и Минпромторг</h3>
+        <p>Портал мер финансовой поддержки Минфина (субсидии, гранты, сроки отборов) и навигатор ГИСП Минпромторга (займы, гарантии, льготы).</p>
+        <div class="source__meta">Минфин · ежедневно · ГИСП · раз в неделю</div>
+      </article>
+      <article class="source">
+        <h3>Без собственных оценок</h3>
+        <p>Мы не добавляем «рекомендаций» и рекламы. Каждая карточка ведёт на официальную страницу меры. Регистрация не требуется.</p>
+        <div class="source__meta">Прозрачный маршрут к источнику</div>
+      </article>
+    </div>
+  </section>
+
+
+  <!-- AFFECTED SUPPLIERS -->
+  <section class="section" id="affected" aria-labelledby="aff-title">
+    <h2 class="section__h" id="aff-title">Меры поддержки <span style="color:var(--gold)">пострадавшим поставщикам</span></h2>
+    <p class="section__lead">
+      Поддержка продавцов маркетплейсов после атак БПЛА на логистические комплексы групп «РВБ» (Wildberries)
+      и «Интернет Решения» (Ozon). Тексты выверены по официальным источникам: постановлениям Правительства,
+      письмам Банка России и Минэкономразвития, офертам площадок. Выберите раздел — он раскроется ниже.
+    </p>
+
+    <div class="sup-nav">
+      <a href="#sup-gov">
+        <strong>Меры от государства</strong>
+        <span>Налоги, проверки, кредитные каникулы, льготное финансирование, регионы</span>
+        <em>8 разделов</em>
+      </a>
+      <a href="#sup-wb">
+        <strong>Меры от ООО «РВБ»</strong>
+        <span>Продавцам, владельцам ПВЗ и клиентам Wildberries</span>
+        <em>3 раздела</em>
+      </a>
+      <a href="#sup-ozon">
+        <strong>Меры от Ozon</strong>
+        <span>Продавцам, владельцам ПВЗ и перевозчикам</span>
+        <em>См. оферты площадки</em>
+      </a>
+    </div>
+
+    <div class="sup-block" id="sup-gov">
+      <h3>Меры поддержки от государства</h3>
+      <p class="sup-intro">Налоги, проверки, кредитные каникулы, льготное финансирование и региональные программы для пострадавших поставщиков.</p>
+
+      <details class="sup-item">
+        <summary><span class="sup-num">01</span> Отсрочка и рассрочка по налогам и взносам</summary>
+        <div class="sup-body">
+          <h4>Суть меры</h4>
+          <ul>
+            <li>Срок уплаты продлевается на 12 месяцев для налогов и взносов, срок уплаты которых наступает в августе 2026 г. — июле 2027 г. (НДС, налог на прибыль, УСН, НПД, НДФЛ для ИП) и страховых взносов (включая взносы на травматизм).</li>
+            <li>Рассрочка по уплате сумм, срок по которым был продлён, — равными долями (1/12) ежемесячно.</li>
+          </ul>
+          <h4>Кто может получить</h4>
+          <p>Пострадавшие юрлица и ИП с действующим договором с «РВБ». Условие (одно из двух): ущерб &gt; 5% дохода (с июля 2026 г.) либо новый бизнес (с декабря 2025 г.). Лица на АУСН и НПД — с ограничениями по рассрочке.</p>
+          <h4>Куда обращаться</h4>
+          <p>Реестры ЮЛ и ИП направляет в ФНС России ООО «РВБ». Отсрочка предоставляется автоматически на основании реестра.</p>
+          <div class="sup-meta"><strong>Срок:</strong> с августа 2026 г. · <strong>Основание:</strong> Постановление Правительства РФ от 25.08.2026 № 1074</div>
+        </div>
+      </details>
+
+      <details class="sup-item">
+        <summary><span class="sup-num">02</span> Налоговые проверки для пострадавших продавцов Wildberries</summary>
+        <div class="sup-body">
+          <h4>Суть меры</h4>
+          <p>Приостановка назначения и проведения выездных налоговых проверок, а также выездных проверок страховых взносов на травматизм до 31 декабря 2026 г. включительно.</p>
+          <h4>Кто может получить</h4>
+          <p>Продавцы с договором с ООО «Вайлдберриз» или ООО «РВБ», пострадавшие от атак на объекты группы «РВБ» с июля 2026 г., если ущерб &gt; 5% дохода за 2025 год либо регистрация с 01.12.2025 и есть ущерб (без минимума).</p>
+          <h4>Куда обращаться</h4>
+          <p>ФНС — по налоговым проверкам, СФР — по взносам на травматизм. Мера по спискам, которые передаёт «РВБ».</p>
+          <div class="sup-meta"><strong>Срок:</strong> до 31.12.2026 · <strong>Основание:</strong> ПП РФ от 25.08.2026 № 1074</div>
+        </div>
+      </details>
+
+      <details class="sup-item">
+        <summary><span class="sup-num">03</span> Налоговые проверки и отсрочки для продавцов Ozon</summary>
+        <div class="sup-body">
+          <h4>Суть меры</h4>
+          <ul>
+            <li>Перенос сроков уплаты ряда налогов и страховых взносов на 12 месяцев с последующей рассрочкой на 12 месяцев без процентов (не для АУСН и НПД).</li>
+            <li>Приостановление выездных налоговых проверок до 31.12.2026 включительно.</li>
+          </ul>
+          <h4>Кто может получить</h4>
+          <p>Продавцы с договором с Ozon, пострадавшие от атак на объекты «Интернет Решения» с августа 2026 г.: ущерб &gt; 5% доходов за 2025 г. либо регистрация с 01.12.2025. При ущербе на Ozon и WB суммы складываются.</p>
+          <h4>Куда обращаться</h4>
+          <p>В Ozon — включение в перечень пострадавших. Перечни передаются в ФНС и СФР.</p>
+          <div class="sup-meta"><strong>Срок:</strong> платежи август 2026 — июль 2027; проверки до 31.12.2026 · <strong>Основание:</strong> ПП РФ от 30.09.2026 № 1277</div>
+        </div>
+      </details>
+
+      <details class="sup-item">
+        <summary><span class="sup-num">04</span> Кредитные каникулы</summary>
+        <div class="sup-body">
+          <h4>Суть меры</h4>
+          <ul>
+            <li>Реструктуризация кредитов (займов) с приостановлением обязательств на срок, согласованный с кредитором; без неустойки.</li>
+            <li>Бюро кредитных историй не ухудшает историю из‑за реструктуризации.</li>
+            <li>Кредиторы воздерживаются от требования досрочного возврата и повышения ставки.</li>
+          </ul>
+          <p>Это рекомендации Банка России: условия согласуются с кредитором.</p>
+          <h4>Кто может получить</h4>
+          <p>Субъекты МСП, пострадавшие в результате терактов на территориях логистических центров, складов, производств, торговых и офисных помещений.</p>
+          <h4>Куда обращаться</h4>
+          <p>В банк, МФО или кредитный кооператив с заявлением об изменении условий договора.</p>
+          <div class="sup-meta"><strong>Срок рекомендаций:</strong> по 31.08.2027 · <strong>Основание:</strong> письмо Банка России от 07.08.2026 № ИН-03-55/27</div>
+        </div>
+      </details>
+
+      <details class="sup-item">
+        <summary><span class="sup-num">05</span> Программа стимулирования кредитования (ПСК), 50 млрд ₽</summary>
+        <div class="sup-body">
+          <h4>Суть меры</h4>
+          <p>Кредиты от 500 тыс. до 500 млн ₽ на оборотные цели по ставке «ключевая ставка ЦБ + 3 п. п.», срок до 1,5 лет.</p>
+          <h4>Кто может получить</h4>
+          <p>Пострадавшие юрлица и ИП — субъекты МСП с договором с «РВБ» (Wildberries) и/или «Интернет Решения» (Ozon).</p>
+          <h4>Куда обращаться</h4>
+          <p>Банки — перечень на сайте Корпорации МСП.</p>
+          <div class="sup-meta"><strong>Срок:</strong> с 03.09.2026 · <strong>Основание:</strong> решение Совета директоров АО «Корпорация «МСП»</div>
+        </div>
+      </details>
+
+      <details class="sup-item">
+        <summary><span class="sup-num">06</span> Микрозаймы государственных МФО</summary>
+        <div class="sup-body">
+          <h4>Суть меры</h4>
+          <p>Микрозаймы до 5 млн ₽ по льготной ставке на срок до 3 лет на цели предпринимательской деятельности.</p>
+          <h4>Кто может получить</h4>
+          <p>Пострадавшие юрлица и ИП — субъекты МСП с договором с «РВБ» и/или «Интернет Решения».</p>
+          <h4>Куда обращаться</h4>
+          <p>Государственные МФО, центры «Мой бизнес».</p>
+          <div class="sup-meta"><strong>Срок:</strong> постоянно · <strong>Основание:</strong> приказ Минэкономразвития от 27.03.2025 № 195; письмо от 11.08.2026 № 29866-ТИ/Д13и</div>
+        </div>
+      </details>
+
+      <details class="sup-item">
+        <summary><span class="sup-num">07</span> Проверки объектов, пострадавших от атак</summary>
+        <div class="sup-body">
+          <h4>Суть меры</h4>
+          <p>Плановые контрольные мероприятия не проводятся; внеплановые — только по установленным основаниям (угроза жизни, ЧС и др.).</p>
+          <h4>Кто может получить</h4>
+          <p>Бизнес, чьи объекты получили ущерб от атак с применением средств огневого воздействия с 01.01.2026. Сведения об ущербе должны поступить в контрольный орган.</p>
+          <div class="sup-meta"><strong>Срок:</strong> 28.09.2026 — 01.10.2027 · <strong>Основание:</strong> ПП РФ от 25.09.2026 № 1238</div>
+        </div>
+      </details>
+
+      <details class="sup-item">
+        <summary><span class="sup-num">08</span> Региональные меры поддержки продавцам</summary>
+        <div class="sup-body">
+          <p>Субъекты РФ вводят собственные меры для пострадавших поставщиков. Актуальный перечень уточняйте в центре «Мой бизнес» региона и на региональных порталах поддержки.</p>
+          <div class="sup-region">
+            <span>Краснодарский край</span>
+            <span>Ленинградская область</span>
+            <span>Республика Крым</span>
+            <span>Республика Мордовия</span>
+            <span>Республика Хакасия</span>
+            <span>Свердловская область</span>
+            <span>Удмуртская Республика</span>
+            <span>Ростовская область</span>
+            <span>Ульяновская область</span>
+            <span>Новосибирская область</span>
+            <span>Орловская область</span>
+            <span>Москва</span>
+            <span>Московская область</span>
+            <span>Тульская область</span>
+            <span>Кемеровская область</span>
+            <span>Новгородская область</span>
+            <span>Приморский край</span>
+            <span>Саратовская область</span>
+            <span>Республика Татарстан</span>
+          </div>
+          <div class="sup-meta">Источник ориентира: материалы о мерах для пострадавших поставщиков маркетплейсов. Условия в каждом регионе свои.</div>
+        </div>
+      </details>
+    </div>
+
+    <div class="sup-block" id="sup-wb">
+      <h3>Меры поддержки от ООО «РВБ» (Wildberries)</h3>
+      <p class="sup-intro">Меры компании для продавцов, владельцев ПВЗ и клиентов. Детали и актуальные условия — в кабинете WB Partners и поддержке площадки.</p>
+
+      <details class="sup-item">
+        <summary><span class="sup-num">01</span> Продавцам — от компании</summary>
+        <div class="sup-body">
+          <ul>
+            <li>Первые добровольные поддерживающие выплаты.</li>
+            <li>Скидки на транзитные поставки и на хранение товаров.</li>
+            <li>Отмена штрафов за перенос или отмену поставок.</li>
+            <li>Кредитные каникулы и бесплатное обслуживание расчётного счёта в WB Банке.</li>
+            <li>Фиксированный индекс локализации и коэффициент территориального распределения.</li>
+            <li>По модели FBS: сниженная стоимость отгрузки в ПВЗ; отгрузка на иной СЦ; бесплатная опция «Выходные дни»; тестирование «Фулфилмент в СЦ»; увеличен срок автоотмены; снижена стоимость автовозврата в ПВЗ.</li>
+            <li>Промобонусы на оплату кампаний продвижения.</li>
+            <li>Досрочное отключение опций и пакетов конструктора тарифов.</li>
+            <li>Добровольное страхование товаров в партнёрских фулфилмент-центрах.</li>
+          </ul>
+          <p>По вопросам продаж — обращение в разделе «Поддержка» на сайте или в приложении WB Partners.</p>
+        </div>
+      </details>
+
+      <details class="sup-item">
+        <summary><span class="sup-num">02</span> Владельцам ПВЗ</summary>
+        <div class="sup-body">
+          <ul>
+            <li>Бесплатное обслуживание счетов и денежные переводы для владельцев ПВЗ от WB Банка.</li>
+            <li>Тестирование партнёрской программы по открытию хабов хранения и обработки товаров.</li>
+            <li>Перестройка логистики, перераспределение товаров и восстановление объёмов поставок.</li>
+          </ul>
+          <p>Вопросы — в личном кабинете WB Мой ПВЗ: «Помощь» → «Тикеты» или чат-помощник.</p>
+        </div>
+      </details>
+
+      <details class="sup-item">
+        <summary><span class="sup-num">03</span> Клиентам</summary>
+        <div class="sup-body">
+          <ul>
+            <li>Заказы оформляются и доставляются в обычном режиме.</li>
+            <li>По заказам и возвратам — поддержка покупателей: профиль на сайте или в приложении Wildberries → «Чаты» → чат с поддержкой.</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <div class="sup-block" id="sup-ozon">
+      <h3>Меры поддержки от Ozon</h3>
+      <p class="sup-intro">
+        Площадка публикует меры для продавцов, владельцев ПВЗ и перевозчиков в личном кабинете и официальных рассылках.
+        Актуальный перечень и условия — в кабинете продавца Ozon и в центре помощи. Государственные меры для продавцов Ozon
+        описаны в разделе 03 выше (ПП РФ № 1277).
+      </p>
+    </div>
+
+    <p class="section__lead" style="margin-top:20px;font-size:13px">
+      Материал справочный. Перед подачей заявки сверяйте формулировки и сроки в тексте постановления или оферты источника.
+      КонтурГрант помогает сориентироваться в мерах; решение о поддержке принимает уполномоченный орган или площадка.
+    </p>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq" id="faq" aria-labelledby="faq-title">
+    <h2 class="section__h" id="faq-title">Частые вопросы о КонтурГрант</h2>
+    <p class="section__lead">Коротко о логике подбора, реестре МСП и границах каталога.</p>
+
+    <details>
+      <summary>Почему подбор идёт по основному ОКВЭД?</summary>
+      <div class="faq-answer">
+        <p>Основной код отражает фактический вид деятельности, и многие меры господдержки требуют именно его. Меры, подходящие по дополнительному ОКВЭД, тоже показываем — в конце списка и с пометкой.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Основной ОКВЭД может измениться из‑за реформы — как это влияет на подбор?</summary>
+      <div class="faq-answer">
+        <p>С 2026 года основной код в ЕГРЮЛ и ЕГРИП поэтапно определяет Росстат по статистической отчётности. «Отчётный» код становится основным, а указанный при регистрации — дополнительным. Мы берём основной код из реестра ФНС, поэтому после обновления реестра подбор обновится автоматически. Этапы реформы — на сайте Минэкономразвития: <a href="https://okved.economy.gov.ru" target="_blank" rel="noopener noreferrer">okved.economy.gov.ru</a>.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Компании нет в реестре МСП — что делать?</summary>
+      <div class="faq-answer">
+        <p>В реестре малого и среднего бизнеса нет крупных организаций и НКО. Новые компании появляются 10-го числа следующего месяца после регистрации. Выберите вид деятельности и регион вручную — подбор сработает по тем же правилам.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Это полный список всех мер господдержки?</summary>
+      <div class="faq-answer">
+        <p>Нет. В каталоге — субсидии и гранты с портала Минфина и меры навигатора ГИСП Минпромторга (займы, гарантии, льготы, консультации — чаще для производства и торговли). Налоговые спецрежимы, банковские льготные кредиты и программы вне этих источников сюда не входят. Их подскажут в центре «Мой бизнес» вашего региона.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Что значит формулировка вроде «проверьте сами»?</summary>
+      <div class="faq-answer">
+        <p>По открытым данным сверяются вид деятельности, регион и форма бизнеса. Остальные условия — отсутствие долгов, доля выручки, срок существования компании — проверяет орган, выдающий поддержку. Такие требования указываем явно, чтобы вы успели сверить их до подачи заявки.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Сохраняете ли вы введённый ИНН?</summary>
+      <div class="faq-answer">
+        <p>Нет. ИНН нужен только для разового запроса к открытому реестру ФНС. Мы не храним его и не передаём третьим лицам.</p>
+      </div>
+    </details>
+  </section>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var PAGE = 20, API = "proxy.php";
+  var state = { data:null, filter:{level:"",kind:"",open:false}, shown:{reg:PAGE,fed:PAGE,any:PAGE} };
+  var $ = function(id){ return document.getElementById(id); };
+  var esc = function(v){ return String(v==null?"":v).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c];}); };
+  var digits = function(v){ return String(v||"").replace(/\D/g,""); };
+  var validInn = function(v){ var n=digits(v).length; return n===10||n===12; };
+  var fmtDate = function(iso){ var m=/^(\d{4})-(\d{2})-(\d{2})/.exec(String(iso||"")); return m?m[3]+"."+m[2]+"."+m[1]:""; };
+  var plural = function(n,one,few,many){ var a=Math.abs(n)%100,b=a%10; if(a>10&&a<20)return many; if(b>1&&b<5)return few; return b===1?one:many; };
+
+  function showErr(t){ var e=$("err"); e.textContent=t; e.hidden=!t; }
+
+  function req(qs){
+    return fetch(API + qs, {headers:{"Accept":"application/json"}}).then(function(r){
+      return r.text().then(function(t){
+        var d=null; try{ d=JSON.parse(t); }catch(e){}
+        if(r.status===200 && d) return d;
+        throw new Error((d && d.error) || ("HTTP "+r.status));
+      });
+    });
+  }
+
+  function renderCompany(d){
+    var c = d.company || {};
+    var size = [c.categoryName, c.staff ? c.staff+" "+plural(c.staff,"сотрудник","сотрудника","сотрудников") : ""].filter(Boolean).join(" · ");
+    var html = '<div class="co">'+
+      '<span class="co__kind">'+(c.kind===1?"Компания":c.kind===2?"Предприниматель":"Организация")+'</span>'+
+      '<h3 class="co__name">'+esc(c.name||"")+'</h3>'+
+      '<div class="co__sub">'+esc([c.inn?"ИНН "+c.inn:"", "в реестре МСП"].filter(Boolean).join(" · "))+'</div>'+
+      '<dl class="co__grid">'+
+        '<div><dt>Основной вид деятельности</dt><dd>'+(c.okved? '<span class="co__code">'+esc(c.okved.code)+'</span>'+esc(c.okved.name||"") : "в реестре не указан")+'</dd></div>'+
+        '<div><dt>Регион'+(size?" и размер":"")+'</dt><dd>'+esc((c.region&&c.region.name)||"не указан")+(size?'<div style="color:var(--mut);font-size:13px;margin-top:3px">'+esc(size)+'</div>':"")+'</dd></div>'+
+      '</dl>'+
+      '<div class="co__foot">Данные: '+esc((d.source&&d.source.name)||"Единый реестр МСП")+(d.source&&d.source.date?", на "+fmtDate(d.source.date):"")+'</div>'+
+    '</div>';
+    var box = $("company"); box.innerHTML = html; box.hidden = false;
+  }
+
+  function filt(list, f){
+    f = f||{};
+    return (list||[]).filter(function(m){
+      if(f.level==="fed" && (m.level!==1 || m.by==="any")) return false;
+      if(f.level==="reg" && (m.level===1 || m.by==="any")) return false;
+      if(f.level==="any" && m.by!=="any") return false;
+      if(f.kind && m.kind!==f.kind) return false;
+      if(f.open && !(m.intake && m.intake.status==="open")) return false;
+      return true;
+    });
+  }
+
+  function measureHtml(m){
+    var cls = m.level===1?"m--fed":(m.by==="any"?"m--any":"m--reg");
+    var tags = '<span class="tag">'+esc(m.kind)+'</span>';
+    tags += m.level===1
+      ? '<span class="tag tag--fed">Федеральная</span>'
+      : '<span class="tag tag--reg">'+esc(m.region||m.levelName||"")+'</span>';
+    if(m.intake && m.intake.status==="open") tags += '<span class="tag tag--open">Приём до '+fmtDate(m.intake.to)+'</span>';
+    else if(m.intake && m.intake.status==="soon") tags += '<span class="tag tag--soon">Приём с '+fmtDate(m.intake.from)+'</span>';
+
+    var why = "";
+    if(m.why && m.why.length){
+      why = '<div class="m__why"><b>Почему подошла</b>'+m.why.map(function(w){return '<span>• '+esc(w)+'</span>';}).join("")+'</div>';
+    }
+    var amount = m.amount ? '<div class="m__sum">'+esc(m.amount)+'</div>' : "";
+    var origin = [m.provider, m.checkedAt?"сверено "+fmtDate(m.checkedAt):""].filter(Boolean).join(" · ");
+    var url = /^https?:\/\//i.test(String(m.url||"")) ? m.url : "";
+
+    return '<article class="m '+cls+'">'+
+      '<div class="m__tags">'+tags+'</div>'+
+      '<h3>'+esc(m.title)+'</h3>'+
+      amount + why +
+      '<div class="m__src"><span>'+esc(origin)+'</span>'+
+      (url?'<a href="'+esc(url)+'" target="_blank" rel="noopener nofollow">Условия и подача — в источнике →</a>':"")+
+      '</div></article>';
+  }
+
+  function sections(list, f, regionName){
+    var rows = filt(list, {kind:f.kind, open:f.open});
+    var main = filt(list, {});
+    function part(key, title, own){
+      return { key:key, title:title, rows:rows.filter(own), all:main.filter(own).length };
+    }
+    var parts = [
+      part("reg", "Ваш регион"+(regionName?": "+regionName:""), function(m){return m.by!=="any" && m.level!==1;}),
+      part("fed", "Федеральные меры", function(m){return m.by!=="any" && m.level===1;})
+    ];
+    var any = part("any","Без отраслевых ограничений",function(m){return m.by==="any";});
+    if(any.all) parts.push(any);
+    return parts;
+  }
+
+  function renderList(){
+    var d = state.data, box = $("list");
+    if(!d){ box.innerHTML=""; return; }
+    var useSections = !state.filter.level;
+    var regionName = (d.company && d.company.region && d.company.region.name) || "";
+
+    if(useSections){
+      var parts = sections(d.measures||[], state.filter, regionName);
+      box.innerHTML = parts.map(function(p){
+        var lim = state.shown[p.key] || PAGE;
+        var rest = p.rows.length - lim;
+        var body = p.rows.slice(0,lim).map(measureHtml).join("");
+        if(!p.rows.length){
+          body = '<p class="sec__empty">'+(p.all?"Под выбранные условия здесь ничего не подходит.":(p.key==="fed"?"Федеральных мер для вашего вида деятельности в каталоге сейчас нет.":"Региональных и муниципальных мер для вашего вида деятельности в каталоге сейчас нет."))+'</p>';
+        }
+        return '<section class="sec"><h3 class="sec__h">'+esc(p.title)+' <span>'+p.rows.length+'</span></h3>'+body+
+          (rest>0?'<div class="more"><button type="button" data-more="'+p.key+'">Показать ещё '+Math.min(rest,PAGE)+'</button></div>':"")+
+        '</section>';
+      }).join("");
+      $("more-wrap").hidden = true;
+      return;
+    }
+
+    var rows = filt(d.measures||[], state.filter);
+    box.innerHTML = rows.length
+      ? '<div>'+rows.slice(0,state.shown.flat||PAGE).map(measureHtml).join("")+'</div>'
+      : '<p class="sec__empty">Под выбранные условия ничего не подходит — снимите часть фильтров.</p>';
+    var rest = rows.length - (state.shown.flat||PAGE);
+    $("more-wrap").hidden = rest<=0;
+    if(rest>0) $("more").textContent = "Показать ещё "+Math.min(rest,PAGE);
+  }
+
+  function renderChips(d){
+    var c = d.counts||{}, chips = [["","Все · "+(c.total||0)]];
+    var own = (c.regional||0)+(c.municipal||0), none = c.noIndustry||0;
+    if((c.federal?1:0)+(own?1:0)+(none?1:0) > 1){
+      if(c.federal) chips.push(["fed","Федеральные · "+c.federal]);
+      if(own) chips.push(["reg",((d.company&&d.company.region&&d.company.region.name)||"Регион")+" · "+own]);
+      if(none) chips.push(["any","Без отраслевых · "+none]);
+    }
+    var box = $("chips");
+    box.innerHTML = chips.length>1 ? chips.map(function(x){
+      return '<button class="chip" type="button" data-level="'+x[0]+'" aria-pressed="'+(x[0]===state.filter.level)+'">'+esc(x[1])+'</button>';
+    }).join("") : "";
+    box.hidden = chips.length<=1;
+
+    var kinds = [];
+    (d.measures||[]).forEach(function(m){ if(m.kind && kinds.indexOf(m.kind)<0) kinds.push(m.kind); });
+    var sel = $("kind");
+    if(kinds.length>1){
+      sel.innerHTML = '<option value="">все типы</option>'+kinds.map(function(k){return '<option value="'+esc(k)+'">'+esc(k)+'</option>';}).join("");
+      $("kinds-wrap").hidden = false;
+    } else { $("kinds-wrap").hidden = true; }
+  }
+
+  function summary(c){
+    c = c||{}; var p=[];
+    if(c.federal) p.push(c.federal+" "+plural(c.federal,"федеральная","федеральные","федеральных"));
+    if(c.regional) p.push(c.regional+" "+plural(c.regional,"региональная","региональные","региональных"));
+    if(c.municipal) p.push(c.municipal+" "+plural(c.municipal,"муниципальная","муниципальные","муниципальных"));
+    if(c.noIndustry) p.push(c.noIndustry+" без отраслевых ограничений");
+    var t = p.length>1 ? p.slice(0,-1).join(", ")+" и "+p[p.length-1] : p.join("");
+    if(c.open) t += (t?" · ":"")+"приём заявок идёт по "+c.open;
+    return t;
+  }
+
+  function render(d){
+    state.data = d;
+    state.filter = {level:"",kind:"",open:false};
+    state.shown = {reg:PAGE,fed:PAGE,any:PAGE,flat:PAGE};
+    $("res").hidden = false;
+    $("open-only").checked = false;
+    $("kind").value = "";
+
+    if(!d.found){
+      $("company").hidden = true;
+      $("list").innerHTML = '<p class="sec__empty">Такого ИНН нет в реестре МСП. Проверьте номер или выберите вид деятельности и регион вручную.</p>';
+      $("res-title").textContent = "Ничего не найдено";
+      $("res-count").textContent = "";
+      $("chips").innerHTML = ""; $("chips").hidden = true;
+      $("more-wrap").hidden = true;
+      $("manual").hidden = false;
+      return;
+    }
+
+    renderCompany(d);
+    var total = (d.counts&&d.counts.total)||0;
+    $("res-title").textContent = total ? ("Найдено "+total+" "+plural(total,"мера","меры","мер")) : "Подходящих мер не нашлось";
+    $("res-count").textContent = total
+      ? summary(d.counts)
+      : "В каталоге сейчас нет мер для основного вида деятельности в этом регионе. Каталог сверяется ежедневно.";
+    renderChips(d);
+    renderList();
+    var cat = d.catalog && d.catalog.date;
+    $("updated").hidden = !cat;
+    if(cat) $("updated").textContent = "Каталог мер сверен с источником "+fmtDate(cat)+".";
+    $("res").scrollIntoView({behavior:"smooth",block:"start"});
+  }
+
+  $("form").addEventListener("submit", function(e){
+    e.preventDefault();
+    var v = digits($("inn").value);
+    if(!validInn(v)) return showErr("Проверьте ИНН: 10 цифр у организации, 12 у предпринимателя.");
+    showErr("");
+    var btn = $("go"); btn.disabled = true; btn.textContent = "Подбираем…";
+    req("?action=search&inn="+encodeURIComponent(v))
+      .then(function(d){ render(d); })
+      .catch(function(e){ showErr("Не получилось: "+e.message); })
+      .finally(function(){ btn.disabled=false; btn.textContent="Подобрать"; });
+  });
+
+  $("manual-link").addEventListener("click", function(e){
+    e.preventDefault();
+    var m = $("manual");
+    if(!m.hidden){ m.hidden=true; return; }
+    m.hidden = false;
+    m.scrollIntoView({behavior:"smooth",block:"start"});
+    if(m.dataset.loaded) return;
+    m.dataset.loaded = "1";
+    req("?action=options").then(function(d){
+      var ok = $("okved"), rg = $("region");
+      ok.innerHTML = '<option value="">Вид деятельности</option>'+d.okveds.map(function(o){return '<option value="'+esc(o.code)+'">'+esc(o.code+" — "+o.name)+'</option>';}).join("");
+      rg.innerHTML = '<option value="">Регион</option>'+d.regions.map(function(r){return '<option value="'+esc(r.code)+'">'+esc(r.name)+'</option>';}).join("");
+    }).catch(function(){ showErr("Списки не загрузились."); });
+  });
+
+  $("manual-go").addEventListener("click", function(){
+    var o = $("okved").value, r = $("region").value;
+    if(!o || !r) return showErr("Выберите вид деятельности и регион.");
+    showErr("");
+    req("?action=search&okved="+encodeURIComponent(o)+"&region="+encodeURIComponent(r))
+      .then(render).catch(function(e){ showErr("Не получилось: "+e.message); });
+  });
+
+  $("chips").addEventListener("click", function(e){
+    var c = e.target.closest(".chip"); if(!c) return;
+    state.filter.level = c.getAttribute("data-level");
+    state.shown = {reg:PAGE,fed:PAGE,any:PAGE,flat:PAGE};
+    [].forEach.call($("chips").querySelectorAll(".chip"),function(x){ x.setAttribute("aria-pressed", String(x===c)); });
+    renderList();
+  });
+  $("kind").addEventListener("change", function(){ state.filter.kind=this.value; state.shown={reg:PAGE,fed:PAGE,any:PAGE,flat:PAGE}; renderList(); });
+  $("open-only").addEventListener("change", function(){ state.filter.open=this.checked; state.shown={reg:PAGE,fed:PAGE,any:PAGE,flat:PAGE}; renderList(); });
+
+  $("list").addEventListener("click", function(e){
+    var b = e.target.closest("button[data-more]"); if(!b) return;
+    var k = b.getAttribute("data-more");
+    state.shown[k] = (state.shown[k]||PAGE) + PAGE;
+    renderList();
+  });
+  $("more").addEventListener("click", function(){ state.shown.flat=(state.shown.flat||PAGE)+PAGE; renderList(); });
+})();
+</script>
+</body>
+</html>

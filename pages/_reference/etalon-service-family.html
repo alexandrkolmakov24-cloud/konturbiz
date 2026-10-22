@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--
+    =====================================================================
+    ЭТАЛОН СЕМЕЙСТВА B — services / solutions
+    ---------------------------------------------------------------------
+    Этот файл: noindex (справочник). На БОЕВОЙ странице заменить:
+
+    <title> — уникальный, услуга + результат | KONTURBIZ
+    <meta name="description"> — краткое описание ИМЕННО этой услуги
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://konturbiz.ru/pages/services/{slug}.html">
+
+    Обязательные поля контента (видимый HTML, не только meta):
+    - один H1 (название услуги / результат)
+    - хлебные крошки (видимые)
+    - блок прямых ответов: что входит, цена/как считается, срок, кому подходит
+    - состав работ, ограничения, следующий шаг
+    - FAQ: вопросы как у клиентов, ответ с сути
+
+    AEO/SEO: нет отдельной «AI-разметки». Текст должен читаться без JS.
+    Schema (Organization / BreadcrumbList / Service) — только по факту
+    видимого контента, не фиктивно. FAQ rich results не обещать.
+    =====================================================================
+  -->
+  <title>Эталон семейства B — услуга / решение | KONTURBIZ</title>
+  <meta name="description" content="Справочный эталон семейства услуг и решений KONTURBIZ. Не для индексации.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://konturbiz.ru/pages/_reference/etalon-service-family.html">
+
+  <link rel="icon" href="/favicons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Базовый слой (не переопределять .container / .section / .hero / .card глобально) -->
+  <link rel="stylesheet" href="/assets/css/konturbiz.css">
+  <link rel="stylesheet" href="/assets/css/buttons.css">
+  <link rel="stylesheet" href="/assets/css/header.css">
+  <link rel="stylesheet" href="/assets/css/footer.css">
+
+  <!--
+    Стили: только .kb-*. Flame / data-stream — только главная.
+  -->
+  <style id="kb-etalon-service-family">
+    /* --- tokens (локальный контур эталона; при выносе в CSS — сверить с tokens.css) --- */
+    .kb-page {
+      --kb-deep: #01091C;
+      --kb-navy: #0A192F;
+      --kb-ink: #112B4A;
+      --kb-gold: #C8A24A;
+      --kb-bg: #F7F8FA;
+      --kb-soft: #F4F7FB;
+      --kb-line: #D9E1E8;
+      --kb-muted: #5A6B80;
+      --kb-white: #FFFFFF;
+      --kb-r: 8px;
+      --kb-r-card: 12px;
+      --kb-max: 1200px;
+      --kb-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+      font-family: Inter, system-ui, sans-serif;
+      color: var(--kb-ink);
+      background: var(--kb-bg);
+    }
+    /* Заголовки на светлом фоне — без !important.
+       Hero/CTA исключены: у них свои цвета внутри .kb-hero / .kb-cta */
+    .kb-page h2,
+    .kb-page h3 {
+      font-family: Montserrat, Inter, sans-serif;
+      color: var(--kb-navy);
+    }
+
+    /* ========== HERO ==========
+       Полоса #01091C на всю ширину. Внутри max 1200.
+       Desktop: ориентир min-height 400px (не жёсткий height — длинный H1 не обрезается).
+       Градиент слева. Картинка справа, декоративная (пустой alt).
+       Mobile ≤768: без картинки — смысл только в тексте + CTA.
+       H1 weight 300–400. Цвета заданы на компоненте, не через !important.
+    */
+    .kb-hero {
+      width: 100%;
+      background: var(--kb-deep);
+      color: #fff;
+    }
+    .kb-hero__box {
+      position: relative;
+      max-width: var(--kb-max);
+      margin: 0 auto;
+      min-height: 400px;
+      overflow: hidden;
+    }
+    .kb-hero__media {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 70%;
+      margin: 0;
+    }
+    .kb-hero__media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      opacity: 1;
+    }
+    .kb-hero__gradient {
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 42%;
+      max-width: 520px;
+      background: linear-gradient(
+        90deg,
+        var(--kb-deep) 0%,
+        var(--kb-deep) 55%,
+        rgba(1, 9, 28, 0.85) 75%,
+        rgba(1, 9, 28, 0) 100%
+      );
+      z-index: 1;
+      pointer-events: none;
+    }
+    .kb-hero__content {
+      position: relative;
+      z-index: 2;
+      max-width: 520px;
+      min-height: 400px;
+      padding: 48px 24px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+    .kb-hero__eyebrow {
+      margin: 0 0 12px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--kb-gold);
+      font-family: Montserrat, Inter, sans-serif;
+    }
+    /* h1 только внутри hero — не конфликтует с .kb-page h2/h3 */
+    .kb-hero__title {
+      margin: 0 0 14px;
+      font-size: clamp(26px, 2.6vw, 32px);
+      line-height: 1.2;
+      font-weight: 300;
+      color: #ffffff;
+      font-family: Montserrat, Inter, sans-serif;
+    }
+    .kb-hero__lead {
+      margin: 0 0 22px;
+      font-size: 15px;
+      line-height: 1.55;
+      color: rgba(255, 255, 255, 0.88);
+      max-width: 28rem;
+    }
+    .kb-hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    .kb-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-family: Montserrat, Inter, sans-serif;
+      transition: background 0.2s var(--kb-ease), border-color 0.2s var(--kb-ease), transform 0.2s var(--kb-ease);
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+    .kb-btn:focus-visible {
+      outline: 2px solid var(--kb-gold);
+      outline-offset: 3px;
+    }
+    .kb-btn--gold {
+      background: var(--kb-gold);
+      color: var(--kb-navy);
+      border-color: var(--kb-gold);
+    }
+    .kb-btn--gold:hover {
+      background: #b8923f;
+      border-color: #b8923f;
+    }
+    .kb-btn--ghost {
+      background: transparent;
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.55);
+    }
+    .kb-btn--ghost:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.75);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .kb-btn,
+      .kb-card {
+        transition: none;
+      }
+      .kb-card:hover {
+        transform: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .kb-hero__box { min-height: 0; }
+      .kb-hero__media { display: none; } /* декоратив; смысл — в тексте */
+      .kb-hero__gradient { display: none; }
+      .kb-hero__content {
+        max-width: none;
+        min-height: 0;
+        padding: 36px 20px 40px;
+      }
+    }
+
+    /* ========== SECTION / LAYOUT ========== */
+    .kb-wrap {
+      max-width: var(--kb-max);
+      margin: 0 auto;
+      padding: 56px 24px;
+      box-sizing: border-box;
+    }
+    .kb-wrap--tight { padding-top: 40px; padding-bottom: 40px; }
+    .kb-section-head { margin-bottom: 28px; max-width: 40rem; }
+    .kb-section-head h2 {
+      margin: 0 0 10px;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 1.25;
+    }
+    /* Золотая линия под H2 — короткий акцент, не отдельный «эффект» */
+    .kb-section-head h2::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 2px;
+      margin-top: 12px;
+      background: var(--kb-gold);
+      border-radius: 1px;
+    }
+    .kb-section-head p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--kb-muted);
+    }
+
+    /* ========== MOTION (слой 2 семейства B) ==========
+       По умолчанию всё видно (без JS / reduced-motion / no IO).
+       Скрытое состояние — только после .kb-reveal-ready на <html>.
+       Каскад карточек: 70ms, потолок ~280ms.
+       Блик кнопки — только hover мышью.
+    */
+    .kb-page {
+      --kb-reveal-dur: 0.45s;
+      --kb-cascade-step: 70ms;
+      --kb-cascade-max: 280ms;
+    }
+    html.kb-reveal-ready .kb-reveal {
+      opacity: 0;
+      transform: translateY(12px);
+      transition:
+        opacity var(--kb-reveal-dur) var(--kb-ease),
+        transform var(--kb-reveal-dur) var(--kb-ease);
+    }
+    html.kb-reveal-ready .kb-reveal.is-in {
+      opacity: 1;
+      transform: none;
+    }
+    /* Каскад внутри одной сетки */
+    html.kb-reveal-ready .kb-cards.kb-reveal .kb-card {
+      opacity: 0;
+      transform: translateY(12px);
+      transition:
+        opacity var(--kb-reveal-dur) var(--kb-ease),
+        transform var(--kb-reveal-dur) var(--kb-ease);
+    }
+    html.kb-reveal-ready .kb-cards.kb-reveal.is-in .kb-card {
+      opacity: 1;
+      transform: none;
+    }
+    html.kb-reveal-ready .kb-cards.kb-reveal.is-in .kb-card:nth-child(1) { transition-delay: 0ms; }
+    html.kb-reveal-ready .kb-cards.kb-reveal.is-in .kb-card:nth-child(2) { transition-delay: 70ms; }
+    html.kb-reveal-ready .kb-cards.kb-reveal.is-in .kb-card:nth-child(3) { transition-delay: 140ms; }
+    html.kb-reveal-ready .kb-cards.kb-reveal.is-in .kb-card:nth-child(4) { transition-delay: 210ms; }
+    html.kb-reveal-ready .kb-cards.kb-reveal.is-in .kb-card:nth-child(5) { transition-delay: 280ms; }
+    html.kb-reveal-ready .kb-cards.kb-reveal.is-in .kb-card:nth-child(n+6) { transition-delay: 280ms; }
+
+    /* Блик на золотой кнопке — только hover, не перекрывает текст */
+    .kb-btn--gold {
+      position: relative;
+      overflow: hidden;
+    }
+    .kb-btn--gold::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -40%;
+      width: 40%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.35),
+        transparent
+      );
+      transform: skewX(-18deg);
+      pointer-events: none;
+      opacity: 0;
+    }
+    .kb-btn--gold:hover::after {
+      animation: kb-btn-shine 0.65s var(--kb-ease) 1;
+    }
+    @keyframes kb-btn-shine {
+      0% { left: -40%; opacity: 0; }
+      30% { opacity: 1; }
+      100% { left: 120%; opacity: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html.kb-reveal-ready .kb-reveal,
+      html.kb-reveal-ready .kb-cards.kb-reveal .kb-card {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+      .kb-btn--gold:hover::after {
+        animation: none;
+      }
+    }
+
+    /* ========== BADGE (ширина по контенту, не 100%) ========== */
+    .kb-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 40px;
+      height: 28px;
+      padding: 0 10px;
+      margin: 0 0 12px;
+      border-radius: var(--kb-r);
+      background: var(--kb-soft);
+      color: var(--kb-navy);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      font-family: Montserrat, Inter, sans-serif;
+      white-space: nowrap;
+      box-sizing: border-box;
+    }
+
+    /* ========== CARDS — тип A навигация / оффер ==========
+       Hover: лёгкий lift + тень. Без flame, без scale.
+       Сетка: явная, не auto-fit на 5+2 дыру.
+    */
+    .kb-cards {
+      display: grid;
+      gap: 14px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    /* 3 в ряд на desktop */
+    .kb-cards--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    /* 5 карточек: 3+2 */
+    .kb-cards--5 {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+    .kb-cards--5 > .kb-card { grid-column: span 4; }
+    .kb-cards--5 > .kb-card:nth-child(4),
+    .kb-cards--5 > .kb-card:nth-child(5) { grid-column: span 6; }
+    /* 7 карточек: 4+3 */
+    .kb-cards--7 {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+    .kb-cards--7 > .kb-card { grid-column: span 3; }
+    .kb-cards--7 > .kb-card:nth-child(5),
+    .kb-cards--7 > .kb-card:nth-child(6),
+    .kb-cards--7 > .kb-card:nth-child(7) { grid-column: span 4; }
+
+    .kb-card {
+      background: var(--kb-white);
+      border: 1px solid var(--kb-line);
+      border-radius: var(--kb-r-card);
+      padding: 20px 20px 18px;
+      box-sizing: border-box;
+      transition: transform 0.2s var(--kb-ease), box-shadow 0.2s var(--kb-ease), border-color 0.2s var(--kb-ease);
+      min-width: 0;
+    }
+    .kb-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(10, 25, 47, 0.08);
+      border-color: #c5d0dc;
+    }
+    .kb-card__title {
+      margin: 0 0 8px;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.3;
+      color: var(--kb-navy);
+      font-family: Montserrat, Inter, sans-serif;
+    }
+    .kb-card__text {
+      margin: 0 0 14px;
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--kb-muted);
+    }
+    .kb-card__link {
+      font-size: 14px;
+      font-weight: 500;
+      color: #2f6fed;
+      text-decoration: none;
+    }
+    .kb-card__link:hover { text-decoration: underline; }
+
+    @media (max-width: 960px) {
+      .kb-cards--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .kb-cards--5,
+      .kb-cards--7 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .kb-cards--5 > .kb-card,
+      .kb-cards--5 > .kb-card:nth-child(4),
+      .kb-cards--5 > .kb-card:nth-child(5),
+      .kb-cards--7 > .kb-card,
+      .kb-cards--7 > .kb-card:nth-child(n) {
+        grid-column: auto;
+      }
+    }
+    @media (max-width: 560px) {
+      .kb-cards--3,
+      .kb-cards--5,
+      .kb-cards--7 { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+    }
+
+    /* ========== STEPS (тип C — спокойные) ========== */
+    .kb-steps {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .kb-step {
+      background: var(--kb-white);
+      border: 1px solid var(--kb-line);
+      border-radius: var(--kb-r-card);
+      padding: 18px 16px;
+    }
+    .kb-step h3 {
+      margin: 0 0 8px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .kb-step p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--kb-muted);
+    }
+    @media (max-width: 800px) {
+      .kb-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 480px) {
+      .kb-steps { grid-template-columns: 1fr; }
+    }
+
+    /* ========== FAQ — только click (details/summary) ========== */
+    .kb-faq {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border: 1px solid var(--kb-line);
+      border-radius: var(--kb-r-card);
+      background: var(--kb-white);
+      overflow: hidden;
+    }
+    .kb-faq details {
+      border-bottom: 1px solid var(--kb-line);
+    }
+    .kb-faq details:last-child { border-bottom: 0; }
+    .kb-faq summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 16px 20px;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--kb-navy);
+      font-family: Montserrat, Inter, sans-serif;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .kb-faq summary::-webkit-details-marker { display: none; }
+    .kb-faq summary::after {
+      content: "+";
+      font-weight: 400;
+      color: var(--kb-muted);
+      flex-shrink: 0;
+    }
+    .kb-faq details[open] summary::after { content: "–"; }
+    .kb-faq__body {
+      padding: 0 20px 16px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--kb-muted);
+    }
+
+    /* ========== CTA band ========== */
+    .kb-cta {
+      background: var(--kb-deep);
+      color: #fff;
+      text-align: center;
+    }
+    .kb-page .kb-cta h2 {
+      margin: 0 0 10px;
+      color: #ffffff;
+      font-weight: 400;
+      font-size: 24px;
+      font-family: Montserrat, Inter, sans-serif;
+    }
+    .kb-cta p {
+      margin: 0 0 22px;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 15px;
+    }
+    .kb-cta .kb-hero__actions { justify-content: center; }
+    .kb-card__link:focus-visible,
+    .kb-faq summary:focus-visible {
+      outline: 2px solid var(--kb-gold);
+      outline-offset: 2px;
+    }
+
+    /* note strip for developers — не копировать на прод */
+    .kb-dev-note {
+      background: #fff8e6;
+      border-bottom: 1px solid #f0e0b0;
+      padding: 10px 16px;
+      font-size: 13px;
+      color: #5a4a20;
+      text-align: center;
+    }
+
+    /* Хлебные крошки — видимые, для людей и структуры */
+    .kb-crumbs {
+      max-width: var(--kb-max);
+      margin: 0 auto;
+      padding: 14px 24px 0;
+      font-size: 13px;
+      color: var(--kb-muted);
+    }
+    .kb-crumbs ol {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 8px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .kb-crumbs li:not(:last-child)::after {
+      content: "/";
+      margin-left: 8px;
+      color: #9aa8b8;
+    }
+    .kb-crumbs a {
+      color: var(--kb-muted);
+      text-decoration: none;
+    }
+    .kb-crumbs a:hover { color: var(--kb-navy); text-decoration: underline; }
+    .kb-crumbs [aria-current="page"] { color: var(--kb-navy); }
+
+    /* Прямой ответ (AEO): сначала суть, потом детали в секциях ниже */
+    .kb-answer {
+      max-width: 40rem;
+      margin: 0 0 28px;
+      padding: 16px 18px;
+      background: var(--kb-soft);
+      border-left: 3px solid var(--kb-gold);
+      border-radius: 0 var(--kb-r) var(--kb-r) 0;
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--kb-ink);
+    }
+    .kb-answer strong { color: var(--kb-navy); font-weight: 600; }
+
+    .kb-facts {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px 16px;
+      margin: 0 0 8px;
+      padding: 0;
+      list-style: none;
+    }
+    .kb-facts li {
+      background: var(--kb-white);
+      border: 1px solid var(--kb-line);
+      border-radius: var(--kb-r-card);
+      padding: 14px 16px;
+    }
+    .kb-facts strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--kb-muted);
+      font-family: Montserrat, Inter, sans-serif;
+    }
+    .kb-facts span {
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--kb-ink);
+    }
+    @media (max-width: 640px) {
+      .kb-facts { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body class="kb-page">
+
+  <!-- Служебная плашка только на эталоне (на боевых страницах не копировать) -->
+  <div class="kb-dev-note">
+    Эталон семейства B (услуги / решения) · классы только <code>.kb-*</code> ·
+    путь: <code>/pages/_reference/etalon-service-family.html</code> · noindex
+  </div>
+
+  <!--
+    HEADER: на боевых страницах — полный из components/header.html.
+    Здесь упрощённая полоса, чтобы эталон открывался автономно.
+  -->
+  <header style="background:#01091C;height:64px;display:flex;align-items:center;">
+    <div style="max-width:1200px;margin:0 auto;padding:0 24px;width:100%;display:flex;justify-content:space-between;align-items:center;">
+      <a href="/" style="color:#fff;text-decoration:none;font-family:Montserrat,sans-serif;font-weight:500;letter-spacing:0.04em;">KONTURBIZ</a>
+      <span style="color:rgba(255,255,255,0.5);font-size:12px;">эталон · не меню сайта</span>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="kb-hero" aria-labelledby="kb-etalon-h1">
+      <div class="kb-hero__box">
+        <figure class="kb-hero__media" aria-hidden="true">
+          <!-- Эталон: картинка как на about. На боевой — webp конкретной услуги -->
+          <img src="/images/about/about.webp" alt="" width="840" height="400">
+        </figure>
+        <div class="kb-hero__gradient" aria-hidden="true"></div>
+        <div class="kb-hero__content">
+          <p class="kb-hero__eyebrow">Услуга · эталон</p>
+          <h1 id="kb-etalon-h1" class="kb-hero__title">
+            Название услуги<br>и результат для бизнеса
+          </h1>
+          <p class="kb-hero__lead">
+            Кратко: кому подходит и какой следующий шаг.
+            Lead и кнопки не обрезаются (min-height 400px).
+          </p>
+          <div class="kb-hero__actions">
+            <a class="kb-btn kb-btn--gold" href="/pages/about/contacts.html">Обсудить задачу</a>
+            <a class="kb-btn kb-btn--ghost" href="/pages/diagnostics/konturscan.html">Пройти диагностику</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Хлебные крошки: на проде — реальный путь; видны пользователю -->
+    <nav class="kb-crumbs" aria-label="Хлебные крошки">
+      <ol>
+        <li><a href="/">Главная</a></li>
+        <li><a href="/pages/services/">Услуги</a></li>
+        <li aria-current="page">Название услуги</li>
+      </ol>
+    </nav>
+
+    <!-- ===== ПРЯМЫЕ ОТВЕТЫ (AEO) — в HTML всегда, не зависят от JS ===== -->
+    <section class="kb-wrap" aria-labelledby="kb-block-answers">
+      <div class="kb-section-head kb-reveal">
+        <h2 id="kb-block-answers">Коротко об услуге</h2>
+        <p>Сначала прямой ответ — затем детали в блоках ниже. Цифры только подтверждённые.</p>
+      </div>
+      <p class="kb-answer kb-reveal">
+        <strong>Что это.</strong>
+        <!-- На проде: 1–2 предложения о сути услуги и результате для клиента. -->
+        Услуга помогает решить конкретную задачу бизнеса: фиксируем объём после короткого брифа,
+        согласуем состав и сроки, выполняем работы по договору.
+      </p>
+      <ul class="kb-facts kb-reveal">
+        <li>
+          <strong>Что входит</strong>
+          <span>Состав работ по брифу: исследование, концепция, передача материалов. Детали — в блоке ниже.</span>
+        </li>
+        <li>
+          <strong>Стоимость</strong>
+          <span>Цена «от» или расчёт после брифа — без обещаний, которые нельзя подтвердить. Оплата по счёту.</span>
+        </li>
+        <li>
+          <strong>Срок</strong>
+          <span>Ориентир фиксируем в КП. Зависит от объёма и готовности исходных данных.</span>
+        </li>
+        <li>
+          <strong>Кому подходит</strong>
+          <span>МСБ с понятной задачей. Ограничения (если есть) указываем явно, без скрытых условий.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===== CARDS 3 ===== -->
+    <section class="kb-wrap" aria-labelledby="kb-block-what">
+      <div class="kb-section-head kb-reveal">
+        <h2 id="kb-block-what">Что входит</h2>
+        <p>Состав работ. Карточки: lift при hover, ссылка всегда видна.</p>
+      </div>
+      <ul class="kb-cards kb-cards--3 kb-reveal">
+        <li class="kb-card">
+          <span class="kb-badge" aria-hidden="true">01</span>
+          <h3 class="kb-card__title">Исследование</h3>
+          <p class="kb-card__text">Бриф, аудитория, конкуренты — фиксируем задачу до старта работ.</p>
+          <a class="kb-card__link" href="/pages/services/">Подробнее →</a>
+        </li>
+        <li class="kb-card">
+          <span class="kb-badge" aria-hidden="true">02</span>
+          <h3 class="kb-card__title">Концепция</h3>
+          <p class="kb-card__text">Варианты решения, согласование, понятный состав и сроки.</p>
+          <a class="kb-card__link" href="/pages/services/">Подробнее →</a>
+        </li>
+        <li class="kb-card">
+          <span class="kb-badge" aria-hidden="true">03</span>
+          <h3 class="kb-card__title">Передача</h3>
+          <p class="kb-card__text">Файлы, гайдлайны, рекомендации по использованию в точках и онлайне.</p>
+          <a class="kb-card__link" href="/pages/services/">Подробнее →</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===== CARDS 5 → 3+2 ===== -->
+    <section class="kb-wrap kb-wrap--tight" style="padding-top:0" aria-labelledby="kb-block-path">
+      <div class="kb-section-head kb-reveal">
+        <h2 id="kb-block-path">Сетка из 5 карточек</h2>
+        <p>Ряд 3 + ряд 2 равной ширины — без «дыры» справа.</p>
+      </div>
+      <ul class="kb-cards kb-cards--5 kb-reveal">
+        <li class="kb-card">
+          <span class="kb-badge" aria-hidden="true">01</span>
+          <h3 class="kb-card__title">Запуск</h3>
+          <p class="kb-card__text">Регистрация, налоги, счёт.</p>
+          <a class="kb-card__link" href="/pages/partners/ip-registration/">Регистрация ИП →</a>
+        </li>
+        <li class="kb-card">
+          <span class="kb-badge" aria-hidden="true">02</span>
+          <h3 class="kb-card__title">Локация</h3>
+          <p class="kb-card__text">Точка, проходимость, аренда.</p>
+          <a class="kb-card__link" href="/pages/services/location-assessment.html">Оценка локации →</a>
+        </li>
+        <li class="kb-card">
+          <span class="kb-badge" aria-hidden="true">03</span>
+          <h3 class="kb-card__title">Сайт</h3>
+          <p class="kb-card__text">Лендинг и заявка из сети.</p>
+          <a class="kb-card__link" href="/pages/services/web-development.html">Сайт →</a>
+        </li>
+        <li class="kb-card">
+          <span class="kb-badge" aria-hidden="true">04</span>
+          <h3 class="kb-card__title">CRM</h3>
+          <p class="kb-card__text">Не терять обращения.</p>
+          <a class="kb-card__link" href="/pages/services/crm.html">CRM →</a>
+        </li>
+        <li class="kb-card">
+          <span class="kb-badge" aria-hidden="true">05</span>
+          <h3 class="kb-card__title">Лояльность</h3>
+          <p class="kb-card__text">Вернуть тех, кого привлекли.</p>
+          <a class="kb-card__link" href="/pages/services/loyalty.html">Программа лояльности →</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===== STEPS ===== -->
+    <section class="kb-wrap" aria-labelledby="kb-block-steps">
+      <div class="kb-section-head kb-reveal">
+        <h2 id="kb-block-steps">Как запускаем за 7–14 дней</h2>
+        <p>Бейдж — светлая плашка по ширине текста (1–3, 11–14), не круг и не 100% ширины карточки.</p>
+      </div>
+      <ol class="kb-steps kb-reveal">
+        <li class="kb-step">
+          <span class="kb-badge" aria-hidden="true">1–3</span>
+          <h3>Кабинет</h3>
+          <p>Регистрация и настройка. ИНН, реквизиты, доступ.</p>
+        </li>
+        <li class="kb-step">
+          <span class="kb-badge" aria-hidden="true">4–7</span>
+          <h3>Материалы</h3>
+          <p>QR и носители для точки — чтобы было что показать.</p>
+        </li>
+        <li class="kb-step">
+          <span class="kb-badge" aria-hidden="true">8–10</span>
+          <h3>Команда</h3>
+          <p>Обучение: как предложить участие и ответить на вопросы.</p>
+        </li>
+        <li class="kb-step">
+          <span class="kb-badge" aria-hidden="true">11–14</span>
+          <h3>Запуск</h3>
+          <p>Первые клиенты, контроль начисления и списания.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="kb-wrap" aria-labelledby="kb-block-faq">
+      <div class="kb-section-head kb-reveal">
+        <h2 id="kb-block-faq">Частые вопросы</h2>
+        <p>Только click (details). Без open on hover.</p>
+      </div>
+      <div class="kb-faq kb-reveal">
+        <details>
+          <summary>Сколько занимает запуск?</summary>
+          <div class="kb-faq__body">Ориентир — после брифа, в коммерческом предложении. Срок зависит от объёма и готовности материалов с вашей стороны.</div>
+        </details>
+        <details>
+          <summary>Сколько стоит услуга?</summary>
+          <div class="kb-faq__body">На сайте может быть цена «от». Итог считаем по составу работ; оплата по договору и счёту KONTURBIZ.</div>
+        </details>
+        <details>
+          <summary>Можно начать с одного блока, а не со всего контура?</summary>
+          <div class="kb-faq__body">Да. Часто начинаем с одного решения, затем связываем остальные элементы по мере результата.</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="kb-cta kb-wrap" style="max-width:none;padding-left:0;padding-right:0">
+      <div style="max-width:1200px;margin:0 auto;padding:56px 24px">
+        <h2>Следующий шаг</h2>
+        <p>Разберём задачу и предложим маршрут — без продажи «всего сразу».</p>
+        <div class="kb-hero__actions">
+          <a class="kb-btn kb-btn--gold" href="/pages/about/contacts.html">Обсудить задачу</a>
+          <a class="kb-btn kb-btn--ghost" href="/pages/diagnostics/konturscan.html">Пройти диагностику</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="background:#01091C;color:rgba(255,255,255,0.55);padding:24px;text-align:center;font-size:12px;">
+    На боевых страницах — полный footer из <code>components/footer.html</code> · Metrika 113120522
+  </footer>
+
+  <!-- Scroll reveal: контент виден без JS; скрытие только после init -->
+  <script>
+  (function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!('IntersectionObserver' in window)) return;
+    document.documentElement.classList.add('kb-reveal-ready');
+    var nodes = document.querySelectorAll('.kb-reveal');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+    nodes.forEach(function (n) { io.observe(n); });
+  })();
+  </script>
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.webvisor.org/metrika/tag_ww.js?id=113120522', 'ym');
+    ym(113120522, 'init', {ssr:true, webvisor:true, clickmap:true, accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <noscript><div><img src="https://mc.webvisor.org/watch/113120522" style="position:absolute;left:-9999px;" alt=""></div></noscript>
+</body>
+</html>

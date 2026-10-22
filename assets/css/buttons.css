@@ -1,0 +1,305 @@
+/* assets/css/buttons.css
+   КНОПКИ KONTURBIZ v2.9-PREMIUM
+   ========================================
+   РАЗМЕРЫ (единые на всём сайте)
+   -----------------------------------------
+   default  — padding 14px 28px · min-height 48px · font 11px uppercase
+   --sm     — компактные (таблицы, карточки)
+   --lg     — крупные CTA (финальные блоки)
+
+   ЦВЕТ = РОЛЬ (куда ведёт)
+   -----------------------------------------
+   ПРОДАЮЩИЕ / конверсия (диагностика, аудит, заявка, купить):
+     .button--gold              заливка золото
+     .button--gold-outline      обводка золото (на светлом)
+     .button--gold-outline-on-dark / .button--white-outline на тёмном — вторичный продающий
+
+   ИНФОРМАЦИОННЫЕ (решения, о нас, кейсы, знания):
+     .button--secondary         обводка синяя (светлый фон)
+     .button--primary           заливка navy
+     .button--white-outline     обводка белая (тёмный фон)
+
+   В паре в одном блоке — одинаковый размер (см. .button-group).
+   ======================================== */
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 8px 18px;
+    min-height: 36px;
+    min-width: 44px;
+    font-family: var(--font-headers, 'Montserrat', sans-serif);
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    border-radius: var(--border-radius-sm, 4px);
+    border: 1px solid transparent;
+    cursor: pointer;
+    gap: 8px;
+    position: relative;
+    transition: all var(--transition-base, 0.3s ease);
+    white-space: nowrap;
+}
+
+.button:focus-visible {
+    outline: 3px solid var(--color-secondary, #295D8A);
+    outline-offset: 2px;
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* ============================================================
+   РАЗМЕРЫ
+   ============================================================ */
+.button--sm {
+    padding: 6px 14px;
+    min-height: 32px;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+}
+
+.button--lg {
+    padding: 8px 18px;
+    min-height: 36px;
+    font-size: 10px;
+}
+
+.button--full {
+    width: 100%;
+    justify-content: center;
+}
+
+/* ============================================================
+   ГРУППА — компактные кнопки в ряд (как hero на главной)
+   ============================================================ */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+/* По контенту, без растягивания на всю ширину */
+.button-group .button {
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 160px;
+    max-width: 280px;
+}
+
+/* На тёмных hero/page-hero / CTA — тот же единый размер */
+.page-hero .button-group .button,
+.hero__actions .button,
+.cta-block .button-group .button,
+.section .button-group .button {
+    min-height: 36px;
+    padding: 8px 18px;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 160px;
+    max-width: 280px;
+}
+
+/* ============================================================
+   СВЕТЛЫЙ ФОН — ПРОДАЮЩИЕ
+   ============================================================ */
+.button--gold {
+    background: var(--color-gold-bus, #C8A24A);
+    color: var(--color-on-gold, #091322);
+    border-color: var(--color-gold-bus, #C8A24A);
+}
+.button--gold:hover {
+    background: var(--color-gold-dark, #B8923A);
+    border-color: var(--color-gold-dark, #B8923A);
+    color: var(--color-on-gold, #091322);
+}
+
+.button--gold-outline,
+.button--outline-gold {
+    background: transparent;
+    color: var(--color-gold-bus, #C8A24A);
+    border-color: var(--color-gold-bus, #C8A24A);
+}
+.button--gold-outline:hover,
+.button--outline-gold:hover {
+    background: var(--color-gold-bus, #C8A24A);
+    color: var(--color-on-gold, #091322);
+}
+
+/* ============================================================
+   СВЕТЛЫЙ ФОН — ИНФОРМАЦИОННЫЕ
+   ============================================================ */
+.button--primary {
+    background: var(--color-primary, #112B4A);
+    color: var(--color-on-primary, #FFFFFF);
+    border-color: var(--color-primary, #112B4A);
+}
+.button--primary:hover {
+    background: transparent;
+    color: var(--color-primary, #112B4A);
+}
+
+.button--secondary {
+    background: transparent;
+    color: var(--color-text-primary, #0A192F);
+    border-color: var(--color-secondary, #295D8A);
+}
+.button--secondary:hover {
+    background: var(--color-secondary, #295D8A);
+    color: #FFFFFF;
+}
+
+.button--dark {
+    background: var(--color-navy-dark, #0A192F);
+    color: #FFFFFF;
+    border-color: var(--color-navy-dark, #0A192F);
+}
+.button--dark:hover {
+    background: transparent;
+    color: var(--color-navy-dark, #0A192F);
+}
+
+/* ============================================================
+   ТЁМНЫЙ ФОН (hero, page-hero, section--dark, cta-block)
+   ============================================================ */
+/* Продающий primary на тёмном */
+.button--gold-on-dark {
+    background: var(--color-gold-bus, #C8A24A);
+    color: var(--color-on-gold, #091322);
+    border-color: var(--color-gold-bus, #C8A24A);
+}
+.button--gold-on-dark:hover {
+    background: var(--color-gold-dark, #B8923A);
+    border-color: var(--color-gold-dark, #B8923A);
+}
+
+/* Продающий secondary / информационный на тёмном */
+.button--white-outline {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 0.28);
+}
+.button--white-outline:hover {
+    border-color: var(--color-gold-bus, #C8A24A);
+    color: #fff;
+    background: rgba(200, 162, 74, 0.1);
+}
+
+.button--gold-outline-on-dark {
+    background: transparent;
+    color: var(--color-gold-bus, #C8A24A);
+    border-color: var(--color-gold-bus, #C8A24A);
+}
+.button--gold-outline-on-dark:hover {
+    background: var(--color-gold-bus, #C8A24A);
+    color: var(--color-on-gold, #091322);
+}
+
+/* ============================================================
+   ИКОНКИ
+   ============================================================ */
+.button--icon .icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+.button--icon-only {
+    padding: 12px;
+    min-width: 48px;
+    width: 48px;
+    height: 48px;
+}
+
+/* ============================================================
+   АДАПТИВ
+   ============================================================ */
+@media (max-width: 768px) {
+    .button {
+        padding: 8px 14px !important;
+        min-height: 36px !important;
+        font-size: 10px !important;
+        letter-spacing: 0.05em !important;
+        white-space: normal;
+        line-height: 1.2;
+    }
+    .button--lg {
+        padding: 8px 14px !important;
+        min-height: 36px !important;
+        font-size: 10px !important;
+    }
+    .button--sm {
+        padding: 6px 12px !important;
+        min-height: 32px !important;
+        font-size: 9px !important;
+    }
+    /* Рядом, компактно — не растягивать на 100% */
+    .button-group,
+    .hero__actions {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        width: auto;
+        max-width: 100%;
+        gap: 8px;
+    }
+    .button-group .button,
+    .hero__actions .button {
+        flex: 0 0 auto !important;
+        width: auto !important;
+        min-width: 140px !important;
+        max-width: 240px !important;
+        justify-content: center;
+        min-height: 36px !important;
+        padding: 8px 14px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .button {
+        padding: 7px 12px !important;
+        min-height: 34px !important;
+        font-size: 9px !important;
+        letter-spacing: 0.04em !important;
+        white-space: normal;
+        text-align: center;
+    }
+    .button--lg {
+        padding: 7px 12px !important;
+        min-height: 34px !important;
+    }
+    .button-group,
+    .hero__actions {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 8px;
+    }
+    .button-group .button,
+    .hero__actions .button {
+        flex: 0 0 auto !important;
+        width: auto !important;
+        min-width: 130px !important;
+        max-width: 100% !important;
+        padding: 7px 12px !important;
+        min-height: 34px !important;
+        font-size: 9px !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .button,
+    .button:hover {
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -1,0 +1,123 @@
+{
+  "version": "1.0",
+  "levels": [
+    {
+      "min": 0,
+      "max": 20,
+      "label": "Старт",
+      "description": "Основные элементы цифрового контура ещё не сформированы."
+    },
+    {
+      "min": 21,
+      "max": 40,
+      "label": "Основа",
+      "description": "Базовая цифровая инфраструктура формируется."
+    },
+    {
+      "min": 41,
+      "max": 60,
+      "label": "Работающая система",
+      "description": "Основные точки контакта и процессы связаны между собой."
+    },
+    {
+      "min": 61,
+      "max": 80,
+      "label": "Автоматизированный контур",
+      "description": "Значительная часть взаимодействия и процессов систематизирована."
+    },
+    {
+      "min": 81,
+      "max": 99,
+      "label": "Системный контур",
+      "description": "Большинство ключевых элементов цифровой системы соединены."
+    },
+    {
+      "min": 100,
+      "max": 100,
+      "label": "Цифровой контур сформирован",
+      "description": "Основные элементы системы бизнеса собраны в единый контур."
+    }
+  ],
+  "modules": [
+    {
+      "id": "scan",
+      "title": "KONTUR SCAN",
+      "category": "Диагностика",
+      "price": 15000,
+      "weight": 5,
+      "description": "Экспресс-диагностика текущего цифрового состояния бизнеса.",
+      "url": "/pages/diagnostics/konturscan.html",
+      "recommendedNext": ["brand", "website"]
+    },
+    {
+      "id": "audit",
+      "title": "Цифровой аудит",
+      "category": "Диагностика",
+      "price": 19000,
+      "weight": 5,
+      "description": "Глубокий анализ цифровых точек контакта и точек потерь.",
+      "url": "/pages/services/digital-audit.html",
+      "recommendedNext": ["brand", "website"]
+    },
+    {
+      "id": "brand",
+      "title": "Бренд",
+      "category": "Бренд",
+      "price": 25000,
+      "weight": 15,
+      "description": "Логотип и визуальная идентичность бренда.",
+      "url": "/pages/services/branding.html",
+      "recommendedNext": ["website"]
+    },
+    {
+      "id": "website",
+      "title": "Сайт",
+      "category": "Сайт",
+      "price": 60000,
+      "weight": 25,
+      "description": "Цифровая точка контакта: от лендинга до корпоративного сайта.",
+      "url": "/pages/services/web-development.html",
+      "recommendedNext": ["crm", "loyalty"]
+    },
+    {
+      "id": "crm",
+      "title": "CRM",
+      "category": "Автоматизация",
+      "price": 40000,
+      "weight": 15,
+      "description": "Управление клиентской базой и продажами.",
+      "url": "/pages/services/crm.html",
+      "recommendedNext": ["loyalty", "automation"]
+    },
+    {
+      "id": "loyalty",
+      "title": "Лояльность",
+      "category": "Удержание",
+      "price": 30000,
+      "weight": 20,
+      "description": "Программа удержания и повторных продаж.",
+      "url": "/pages/services/loyalty.html",
+      "recommendedNext": ["automation"]
+    },
+    {
+      "id": "automation",
+      "title": "Автоматизация",
+      "category": "Автоматизация",
+      "price": 40000,
+      "weight": 10,
+      "description": "Автоматизация коммуникаций и бизнес-процессов.",
+      "url": "/pages/services/integration.html",
+      "recommendedNext": ["analytics"]
+    },
+    {
+      "id": "analytics",
+      "title": "Аналитика",
+      "category": "Аналитика",
+      "price": 25000,
+      "weight": 10,
+      "description": "Измерение и развитие цифрового контура.",
+      "url": "/pages/solutions/analytics.html",
+      "recommendedNext": []
+    }
+  ]
+}

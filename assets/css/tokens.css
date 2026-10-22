@@ -1,0 +1,167 @@
+/* assets/css/tokens.css
+   KONTURBIZ — Цифровые токены бренда
+   Версия: 2.9-PREMIUM (полное соответствие "индекс без сканера")
+   ======================================== */
+
+:root {
+    /* === ЕДИНЫЙ СЛОЙ ТОКЕНОВ KONTURBIZ ===
+       Новые компоненты используют --kb-*; legacy-алиасы ниже сохранены,
+       чтобы мигрировать страницы по семействам без массового переключения. */
+    --kb-color-navy: #01091C;
+    --kb-color-navy-soft: #0A192F;
+    --kb-color-ink: #112B4A;
+    --kb-color-blue: #295D8A;
+    --kb-color-gold: #C8A24A;
+    --kb-color-gold-text: #956A0A;
+    --kb-color-canvas: #F4F7FA;
+    --kb-color-surface: #FFFFFF;
+    --kb-color-surface-muted: #F1F4F7;
+    --kb-color-text: #112B4A;
+    --kb-color-text-muted: #52667A;
+    --kb-color-text-subtle: #8A9BB3;
+    --kb-color-border: #D9E1E8;
+    --kb-color-success: #27AE60;
+    --kb-color-warning: #F39C12;
+    --kb-color-error: #E53E3E;
+
+    --kb-font-body: 'Inter', sans-serif;
+    --kb-font-heading: 'Montserrat', sans-serif;
+    --kb-font-mono: 'JetBrains Mono', monospace;
+    --kb-text-xs: 0.75rem;
+    --kb-text-sm: 0.875rem;
+    --kb-text-base: 1rem;
+    --kb-text-lg: 1.125rem;
+    --kb-text-xl: 1.375rem;
+    --kb-text-2xl: clamp(1.75rem, 3vw, 2.5rem);
+    --kb-text-display: clamp(2.25rem, 5vw, 4rem);
+    --kb-leading-tight: 1.15;
+    --kb-leading-normal: 1.6;
+
+    --kb-space-1: 0.25rem;
+    --kb-space-2: 0.5rem;
+    --kb-space-3: 0.75rem;
+    --kb-space-4: 1rem;
+    --kb-space-6: 1.5rem;
+    --kb-space-8: 2rem;
+    --kb-space-12: 3rem;
+    --kb-space-16: 4rem;
+    --kb-space-20: 5rem;
+    --kb-container-max: 75rem;
+    --kb-container-gutter: clamp(1.125rem, 4vw, 2.5rem);
+
+    --kb-radius-sm: 0.375rem;
+    --kb-radius-control: 0.625rem;
+    --kb-radius-card: 0.875rem;
+    --kb-radius-panel: 1rem;
+    --kb-border-width: 1px;
+    --kb-shadow-card: 0 4px 16px rgba(13, 35, 59, 0.045);
+    --kb-shadow-card-hover: 0 12px 28px rgba(13, 35, 59, 0.09);
+    --kb-shadow-focus: 0 0 0 3px rgba(200, 162, 74, 0.38);
+    --kb-motion-fast: 160ms;
+    --kb-motion-base: 220ms;
+    --kb-motion-reveal: 560ms;
+    --kb-ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+    --kb-layer-header: 100;
+    --kb-layer-menu: 200;
+    --kb-layer-overlay: 300;
+    --kb-layer-dialog: 400;
+
+    /* === Совместимые legacy-алиасы. Оставшиеся отличия подписаны явно. === */
+    --color-bg-dark: var(--kb-color-navy);
+    --color-hero-bg: var(--kb-color-navy);
+    --color-gold-ui: var(--kb-color-gold);
+    --color-gold-text: var(--kb-color-gold-text);
+    --color-mid-slate: var(--kb-color-text-muted);
+    --color-neon-blue: var(--kb-color-blue);
+    --color-border: #E8EDF3; /* legacy-разделитель мягче стандартной границы компонентов */
+    --color-bg-alt: var(--kb-color-canvas);
+    --color-primary: var(--kb-color-ink);
+    --color-on-primary: var(--kb-color-surface);
+    --color-surface: var(--kb-color-surface);
+    --color-surface-container: var(--kb-color-surface-muted);
+    --color-outline-variant: #B9C5D0; /* отдельный токен контрастного контура */
+    --color-text-primary: var(--kb-color-text);
+    --color-text-secondary: var(--kb-color-text-muted);
+    --color-text-muted: var(--kb-color-text-subtle);
+    --color-error: var(--kb-color-error);
+    --color-success: var(--kb-color-success);
+    --color-warning: var(--kb-color-warning);
+    --color-navy-dark: var(--kb-color-navy);
+
+    /* === ШРИФТЫ (из "индекс без сканера") === */
+    --font-headers: var(--kb-font-heading);
+    --font-body: var(--kb-font-body);
+    --font-mono: var(--kb-font-mono);
+
+    /* Алиасы для совместимости */
+    --font-primary: var(--kb-font-body);
+
+    /* === РАЗМЕРЫ ШРИФТОВ (из "индекс без сканера") === */
+    --text-xs: 11px;
+    --text-sm: 13px;
+    --text-base: 15px;
+    --text-md: 16px;
+    --text-lg: 18px;
+    --text-xl: 22px;
+    --text-2xl: 1.5rem; /* 24px — как в Tailwind text-2xl */
+    --text-display: clamp(26px, 3.2vw, 30px);
+
+    /* === ВЕСА ШРИФТОВ === */
+    --fw-light: 300;
+    --fw-normal: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    /* === ОТСТУПЫ === */
+    --space-xs: 6px;
+    --space-sm: 12px;
+    --space-md: 20px;
+    --space-lg: 32px;
+    --space-xl: 48px;
+    --space-2xl: 64px;
+
+    /* === ГРАНИЦЫ === */
+    --radius-btn: 4px;
+    --radius-card: 12px;
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --border-radius-xl: 16px;
+
+    /* === ТЕНИ === */
+    --shadow-sm: 0 1px 2px rgba(10,25,47,0.05);
+    --shadow-md: 0 4px 12px rgba(10,25,47,0.07);
+    --shadow-lg: 0 12px 28px rgba(10,25,47,0.10);
+    --shadow-xl: 0 20px 60px rgba(10,25,47,0.16);
+    --shadow-focus: 0 16px 48px rgba(10,25,47,0.18), 0 4px 16px rgba(10,25,47,0.08);
+
+    /* === КОНТЕЙНЕР === */
+    --container-max: 1200px;
+    --container-padding: 40px;
+    --container-padding-mobile: 16px;
+
+    /* === ХЕДЕР (из "индекс без сканера") === */
+    --header-height: 90px;
+    --header-height-tablet: 72px;
+    --header-height-mobile: 64px;
+
+    /* === АНИМАЦИИ === */
+    --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-focus: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-smooth: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+    /* === АЛИАСЫ === */
+    --color-deep-navy: var(--kb-color-ink);
+    --color-steel-blue: var(--kb-color-blue);
+    --color-business-gold: var(--kb-color-gold);
+    --color-gold-dark: #B8923A;
+    --color-soft-grey: #E8EDF3;
+    --color-bg-light: #F6F8FB;
+    --color-white: #FFFFFF;
+    --color-black: #091322;
+    --color-accent: var(--kb-color-gold);
+    --color-blue-action: var(--kb-color-blue);
+    --color-surface-soft: var(--kb-color-surface-muted);
+    --color-text-disabled: #8A9BB3;
+}

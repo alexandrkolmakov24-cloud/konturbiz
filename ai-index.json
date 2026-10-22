@@ -1,0 +1,770 @@
+{
+  "site": "KONTURBIZ",
+  "base_url": "https://konturbiz.ru/pages/",
+  "language": "ru",
+  "generated": "2026-09-30",
+  "description": "Machine-readable index of public KONTURBIZ pages for search and AI retrieval.",
+  "sitemap": "https://konturbiz.ru/pages/sitemap.xml",
+  "pages": [
+    {
+      "url": "https://konturbiz.ru/pages/about/contacts.html",
+      "path": "about/contacts.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/about/index.html",
+      "path": "about/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "AboutPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/about/legal.html",
+      "path": "about/legal.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/about/partners.html",
+      "path": "about/partners.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/about/team.html",
+      "path": "about/team.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/cases/automation/index.html",
+      "path": "cases/automation/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "CaseStudy"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/cases/branding/index.html",
+      "path": "cases/branding/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "CaseStudy"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/cases/index.html",
+      "path": "cases/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "CaseStudy"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/cases/loyalty/index.html",
+      "path": "cases/loyalty/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "CaseStudy"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/cases/websites/index.html",
+      "path": "cases/websites/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "CaseStudy"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/contour/index.html",
+      "path": "contour/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/diagnostics/digital-portrait.html",
+      "path": "diagnostics/digital-portrait.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/diagnostics/geo-audit.html",
+      "path": "diagnostics/geo-audit.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/diagnostics/index.html",
+      "path": "diagnostics/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/diagnostics/konturscan.html",
+      "path": "diagnostics/konturscan.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/industries/ho-re-ca.html",
+      "path": "industries/ho-re-ca.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/industries/index.html",
+      "path": "industries/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/industries/retail.html",
+      "path": "industries/retail.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/industries/services.html",
+      "path": "industries/services.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/industries/small-business.html",
+      "path": "industries/small-business.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/knowledge/automation/chto-avtomatizirovat-v-malom-biznese.html",
+      "path": "knowledge/automation/chto-avtomatizirovat-v-malom-biznese.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Article"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/knowledge/automation/crm-nuzhna-li-malomu-biznesu.html",
+      "path": "knowledge/automation/crm-nuzhna-li-malomu-biznesu.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Article"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/knowledge/automation/index.html",
+      "path": "knowledge/automation/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Article"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/knowledge/branding/chem-brending-otlichaetsya-ot-logotipa.html",
+      "path": "knowledge/branding/chem-brending-otlichaetsya-ot-logotipa.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Article"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/knowledge/branding/index.html",
+      "path": "knowledge/branding/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Article"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/knowledge/branding/kogda-nuzhen-rebrending.html",
+      "path": "knowledge/branding/kogda-nuzhen-rebrending.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Article"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/knowledge/digitalization/chto-takoe-cifrovoj-kontur.html",
+      "path": "knowledge/digitalization/chto-takoe-cifrovoj-kontur.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Article"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/knowledge/digitalization/index.html",
+      "path": "knowledge/digitalization/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Article"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/knowledge/digitalization/s-chego-nachat-cifrovizaciyu.html",
+      "path": "knowledge/digitalization/s-chego-nachat-cifrovizaciyu.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Article"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/knowledge/finance/ekonomika-programmy-loyalnosti.html",
+      "path": "knowledge/finance/ekonomika-programmy-loyalnosti.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Article"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/knowledge/finance/index.html",
+      "path": "knowledge/finance/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Article"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/knowledge/grants/gospodderzhka-cifrovizacii.html",
+      "path": "knowledge/grants/gospodderzhka-cifrovizacii.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Article"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/knowledge/grants/index.html",
+      "path": "knowledge/grants/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Article"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/knowledge/index.html",
+      "path": "knowledge/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Article"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/knowledge/loyalty/bonusy-ili-skidki.html",
+      "path": "knowledge/loyalty/bonusy-ili-skidki.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Article"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/knowledge/loyalty/chto-takoe-programma-loyalnosti.html",
+      "path": "knowledge/loyalty/chto-takoe-programma-loyalnosti.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Article"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/knowledge/loyalty/index.html",
+      "path": "knowledge/loyalty/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Article"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/knowledge/loyalty/kak-rabotaet-rc-city.html",
+      "path": "knowledge/loyalty/kak-rabotaet-rc-city.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Article"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/knowledge/management/index.html",
+      "path": "knowledge/management/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Article"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/knowledge/management/kakie-pokazateli-otlezhivat.html",
+      "path": "knowledge/management/kakie-pokazateli-otlezhivat.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Article"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/knowledge/marketing/index.html",
+      "path": "knowledge/marketing/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Article"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/knowledge/marketing/pochemu-sajt-ne-prinosit-klientov.html",
+      "path": "knowledge/marketing/pochemu-sajt-ne-prinosit-klientov.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Article"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/knowledge/partners/index.html",
+      "path": "knowledge/partners/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Article"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/knowledge/partners/kak-vybrat-partnera-po-loyalnosti.html",
+      "path": "knowledge/partners/kak-vybrat-partnera-po-loyalnosti.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Article"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/knowledge/retail/index.html",
+      "path": "knowledge/retail/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Article"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/knowledge/retail/povtornye-prodazhi-v-magazine.html",
+      "path": "knowledge/retail/povtornye-prodazhi-v-magazine.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Article"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/knowledge/small-business/cifrovye-instrumenty-dlya-ip.html",
+      "path": "knowledge/small-business/cifrovye-instrumenty-dlya-ip.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Article"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/knowledge/small-business/index.html",
+      "path": "knowledge/small-business/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Article"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/partners/bank/index.html",
+      "path": "partners/bank/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/partners/client-service/index.html",
+      "path": "partners/client-service/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/partners/cyberuniversity/index.html",
+      "path": "partners/cyberuniversity/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/partners/diadoc/index.html",
+      "path": "partners/diadoc/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/partners/elba/index.html",
+      "path": "partners/elba/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/partners/focus/index.html",
+      "path": "partners/focus/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/partners/index.html",
+      "path": "partners/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/partners/infintech/index.html",
+      "path": "partners/infintech/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/partners/ip-registration/index.html",
+      "path": "partners/ip-registration/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/partners/kontur/bank/index.html",
+      "path": "partners/kontur/bank/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/partners/kontur/client-search/index.html",
+      "path": "partners/kontur/client-search/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/partners/kontur/diadoc/index.html",
+      "path": "partners/kontur/diadoc/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/partners/kontur/elba/index.html",
+      "path": "partners/kontur/elba/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/partners/kontur/focus/index.html",
+      "path": "partners/kontur/focus/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/partners/kontur/index.html",
+      "path": "partners/kontur/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/partners/loyalty-platform/index.html",
+      "path": "partners/loyalty-platform/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/partners/payment-terminals/index.html",
+      "path": "partners/payment-terminals/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/partners/rc-bonus/index.html",
+      "path": "partners/rc-bonus/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/partners/rc-franchise/index.html",
+      "path": "partners/rc-franchise/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/partners/rc-pay/index.html",
+      "path": "partners/rc-pay/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/partners/rcbiz/index.html",
+      "path": "partners/rcbiz/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/partners/rdo/index.html",
+      "path": "partners/rdo/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/partners/samo.html",
+      "path": "partners/samo.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/partners/samo/index.html",
+      "path": "partners/samo/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/partners/sovcombank/index.html",
+      "path": "partners/sovcombank/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/services/account-opening.html",
+      "path": "services/account-opening.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Service"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/services/bank-comparison.html",
+      "path": "services/bank-comparison.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Service"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/services/branding.html",
+      "path": "services/branding.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Service"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/services/business-plan.html",
+      "path": "services/business-plan.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Service"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/services/crm.html",
+      "path": "services/crm.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Service"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/services/digital-audit.html",
+      "path": "services/digital-audit.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Service"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/services/grants.html",
+      "path": "services/grants.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Service"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/services/graphic-design.html",
+      "path": "services/graphic-design.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Service"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/services/index.html",
+      "path": "services/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Service"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/services/integration.html",
+      "path": "services/integration.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Service"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/services/location-assessment.html",
+      "path": "services/location-assessment.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Service"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/services/loyalty-calculator.html",
+      "path": "services/loyalty-calculator.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Service"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/services/loyalty.html",
+      "path": "services/loyalty.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Service"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/services/tariffs.html",
+      "path": "services/tariffs.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Service"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/services/telegram-bots.html",
+      "path": "services/telegram-bots.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Service"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/services/web-development.html",
+      "path": "services/web-development.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "Service"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/solutions/acquisition.html",
+      "path": "solutions/acquisition.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/solutions/analytics.html",
+      "path": "solutions/analytics.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/solutions/automation.html",
+      "path": "solutions/automation.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/solutions/index.html",
+      "path": "solutions/index.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "CollectionPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/solutions/infrastructure.html",
+      "path": "solutions/infrastructure.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    },
+    {
+      "url": "https://konturbiz.ru/pages/solutions/retention.html",
+      "path": "solutions/retention.html",
+      "title": "KONTURBIZ — цифровые решения для бизнеса",
+      "description": "Цифровые решения для бизнеса: диагностика, сайты, CRM, автоматизация, аналитика, брендинг и цифровая инфраструктура.",
+      "h1": "",
+      "type": "WebPage"
+    }
+  ]
+}

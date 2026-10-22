@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Регистрация ИП — бесплатно и онлайн | KONTURBIZ</title>
+<meta name="description" content="Бесплатная онлайн-регистрация ИП за 3 дня для партнёров Русского цифрового: документы, КЭП, без госпошлины. УСН, ПСН, ОСНО.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://konturbiz.ru/pages/partners/ip-registration/">
+<meta property="og:title" content="Регистрация ИП — бесплатно и онлайн | KONTURBIZ">
+<meta property="og:description" content="Документы, КЭП, без госпошлины. Для партнёров Русского цифрового.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://konturbiz.ru/m/ip-registration/">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0A192F; --navy-deep: #01091C; --gold: #C8A24A; --blue: #295D8A;
+  --bg: #F6F8FB; --card: #fff; --tx: #0A192F; --mut: #5A6B80; --bd: #E2E8F1;
+  --font: Inter, system-ui, sans-serif; --font-d: Montserrat, Inter, sans-serif;
+  --acc: #2563eb; --fed: #7c3aed; --reg: #0891b2; --r: 4px;
+  --sh: 0 1px 3px rgba(10,25,47,.06), 0 8px 28px rgba(10,25,47,.07);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:15px/1.6 var(--font);color:var(--tx);background:var(--bg);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--blue)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+
+.hero{position:relative;width:100%;height:400px;background:var(--navy-deep);overflow:hidden}
+.hero__box{position:relative;max-width:1200px;width:100%;height:400px;margin:0 auto;overflow:hidden}
+.hero__box img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block}
+.hero__box::after{
+  content:"";position:absolute;inset:0 auto 0 0;width:5%;max-width:60px;pointer-events:none;
+  background:linear-gradient(90deg,#01091C 0%,rgba(1,9,28,.35) 55%,transparent 100%);
+}
+@media (max-width:768px){.hero,.hero__box{height:200px}.hero__box::after{width:8%}}
+
+.sec{padding:56px 0}
+.sec--white{background:#fff}
+.sec--grey{background:var(--bg)}
+.eyebrow{display:block;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin:0 0 10px}
+h1{font-family:var(--font-d);font-weight:400;font-size:clamp(24px,3vw,32px);line-height:1.25;margin:0 0 14px;color:var(--navy)}
+h2{font-family:var(--font-d);font-weight:400;font-size:clamp(20px,2.4vw,26px);margin:0 0 12px;color:var(--navy);text-align:center}
+.lead{font-size:16px;color:var(--mut);line-height:1.6;margin:0 0 20px;max-width:640px}
+.lead--center{margin-left:auto;margin-right:auto;text-align:center}
+.sub{font-size:14px;color:var(--mut);margin:0 0 28px;text-align:center}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 28px;
+  font-family:var(--font-d);font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;
+  text-decoration:none;border-radius:4px;border:1.5px solid transparent;box-sizing:border-box;
+  transition:background .15s,color .15s,border-color .15s;cursor:pointer;font:inherit}
+.btn--gold{background:var(--gold);color:#0A192F;border-color:var(--gold)}
+.btn--gold:hover{background:#d4b05e;border-color:#d4b05e;color:#0A192F}
+.btn--outline{background:#fff;color:var(--blue);border-color:var(--blue)}
+.btn--outline:hover{background:var(--blue);color:#fff}
+.btn--navy{background:var(--navy);color:#fff;border-color:var(--navy);min-width:140px}
+.btn--navy:hover{background:#132f4f}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0 0}
+.btn-row--center{justify-content:center}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:28px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:4px;padding:20px 18px}
+.sec--white .card{background:var(--bg)}
+.card h3{font-family:var(--font-d);font-weight:500;font-size:16px;margin:0 0 8px;color:var(--navy)}
+.card p{margin:0;font-size:14px;color:var(--mut);line-height:1.55}
+
+.features{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:14px}
+.features li{background:#fff;border:1px solid var(--bd);border-radius:4px;padding:18px 20px}
+.features strong{display:block;font-family:var(--font-d);font-weight:500;font-size:15px;color:var(--navy);margin-bottom:4px}
+.features span{font-size:14px;color:var(--mut);line-height:1.5}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px;counter-reset:step}
+@media (max-width:768px){.steps{grid-template-columns:1fr}}
+.step{background:#fff;border:1px solid var(--bd);border-radius:4px;padding:20px 18px}
+.step::before{counter-increment:step;content:counter(step);display:inline-flex;align-items:center;justify-content:center;
+  width:28px;height:28px;border-radius:4px;background:#EEF2F7;color:var(--mut);font-size:13px;font-weight:600;margin-bottom:12px}
+.step h3{font-family:var(--font-d);font-weight:500;font-size:15px;margin:0 0 6px}
+.step p{margin:0;font-size:14px;color:var(--mut)}
+
+/* OKVED module */
+.okved-box{
+  background:#fff;border:1px solid var(--bd);border-radius:8px;padding:20px 18px;
+  box-shadow:var(--sh);max-width:900px;margin:0 auto;
+}
+.okved-box__grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:640px){.okved-box__grid{grid-template-columns:1fr}}
+.okved-box select{
+  width:100%;font:inherit;font-size:14px;padding:12px 14px;border:1px solid var(--bd);
+  border-radius:8px;background:#fff;color:var(--tx);appearance:auto;
+}
+.okved-err{margin-top:12px;color:#dc2626;font-size:14px}
+.okved-err[hidden]{display:none}
+
+.m{background:#fff;border-radius:var(--r);box-shadow:var(--sh);padding:18px 20px;margin-bottom:12px;border:1px solid var(--bd);border-left:3px solid transparent}
+.m--fed{border-left-color:var(--fed)}.m--reg{border-left-color:var(--reg)}.m--any{border-left-color:#64748b}
+.m__tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.tag{font-size:11px;font-weight:600;letter-spacing:.02em;text-transform:uppercase;padding:3px 9px;border-radius:999px;background:#f1f5f9;color:#475569}
+.tag--fed{background:#ede9fe;color:#5b21b6}.tag--reg{background:#cffafe;color:#155e75}
+.tag--open{background:#d1fae5;color:#065f46}.tag--soon{background:#fef3c7;color:#92400e}
+.m h3{margin:0 0 10px;font-size:16px;line-height:1.4;font-weight:600;color:var(--navy)}
+.m__sum{display:inline-block;font-weight:700;color:#0D3156;background:#eef4fb;padding:5px 12px;border-radius:8px;font-size:14px;margin-bottom:10px}
+.m__src{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;border-top:1px solid var(--bd);padding-top:12px;font-size:12.5px;color:var(--mut)}
+.m__src a{color:var(--acc);text-decoration:none;font-weight:600}
+.sec-fold{background:#fff;border:1px solid var(--bd);border-radius:4px;margin-bottom:12px;overflow:hidden}
+.sec-fold>summary{list-style:none;cursor:pointer;padding:16px 44px 16px 18px;font-family:var(--font-d);font-size:15px;font-weight:500;color:var(--navy);position:relative}
+.sec-fold>summary::-webkit-details-marker{display:none}
+.sec-fold>summary::after{content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:18px;font-weight:300}
+.sec-fold[open]>summary{border-bottom:1px solid var(--bd);color:var(--gold)}
+.sec-fold[open]>summary::after{content:"−"}
+.sec-fold__body{padding:14px 16px 18px}
+.res-count{color:var(--mut);font-size:14px;margin:8px 0 16px;text-align:center}
+
+.faq{margin-top:28px;max-width:800px;margin-left:auto;margin-right:auto}
+.faq details{background:#fff;border:1px solid var(--bd);border-radius:4px;margin-bottom:10px;overflow:hidden}
+.faq summary{list-style:none;cursor:pointer;padding:16px 44px 16px 18px;font-family:var(--font-d);font-size:14.5px;font-weight:500;color:var(--navy);position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:18px;font-weight:300}
+.faq details[open] summary{color:var(--gold);border-bottom:1px solid var(--bd)}
+.faq details[open] summary::after{content:"−"}
+.faq-a{padding:14px 18px 18px;font-size:14px;color:var(--mut);line-height:1.6}
+.faq-a p{margin:0 0 8px}.faq-a p:last-child{margin:0}
+
+.cta-box{text-align:center;padding:40px 24px;background:var(--navy-deep);color:#fff;border-radius:4px}
+.cta-box h2{color:#fff;margin-bottom:10px}
+.cta-box p{color:rgba(255,255,255,.8);margin:0 auto 24px;max-width:480px}
+.m-foot{padding:20px 16px;background:var(--navy-deep);color:rgba(255,255,255,.55);font:12px/1.4 var(--font)}
+.m-foot__in{max-width:1100px;margin:0 auto}
+</style>
+    <link rel="stylesheet" href="/assets/css/konturbiz-redesign.css?v=20261020-hero">
+</head>
+<body data-entry="messenger">
+
+<section class="hero" aria-label="Регистрация ИП">
+  <div class="hero__box">
+    <img src="/m/ip-hero.webp" alt="" width="1200" height="400" decoding="async" fetchpriority="high">
+  </div>
+</section>
+
+<main>
+  <!-- Intro — не дублирует баннер -->
+  <section class="sec sec--white">
+    <div class="wrap">
+      <span class="eyebrow">Для партнёров Русского цифрового</span>
+      <h1>Бесплатная онлайн‑регистрация ИП за 3 дня</h1>
+      <ul class="features">
+        <li>
+          <strong>Подготовим за вас документы</strong>
+          <span>А ещё поможем выбрать ОКВЭД и систему налогообложения</span>
+        </li>
+        <li>
+          <strong>Бесплатно выпустим КЭП</strong>
+          <span>Для отправки документов в налоговую дистанционно</span>
+        </li>
+        <li>
+          <strong>Сэкономим вам до 5&nbsp;800&nbsp;₽</strong>
+          <span>Не нужно оплачивать госпошлину и электронную подпись</span>
+        </li>
+      </ul>
+      <div class="btn-row">
+        <a class="btn btn--gold" href="https://open.kontur.ru/business/registration/ip/phone?p=f76143&utm_source=kontur_partner&utm_medium=banner&utm_campaign=banner-5779-bank&utm_from=widget-price-referral.kontur.ru&utm_startpage=kontur.ru%2Fbank%2Fmalomu-biznesu-i-ip%2Fregistraciya-biznesa&utm_orderpage=kontur.ru%2Fbank%2Fmalomu-biznesu-i-ip%2Fregistraciya-biznesa" target="_blank" rel="noopener noreferrer">Зарегистрировать ИП</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--grey">
+    <div class="wrap">
+      <h2>О продукте</h2>
+      <p class="lead lead--center">Всё для открытия ИП — бесплатно в Контуре: без визита в налоговую и банк. Нужны скан паспорта, СНИЛС и ИНН. Сервис подготовит заявление по форме Р21001 и уведомление о переходе на УСН, ПСН или ОСНО.</p>
+      <p class="sub">Кому подходит: ИП на УСН, ПСН и ОСНО.</p>
+      <div class="btn-row btn-row--center">
+        <a class="btn btn--outline" href="https://open.kontur.ru/business/registration/ip/phone?p=f76143&utm_source=kontur_partner&utm_medium=banner&utm_campaign=banner-5779-bank&utm_from=widget-price-referral.kontur.ru&utm_startpage=kontur.ru%2Fbank%2Fmalomu-biznesu-i-ip%2Fregistraciya-biznesa&utm_orderpage=kontur.ru%2Fbank%2Fmalomu-biznesu-i-ip%2Fregistraciya-biznesa" target="_blank" rel="noopener noreferrer">Начать регистрацию</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OKVED module from grants -->
+  <section class="sec sec--white" id="okved-pick" aria-labelledby="okved-title">
+    <div class="wrap">
+      <h2 id="okved-title">Подобрать ОКВЭД и меры поддержки</h2>
+      <p class="lead lead--center">Выберите вид деятельности и регион — покажем подходящие меры господдержки из официальных каталогов. Пригодится и при выборе ОКВЭД для регистрации.</p>
+      <div class="okved-box">
+        <div class="okved-box__grid">
+          <select id="okved" aria-label="Вид деятельности">
+            <option value="">Вид деятельности (ОКВЭД)</option>
+          </select>
+          <select id="region" aria-label="Регион">
+            <option value="">Регион</option>
+          </select>
+        </div>
+        <div style="margin-top:14px">
+          <button type="button" id="okved-go" class="btn btn--navy">Подобрать</button>
+        </div>
+        <div class="okved-err" id="okved-err" hidden></div>
+      </div>
+      <div id="okved-res" hidden style="margin-top:28px;max-width:900px;margin-left:auto;margin-right:auto">
+        <p class="res-count" id="okved-count"></p>
+        <div id="okved-list"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--grey">
+    <div class="wrap">
+      <h2>Зарегистрируйте бизнес за 3 шага</h2>
+      <div class="steps">
+        <div class="step">
+          <h3>Заявка</h3>
+          <p>Оставьте контакты — сервис подготовит пакет документов.</p>
+        </div>
+        <div class="step">
+          <h3>КЭП и подпись</h3>
+          <p>Выпустим подпись для ФНС и отправим документы дистанционно.</p>
+        </div>
+        <div class="step">
+          <h3>Готово</h3>
+          <p>Обычно 3 рабочих дня. Выписка — в личном кабинете.</p>
+        </div>
+      </div>
+      <div class="btn-row btn-row--center" style="margin-top:28px">
+        <a class="btn btn--gold" href="https://open.kontur.ru/business/registration/ip/phone?p=f76143&utm_source=kontur_partner&utm_medium=banner&utm_campaign=banner-5779-bank&utm_from=widget-price-referral.kontur.ru&utm_startpage=kontur.ru%2Fbank%2Fmalomu-biznesu-i-ip%2Fregistraciya-biznesa&utm_orderpage=kontur.ru%2Fbank%2Fmalomu-biznesu-i-ip%2Fregistraciya-biznesa" target="_blank" rel="noopener noreferrer">Начать регистрацию</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--white">
+    <div class="wrap">
+      <h2>Вопросы и ответы</h2>
+      <div class="faq">
+        <details>
+          <summary>Кто может зарегистрировать бизнес через сервис?</summary>
+          <div class="faq-a"><p>Любой совершеннолетний гражданин России, кроме военнослужащих и государственных служащих.</p></div>
+        </details>
+        <details>
+          <summary>Какие документы понадобятся?</summary>
+          <div class="faq-a"><p>СНИЛС и ИНН. Заявление и уведомление о УСН, ПСН или ОСНО подготовит сервис и отправит в ФНС автоматически.</p></div>
+        </details>
+        <details>
+          <summary>Что такое коды ОКВЭД?</summary>
+          <div class="faq-a"><p>Общероссийский классификатор видов деятельности. Нужен один основной и любое число дополнительных. Коды можно изменить позже. Ниже на странице — подбор по ОКВЭД и региону.</p></div>
+        </details>
+        <details>
+          <summary>Каков размер госпошлины?</summary>
+          <div class="faq-a"><p>При личной подаче — до 5&nbsp;800&nbsp;₽. Через сервис госпошлину платить не нужно.</p></div>
+        </details>
+        <details>
+          <summary>У меня уже есть КЭП — подойдёт?</summary>
+          <div class="faq-a"><p>Для регистрации в ФНС нужна отдельная КЭП. Поможем оформить её онлайн на базе вашей подписи.</p></div>
+        </details>
+        <details>
+          <summary>Сколько ждать регистрации?</summary>
+          <div class="faq-a"><p>Как правило, 3 рабочих дня. Документы — на почту или в личном кабинете сервиса.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--grey">
+    <div class="wrap">
+      <div class="cta-box">
+        <h2>Давайте начнём регистрацию</h2>
+        <p>Бесплатно, онлайн, без госпошлины — для партнёров Русского цифрового.</p>
+        <a class="btn btn--gold" href="https://open.kontur.ru/business/registration/ip/phone?p=f76143&utm_source=kontur_partner&utm_medium=banner&utm_campaign=banner-5779-bank&utm_from=widget-price-referral.kontur.ru&utm_startpage=kontur.ru%2Fbank%2Fmalomu-biznesu-i-ip%2Fregistraciya-biznesa&utm_orderpage=kontur.ru%2Fbank%2Fmalomu-biznesu-i-ip%2Fregistraciya-biznesa" target="_blank" rel="noopener noreferrer">Зарегистрировать ИП</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="m-foot" role="contentinfo"><div class="m-foot__in"><span>© 2026 KONTURBIZ · регистрация ИП</span></div></div>
+
+<script>
+(function(){
+  "use strict";
+  var API = "/test-govsupport/proxy.php";
+  var PAGE = 12;
+  var $ = function(id){ return document.getElementById(id); };
+  var esc = function(v){ return String(v==null?"":v).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c];}); };
+  var fmtDate = function(iso){ var m=/^(\d{4})-(\d{2})-(\d{2})/.exec(String(iso||"")); return m?m[3]+"."+m[2]+"."+m[1]:""; };
+
+  function req(qs){
+    return fetch(API + qs, {headers:{"Accept":"application/json"}}).then(function(r){
+      return r.text().then(function(t){
+        var d=null; try{ d=JSON.parse(t); }catch(e){}
+        if(r.status===200 && d) return d;
+        throw new Error((d && d.error) || ("HTTP "+r.status));
+      });
+    });
+  }
+
+  function measureHtml(m){
+    var cls = m.level===1?"m--fed":(m.by==="any"?"m--any":"m--reg");
+    var tags = '<span class="tag">'+esc(m.kind)+'</span>';
+    tags += m.level===1 ? '<span class="tag tag--fed">Федеральная</span>' : '<span class="tag tag--reg">'+esc(m.region||m.levelName||"")+'</span>';
+    if(m.intake && m.intake.status==="open") tags += '<span class="tag tag--open">Приём до '+fmtDate(m.intake.to)+'</span>';
+    var amount = m.amount ? '<div class="m__sum">'+esc(m.amount)+'</div>' : '';
+    var url = m.url || m.sourceUrl || '';
+    return '<article class="m '+cls+'"><div class="m__tags">'+tags+'</div><h3>'+esc(m.title||m.name||"Мера")+'</h3>'+amount+
+      '<div class="m__src">'+(url?'<a href="'+esc(url)+'" target="_blank" rel="noopener nofollow">Условия в источнике →</a>':'')+'</div></article>';
+  }
+
+  function renderMeasures(d){
+    var list = d.measures || [];
+    var box = $("okved-list");
+    var res = $("okved-res");
+    res.hidden = false;
+    var c = d.counts || {};
+    $("okved-count").textContent = "Найдено " + (c.total != null ? c.total : list.length) + " мер";
+    var fed = list.filter(function(m){ return m.level===1 && m.by!=="any"; });
+    var reg = list.filter(function(m){ return m.level!==1 && m.by!=="any"; });
+    var any = list.filter(function(m){ return m.by==="any"; });
+    function fold(title, rows){
+      if(!rows.length) return "";
+      var body = rows.slice(0, PAGE).map(measureHtml).join("");
+      return '<details class="sec-fold"><summary>'+esc(title)+' · '+rows.length+'</summary><div class="sec-fold__body">'+body+'</div></details>';
+    }
+    box.innerHTML = fold("Федеральные", fed) + fold("Региональные", reg) + fold("Без отраслевых ограничений", any);
+    if(!list.length) box.innerHTML = '<p class="res-count">Под выбранные условия мер не найдено.</p>';
+  }
+
+  // load options
+  req("?action=options").then(function(d){
+    var ok = $("okved"), rg = $("region");
+    ok.innerHTML = '<option value="">Вид деятельности (ОКВЭД)</option>'+(d.okveds||[]).map(function(o){
+      return '<option value="'+esc(o.code)+'">'+esc(o.code+" — "+o.name)+'</option>';
+    }).join("");
+    rg.innerHTML = '<option value="">Регион</option>'+(d.regions||[]).map(function(r){
+      return '<option value="'+esc(r.code)+'">'+esc(r.name)+'</option>';
+    }).join("");
+  }).catch(function(){ $("okved-err").hidden=false; $("okved-err").textContent="Не удалось загрузить списки ОКВЭД."; });
+
+  $("okved-go").addEventListener("click", function(){
+    var o = $("okved").value, r = $("region").value;
+    var err = $("okved-err");
+    if(!o || !r){ err.hidden=false; err.textContent="Выберите вид деятельности и регион."; return; }
+    err.hidden = true;
+    var btn = $("okved-go"); btn.disabled = true; btn.textContent = "Подбираем…";
+    req("?action=search&okved="+encodeURIComponent(o)+"&region="+encodeURIComponent(r))
+      .then(renderMeasures)
+      .catch(function(e){ err.hidden=false; err.textContent="Не получилось: "+e.message; })
+      .finally(function(){ btn.disabled=false; btn.textContent="Подобрать"; });
+  });
+
+  try { if (typeof ym === 'function') ym(113120522, 'reachGoal', 'm_ip_open'); } catch(e) {}
+})();
+</script>
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){
+  m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();
+  for (var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}
+  k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+})(window, document,'script','https://mc.yandex.ru/metrika/tag.js','ym');
+ym(113120522,'init',{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/113120522" style="position:absolute;left:-9999px" alt=""/></div></noscript>
+</body>
+</html>

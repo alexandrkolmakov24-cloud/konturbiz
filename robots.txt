@@ -1,0 +1,36 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /config/
+Disallow: /data/
+Disallow: /knowledge-private/
+Disallow: /tmp/
+Disallow: /test/
+
+# AI/search crawlers: public site content is explicitly available.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+Sitemap: https://konturbiz.ru/sitemap.xml

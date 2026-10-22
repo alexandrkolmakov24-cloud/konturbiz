@@ -1,0 +1,83 @@
+/* assets/css/reset.css
+   Сброс стилей
+   ======================================== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-primary, 'Inter', sans-serif);
+    font-size: var(--text-base, 16px);
+    font-weight: var(--fw-normal, 400);
+    line-height: 1.6;
+    color: var(--color-text-primary, #091322);
+    background: var(--color-bg-light, #F6F8FB);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+address {
+    font-style: normal;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--color-soft-grey);
+    margin: var(--space-md) 0;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    padding: 0;
+}

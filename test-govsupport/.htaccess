@@ -1,0 +1,10 @@
+# Папка test-govsupport — изолированный тест.
+# Отключаем перехват WordPress и прочих CMS, разрешаем прямой доступ.
+<IfModule mod_rewrite.c>
+  RewriteEngine Off
+</IfModule>
+
+# Если CMS ставит свой обработчик — эта папка исключение
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "noindex, nofollow"
+</IfModule>

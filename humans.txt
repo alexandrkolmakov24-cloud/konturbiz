@@ -1,0 +1,17 @@
+/* TEAM */
+Brand / System Communications: KONTURBIZ
+Website: https://konturbiz.ru/
+Partner: Александр Колмаков
+Telegram: https://t.me/rcbbusiness
+
+/* SITE */
+Purpose: Цифровые решения для бизнеса — диагностика, лояльность, сайты, CRM, автоматизация, аналитика, брендинг.
+Language: Russian
+Ecosystem: https://xn--b1aladcb5ablegayu2a.xn--p1ai/
+Regional partner: https://rcagent.ru/
+
+/* STANDARDS */
+HTML5, CSS3, JSON-LD (schema.org)
+Sitemap: https://konturbiz.ru/sitemap.xml
+llms.txt: https://konturbiz.ru/llms.txt
+llms-full.txt: https://konturbiz.ru/llms-full.txt

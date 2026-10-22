@@ -1,0 +1,223 @@
+/* ============================================================
+   faq.css — единый FAQ KONTURBIZ v2.9
+   Эталон: /pages/diagnostics/
+   Подключать через konturbiz.css или отдельно на всех страницах с FAQ
+   ============================================================ */
+
+/* --- Контейнер --- */
+.faq-list,
+.accordion-list {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* --- Элемент (details) --- */
+.faq-item,
+.accordion {
+    border-bottom: 1px solid var(--color-outline, #D9E1E8);
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.faq-item + .faq-item,
+.accordion + .accordion {
+    margin-top: 0;
+}
+
+/* --- Вопрос (summary) --- */
+.faq-item > summary,
+.accordion > summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 18px 40px 18px 0;
+    font-family: var(--font-headers, 'Montserrat', sans-serif);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--color-text-primary, #0A192F);
+    position: relative;
+    transition: color 0.2s ease;
+    user-select: none;
+}
+
+.faq-item > summary::-webkit-details-marker,
+.accordion > summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item > summary::marker,
+.accordion > summary::marker {
+    content: '';
+    display: none;
+}
+
+/* Плюс / минус справа */
+.faq-item > summary::after,
+.accordion > summary::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-gold-bus, #C8A24A);
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1;
+    width: 28px;
+    text-align: center;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.faq-item[open] > summary,
+.accordion[open] > summary {
+    color: var(--color-gold-bus, #C8A24A);
+}
+
+.faq-item[open] > summary::after,
+.accordion[open] > summary::after {
+    content: '−';
+}
+
+.faq-item > summary:hover,
+.accordion > summary:hover {
+    color: var(--color-gold-bus, #C8A24A);
+}
+
+.faq-item > summary:focus-visible,
+.accordion > summary:focus-visible {
+    outline: 2px solid var(--color-secondary, #295D8A);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* --- Ответ --- */
+.faq-answer,
+.accordion__body {
+    padding: 0 40px 20px 0;
+    font-family: var(--font-primary, 'Inter', sans-serif);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-text-secondary, #52667A);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.faq-answer p,
+.accordion__body p {
+    margin: 0 0 10px;
+}
+
+.faq-answer p:last-child,
+.accordion__body p:last-child {
+    margin-bottom: 0;
+}
+
+.faq-answer ul,
+.accordion__body ul {
+    margin: 8px 0 0;
+    padding-left: 18px;
+}
+
+.faq-answer li,
+.accordion__body li {
+    margin-bottom: 4px;
+}
+
+/* --- Открытый FAQ без <details> (GSO: всегда видимый) --- */
+.faq-item:not(details) {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--color-outline, #D9E1E8);
+}
+
+.faq-item:not(details) h3 {
+    font-family: var(--font-headers, 'Montserrat', sans-serif);
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 0 8px;
+    color: var(--color-text-primary, #0A192F);
+    line-height: 1.4;
+}
+
+.faq-item:not(details) p {
+    font-size: 14px;
+    color: var(--color-text-secondary, #52667A);
+    margin: 0;
+    line-height: 1.55;
+}
+
+/* --- Тёмные секции --- */
+.section--dark .faq-item,
+.section--dark .accordion {
+    border-bottom-color: rgba(255, 255, 255, 0.12);
+}
+
+.section--dark .faq-item > summary,
+.section--dark .accordion > summary {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.section--dark .faq-item[open] > summary,
+.section--dark .accordion[open] > summary,
+.section--dark .faq-item > summary:hover,
+.section--dark .accordion > summary:hover {
+    color: var(--color-gold-bus, #C8A24A);
+}
+
+.section--dark .faq-answer,
+.section--dark .accordion__body {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.section--dark .faq-item:not(details) h3 {
+    color: #fff;
+}
+
+.section--dark .faq-item:not(details) p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* --- Мобильный --- */
+@media (max-width: 768px) {
+    .faq-item > summary,
+    .accordion > summary {
+        font-size: 15px;
+        padding: 16px 36px 16px 0;
+    }
+
+    .faq-answer,
+    .accordion__body {
+        font-size: 13px;
+        padding: 0 36px 16px 0;
+    }
+
+    .faq-item:not(details) h3 {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-item > summary,
+    .accordion > summary {
+        font-size: 14px;
+        padding: 14px 32px 14px 0;
+    }
+
+    .faq-item > summary::after,
+    .accordion > summary::after {
+        font-size: 18px;
+        width: 24px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .faq-item > summary,
+    .accordion > summary,
+    .faq-item > summary::after,
+    .accordion > summary::after {
+        transition: none;
+    }
+}

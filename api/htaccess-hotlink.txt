@@ -1,0 +1,6 @@
+# Добавить в .htaccess в корне сайта (или создать файл). Apache 2.2, mod_rewrite.
+# Закрывает подгрузку ваших js/css с чужих сайтов (хотлинк). Пустой Referer разрешён.
+RewriteEngine On
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https?://([a-z0-9-]+\.)?(xn--b1aladcb5ablegayu2a\.xn--p1ai|konturbiz\.ru)(/|$) [NC]
+RewriteRule ^(js|css)/ - [F,NC]

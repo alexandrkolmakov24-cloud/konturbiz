@@ -1,0 +1,486 @@
+/* KONTURBIZ site unified — hero 1200×400, FAQ, cards, mobile, motion
+   Connect on every public page: <link rel="stylesheet" href="/assets/css/kb-site-unified.css">
+*/
+:root {
+  --kb-navy: #01091C;
+  --kb-blue: #0D3156;
+  --kb-blue-2: #1E3A5F;
+  --kb-muted: #5A6B80;
+  --kb-line: #DCE3EE;
+  --kb-bg: #F4F6FA;
+  --kb-gold: #C9A24E;
+  --kb-gold-hover: #B8923F;
+  --kb-white: #FFFFFF;
+  --kb-r: 4px;
+  --kb-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --kb-header: 90px;
+}
+
+/* ---------- Buttons (hero gold / outline) ---------- */
+.button--gold,
+a.button--gold {
+  background: var(--kb-gold) !important;
+  color: var(--kb-navy) !important;
+  border: 1px solid var(--kb-gold) !important;
+  border-radius: var(--kb-r) !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  transition: background 0.25s var(--kb-ease), transform 0.25s var(--kb-ease), box-shadow 0.25s var(--kb-ease);
+}
+.button--gold:hover,
+a.button--gold:hover {
+  background: var(--kb-gold-hover) !important;
+  border-color: var(--kb-gold-hover) !important;
+  color: var(--kb-navy) !important;
+  box-shadow: 0 6px 18px rgba(201, 162, 78, 0.35);
+  transform: translateY(-1px);
+}
+.button--blue,
+a.button--blue {
+  background: var(--kb-blue) !important;
+  color: #fff !important;
+  border: 1px solid var(--kb-blue) !important;
+  border-radius: var(--kb-r) !important;
+  font-weight: 600 !important;
+  transition: background 0.25s var(--kb-ease), transform 0.25s var(--kb-ease);
+}
+.button--blue:hover {
+  background: #0a2744 !important;
+  transform: translateY(-1px);
+}
+.button--outline-light,
+a.button--outline-light {
+  background: transparent !important;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.55) !important;
+  border-radius: var(--kb-r) !important;
+  transition: background 0.25s var(--kb-ease), border-color 0.25s var(--kb-ease);
+}
+.button--outline-light:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: #fff !important;
+  color: #fff !important;
+}
+
+/* ---------- Hero shell 1200 × 400 ---------- */
+.kb-hero,
+.page-hero,
+section.hero {
+  position: relative !important;
+  height: 400px !important;
+  min-height: 400px !important;
+  max-height: 400px !important;
+  overflow: hidden !important;
+  background: var(--kb-navy) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.kb-hero__inner {
+  position: relative;
+  height: 400px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.kb-hero__grad {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(1, 9, 28, 0.88) 0%,
+    rgba(1, 9, 28, 0.65) 28%,
+    rgba(1, 9, 28, 0.35) 48%,
+    transparent 62%
+  );
+}
+.kb-hero__bg,
+.kb-hero__bg img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  z-index: 0;
+}
+.kb-hero .container {
+  position: relative;
+  z-index: 2;
+  height: 400px;
+  display: flex;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+.kb-hero__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 36px;
+  padding-bottom: 32px;
+  max-width: 560px;
+  height: 100%;
+  box-sizing: border-box;
+  color: #fff;
+}
+/* Typography = main page */
+.kb-hero .eyebrow,
+.kb-hero__content .eyebrow,
+.page-hero .eyebrow {
+  font-family: Montserrat, Inter, system-ui, sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 12px !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: var(--kb-gold) !important;
+  margin: 0 0 10px !important;
+}
+.kb-hero h1,
+.kb-hero__content h1,
+.page-hero h1,
+section.hero h1 {
+  font-family: Montserrat, Inter, system-ui, sans-serif !important;
+  font-weight: 300 !important;
+  font-size: clamp(26px, 3.2vw, 40px) !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.02em !important;
+  color: #fff !important;
+  margin: 0 0 12px !important;
+}
+.kb-hero .lead,
+.kb-hero__content .lead,
+.page-hero .lead,
+section.hero .lead {
+  font-family: Inter, system-ui, sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 16px !important;
+  line-height: 1.55 !important;
+  color: rgba(255, 255, 255, 0.82) !important;
+  margin: 0 !important;
+  max-width: 42ch;
+}
+.kb-hero .button-group,
+.kb-hero__actions {
+  margin-top: auto !important;
+  padding-top: 18px !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+}
+
+/* Breadcrumbs in hero */
+.kb-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0 0 12px;
+  font-family: Inter, system-ui, sans-serif;
+  font-weight: 400;
+}
+.kb-breadcrumb a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.kb-breadcrumb a:hover {
+  color: #fff;
+}
+.kb-breadcrumb span[aria-current="page"] {
+  color: rgba(255, 255, 255, 0.9);
+}
+.kb-breadcrumb .sep {
+  opacity: 0.45;
+  user-select: none;
+}
+
+/* ---------- Section titles centered ---------- */
+.kb-section h2,
+main .section h2,
+main section > .container > h2 {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 36rem;
+}
+.kb-section .section-lead,
+.kb-section > .container > p.lead {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* ---------- FAQ unified ---------- */
+.faq-list {
+  max-width: 800px;
+  margin: 20px auto 0;
+}
+.faq-item {
+  border: 1px solid var(--kb-line);
+  border-radius: var(--kb-r);
+  margin-bottom: 10px;
+  background: var(--kb-white);
+  transition: box-shadow 0.28s var(--kb-ease), border-color 0.28s var(--kb-ease);
+}
+.faq-item[open] {
+  border-color: var(--kb-blue);
+  box-shadow: 0 6px 20px rgba(13, 49, 86, 0.08);
+}
+.faq-item summary {
+  cursor: pointer;
+  padding: 14px 40px 14px 16px;
+  font-weight: 600;
+  color: var(--kb-blue);
+  font-size: 15px;
+  list-style: none;
+  position: relative;
+  font-family: Montserrat, Inter, sans-serif;
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--kb-blue);
+}
+.faq-item[open] summary::after {
+  content: "−";
+}
+.faq-answer {
+  padding: 0 16px 14px;
+  color: var(--kb-muted);
+  font-size: 14px;
+  line-height: 1.65;
+  animation: kbFadeUp 0.3s var(--kb-ease);
+}
+.faq-answer p {
+  margin: 0 0 8px;
+}
+
+/* ---------- Cards motion ---------- */
+.kb-card,
+.tariff-card,
+.card:not(.card--dark) {
+  transition: transform 0.28s var(--kb-ease), box-shadow 0.28s var(--kb-ease), border-color 0.28s var(--kb-ease);
+}
+.kb-card:hover,
+.tariff-card:hover,
+.card:not(.card--dark):hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(13, 49, 86, 0.1);
+}
+.kb-card {
+  background: #fff;
+  border: 1px solid var(--kb-line);
+  border-radius: var(--kb-r);
+  padding: 18px 16px;
+}
+
+/* ---------- Widget shell (no service notes) ---------- */
+.kb-widget-box,
+.sign-widget {
+  background: #fff;
+  border: 1px solid var(--kb-line);
+  border-radius: 8px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 24px rgba(13, 49, 86, 0.06);
+  max-width: 720px;
+  margin: 0 auto;
+}
+.kb-widget-box h2,
+.sign-widget h2 {
+  text-align: center;
+  margin: 0 0 8px;
+  color: var(--kb-blue);
+  font-weight: 600;
+  font-size: 22px;
+}
+.kb-widget-box > p,
+.sign-widget__lead {
+  text-align: center;
+  color: var(--kb-muted);
+  font-size: 15px;
+  margin: 0 0 20px;
+}
+#skb-order-widget-root {
+  min-height: 240px;
+}
+
+/* ---------- AEO answer ---------- */
+.aeo-answer {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #0a192f;
+  padding: 20px 24px;
+  background: #f8f9fa;
+  border-left: 4px solid var(--kb-gold);
+  border-radius: 0 8px 8px 0;
+  margin: 0 auto 16px;
+  max-width: 48rem;
+}
+
+/* ---------- Mobile: full hero image then text ---------- */
+@media (max-width: 900px) {
+  .kb-hero,
+  .page-hero,
+  section.hero {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    display: block !important;
+    overflow: visible !important;
+  }
+  .kb-hero__inner {
+    height: auto;
+  }
+  .kb-hero__bg,
+  .kb-hero__bg img {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 180px;
+    max-height: 240px;
+    object-fit: cover !important;
+    object-position: right center !important;
+  }
+  /* when bg is pseudo / empty visual — use padding-bottom image area via ::before on pages that use it */
+  .kb-hero__grad {
+    display: none !important;
+  }
+  .kb-hero .container {
+    height: auto !important;
+    padding: 24px 16px 28px !important;
+    background: var(--kb-navy) !important;
+    display: block !important;
+  }
+  .kb-hero__content {
+    max-width: none !important;
+    height: auto !important;
+    padding: 0 !important;
+  }
+  .kb-hero .lead {
+    max-width: none !important;
+    margin-bottom: 16px !important;
+  }
+  .kb-hero .button-group {
+    margin-top: 0 !important;
+  }
+  .kb-breadcrumb {
+    margin-bottom: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .kb-card:hover,
+  .card:hover {
+    transform: none !important;
+  }
+}
+
+@keyframes kbFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+/* ---------- Mobile hero: full image, NO darkening (rcbiz & partners) ---------- */
+@media (max-width: 768px) {
+  .kb-hero,
+  .page-hero,
+  section.hero {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    display: flex !important;
+    flex-direction: column !important;
+    background: #01091C !important;
+  }
+  .page-hero__media,
+  .kb-hero__media {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 3 / 1 !important;
+    order: 1 !important;
+    background: transparent !important;
+  }
+  .page-hero__media::before,
+  .page-hero__media::after,
+  .kb-hero__media::before,
+  .kb-hero__media::after {
+    display: none !important;
+    content: none !important;
+    opacity: 0 !important;
+  }
+  .page-hero__media img,
+  .page-hero__media picture,
+  .page-hero__media picture img,
+  .kb-hero__media img {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    display: block !important;
+    opacity: 1 !important;
+    filter: none !important;
+  }
+  .page-hero__overlay,
+  .kb-hero__overlay,
+  .page-hero .hero__overlay {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    background: none !important;
+  }
+  .page-hero__shell,
+  .kb-hero__shell {
+    position: relative !important;
+    order: 2 !important;
+    width: 100% !important;
+    height: auto !important;
+    background: #01091C !important;
+  }
+  .page-hero__body,
+  .kb-hero__body {
+    position: relative !important;
+    background: #01091C !important;
+    padding: 20px 16px 28px !important;
+    z-index: 2 !important;
+  }
+  .page-hero h1,
+  .kb-hero h1 {
+    color: #fff !important;
+    font-size: 22px !important;
+    font-weight: 300 !important;
+  }
+  .page-hero .lead {
+    color: rgba(255,255,255,.78) !important;
+  }
+}

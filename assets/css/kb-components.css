@@ -1,0 +1,129 @@
+/* KONTURBIZ shared component primitives.
+   Opt in with explicit .kb-* classes; no legacy selectors are overridden here. */
+
+.kb-container {
+  width: min(var(--kb-container-max, 75rem), calc(100% - 2 * var(--kb-container-gutter, 1.5rem)));
+  margin-inline: auto;
+}
+
+.kb-skip-link { position: fixed; z-index: var(--kb-layer-dialog, 400); top: .5rem; left: .5rem; padding: .75rem 1rem; transform: translateY(-160%); border-radius: var(--kb-radius-control, 10px); background: var(--kb-color-surface, #fff); color: var(--kb-color-ink, #112b4a); box-shadow: 0 4px 18px rgba(1,9,28,.22); }
+.kb-skip-link:focus { transform: translateY(0); }
+
+.kb-section { padding-block: clamp(3.25rem, 6vw, 5rem); }
+.kb-section__heading { max-width: 20ch; margin: 0 auto var(--kb-space-4, 1rem); text-align: center; }
+.kb-section__lead { max-width: 64ch; margin: 0 auto var(--kb-space-8, 2rem); color: var(--kb-color-text-muted, #52667a); text-align: center; }
+
+.kb-cards { display: grid; align-items: stretch; gap: clamp(.875rem, 2vw, 1.25rem); margin: 0; padding: 0; list-style: none; }
+.kb-cards--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.kb-cards--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.kb-cards--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.kb-cards--5 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+.kb-cards--5 > .kb-card { grid-column: span 4; }
+.kb-cards--5 > .kb-card:nth-child(4), .kb-cards--5 > .kb-card:nth-child(5) { grid-column: span 6; }
+.kb-cards--7 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+.kb-cards--7 > .kb-card { grid-column: span 3; }
+.kb-cards--7 > .kb-card:nth-child(n+5) { grid-column: span 4; }
+
+.kb-button, .kb-btn {
+  --_button-bg: transparent;
+  --_button-color: var(--kb-color-ink, #112b4a);
+  --_button-border: var(--kb-color-border, #d9e1e8);
+  position: relative;
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  box-sizing: border-box;
+  padding: .75rem 1.25rem;
+  border: 1px solid var(--_button-border);
+  border-radius: var(--kb-radius-control, 10px);
+  background: var(--_button-bg);
+  color: var(--_button-color);
+  font: 600 1rem/1.25 var(--kb-font-body, Inter, sans-serif);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color var(--kb-motion-fast, 160ms) ease, background-color var(--kb-motion-fast, 160ms) ease, border-color var(--kb-motion-fast, 160ms) ease, box-shadow var(--kb-motion-fast, 160ms) ease, transform var(--kb-motion-fast, 160ms) ease;
+}
+.kb-button--primary, .kb-btn--gold { --_button-bg: var(--kb-color-gold, #c8a24a); --_button-color: var(--kb-color-navy, #01091c); --_button-border: var(--kb-color-gold, #c8a24a); }
+.kb-button--secondary { --_button-bg: var(--kb-color-surface, #fff); }
+.kb-button--outline-light, .kb-btn--ghost { --_button-color: #fff; --_button-border: rgba(255,255,255,.48); }
+.kb-button--text { min-height: 44px; padding-inline: .25rem; border-color: transparent; text-decoration: underline; text-underline-offset: .18em; }
+.kb-button:hover:not(:disabled), .kb-btn:hover:not(:disabled) { border-color: var(--kb-color-gold, #c8a24a); box-shadow: 0 6px 18px rgba(13,35,59,.12); transform: translateY(-1px); }
+.kb-button:active:not(:disabled), .kb-btn:active:not(:disabled) { transform: translateY(0); }
+.kb-button:focus-visible, .kb-btn:focus-visible { outline: 3px solid rgba(200,162,74,.65); outline-offset: 3px; }
+.kb-button:disabled, .kb-btn:disabled, .kb-button[aria-disabled="true"], .kb-btn[aria-disabled="true"] { opacity: .55; cursor: not-allowed; box-shadow: none; transform: none; }
+.kb-button[aria-busy="true"], .kb-btn[aria-busy="true"] { cursor: progress; }
+
+.kb-card {
+  box-sizing: border-box;
+  min-width: 0;
+  padding: clamp(1.125rem, 2.4vw, 1.75rem);
+  border: 1px solid var(--kb-color-border, #d9e1e8);
+  border-radius: var(--kb-radius-card, 14px);
+  background: var(--kb-color-surface, #fff);
+  box-shadow: var(--kb-shadow-card, 0 4px 16px rgba(13,35,59,.045));
+  transition: transform var(--kb-motion-base, 220ms) var(--kb-ease-standard, ease), border-color var(--kb-motion-base, 220ms) ease, box-shadow var(--kb-motion-base, 220ms) ease;
+}
+.kb-card--service, .kb-card--solution, .kb-card--product, .kb-card--feature { display: flex; flex-direction: column; }
+.kb-card--step { position: relative; }
+.kb-card--case { overflow: hidden; }
+.kb-card--article { display: grid; grid-template-rows: auto 1fr auto; }
+.kb-card:focus-within { border-color: rgba(200,162,74,.62); box-shadow: var(--kb-shadow-card-hover, 0 12px 28px rgba(13,35,59,.09)); }
+.kb-card__title { margin: 0 0 .625rem; color: var(--kb-color-ink, #112b4a); font: 600 1.125rem/1.35 var(--kb-font-heading, Montserrat, sans-serif); }
+.kb-card__body, .kb-card__text { color: var(--kb-color-text-muted, #52667a); }
+.kb-card__action, .kb-card__link { align-self: flex-start; margin-top: auto; }
+
+.kb-badge {
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 1.75rem;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: .25rem .625rem;
+  border: 1px solid rgba(200,162,74,.22);
+  border-radius: 999px;
+  background: rgba(200,162,74,.1);
+  color: var(--kb-color-gold-text, #956a0a);
+  font: 700 var(--kb-text-xs, .75rem)/1.2 var(--kb-font-body, Inter, sans-serif);
+  letter-spacing: .06em;
+}
+
+.kb-faq { display: grid; gap: .75rem; }
+.kb-faq details { overflow: clip; border: 1px solid var(--kb-color-border, #d9e1e8); border-radius: var(--kb-radius-card, 14px); background: var(--kb-color-surface, #fff); }
+.kb-faq summary { display: flex; min-height: 60px; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 1.25rem; color: var(--kb-color-ink, #112b4a); font-weight: 600; cursor: pointer; list-style: none; }
+.kb-faq summary::-webkit-details-marker { display: none; }
+.kb-faq summary::after { content: "+"; display: grid; width: 1.75rem; height: 1.75rem; flex: 0 0 auto; place-items: center; border-radius: 50%; background: rgba(200,162,74,.14); color: var(--kb-color-gold-text, #956a0a); }
+.kb-faq details[open] > summary::after { content: "−"; }
+.kb-faq summary:focus-visible { outline: 3px solid rgba(200,162,74,.65); outline-offset: -3px; }
+.kb-faq__answer, .kb-faq__body { padding: 0 1.25rem 1.25rem; color: var(--kb-color-text-muted, #52667a); line-height: var(--kb-leading-normal, 1.6); }
+
+@media (hover: hover) and (pointer: fine) {
+  .kb-button:hover:not(:disabled), .kb-btn:hover:not(:disabled), .kb-card:hover { border-color: var(--kb-color-gold, #c8a24a); box-shadow: var(--kb-shadow-card-hover, 0 12px 28px rgba(13,35,59,.09)); transform: translateY(-2px); }
+  .kb-button--primary::after, .kb-btn--gold::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,.34) 48%, transparent 66%); opacity: 0; transform: translateX(-35%); pointer-events: none; }
+  .kb-button--primary:hover::after, .kb-btn--gold:hover::after { opacity: 1; transform: translateX(35%); transition: opacity 120ms ease, transform 480ms ease; }
+}
+
+@media (max-width: 960px) {
+  .kb-cards--3, .kb-cards--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .kb-cards--5, .kb-cards--7 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .kb-cards--5 > .kb-card, .kb-cards--5 > .kb-card:nth-child(4), .kb-cards--5 > .kb-card:nth-child(5),
+  .kb-cards--7 > .kb-card, .kb-cards--7 > .kb-card:nth-child(n) { grid-column: auto; }
+}
+
+@media (max-width: 640px) {
+  .kb-button, .kb-btn { min-height: 48px; }
+  .kb-card { padding: 1.125rem; }
+  .kb-cards--2, .kb-cards--3, .kb-cards--4, .kb-cards--5, .kb-cards--7 { grid-template-columns: 1fr; max-width: 400px; margin-inline: auto; }
+  .kb-cards--5 > .kb-card, .kb-cards--5 > .kb-card:nth-child(4), .kb-cards--5 > .kb-card:nth-child(5),
+  .kb-cards--7 > .kb-card, .kb-cards--7 > .kb-card:nth-child(n) { grid-column: 1 / -1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kb-button, .kb-btn, .kb-card { transition-duration: .01ms; }
+  .kb-button:hover:not(:disabled), .kb-btn:hover:not(:disabled), .kb-card:hover { transform: none; }
+  .kb-button--primary::after, .kb-btn--gold::after { display: none; }
+}

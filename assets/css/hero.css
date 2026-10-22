@@ -1,0 +1,317 @@
+/* ============================================================
+   hero.css — ЕДИНЫЙ HERO KONTURBIZ (все страницы)
+   ------------------------------------------------------------
+   Коробка: 1200 × 400
+   Картинка: на всю ширину 1200 (3:1 → 100% 100%)
+   Две зоны по 600:
+     слева  — заголовок + до 2 кнопок (max-width ~560)
+     справа — правая половина картинки без затемнения
+   Типографика одинаковая на главной (.hero) и внутренних (.page-hero)
+   ============================================================ */
+
+:root {
+  --hero-h: 400px;
+  --hero-w: 1200px;
+  --hero-navy: #01091C;
+  --hero-col: 600px;
+  --hero-title-size: clamp(24px, 2.6vw, 32px);
+  --hero-lead-size: 14px;
+  --hero-eyebrow-size: 11px;
+}
+
+/* ---- Главная: картинка и градиент на .hero (вся высота, без щелей) ---- */
+.hero::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 100% !important;
+  max-width: var(--hero-w, 1200px) !important;
+  height: var(--hero-h, 400px) !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  background-color: var(--hero-navy) !important;
+  background-image: url("/images/hero.webp?v=20260926") !important;
+  background-repeat: no-repeat !important;
+  background-position: right center !important;
+  background-size: cover !important;
+}
+.hero::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 100% !important;
+  max-width: var(--hero-w, 1200px) !important;
+  height: var(--hero-h, 400px) !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: linear-gradient(
+    90deg,
+    #01091C 0%,
+    #01091C 34%,
+    rgba(1, 9, 28, 0.92) 44%,
+    rgba(1, 9, 28, 0.55) 54%,
+    rgba(1, 9, 28, 0.15) 64%,
+    transparent 72%
+  ) !important;
+}
+.hero > .container::before,
+.hero > .container::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Контент без подложки — только градиент ::after слева */
+.hero__grid,
+.hero__content,
+.hero__visual {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.hero__content {
+  position: relative !important;
+  z-index: 2 !important;
+  max-width: 560px !important;
+}
+.hero__grid {
+  position: relative !important;
+  z-index: 2 !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 560px) 1fr !important;
+  align-items: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* ---- Секция ---- */
+.hero,
+.page-hero {
+  position: relative !important;
+  width: 100% !important;
+  height: var(--hero-h) !important;
+  min-height: var(--hero-h) !important;
+  max-height: var(--hero-h) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background: var(--hero-navy) !important;
+  color: #fff !important;
+  box-sizing: border-box !important;
+}
+
+/* ---- Shell 1200 ---- */
+.hero .container,
+.page-hero .container,
+.page-hero__shell {
+  position: relative !important;
+  max-width: var(--hero-w) !important;
+  width: 100% !important;
+  height: var(--hero-h) !important;
+  min-height: var(--hero-h) !important;
+  max-height: var(--hero-h) !important;
+  margin: 0 auto !important;
+  padding: 0 40px !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  background: transparent !important;
+  background-image: none !important;
+  /* колонка: контент только слева, НЕ в ряд на всю ширину */
+  display: flex !important;
+  flex-direction: column !important;
+  flex-wrap: nowrap !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  gap: 0 !important;
+}
+
+/* Контент page-hero только в левой зоне (~600), вертикальный стек */
+.page-hero .container > * {
+  position: relative !important;
+  z-index: 2 !important;
+  max-width: 560px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  flex: 0 0 auto !important;
+}
+.page-hero .container > .button-group {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+}
+.page-hero .container > h1,
+.page-hero .container > .lead,
+.page-hero .container > .eyebrow {
+  display: block !important;
+}
+
+
+/* ---- Картинка на всю 1200×400 ---- */
+.hero .container::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  background-color: var(--hero-navy) !important;
+  background-image: url("/images/hero.webp?v=20260926") !important;
+  background-repeat: no-repeat !important;
+  background-position: right center !important;
+  background-size: cover !important;
+}
+
+/* Медиа — оболочка 1200×400 по центру (не на весь экран) */
+.page-hero__media {
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 100% !important;
+  max-width: var(--hero-w, 1200px) !important;
+  height: var(--hero-h, 400px) !important;
+  z-index: 0 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+  background: transparent !important;
+}
+.page-hero__media picture {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+.page-hero__media img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: right center !important;
+  display: block !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+/* ---- Градиент ТОЛЬКО слева, на всю высоту; справа картинка ---- */
+.hero .container::after,
+.page-hero__overlay,
+.page-hero .container::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  right: auto !important;
+  width: min(560px, 52%) !important;
+  max-width: 640px !important;
+  height: 100% !important;
+  transform: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: linear-gradient(
+    90deg,
+    #01091C 0%,
+    #01091C 55%,
+    rgba(1, 9, 28, 0.85) 78%,
+    rgba(1, 9, 28, 0.25) 92%,
+    transparent 100%
+  ) !important;
+}
+
+/* ---- Mobile: текст читаемый, без наслоения на картинку ---- */
+@media (max-width: 900px) {
+  .hero,
+  .page-hero {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+  .hero .container,
+  .page-hero .container,
+  .page-hero__shell {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 28px 16px 32px !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+  /* Картинка — фон секции, не отдельный блок поверх текста */
+  .page-hero__media {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    transform: none !important;
+    left: 0 !important;
+    z-index: 0 !important;
+  }
+  .page-hero__media img,
+  .page-hero__media picture {
+    object-position: center center !important;
+    opacity: 0.4 !important;
+  }
+  /* Сильное затемнение на всю площадь — текст не наслаивается */
+  .hero .container::after,
+  .page-hero__overlay,
+  .page-hero .container::after {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    transform: none !important;
+    left: 0 !important;
+    z-index: 1 !important;
+    background: linear-gradient(
+      180deg,
+      rgba(1, 9, 28, 0.88) 0%,
+      rgba(1, 9, 28, 0.92) 40%,
+      #01091C 70%,
+      #01091C 100%
+    ) !important;
+  }
+  .hero .container::before {
+    display: none !important;
+  }
+  .hero__grid {
+    grid-template-columns: 1fr !important;
+    height: auto !important;
+    padding: 16px 0 0 !important;
+  }
+  .hero__content h1,
+  .page-hero h1,
+  .page-hero__title {
+    font-size: 22px !important;
+  }
+  .page-hero .container > *,
+  .page-hero .container > h1,
+  .page-hero .container > .lead,
+  .page-hero .container > .eyebrow,
+  .page-hero .container > .button-group {
+    max-width: 100% !important;
+  }
+  .page-hero--no-media .page-hero__shell {
+    grid-template-columns: 1fr !important;
+  }
+}

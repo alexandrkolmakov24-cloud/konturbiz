@@ -1,0 +1,103 @@
+/* assets/css/theme.css
+   ГЛАВНАЯ СБОРКА ВСЕХ СТИЛЕЙ v2.9-PREMIUM
+   ======================================== */
+
+/* === 1. ТОКЕНЫ === */
+@import url('tokens.css');
+
+/* === 2. СБРОСЫ === */
+@import url('reset.css');
+
+/* === 3. ТИПОГРАФИКА === */
+@import url('typography.css');
+
+/* === 4. СЕТКА === */
+@import url('grid.css');
+
+/* === 5. КОМПОНЕНТЫ === */
+@import url('buttons.css');
+@import url('cards.css');
+@import url('forms.css');
+@import url('header.css');
+@import url('footer.css');
+
+/* === 6. ИКОНКИ === */
+@import url('icons.css');
+@import url('icons-collection.css');
+
+/* === 7. ДОСТУПНОСТЬ === */
+@import url('accessibility.css');
+
+/* === 8. АНИМАЦИИ === */
+@import url('animations.css');
+
+/* === 8b. PAGE HERO (единый на всех страницах) === */
+@import url('hero.css');
+
+/* === 9. УТИЛИТЫ === */
+@import url('utilities.css');
+
+/* ============================================================
+   ЗАЩИТА ОТ БЕЛОЙ ПОЛОСЫ ПОД ХЕДЕРОМ
+   ============================================================ */
+
+html {
+    background: var(--color-navy-dark, #01091C);
+}
+
+body {
+    margin: 0;
+    padding-top: var(--header-height, 90px);
+    background: var(--color-navy-dark, #01091C);
+}
+
+@media (max-width: 1024px) {
+    body {
+        padding-top: var(--header-height-tablet, 72px);
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: var(--header-height-mobile, 64px);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 56px;
+    }
+}
+
+/* === ОТСТУП ПОД ФИКСИРОВАННЫЙ ХЕДЕР ДЛЯ ОСНОВНОГО КОНТЕНТА === */
+main#main {
+    display: block;
+    /* padding-top уже задан на body, но для совместимости оставляем */
+}
+
+/* Светлые секции сами задают свой фон */
+.section,
+.problems,
+.solutions,
+.services,
+.cases,
+.knowledge,
+.faq,
+.contacts,
+.vector {
+    background: var(--color-surface, #FFFFFF);
+}
+
+.section--grey,
+.services.section--grey,
+.vector.section--grey,
+.faq.section--grey {
+    background: var(--color-bg-alt, #F4F7FA);
+}
+
+.section--dark,
+.diagnostic,
+.hero,
+.footer {
+    background: var(--color-navy-dark, #01091C);
+}

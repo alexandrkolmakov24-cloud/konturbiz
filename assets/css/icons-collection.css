@@ -1,0 +1,121 @@
+/* ============================================================
+   icons-collection.css — КОЛЛЕКЦИЯ ИКОНОК KONTURBIZ v2.9
+   Все иконки в виде CSS-классов для использования через спрайт
+   ============================================================ */
+
+/* === БАЗОВЫЕ ПЕРЕМЕННЫЕ === */
+:root {
+    --icon-size-xs: 16px;
+    --icon-size-sm: 20px;
+    --icon-size-md: 28px;
+    --icon-size-lg: 40px;
+    --icon-size-xl: 56px;
+    --icon-size-2xl: 72px;
+
+    --icon-color-default: var(--color-primary, #112B4A);
+    --icon-color-gold: var(--color-gold-bus, #C8A24A);
+    --icon-color-muted: var(--color-text-muted, #8A9BB3);
+    --icon-color-secondary: var(--color-secondary, #295D8A);
+}
+
+/* === БАЗОВЫЙ КЛАСС === */
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: var(--icon-size-md, 28px);
+    height: var(--icon-size-md, 28px);
+    line-height: 0;
+    color: var(--icon-color-default);
+    transition: all var(--transition-base, 0.3s ease);
+}
+
+.icon svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+    display: block;
+}
+
+/* === РАЗМЕРЫ === */
+.icon--xs { width: var(--icon-size-xs, 16px); height: var(--icon-size-xs, 16px); }
+.icon--sm { width: var(--icon-size-sm, 20px); height: var(--icon-size-sm, 20px); }
+.icon--md { width: var(--icon-size-md, 28px); height: var(--icon-size-md, 28px); }
+.icon--lg { width: var(--icon-size-lg, 40px); height: var(--icon-size-lg, 40px); }
+.icon--xl { width: var(--icon-size-xl, 56px); height: var(--icon-size-xl, 56px); }
+.icon--2xl { width: var(--icon-size-2xl, 72px); height: var(--icon-size-2xl, 72px); }
+
+/* === ЦВЕТА === */
+.icon--gold { color: var(--icon-color-gold, #C8A24A); }
+.icon--muted { color: var(--icon-color-muted, #8A9BB3); }
+.icon--secondary { color: var(--icon-color-secondary, #295D8A); }
+.icon--white { color: var(--color-on-primary, #FFFFFF); }
+.icon--dark { color: var(--color-navy-dark, #0A192F); }
+.icon--primary { color: var(--color-primary, #112B4A); }
+
+.icon:hover {
+    color: var(--color-gold-bus, #C8A24A);
+    transform: scale(1.1);
+}
+
+/* === ИКОНКИ В КАРТОЧКАХ === */
+.card .icon { color: var(--color-primary, #112B4A); transition: all var(--transition-base, 0.3s ease); }
+.card:hover .icon { color: var(--color-gold-bus, #C8A24A); transform: scale(1.1); }
+.card--dark .icon { color: var(--color-on-primary, #FFFFFF); }
+.card--dark:hover .icon { color: var(--color-gold-bus, #C8A24A); transform: scale(1.1); }
+
+/* === ИКОНКИ В КНОПКАХ === */
+.button .icon {
+    color: currentColor;
+    width: 20px;
+    height: 20px;
+}
+.button--gold .icon { color: var(--color-on-gold, #091322); }
+.button--primary .icon,
+.button--dark .icon { color: var(--color-on-primary, #FFFFFF); }
+
+/* === ИКОНКИ В ХЕДЕРЕ И ФУТЕРЕ === */
+.header .icon { color: var(--color-on-primary, #FFFFFF); }
+.header .icon:hover { color: var(--color-gold-bus, #C8A24A); }
+.footer .icon { color: rgba(255, 255, 255, 0.5); }
+.footer .icon:hover { color: var(--color-gold-bus, #C8A24A); }
+
+/* === ИКОНКИ В СПИСКАХ === */
+.list-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    color: var(--color-gold-bus, #C8A24A);
+}
+.list-icon--sm { width: 20px; height: 20px; }
+.list-icon--lg { width: 36px; height: 36px; }
+
+/* === АДАПТИВНОСТЬ === */
+@media (max-width: 768px) {
+    .icon--xl { width: 48px; height: 48px; }
+    .icon--lg { width: 36px; height: 36px; }
+    .icon--2xl { width: 56px; height: 56px; }
+}
+
+@media (max-width: 480px) {
+    .icon--xl { width: 40px; height: 40px; }
+    .icon--lg { width: 32px; height: 32px; }
+    .icon--md { width: 24px; height: 24px; }
+    .icon--sm { width: 18px; height: 18px; }
+    .icon--2xl { width: 48px; height: 48px; }
+}
+
+/* === PREFERS-REDUCED-MOTION === */
+@media (prefers-reduced-motion: reduce) {
+    .icon,
+    .icon:hover,
+    .card .icon,
+    .card:hover .icon {
+        transition-duration: 0.01ms !important;
+        transform: none !important;
+    }
+}

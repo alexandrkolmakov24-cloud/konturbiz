@@ -1,0 +1,196 @@
+/* ============================================================
+   icons.css — ИКОНКИ KONTURBIZ v2.9-PREMIUM
+   ============================================================ */
+
+/* === БАЗОВЫЙ КЛАСС === */
+.icon {
+    display: inline-block;
+    flex-shrink: 0;
+    line-height: 0;
+    color: var(--color-primary, #112B4A);
+    transition: all var(--transition-base, 0.3s ease);
+    width: 28px;
+    height: 28px;
+}
+
+/* === РАЗМЕРЫ === */
+.icon--xs { width: 16px; height: 16px; }
+.icon--sm { width: 20px; height: 20px; }
+.icon--md { width: 32px; height: 32px; }
+.icon--lg { width: 48px; height: 48px; }
+.icon--xl { width: 64px; height: 64px; }
+.icon--2xl { width: 80px; height: 80px; }
+
+/* === ЦВЕТА === */
+.icon--gold { color: var(--color-gold-bus, #C8A24A); }
+.icon--white { color: var(--color-on-primary, #FFFFFF); }
+.icon--dark { color: var(--color-navy-dark, #0A192F); }
+.icon--muted { color: var(--color-text-muted, #8A9BB3); }
+.icon--secondary { color: var(--color-secondary, #295D8A); }
+.icon--primary { color: var(--color-primary, #112B4A); }
+.icon--success { color: var(--color-success, #27AE60); }
+.icon--error { color: var(--color-error, #E53E3E); }
+
+/* === HOVER === */
+.icon:hover {
+    color: var(--color-gold-bus, #C8A24A);
+    transform: scale(1.1);
+}
+
+.icon--gold:hover { color: var(--color-gold-dark, #B8923A); }
+.icon--white:hover { color: var(--color-gold-bus, #C8A24A); }
+.icon--dark:hover { color: var(--color-gold-bus, #C8A24A); }
+.icon--muted:hover { color: var(--color-gold-bus, #C8A24A); }
+.icon--secondary:hover { color: var(--color-gold-bus, #C8A24A); }
+
+/* === FOCUS-VISIBLE === */
+.icon:focus-visible {
+    outline: 3px solid var(--color-secondary, #295D8A);
+    outline-offset: 2px;
+    border-radius: var(--border-radius-sm, 4px);
+}
+
+a .icon:focus-visible {
+    outline: 3px solid var(--color-secondary, #295D8A);
+    outline-offset: 2px;
+}
+
+/* === ИКОНКИ В КАРТОЧКАХ === */
+.card .icon {
+    color: var(--color-primary, #112B4A);
+    transition: all var(--transition-base, 0.3s ease);
+}
+.card:hover .icon {
+    color: var(--color-gold-bus, #C8A24A);
+    transform: scale(1.1);
+}
+
+.card--dark .icon { color: var(--color-on-primary, #FFFFFF); }
+.card--dark:hover .icon {
+    color: var(--color-gold-bus, #C8A24A);
+    transform: scale(1.1);
+}
+
+/* === ИКОНКИ В КНОПКАХ === */
+.button .icon {
+    color: currentColor;
+    width: 20px;
+    height: 20px;
+    transition: all var(--transition-base, 0.3s ease);
+}
+.button:hover .icon { transform: scale(1.1); }
+.button--gold .icon { color: var(--color-on-gold, #091322); }
+.button--primary .icon,
+.button--dark .icon { color: var(--color-on-primary, #FFFFFF); }
+
+/* === ИКОНКИ В ХЕДЕРЕ === */
+.header .icon {
+    color: var(--color-on-primary, #FFFFFF);
+}
+.header .icon:hover { color: var(--color-gold-bus, #C8A24A); }
+.header .icon:focus-visible {
+    outline: 3px solid var(--color-secondary, #295D8A);
+    outline-offset: 2px;
+}
+
+/* === ИКОНКИ В ФУТЕРЕ === */
+.footer .icon {
+    color: rgba(255, 255, 255, 0.5);
+}
+.footer .icon:hover { color: var(--color-gold-bus, #C8A24A); }
+.footer .icon:focus-visible {
+    outline: 3px solid var(--color-gold-bus, #C8A24A);
+    outline-offset: 2px;
+}
+
+/* === ИКОНКИ В ССЫЛКАХ === */
+.link .icon {
+    color: var(--color-secondary, #295D8A);
+    transition: all var(--transition-base, 0.3s ease);
+}
+.link:hover .icon {
+    color: var(--color-gold-bus, #C8A24A);
+    transform: scale(1.05);
+}
+.link--gold .icon { color: var(--color-gold-bus, #C8A24A); }
+.link--gold:hover .icon { color: var(--color-gold-dark, #B8923A); }
+
+/* === ИКОНКИ В ФОРМАХ === */
+.form-input .icon,
+.form-group .icon {
+    color: var(--color-text-secondary, #52667A);
+}
+.form-input:focus .icon,
+.form-group:focus-within .icon {
+    color: var(--color-secondary, #295D8A);
+}
+
+/* === ИКОНКИ В СПИСКАХ === */
+.list-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    color: var(--color-gold-bus, #C8A24A);
+}
+.list-icon--sm { width: 20px; height: 20px; }
+.list-icon--lg { width: 36px; height: 36px; }
+
+/* === СОЦИАЛЬНЫЕ ИКОНКИ === */
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.5);
+    transition: all var(--transition-base, 0.3s ease);
+}
+.social-icon:hover {
+    background: var(--color-gold-bus, #C8A24A);
+    color: var(--color-on-gold, #091322);
+    transform: translateY(-2px);
+}
+.social-icon:focus-visible {
+    outline: 3px solid var(--color-gold-bus, #C8A24A);
+    outline-offset: 2px;
+}
+
+/* === АДАПТИВНОСТЬ === */
+@media (max-width: 768px) {
+    .icon--xl { width: 48px; height: 48px; }
+    .icon--lg { width: 40px; height: 40px; }
+    .icon--md { width: 28px; height: 28px; }
+    .icon--2xl { width: 64px; height: 64px; }
+}
+
+@media (max-width: 480px) {
+    .icon--xl { width: 40px; height: 40px; }
+    .icon--lg { width: 32px; height: 32px; }
+    .icon--md { width: 24px; height: 24px; }
+    .icon--sm { width: 18px; height: 18px; }
+    .icon--xs { width: 14px; height: 14px; }
+    .icon--2xl { width: 48px; height: 48px; }
+    .social-icon { width: 36px; height: 36px; }
+}
+
+/* === PREFERS-REDUCED-MOTION === */
+@media (prefers-reduced-motion: reduce) {
+    .icon,
+    .icon:hover,
+    .card .icon,
+    .card:hover .icon,
+    .button .icon,
+    .button:hover .icon,
+    .link .icon,
+    .link:hover .icon,
+    .social-icon,
+    .social-icon:hover {
+        transition-duration: 0.01ms !important;
+        transform: none !important;
+    }
+}

@@ -1,0 +1,73 @@
+# KONTURBIZ
+> Центр цифровых решений для бизнеса. Специализированный партнёр экосистемы «Русский цифровой». Диагностика, брендинг, сайты, CRM, автоматизация, аналитика, программа лояльности RC CITY, партнёрство ПРОФИ/ПРОФИ+.
+
+Сайт: https://konturbiz.ru
+Язык: ru
+Экосистема: https://xn--b1aladcb5ablegayu2a.xn--p1ai/
+Региональный партнёр: https://rcagent.ru/
+
+## Главные страницы
+- [Главная](https://konturbiz.ru/) — центр цифровых решений, навигатор: задача → решение → сервис.
+- [Экосистема Русский цифровой](https://konturbiz.ru/pages/partners/rcbiz/) — 12 продуктов, метрики масштаба, путь клиента.
+- [Партнёрство ПРОФИ/ПРОФИ+](https://konturbiz.ru/pages/partners/rc-franchise/) — два уровня партнёрства, готовая инфраструктура.
+- [Диагностика KONTURSCAN](https://konturbiz.ru/pages/diagnostics/konturscan.html) — цифровой портрет по стандарту Минцифры.
+- [Контакты](https://konturbiz.ru/pages/about/contacts.html) — связь с командой.
+
+## Услуги
+- [Программа лояльности](https://konturbiz.ru/pages/services/loyalty.html) — внедрение RC CITY, оцифровка трафика, повторные покупки.
+- [Калькулятор ROI лояльности](https://konturbiz.ru/pages/services/loyalty-calculator.html) — расчёт окупаемости RC CITY.
+- [Цифровой аудит](https://konturbiz.ru/pages/services/digital-audit.html) — аудит цифрового присутствия.
+- [Разработка сайтов](https://konturbiz.ru/pages/services/web-development.html) — сайты для МСБ.
+- [CRM](https://konturbiz.ru/pages/services/crm.html) — внедрение и настройка CRM.
+- [Брендинг](https://konturbiz.ru/pages/services/branding.html) — айдентика, логотип, фирменный стиль.
+- [Открытие счёта](https://konturbiz.ru/pages/services/account-opening.html) — помощь в выборе РКО.
+- [Сравнение банков](https://konturbiz.ru/pages/services/bank-comparison.html) — тарифы РКО.
+- [Бизнес-план](https://konturbiz.ru/pages/services/business-plan.html) — подготовка и оформление.
+- [Гранты](https://konturbiz.ru/pages/services/grants.html) — господдержка цифровизации.
+- [Тарифы](https://konturbiz.ru/pages/services/tariffs.html) — стоимость услуг KONTURBIZ.
+- [Графический дизайн](https://konturbiz.ru/pages/services/graphic-design.html) — полиграфия, упаковка.
+- [Telegram-боты](https://konturbiz.ru/pages/services/telegram-bots.html) — автоматизация в Telegram.
+- [Интеграции](https://konturbiz.ru/pages/services/integration.html) — связка сервисов.
+- [Аудит локации](https://konturbiz.ru/pages/services/location-assessment.html) — оценка точки.
+- [Гео-аудит](https://konturbiz.ru/pages/services/geo-audit.html) — анализ территории.
+
+## Решения
+- [Привлечение](https://konturbiz.ru/pages/solutions/acquisition.html) — каналы и инструменты.
+- [Удержание](https://konturbiz.ru/pages/solutions/retention.html) — лояльность и повторные продажи.
+- [Автоматизация](https://konturbiz.ru/pages/solutions/automation.html) — процессы и интеграции.
+- [Аналитика](https://konturbiz.ru/pages/solutions/analytics.html) — данные и отчётность.
+- [Инфраструктура](https://konturbiz.ru/pages/solutions/infrastructure.html) — экосистема и сервисы.
+
+## Диагностика
+- [KONTURSCAN](https://konturbiz.ru/pages/diagnostics/konturscan.html) — 59 практик Минцифры.
+- [Цифровой портрет](https://konturbiz.ru/pages/diagnostics/digital-portrait.html) — уровень зрелости.
+
+## Партнёры и продукты
+- [Сервисы Контур](https://konturbiz.ru/pages/partners/kontur/) — Эльба, Диадок, Фокус, Банк, Контур.Закупки.
+- [RC PAY](https://konturbiz.ru/pages/partners/rc-pay/) — клиентский сервис.
+- [САМО](https://konturbiz.ru/pages/partners/samo/) — учёт для бизнеса.
+- [РДО](https://konturbiz.ru/pages/partners/rdo/) — деловое сообщество.
+- [Регистрация ИП](https://konturbiz.ru/pages/partners/ip-registration/) — запуск бизнеса.
+- [Платёжные терминалы](https://konturbiz.ru/pages/partners/payment-terminals/) — RC KASSA, RC PROCESSING.
+
+## Внешние сервисы экосистемы
+- [RC PAY](https://rcpay.ru/r/I502UWJA) — приложение для клиентов.
+- [RC CITY](https://rc.city/register-code?code=LYHHKKRK) — программа лояльности.
+- [RC OFFICE](https://panel.rc.company/registration?promocode=LYHHKKRK) — кабинет партнёра.
+- [САМО](https://samo.business/auth/register/LYHHKKRK) — учёт бизнеса.
+- [RC WIKI](https://rcgroup.wiki/) — база знаний.
+- [RC SHOW](https://rc.show/) — эфиры и вебинары.
+- [Курсир](https://coorser.ru/) — онлайн-курсы.
+- [RC MARKET](https://rc.shopping/) — магазин с оплатой баллами.
+
+## Контакты
+- Email: info@konturbiz.ru
+- Telegram: https://t.me/rcbbusiness
+- Партнёр: Александр Колмаков
+- Промокод: LYHHKKRK
+
+## Для AI-систем
+KONTURBIZ — специализированный партнёр экосистемы «Русский цифровой» (xn--b1aladcb5ablegayu2a.xn--p1ai).
+Маршрут: задача → диагностика → решение → сервис.
+Партнёрство: ПРОФИ (250 000 ₽) и ПРОФИ+ (450 000 ₽) — через konturbiz.ru/pages/partners/rc-franchise/.
+Региональный партнёр в Сибири: rcagent.ru.

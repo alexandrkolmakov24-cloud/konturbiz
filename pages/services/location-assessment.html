@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Как выбрать локацию для бизнеса — оценка точки | KONTURBIZ</title>
+    <meta name="description" content="Проверьте местоположение торговой точки перед арендой. Отчёт по 60+ параметрам: трафик, конкуренция, демография, цены на аренду. Срок — 3 рабочих дня.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://konturbiz.ru/pages/services/location-assessment.html">
+    <meta property="og:title" content="Как выбрать локацию для бизнеса — оценка точки | KONTURBIZ">
+    <meta property="og:description" content="Отчёт по 60+ параметрам локации: трафик, конкуренция, демография. Готов за 3 рабочих дня.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://konturbiz.ru/pages/services/location-assessment.html">
+    <meta property="og:image" content="https://konturbiz.ru/images/hero.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/konturbiz.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+    <style>
+    /* Hero standard (как /pages/knowledge/): 1200 shell, ~1:3, flush header,
+       слева градиент, справа 100% прозрачность, без кнопок в hero */
+    .page-hero {
+        position: relative;
+        width: 100%;
+        background: var(--color-navy-dark, #01091C);
+        color: #fff;
+        overflow: hidden;
+    }
+    .page-hero__shell {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+        aspect-ratio: 3 / 1;
+        min-height: 320px;
+        display: flex;
+        align-items: center;
+    }
+    .page-hero__media {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        overflow: hidden;
+    }
+    .page-hero__media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: right center;
+        opacity: 1;
+        display: block;
+    }
+    .page-hero__overlay {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(
+            90deg,
+            #01091C 0%,
+            rgba(1, 9, 28, 0.96) 28%,
+            rgba(1, 9, 28, 0.55) 48%,
+            rgba(1, 9, 28, 0.12) 62%,
+            transparent 72%
+        );
+        pointer-events: none;
+    }
+    .page-hero__body {
+        position: relative;
+        z-index: 2;
+        max-width: 560px;
+        padding: 48px 40px 52px;
+    }
+    .page-hero h1 {
+        margin: 0 0 14px;
+        font-family: var(--font-headers, Montserrat, sans-serif);
+        font-weight: 300;
+        font-size: clamp(30px, 4vw, 48px);
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        color: #fff;
+    }
+    .page-hero .lead {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.55;
+        color: rgba(255,255,255,0.78);
+        max-width: 36rem;
+    }
+
+    /* Problem block — air + cards + accordion */
+    .pain-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 40px;
+    }
+    .pain-card {
+        padding: 32px 28px;
+        border: 1px solid var(--color-outline, #D9E1E8);
+        border-radius: 4px;
+        background: #fff;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .pain-card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-md, 0 8px 24px rgba(10,25,47,0.08));
+        border-color: var(--color-outline-variant, #B9C5D0);
+    }
+    .pain-card .n {
+        display: block;
+        margin-bottom: 16px;
+        font-family: var(--font-mono, "JetBrains Mono", monospace);
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        color: var(--color-gold-text, #956A0A);
+    }
+    .pain-card h3 {
+        margin: 0 0 12px;
+        font-family: var(--font-headers, Montserrat, sans-serif);
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.3;
+        color: var(--color-text-primary, #112B4A);
+    }
+    .pain-card p {
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.6;
+        color: var(--color-text-secondary, #52667A);
+    }
+    .pain-insight {
+        margin-top: 28px;
+        padding: 28px 32px;
+        border-left: 3px solid var(--color-gold-bus, #C8A24A);
+        background: var(--color-platinum-bg, #F7F8FA);
+        border-radius: 0 4px 4px 0;
+    }
+    .pain-insight p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.55;
+        color: var(--color-text-primary, #112B4A);
+        font-weight: 500;
+    }
+
+    .check-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .check-list li {
+        position: relative;
+        padding: 12px 0 12px 28px;
+        border-bottom: 1px solid var(--color-outline, #D9E1E8);
+        font-size: 15px;
+        line-height: 1.5;
+        color: var(--color-text-secondary, #52667A);
+    }
+    .check-list li:last-child { border-bottom: 0; }
+    .check-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 18px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--color-gold-bus, #C8A24A);
+    }
+
+    /* Business process steps */
+    .process {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        counter-reset: proc;
+    }
+    .process li {
+        display: grid;
+        grid-template-columns: 56px 1fr;
+        gap: 20px;
+        padding: 28px 0;
+        border-bottom: 1px solid var(--color-outline, #D9E1E8);
+        align-items: start;
+        transition: background 0.2s ease;
+    }
+    .process li:last-child { border-bottom: 0; }
+    .process .n {
+        font-family: var(--font-mono, "JetBrains Mono", monospace);
+        font-size: 13px;
+        letter-spacing: 0.08em;
+        color: var(--color-gold-text, #956A0A);
+        padding-top: 4px;
+    }
+    .process h3 {
+        margin: 0 0 8px;
+        font-family: var(--font-headers, Montserrat, sans-serif);
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--color-text-primary, #112B4A);
+    }
+    .process p {
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.55;
+        color: var(--color-text-secondary, #52667A);
+        max-width: 40rem;
+    }
+
+    /* Sample report */
+    .sample-report {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        margin-top: 36px;
+        padding: 28px 32px;
+        border: 1px solid var(--color-outline, #D9E1E8);
+        border-radius: 4px;
+        background: #fff;
+    }
+    .sample-report h3 {
+        margin: 0 0 6px;
+        font-family: var(--font-headers, Montserrat, sans-serif);
+        font-size: 17px;
+        font-weight: 500;
+        color: var(--color-text-primary, #112B4A);
+    }
+    .sample-report p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.5;
+        color: var(--color-text-secondary, #52667A);
+        max-width: 28rem;
+    }
+
+    .price-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+    }
+    .price-table th,
+    .price-table td {
+        padding: 14px 16px;
+        text-align: left;
+        border-bottom: 1px solid var(--color-outline, #D9E1E8);
+    }
+    .price-table th {
+        font-family: var(--font-mono, "JetBrains Mono", monospace);
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--color-text-muted, #8A9BB3);
+        font-weight: 500;
+        background: var(--color-platinum-bg, #F7F8FA);
+    }
+    .price-table td { color: var(--color-text-primary, #112B4A); }
+    .price-table .price { font-weight: 600; white-space: nowrap; }
+    .price-table .disc {
+        color: var(--color-gold-text, #956A0A);
+        font-family: var(--font-mono, "JetBrains Mono", monospace);
+        font-size: 12px;
+    }
+    .price-table tr:hover td { background: rgba(200,162,74,0.04); }
+
+    .audience-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .audience-card {
+        padding: 24px;
+        border: 1px solid var(--color-outline, #D9E1E8);
+        border-radius: 4px;
+        background: #fff;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .audience-card:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-sm, 0 4px 12px rgba(10,25,47,0.06));
+    }
+    .audience-card h3 {
+        margin: 0 0 8px;
+        font-family: var(--font-headers, Montserrat, sans-serif);
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--color-text-primary, #112B4A);
+    }
+    .audience-card p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.5;
+        color: var(--color-text-secondary, #52667A);
+    }
+    .social-proof {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+        align-items: center;
+        margin-top: 24px;
+        padding-top: 20px;
+        border-top: 1px solid var(--color-outline, #D9E1E8);
+        font-size: 13px;
+        color: var(--color-text-muted, #8A9BB3);
+    }
+    .social-proof strong {
+        font-family: var(--font-mono, "JetBrains Mono", monospace);
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--color-text-secondary, #52667A);
+        font-weight: 500;
+    }
+
+    /* Accordion details in problem */
+    .pain-acc {
+        margin-top: 32px;
+    }
+    .pain-acc details {
+        border-bottom: 1px solid var(--color-outline, #D9E1E8);
+    }
+    .pain-acc summary {
+        list-style: none;
+        cursor: pointer;
+        padding: 18px 0;
+        font-family: var(--font-headers, Montserrat, sans-serif);
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--color-text-primary, #112B4A);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+    }
+    .pain-acc summary::-webkit-details-marker { display: none; }
+    .pain-acc summary::after {
+        content: "+";
+        font-family: var(--font-mono, "JetBrains Mono", monospace);
+        font-size: 14px;
+        color: var(--color-gold-text, #956A0A);
+        flex-shrink: 0;
+    }
+    .pain-acc details[open] summary::after { content: "−"; }
+    .pain-acc .acc-body {
+        padding: 0 0 20px;
+        font-size: 15px;
+        line-height: 1.6;
+        color: var(--color-text-secondary, #52667A);
+        max-width: 40rem;
+    }
+
+    @media (max-width: 768px) {
+        .page-hero__shell {
+            aspect-ratio: auto;
+            min-height: 0;
+            flex-direction: column;
+            align-items: stretch;
+        }
+        .page-hero__media {
+            position: relative;
+            height: 180px;
+        }
+        .page-hero__body { padding: 28px 20px 36px; }
+        .page-hero h1 { font-size: 28px; }
+        .pain-grid { grid-template-columns: 1fr; }
+        .audience-grid { grid-template-columns: 1fr; }
+        .price-table { font-size: 13px; }
+        .price-table th, .price-table td { padding: 12px 10px; }
+        .sample-report { flex-direction: column; align-items: flex-start; }
+        .process li { grid-template-columns: 40px 1fr; gap: 12px; }
+    }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Оценка локаций",
+      "description": "Отчёт по 60+ параметрам локации для торговых точек на основе геоданных и аналитики. Срок — 3 рабочих дня.",
+      "url": "https://konturbiz.ru/pages/services/location-assessment.html",
+      "provider": {
+        "@type": "Organization",
+        "name": "KONTURBIZ",
+        "url": "https://konturbiz.ru"
+      },
+      "areaServed": "RU",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "RUB",
+        "price": "4200",
+        "availability": "https://schema.org/InStock"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Пакеты отчётов по локации",
+        "itemListElement": [
+          { "@type": "Offer", "name": "1 отчёт", "price": "4200", "priceCurrency": "RUB" },
+          { "@type": "Offer", "name": "5 отчётов", "price": "12500", "priceCurrency": "RUB" },
+          { "@type": "Offer", "name": "10 отчётов", "price": "20000", "priceCurrency": "RUB" },
+          { "@type": "Offer", "name": "20 отчётов", "price": "30000", "priceCurrency": "RUB" },
+          { "@type": "Offer", "name": "50 отчётов", "price": "50000", "priceCurrency": "RUB" }
+        ]
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "KONTURBIZ", "item": "https://konturbiz.ru/" },
+        { "@type": "ListItem", "position": 2, "name": "Услуги", "item": "https://konturbiz.ru/pages/services/" },
+        { "@type": "ListItem", "position": 3, "name": "Оценка локаций", "item": "https://konturbiz.ru/pages/services/location-assessment.html" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Сколько времени готовится отчёт?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Отчёт строится на геоданных и аналитике и приходит на почту в течение 3 рабочих дней."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Нужно ли устанавливать программы?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет. Отчёт приходит на почту — без установки программ и передачи данных третьим лицам."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли сравнить несколько локаций?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. В пакете от 5 отчётов вы можете проверить несколько адресов и выбрать оптимальный."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какие данные используются?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Большие данные, включая информацию от операторов сотовой связи, открытые источники и собственные модели машинного обучения."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько стоит отчёт по локации?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 отчёт — 4 200 ₽. Пакеты от 5 отчётов снижают цену до 2 500–1 000 ₽ за отчёт."
+          }
+        }
+      ]
+    }
+    </script>
+    <link rel="stylesheet" href="/assets/css/konturbiz-redesign.css?v=20261020-hero">
+<meta property="og:site_name" content="KONTURBIZ">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://konturbiz.ru/images/hero.webp">
+</head>
+<body>
+    <a class="skip-to-content" href="#main">Перейти к содержанию</a>
+
+<header class="header" role="banner">
+    <div class="container header__inner">
+
+        <!-- LOGO -->
+        <a href="/" class="header__logo-link" aria-label="На главную страницу KONTURBIZ">
+            <img
+                src="/images/logolight.svg"
+                alt="KONTURBIZ"
+                width="160"
+                height="32"
+                decoding="async"
+            />
+        </a>
+
+        <!-- MAIN NAVIGATION -->
+        <nav class="header__nav" id="main-nav" aria-label="Основное меню">
+            <ul class="header__menu">
+
+                <!-- 1. РЕШЕНИЯ -->
+                <li class="dropdown">
+                    <a href="/pages/solutions/" class="header__nav-link">Решения</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/pages/solutions/" class="dropdown-link">Все решения</a></li>
+                        <li><a href="/pages/solutions/acquisition.html" class="dropdown-link">Привлечение клиентов</a></li>
+                        <li><a href="/pages/solutions/retention.html" class="dropdown-link">Удержание клиентов</a></li>
+                        <li><a href="/pages/solutions/automation.html" class="dropdown-link">Автоматизация бизнеса</a></li>
+                        <li><a href="/pages/solutions/analytics.html" class="dropdown-link">Управление и аналитика</a></li>
+                        <li><a href="/pages/solutions/infrastructure.html" class="dropdown-link">Цифровая инфраструктура</a></li>
+                        <li><a href="/pages/diagnostics/" class="dropdown-link">Диагностика</a></li>
+                    </ul>
+                </li>
+
+                <!-- 2. УСЛУГИ -->
+                <li class="dropdown">
+                    <a href="/pages/services/" class="header__nav-link">Услуги</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/pages/services/" class="dropdown-link">Все услуги</a></li>
+                        <li><a href="/pages/services/digital-audit.html" class="dropdown-link">Цифровой аудит</a></li>
+                        <li><a href="/pages/services/location-assessment.html" class="dropdown-link">Оценка локаций</a></li>
+                        <li><a href="/pages/services/branding.html" class="dropdown-link">Брендинг</a></li>
+                        <li><a href="/pages/services/graphic-design.html" class="dropdown-link">Графический дизайн</a></li>
+                        <li><a href="/pages/services/web-development.html" class="dropdown-link">Сайты</a></li>
+                        <li><a href="/pages/services/crm.html" class="dropdown-link">CRM</a></li>
+                        <li><a href="/pages/services/loyalty.html" class="dropdown-link">Программа лояльности</a></li>
+                        <li><a href="/pages/services/integration.html" class="dropdown-link">Интеграции</a></li>
+                        <li><a href="/pages/services/telegram-bots.html" class="dropdown-link">Telegram-боты</a></li>
+                    </ul>
+                </li>
+
+                <!-- 3. ПРОДУКТЫ (СКБ Контур + RC) -->
+                <li class="dropdown">
+                    <a href="/pages/partners/" class="header__nav-link">Продукты</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/pages/partners/" class="dropdown-link">Все продукты</a></li>
+                        <li><span class="dropdown-link dropdown-link--label" aria-hidden="true">СКБ Контур</span></li>
+                        <li><a href="/pages/partners/kontur/" class="dropdown-link">Продукты Контур</a></li>
+                        <li><a href="/pages/partners/kontur/elba/" class="dropdown-link">Контур.Эльба</a></li>
+                        <li><a href="/pages/partners/kontur/diadoc/" class="dropdown-link">Контур.Диадок</a></li>
+                        <li><a href="/pages/partners/kontur/focus/" class="dropdown-link">Контур.Фокус</a></li>
+                        <li><a href="/pages/partners/kontur/bank/" class="dropdown-link">Контур.Банк</a></li>
+                        <li><span class="dropdown-link dropdown-link--label" aria-hidden="true">RC</span></li>
+                        <li><a href="/pages/services/loyalty.html" class="dropdown-link">RC CITY</a></li>
+                        <li><a href="/pages/partners/rc-pay/" class="dropdown-link">RC PAY</a></li>
+                        <li><a href="/pages/partners/rc-franchise/" class="dropdown-link">Партнёрская программа RC</a></li>
+                        <li><a href="/pages/partners/samo/" class="dropdown-link">САМО</a></li>
+                        <li><a href="/pages/partners/rdo/" class="dropdown-link">Русское деловое общество</a></li>
+                    </ul>
+                </li>
+
+                <!-- 4. ЗНАНИЯ -->
+                <li class="dropdown">
+                    <a href="/pages/knowledge/" class="header__nav-link">Знания</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/pages/knowledge/" class="dropdown-link">Все материалы</a></li>
+                        <li><a href="/pages/knowledge/digitalization/" class="dropdown-link">Цифровизация</a></li>
+                        <li><a href="/pages/knowledge/branding/" class="dropdown-link">Брендинг</a></li>
+                        <li><a href="/pages/knowledge/automation/" class="dropdown-link">Автоматизация</a></li>
+                        <li><a href="/pages/knowledge/loyalty/" class="dropdown-link">Лояльность</a></li>
+                        <li><a href="/pages/knowledge/retail/" class="dropdown-link">Ритейл</a></li>
+                        <li><a href="/pages/knowledge/small-business/" class="dropdown-link">Малый бизнес</a></li>
+                        <li><a href="/pages/diagnostics/konturscan.html" class="dropdown-link">KONTUR SCAN</a></li>
+                    </ul>
+                </li>
+
+                <!-- 5. О КОМПАНИИ -->
+                <li class="dropdown">
+                    <a href="/pages/about/" class="header__nav-link">О компании</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/pages/about/" class="dropdown-link">О KONTURBIZ</a></li>
+                        <li><a href="/pages/about/team.html" class="dropdown-link">Команда</a></li>
+                        <li><a href="/pages/about/partners.html" class="dropdown-link">Партнёры</a></li>
+                        <li><a href="/pages/cases/" class="dropdown-link">Кейсы</a></li>
+                        <li><a href="/pages/about/contacts.html" class="dropdown-link">Контакты</a></li>
+                        <li><a href="/pages/about/legal.html" class="dropdown-link">Документы</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+
+            <!-- MOBILE CTA -->
+            <a href="/pages/diagnostics/konturscan.html" class="button--audit-mobile">
+                Пройти диагностику
+            </a>
+        </nav>
+
+        <!-- HEADER ACTIONS -->
+        <div class="header__actions">
+            <a href="/pages/diagnostics/konturscan.html" class="button button--gold">
+                Пройти диагностику
+            </a>
+            <button
+                class="burger-menu"
+                id="burger-menu"
+                aria-label="Открыть меню"
+                aria-expanded="false"
+                aria-controls="main-nav"
+                type="button"
+            >
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
+        </div>
+
+    </div>
+</header>
+
+    <main id="main">
+
+        <section class="page-hero" aria-labelledby="loc-h1">
+            <div class="page-hero__shell">
+                <div class="page-hero__media" aria-hidden="true">
+                    <img
+                        src="/images/location-assessment.webp"
+                        alt=""
+                        width="1200"
+                        height="400"
+                        fetchpriority="high"
+                        decoding="async"
+                    >
+                </div>
+                <div class="page-hero__overlay" aria-hidden="true"></div>
+                <div class="page-hero__body">
+                    <span class="eyebrow" style="color:#C8A24A;">KONTURBIZ / УСЛУГИ</span>
+                    <nav class="kb-breadcrumbs" aria-label="Хлебные крошки"><ol><li><a href="/">Главная</a></li><li><a href="/pages/services/">Услуги</a></li><li aria-current="page">Как выбрать правильную локацию для бизнеса?</li></ol></nav><h1 id="loc-h1">Как выбрать правильную<br>локацию для бизнеса?</h1>
+                    <p class="lead">Отчёт по 60+ параметрам: трафик, конкуренция, демография, аренда. Срок — 3 рабочих дня. Без выезда на объект.</p><div class="button-group page-hero__actions"><a class="button button--gold" href="/pages/services/loyalty.html">Смотреть решение</a><a class="button button--white-outline" href="/pages/about/contacts.html">Обсудить задачу</a></div>
+                </div>
+            </div>
+        </section>
+
+
+        
+        <section class="section section--light" style="padding-top:28px;padding-bottom:8px;" aria-label="Краткий ответ">
+            <div class="container">
+                <div class="answer-first" style="max-width:48rem;">
+                    <p style="margin:0;line-height:1.6;color:#112B4A;font-size:16px;">
+                        <strong>Оценка локации</strong> — проверка адреса по трафику, платёжеспособности района,
+                        конкурентам и инфраструктуре <strong>до подписания договора аренды</strong>.
+                        Ошибка в месте стоит не месяца аренды, а ремонта, закупок и зарплат за простой.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- VISUAL: map report preview -->
+        <section class="section" aria-label="Пример визуализации" style="padding-top:8px;">
+            <div class="container">
+                <figure class="media-slot media-slot--full" style="margin:0;">
+                    <img src="/images/loc-map-report.webp" alt="Пример интерфейса оценки локации: объекты социальной сферы и карта в радиусе 300 м" width="1200" height="600" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:4px;display:block;">
+                </figure>
+            </div>
+        </section>
+
+        <section class="section section--light" style="padding-top:32px;padding-bottom:8px;" aria-label="Действия">
+            <div class="container">
+                <div class="button-group">
+                    <a href="/pages/about/contacts.html?from=location-assessment" class="button button--gold" data-analytics="loc_cta_order">Обсудить оценку локации</a>
+                    <a href="#pricing" class="button button--gold-outline">Тарифы и пакеты</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--light" aria-labelledby="why-title">
+            <div class="container">
+                <header class="section__header">
+                    <span class="eyebrow">Проблема</span>
+                    <h2 id="why-title">Почему выбор помещения — самое дорогое решение в бизнесе</h2>
+                </header>
+
+                <div class="pain-grid">
+                    <article class="pain-card">
+                        <span class="n">01</span>
+                        <h3>Цена ошибки — не месяц аренды</h3>
+                        <p>
+                            Ошибка в локации стоит всего вложенного бюджета:
+                            ремонт, закупки, зарплата за первые месяцы простоя.
+                        </p>
+                    </article>
+                    <article class="pain-card">
+                        <span class="n">02</span>
+                        <h3>Решение «на глаз»</h3>
+                        <p>
+                            Понравилась вывеска, знакомый посоветовал улицу, риелтор сказал «тут людно».
+                            Трафик, платёжеспособность района и конкуренты в 500&nbsp;м — не проверяются.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="pain-insight">
+                    <p>Отчёт по локации переводит решение с интуиции на данные.</p>
+                </div>
+
+                <div class="pain-acc">
+                    <details open>
+                        <summary>Что обычно не проверяют до договора</summary>
+                        <div class="acc-body">
+                            Пешеходный и автомобильный поток в разное время суток, профиль жителей и работников района,
+                            плотность похожих точек, инфраструктуру и реальные ставки аренды рядом —
+                            всё это остаётся «на ощущениях», пока не появляется структурированный отчёт.
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Почему один удачный адрес не гарантирует второй</summary>
+                        <div class="acc-body">
+                            В каждой локации свой трафик, своя конкуренция и свой профиль населения.
+                            То, что сработало на первом месте, может провалиться на соседней улице —
+                            поэтому проверку имеет смысл делать перед каждой точкой, а не выборочно.
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Для кого риск особенно высок</summary>
+                        <div class="acc-body">
+                            Кофе с собой, аптека, фастфуд и другой бизнес с импульсным спросом:
+                            здесь локация решает почти всё, а ошибка на входе бьёт по всей экономике точки.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--platinum" aria-labelledby="report-title">
+            <div class="container">
+                <header class="section__header">
+                    <span class="eyebrow">Отчёт</span>
+                    <h2 id="report-title">Что даёт отчёт по локации</h2>
+                    <p class="section-lead">
+                        Указываете точку на карте — получаете структурированный отчёт
+                        по более чем 60 параметрам локации.
+                    </p>
+                </header>
+                <ul class="check-list">
+                    <li>Пешеходный и автомобильный трафик рядом с точкой в разное время суток</li>
+                    <li>Демография и покупательская способность населения в радиусе</li>
+                    <li>Тепловая карта конкурентов отрасли — сгущения и «белые пятна»</li>
+                    <li>Инфраструктура района: жильё, соцобъекты, новостройки, точки притяжения</li>
+                    <li>Актуальные цены на аренду и продажу коммерческих площадей рядом</li>
+                    <li>Прогноз результатов точки по отрасли на основе моделей машинного обучения</li>
+                </ul>
+                <p style="margin-top:24px;font-size:14px;color:var(--color-text-secondary,#52667A);max-width:40rem;">
+                    Отчёт строится на данных из открытых источников и операторов сотовой связи,
+                    моделях геоаналитики и отраслевых показателях. Результат приходит на почту в течение <strong>3 рабочих дней</strong>.
+                </p>
+                <div class="social-proof">
+                    <strong>Похожие данные используют</strong>
+                    <span>Т2</span>
+                    <span>Авито</span>
+                    <span>Сбербанк</span>
+                    <span>и другие игроки рынка</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--light" aria-labelledby="every-title">
+            <div class="container">
+                <header class="section__header">
+                    <span class="eyebrow">Принцип</span>
+                    <h2 id="every-title">Почему проверять нужно каждую точку — не выборочно</h2>
+                    <p class="section-lead">
+                        Один удачный опыт не гарантирует второго. В каждой локации свой трафик,
+                        своя конкуренция, свой профиль населения.
+                    </p>
+                </header>
+                <div class="card-grid card-grid--2">
+                    <article class="card">
+                        <h3>Экономия бюджета</h3>
+                        <p>Отказ от одной неудачной локации окупает сервис на годы вперёд.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Ускоряет решение</h3>
+                        <p>Не нужно ехать на объект и «щупать» район вручную.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Аргументы в переговорах</h3>
+                        <p>С цифрами в руках легче торговать арендную ставку.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Чек-лист для сети</h3>
+                        <p>Франчайзи и управляющие согласуют точки по единому стандарту, а не «на глазок».</p>
+                    </article>
+                </div>
+                <p style="margin-top:24px;font-size:15px;line-height:1.55;color:var(--color-text-secondary,#52667A);max-width:40rem;">
+                    Особенно критично для бизнеса с импульсным спросом — кофе с собой, аптека, фастфуд —
+                    где локация решает почти всё.
+                </p>
+            </div>
+        </section>
+
+        <section class="section section--platinum" aria-labelledby="how-title">
+            <div class="container">
+                <header class="section__header">
+                    <span class="eyebrow">Процесс</span>
+                    <h2 id="how-title">Как это работает</h2>
+                    <p class="section-lead">
+                        Это не самообслуживание и не «оплатили — получили PDF».
+                        Мы сопровождаем заявку как бизнес-процесс: от выбора адресов до договора и отчёта.
+                    </p>
+                </header>
+                <ol class="process">
+                    <li>
+                        <span class="n">01</span>
+                        <div>
+                            <h3>Локации и адреса</h3>
+                            <p>
+                                Вы выбираете интересующие адреса или зоны на карте —
+                                одну точку или несколько вариантов для сравнения.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="n">02</span>
+                        <div>
+                            <h3>Отрасль и задача</h3>
+                            <p>
+                                Указываете вид бизнеса и контекст: первая точка, расширение сети,
+                                франшиза или переговоры по аренде. От этого зависит модель оценки.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="n">03</span>
+                        <div>
+                            <h3>Заявка и договор</h3>
+                            <p>
+                                Напишите нам — поможем собрать заявку, уточним параметры отчёта
+                                и оформим договор. Без «просто пришлите 50&nbsp;000».
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="n">04</span>
+                        <div>
+                            <h3>Отчёт на почту</h3>
+                            <p>
+                                Готовый отчёт по согласованным локациям приходит на почту
+                                в течение 3 рабочих дней — с данными по трафику, конкуренции,
+                                демографии и потенциалу точки.
+                            </p>
+                        </div>
+                    </li>
+                </ol>
+
+                <div class="sample-report">
+                    <div>
+                        <h3>Пример отчёта</h3>
+                        <p>Посмотрите структуру и уровень детализации на образце PDF.</p>
+                    </div>
+                    <a
+                        href="/files/location-assessment-sample.pdf"
+                        class="button button--gold-outline"
+                        download
+                        data-analytics="loc_sample_pdf"
+                    >Скачать пример PDF</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--light" aria-labelledby="who-title">
+            <div class="container">
+                <header class="section__header">
+                    <span class="eyebrow">Для кого</span>
+                    <h2 id="who-title">Кому это особенно необходимо</h2>
+                </header>
+                <div class="audience-grid">
+                    <div class="audience-card">
+                        <h3>Открываете первую точку</h3>
+                        <p>Снижаете риск ошибиться с самого старта.</p>
+                    </div>
+                    <div class="audience-card">
+                        <h3>Расширяете сеть</h3>
+                        <p>Тиражируете успех, а не удачу.</p>
+                    </div>
+                    <div class="audience-card">
+                        <h3>Управляете франшизой</h3>
+                        <p>Согласовываете локации франчайзи по объективным данным.</p>
+                    </div>
+                    <div class="audience-card">
+                        <h3>Пересматриваете аренду</h3>
+                        <p>Получаете аргументы для переговоров с арендодателем.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="section section--light" id="params" aria-labelledby="params-title">
+            <div class="container">
+                <header class="section__header">
+                    <span class="eyebrow">60+ параметров</span>
+                    <h2 id="params-title">Какие показатели важны при выборе локации?</h2>
+                    <p class="section-lead">Ключевые группы метрик в отчёте. Полный перечень — в готовом PDF.</p>
+                </header>
+                <div class="table-wrap" style="overflow-x:auto;">
+                    <table class="compare-table" style="width:100%;border-collapse:collapse;font-size:14px;">
+                        <thead>
+                            <tr style="background:#0A192F;color:#fff;">
+                                <th style="padding:12px 14px;text-align:left;">Группа</th>
+                                <th style="padding:12px 14px;text-align:left;">Что смотрим</th>
+                                <th style="padding:12px 14px;text-align:left;">Зачем бизнесу</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom:1px solid #D9E1E8;"><td style="padding:10px 14px;">Трафик</td><td style="padding:10px 14px;">Пеший и авто, по времени суток</td><td style="padding:10px 14px;">Реальный поток, а не «тут людно»</td></tr>
+                            <tr style="border-bottom:1px solid #D9E1E8;background:#F7F8FA;"><td style="padding:10px 14px;">Демография</td><td style="padding:10px 14px;">Состав и платёжеспособность в радиусе</td><td style="padding:10px 14px;">Совпадение с ЦА</td></tr>
+                            <tr style="border-bottom:1px solid #D9E1E8;"><td style="padding:10px 14px;">Конкуренты</td><td style="padding:10px 14px;">Плотность и «белые пятна» отрасли</td><td style="padding:10px 14px;">Где перегрев, где ниша</td></tr>
+                            <tr style="border-bottom:1px solid #D9E1E8;background:#F7F8FA;"><td style="padding:10px 14px;">Инфраструктура</td><td style="padding:10px 14px;">Жильё, соцобъекты, точки притяжения</td><td style="padding:10px 14px;">Стабильный спрос рядом</td></tr>
+                            <tr style="border-bottom:1px solid #D9E1E8;"><td style="padding:10px 14px;">Недвижимость</td><td style="padding:10px 14px;">Ориентиры аренды и продажи</td><td style="padding:10px 14px;">Адекватность ставки</td></tr>
+                            <tr><td style="padding:10px 14px;">Прогноз</td><td style="padding:10px 14px;">Потенциал точки под вид бизнеса</td><td style="padding:10px 14px;">Решение до договора</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px;">
+                    <figure class="media-slot" style="margin:0;">
+                        <img src="/images/loc-params-heatmap.webp" alt="Карта конкурентов в радиусе оценки локации" width="600" height="400" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:4px;display:block;">
+                    </figure>
+                    <figure class="media-slot" style="margin:0;">
+                        <img src="/images/loc-report-pages.webp" alt="Интенсивность выручки по гексагонам — фрагмент аналитики локации" width="600" height="400" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:4px;display:block;">
+                    </figure>
+                </div>
+                <p style="margin-top:16px;font-size:14px;color:#52667A;">Отрасли: ритейл · HoReCa · услуги · пункты выдачи · клиники · салоны</p>
+            </div>
+        </section>
+
+        
+        <section class="section section--platinum" id="compare-tools" aria-labelledby="compare-title">
+            <div class="container">
+                <header class="section__header">
+                    <span class="eyebrow">Сравнение</span>
+                    <h2 id="compare-title">Отчёт KONTURBIZ и самостоятельный анализ</h2>
+                    <p class="section-lead">Бесплатные конструкторы полезны для обзора. Отчёт — когда нужно решение до аренды.</p>
+                </header>
+                <div class="table-wrap" style="overflow-x:auto;">
+                    <table style="width:100%;border-collapse:collapse;font-size:14px;">
+                        <thead>
+                            <tr style="background:#0A192F;color:#fff;">
+                                <th style="padding:12px 14px;text-align:left;">Критерий</th>
+                                <th style="padding:12px 14px;text-align:left;">Самостоятельно (карты, открытые данные)</th>
+                                <th style="padding:12px 14px;text-align:left;">Отчёт KONTURBIZ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom:1px solid #D9E1E8;"><td style="padding:10px 14px;">Срок</td><td style="padding:10px 14px;">Часы–дни на сбор</td><td style="padding:10px 14px;">До 3 рабочих дней</td></tr>
+                            <tr style="border-bottom:1px solid #D9E1E8;background:#fff;"><td style="padding:10px 14px;">Структура</td><td style="padding:10px 14px;">Разрозненные источники</td><td style="padding:10px 14px;">Единый отчёт 60+ параметров</td></tr>
+                            <tr style="border-bottom:1px solid #D9E1E8;"><td style="padding:10px 14px;">Отрасль</td><td style="padding:10px 14px;">Общая картина</td><td style="padding:10px 14px;">Учёт вида бизнеса</td></tr>
+                            <tr style="border-bottom:1px solid #D9E1E8;background:#fff;"><td style="padding:10px 14px;">Решение по аренде</td><td style="padding:10px 14px;">Нужна своя интерпретация</td><td style="padding:10px 14px;">Готово к решению «брать / не брать»</td></tr>
+                            <tr><td style="padding:10px 14px;">СберАналитика / карты</td><td style="padding:10px 14px;" colspan="2">Можно использовать для самостоятельного расчёта модулей.
+                                <a href="https://gis.sberanalytics.ru/configurator/" target="_blank" rel="noopener noreferrer">Конструктор СберАналитики</a> — не продукт KONTURBIZ.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--platinum" id="pricing" aria-labelledby="price-title">
+            <div class="container">
+
+                <figure class="media-slot media-slot--full" style="margin:0 0 28px;">
+                    <img src="/images/loc-pricing-context.webp" alt="Договор аренды против анализа локации: ставка выше рынка и слабый трафик на карте" width="1200" height="400" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:4px;display:block;">
+                </figure>
+
+                <header class="section__header">
+                    <span class="eyebrow">Тарифы</span>
+                    <h2 id="price-title">Пакеты отчётов</h2>
+                    <p class="section-lead">
+                        Чем больше локаций проверяете — тем ниже стоимость одного исследования.
+                    </p>
+                </header>
+                <div style="overflow-x:auto;">
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Пакет</th>
+                                <th>Цена</th>
+                                <th>За 1 отчёт</th>
+                                <th>Скидка</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1 отчёт</td>
+                                <td class="price">4 200 ₽</td>
+                                <td>4 200 ₽</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>5 отчётов</td>
+                                <td class="price">12 500 ₽</td>
+                                <td>2 500 ₽</td>
+                                <td class="disc">−41%</td>
+                            </tr>
+                            <tr>
+                                <td>10 отчётов</td>
+                                <td class="price">20 000 ₽</td>
+                                <td>2 000 ₽</td>
+                                <td class="disc">−52%</td>
+                            </tr>
+                            <tr>
+                                <td>20 отчётов</td>
+                                <td class="price">30 000 ₽</td>
+                                <td>1 500 ₽</td>
+                                <td class="disc">−64%</td>
+                            </tr>
+                            <tr>
+                                <td>50 отчётов</td>
+                                <td class="price">50 000 ₽</td>
+                                <td>1 000 ₽</td>
+                                <td class="disc">−76%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="margin-top:16px;font-size:13px;color:var(--color-text-muted,#8A9BB3);">
+                    Розница считается от 4 200 ₽ × количество отчётов. Отчёт приходит на почту в течение 3 рабочих дней.
+                </p>
+            </div>
+        </section>
+
+        <section class="section section--light" id="alternatives" aria-labelledby="alt-title">
+            <div class="container">
+                <header class="section__header">
+                    <span class="eyebrow">Для сравнения</span>
+                    <h2 id="alt-title">Хотите собрать аналитику сами?</h2>
+                    <p class="section-lead">
+                        Такие же данные — трафик, конкуренты, портрет жителей, недвижимость — можно собрать
+                        самостоятельно в конструкторе СберАналитики, одного из крупнейших поставщиков геоданных в России.
+                        Мы даём готовый отчёт с интерпретацией, они — конструктор, где вы сами выбираете модули и считаете стоимость.
+                    </p>
+                </header>
+
+                <div style="overflow-x:auto;">
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Критерий</th>
+                                <th>Отчёт KONTURBIZ</th>
+                                <th>Конструктор СберАналитики</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Что получаете</td>
+                                <td>Готовый отчёт с выводом и рекомендацией по адресу</td>
+                                <td>Сырые данные и визуализации по выбранным модулям — интерпретация на вас</td>
+                            </tr>
+                            <tr>
+                                <td>Кто анализирует</td>
+                                <td>Наша команда</td>
+                                <td>Вы сами</td>
+                            </tr>
+                            <tr>
+                                <td>Срок</td>
+                                <td>3 рабочих дня</td>
+                                <td>Доступ на 1–4 недели, зависит от заказа</td>
+                            </tr>
+                            <tr>
+                                <td>Стоимость</td>
+                                <td class="price">от 1 000 ₽ за отчёт*</td>
+                                <td>Индивидуально — по модулям, отрасли, городу и сроку</td>
+                            </tr>
+                            <tr>
+                                <td>Подходит, если</td>
+                                <td>Нужен быстрый ответ по одному-нескольким адресам</td>
+                                <td>Нужен свой аналитик и разбор многих локаций своими силами</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="margin-top:12px;font-size:13px;color:var(--color-text-muted,#8A9BB3);">
+                    *В пакете от 50 отчётов, см. тарифы выше.
+                </p>
+
+                <div class="sample-report" style="position:relative;z-index:2;">
+                    <div style="flex:1;min-width:0;">
+                        <h3 style="margin:0 0 8px;">Конструктор заказа СберАналитики</h3>
+                        <p style="margin:0;">
+                            Выбираете модули (трафик, бизнес-метрики, портрет жителя, недвижимость), отрасль, город и срок доступа — сервис считает стоимость решения.
+                        </p>
+                    </div>
+                    <p style="margin:0;flex-shrink:0;">
+                        <a
+                            href="https://gis.sberanalytics.ru/configurator/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="button button--sber-ext"
+                            data-analytics="loc_sber_configurator"
+                        >Открыть конструктор Сбера ↗</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--light" id="faq" aria-labelledby="faq-title">
+            <div class="container">
+                <header class="section__header">
+                    <span class="eyebrow">FAQ</span>
+                    <h2 id="faq-title">Частые вопросы</h2>
+                </header>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary class="faq-question">Сколько времени готовится отчёт?</summary>
+                        <div class="faq-answer">
+                            <p>Отчёт строится на данных из открытых источников, операторов связи и моделях геоаналитики. Результат приходит на почту в течение 3 рабочих дней.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Нужно ли устанавливать программы?</summary>
+                        <div class="faq-answer">
+                            <p>Нет. Отчёт приходит на почту — без установки программ и передачи данных третьим лицам.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Можно ли сравнить несколько локаций?</summary>
+                        <div class="faq-answer">
+                            <p>Да. В пакете от 5 отчётов вы можете проверить несколько адресов и выбрать оптимальный.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Какие данные используются?</summary>
+                        <div class="faq-answer">
+                            <p>Большие данные, включая информацию от операторов сотовой связи, открытые источники и собственные модели машинного обучения.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Сколько стоит отчёт по локации?</summary>
+                        <div class="faq-answer">
+                            <p>1 отчёт — 4 200 ₽. Пакеты от 5 отчётов снижают цену до 2 500–1 000 ₽ за отчёт. <a href="#pricing">Смотреть тарифы →</a></p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Кто использует такие данные?</summary>
+                        <div class="faq-answer">
+                            <p>Похожие геоаналитические данные используют Т2, Авито, Сбербанк и другие крупные игроки рынка.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Как оценить проходимость места?</summary>
+                        <div class="faq-answer"><p>Смотрят пеший и автомобильный трафик в разное время суток, а не только «ощущение людности». В отчёте — данные по потоку у выбранной точки.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Какие показатели важны при выборе локации?</summary>
+                        <div class="faq-answer"><p>Трафик, демография и платёжеспособность района, конкуренты в радиусе, инфраструктура, ориентиры по аренде, потенциал под ваш вид бизнеса.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Можно ли проверить несколько адресов?</summary>
+                        <div class="faq-answer"><p>Да. Можно сравнить несколько локаций в одной заявке и выбрать оптимальную до подписания договора аренды.</p></div>
+                    </details>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--dark" aria-labelledby="cta-title">
+            <div class="container" style="text-align:center;max-width:40rem;margin-inline:auto;">
+                <span class="eyebrow">Следующий шаг</span>
+                <h2 id="cta-title">Проверьте локацию, прежде чем платить за аренду</h2>
+                <p class="section-lead" style="margin-inline:auto;">
+                    Отчёт на почту в течение 3 рабочих дней — без установки программ
+                    и передачи данных третьим лицам.
+                </p>
+                <div class="button-group" style="justify-content:center;margin-top:1.75rem;">
+                    <a href="/pages/about/contacts.html?from=location-assessment" class="button button--gold" data-analytics="loc_final_order">Обсудить оценку локации</a>
+                    <a href="/pages/services/" class="button button--white-outline">Все услуги</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+<footer class="footer" role="contentinfo">
+    <div class="container">
+
+                                <div class="footer__grid">
+            <div>
+                <h4 class="footer__title">Решения</h4>
+                <ul class="footer__menu">
+                    <li><a href="/pages/solutions/" class="footer__link">Все решения</a></li>
+                    <li><a href="/pages/solutions/acquisition.html" class="footer__link">Привлечение клиентов</a></li>
+                    <li><a href="/pages/solutions/retention.html" class="footer__link">Удержание клиентов</a></li>
+                    <li><a href="/pages/solutions/automation.html" class="footer__link">Автоматизация бизнеса</a></li>
+                    <li><a href="/pages/solutions/analytics.html" class="footer__link">Управление и аналитика</a></li>
+                    <li><a href="/pages/solutions/infrastructure.html" class="footer__link">Цифровая инфраструктура</a></li>
+                    <li><a href="/pages/diagnostics/" class="footer__link">Диагностика</a></li>
+                </ul>
+            </div>
+
+                                    <div>
+                <h4 class="footer__title">Услуги</h4>
+                <ul class="footer__menu">
+                    <li><a href="/pages/services/" class="footer__link">Все услуги</a></li>
+                    <li><a href="/pages/services/digital-audit.html" class="footer__link">Цифровой аудит</a></li>
+                    <li><a href="/pages/services/location-assessment.html" class="footer__link">Оценка локаций</a></li>
+                    <li><a href="/pages/services/branding.html" class="footer__link">Брендинг</a></li>
+                    <li><a href="/pages/services/graphic-design.html" class="footer__link">Графический дизайн</a></li>
+                    <li><a href="/pages/services/web-development.html" class="footer__link">Разработка сайтов</a></li>
+                    <li><a href="/pages/services/business-plan.html" class="footer__link">Бизнес-план под господдержку</a></li>
+                    <li><a href="/pages/services/telegram-bots.html" class="footer__link">Telegram-боты</a></li>
+                    <li><a href="/pages/partners/ip-registration/" class="footer__link">Регистрация ИП бесплатно</a></li>
+                    <li><a href="/pages/services/account-opening.html" class="footer__link">Открытие счёта</a></li>
+                    <li><a href="/pages/services/prices.html" class="footer__link">Цены и тарифы</a></li>
+                    <li><a href="/pages/services/payment-methods.html" class="footer__link">Способы оплаты</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer__title">Продукты</h4>
+                <ul class="footer__menu">
+                    <li><a href="/pages/partners/" class="footer__link">Все продукты</a></li>
+                    <li><a href="/pages/partners/kontur/" class="footer__link">СКБ Контур</a></li>
+                    <li><a href="/pages/partners/kontur/elba/" class="footer__link">Контур.Эльба</a></li>
+                    <li><a href="/pages/partners/kontur/diadoc/" class="footer__link">Контур.Диадок</a></li>
+                    <li><a href="/pages/partners/kontur/focus/" class="footer__link">Контур.Фокус</a></li>
+                    <li><a href="/pages/partners/kontur/bank/" class="footer__link">Контур.Банк</a></li>
+                    <li><a href="/pages/partners/kontur/client-search/" class="footer__link">Контур.Поиск клиентов</a></li>
+                    <li><a href="/pages/partners/kontur/edo-selfemployed/" class="footer__link">ЭДО с самозанятыми</a></li>
+                    <li><a href="/pages/partners/kontur/hotel/" class="footer__link">Контур.Отель</a></li>
+                    <li><a href="/pages/partners/kontur/logistics/" class="footer__link">Сервис «Логистика»</a></li>
+                    <li><a href="/pages/partners/kontur/procurement/" class="footer__link">Контур.Закупки</a></li>
+                    <li><a href="/pages/partners/kontur/power-of-attorney/" class="footer__link">Контур.Доверенность</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer__title">Русский цифровой</h4>
+                <ul class="footer__menu">
+                    <li><a href="/pages/partners/rcbiz/" class="footer__link">Экосистема</a></li>
+                    <li><a href="/pages/partners/rc-pay/" class="footer__link">Клиентский сервис</a></li>
+                    <li><a href="/pages/services/loyalty.html" class="footer__link">Платформа лояльности</a></li>
+                    <li><a href="/pages/partners/payment-terminals/" class="footer__link">Платёжные решения</a></li>
+                    <li><a href="/pages/partners/samo/" class="footer__link">САМО</a></li>
+                    <li><a href="/pages/partners/rdo/" class="footer__link">Русское деловое общество</a></li>
+                    <li><a href="/pages/partners/sovcombank/" class="footer__link">RC-Совкомбанк</a></li>
+                    <li><a href="/pages/partners/rc-franchise/" class="footer__link">Партнёрская программа</a></li>
+                    <li><a href="/pages/partners/cyberuniversity/" class="footer__link">Киберуниверситет</a></li>
+                    <li><a href="/pages/partners/frappe/" class="footer__link">Ассоциация ФраППэ</a></li>
+                    <li><a href="https://gor.press/" class="footer__link" target="_blank" rel="noopener noreferrer">Газета о России</a></li>
+                    <li><a href="https://mikhaylova.spb.ru/" class="footer__link" target="_blank" rel="noopener noreferrer">Фонд Марии Михайловой</a></li>
+                    <li><a href="/pages/partners/svo-support/" class="footer__link">Центр поддержки СВО</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer__title">О KONTURBIZ</h4>
+                <ul class="footer__menu">
+                    <li><a href="/pages/about/" class="footer__link">О компании</a></li>
+                    <li><a href="/pages/about/team.html" class="footer__link">Команда</a></li>
+                    <li><a href="/pages/about/partners.html" class="footer__link">Партнёры</a></li>
+                    <li><a href="/pages/cases/" class="footer__link">Кейсы</a></li>
+                    <li><a href="/pages/knowledge/" class="footer__link">Знания</a></li>
+                    <li><a href="/pages/about/contacts.html" class="footer__link">Контакты</a></li>
+                    <li><a href="/pages/about/legal.html" class="footer__link">Документы</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__industries">
+            <span class="footer__industries-label">Отрасли</span>
+            <ul class="footer__industries-list">
+                <li><a href="/pages/industries/retail.html" class="footer__link">Ритейл</a></li>
+                <li><a href="/pages/industries/ho-re-ca.html" class="footer__link">HoReCa</a></li>
+                <li><a href="/pages/industries/small-business.html" class="footer__link">Малый бизнес</a></li>
+                <li><a href="/pages/industries/services.html" class="footer__link">Услуги</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__cta-bar">
+            <a href="tel:+79509700916" class="footer__phone">+7 (950) 970-09-16</a>
+            <div class="footer__cta-actions">
+                <a href="/pages/about/contacts.html" class="button button--gold-outline button--sm">Обсудить задачу</a>
+                <a href="/pages/diagnostics/konturscan.html" class="button button--gold button--sm">Пройти диагностику</a>
+            </div>
+        </div>
+
+        <div class="footer__meta">
+            <div class="footer__meta-brand">
+                <a href="/" class="footer__logo-link" aria-label="На главную страницу KONTURBIZ">
+                    <img src="/images/logolight.svg" alt="KONTURBIZ" width="140" height="30" loading="lazy" />
+                </a>
+                <div class="footer__social">
+                    <a href="https://t.me/konturbiz_ru" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Telegram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M21.1318 6.69889C20.8921 9.21709 19.874 15.2053 19.3634 17.9349C19.1202 19.235 18.4588 20.5991 16.9711 20.736C16.0801 20.8179 15.362 20.5057 14.8401 20.1991C14.5834 20.0483 14.3425 19.8795 14.1412 19.7365C14.1033 19.7096 14.0667 19.6835 14.0312 19.6582C13.8639 19.539 13.7191 19.4358 13.565 19.3348C12.8737 18.8817 12.3329 18.514 11.805 18.1546L11.7371 18.1084C11.233 17.7651 10.7366 17.427 10.1157 17.0179C9.65624 16.7151 9.18116 16.3207 8.898 15.7784C8.73941 15.4747 8.66175 15.1664 8.64906 14.8669C8.10884 15.1233 7.52706 15.2826 6.91641 15.2694C6.45862 15.2595 5.91411 15.143 5.47264 15.0323C4.99636 14.9129 4.49942 14.763 4.08464 14.6282C4.01173 14.6045 3.92894 14.5786 3.8397 14.5507C3.47977 14.4381 3.01512 14.2928 2.6723 14.1267C2.44002 14.0142 2.09238 13.8174 1.81255 13.4734C1.48496 13.0708 1.32191 12.5536 1.39123 12.0007C1.48554 11.2484 1.9961 10.7858 2.29861 10.5612C2.63386 10.3122 3.03943 10.1145 3.45054 9.94966C7.93857 7.99434 10.9449 6.69934 12.458 6.06997C14.5968 5.18037 15.9236 4.64341 16.793 4.32793C17.6366 4.02183 18.2081 3.86122 18.7681 3.85135C18.9502 3.84815 19.1799 3.86727 19.4208 3.9248C19.6521 3.98007 20.0072 4.09742 20.338 4.36588C20.8885 4.81251 21.0546 5.4163 21.1116 5.76708C21.1722 6.13998 21.1519 6.48701 21.1318 6.69889Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.8285 11.6661C10.169 12.109 9.43404 12.604 8.62347 13.1512C8.00718 13.5744 7.44895 13.7805 6.94881 13.7697C6.39743 13.7578 5.33681 13.458 4.54835 13.2017C4.43256 13.164 4.31961 13.1285 4.2106 13.0943C3.40919 12.8423 2.82067 12.6572 2.87958 12.1872C2.91444 11.9092 3.29738 11.6248 4.0284 11.3341C8.53017 9.37273 11.5321 8.07968 13.0341 7.45495C17.3226 5.67121 18.2137 5.36135 18.7945 5.35112C18.9223 5.34887 19.2079 5.38053 19.3929 5.53066C19.6699 5.7554 19.669 6.23582 19.6385 6.55677C19.4061 8.99858 18.4005 14.9242 17.889 17.6591C17.6725 18.8163 17.2462 19.2043 16.8336 19.2423C16.1235 19.3076 15.5487 18.8978 14.9088 18.4417C14.7407 18.3218 14.5681 18.1988 14.3873 18.0803C13.6778 17.6152 13.1295 17.2418 12.5797 16.8674C12.0763 16.5245 11.5717 16.1809 10.9411 15.7654C9.62886 14.9006 10.1782 14.3711 10.9107 13.665C11.0292 13.5506 11.1526 13.4317 11.2737 13.306C11.3173 13.2606 11.4981 13.0917 11.7623 12.8459C11.8253 12.7873 11.893 12.7243 11.9648 12.6576C12.6951 11.9786 13.8413 10.913 14.6361 10.1298C14.8977 9.87201 15.1212 9.64481 15.2793 9.47208C15.4272 9.31051 15.5178 9.19659 15.5287 9.14985C15.5383 9.10908 15.5472 8.95709 15.4569 8.87683C15.3666 8.79658 15.2333 8.82402 15.1372 8.84585C15.1129 8.85135 15.0243 8.90128 14.8713 8.99563C14.6987 9.10208 14.4441 9.26506 14.1076 9.48459C13.3886 9.95365 12.2956 10.6808 10.8285 11.6661Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="https://max.ru/channel_konturbiz" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="MAX">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C10.533 22 9.34382 21.5685 8.14844 20.7656C7.11891 21.6005 5.83538 21.9708 4.51758 22.001C3.84163 22.0164 3.36005 21.4582 3.35352 20.8604C3.32056 17.8435 2 15.0289 2 12C2 6.47715 6.47715 2 12 2Z" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="12" cy="12" r="5.5" stroke="currentColor" stroke-width="2.3"/>
+                        </svg>
+                    </a>
+                    <a href="https://vk.ru/konturbiz_ru" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="ВКонтакте">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M1.82166 5.47515C1.96273 5.33115 2.15583 5.25 2.35742 5.25H5.60914C6.01768 5.25 6.35107 5.57698 6.359 5.98544C6.44162 10.241 7.92677 12.3244 9.26195 13.1712V6C9.26195 5.58579 9.59774 5.25 10.012 5.25H12.9663C13.3805 5.25 13.7163 5.58579 13.7163 6V9.75429C14.201 9.53 14.7091 9.16212 15.1902 8.6657C15.9475 7.88443 16.5651 6.85713 16.861 5.79816C16.9516 5.47409 17.2469 5.25 17.5834 5.25H20.6453C20.8667 5.25 21.0768 5.34783 21.2193 5.51729C21.3618 5.68675 21.4221 5.91052 21.3841 6.12865C20.9344 8.7115 19.3436 10.7267 17.8751 11.9184C19.4336 12.9589 21.2807 14.8532 22.0812 17.8036C22.1424 18.029 22.0951 18.2701 21.9532 18.4556C21.8113 18.6412 21.591 18.75 21.3574 18.75H17.9869C17.6601 18.75 17.3708 18.5383 17.272 18.2268C16.7145 16.4692 15.3834 15.0945 13.7163 14.6165V18C13.7163 18.4142 13.3805 18.75 12.9663 18.75H12.7059C9.27318 18.75 6.50301 17.551 4.5841 15.297C2.68099 13.0616 1.68699 9.87369 1.60758 6.01543C1.60343 5.81389 1.68059 5.61916 1.82166 5.47515Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/@KonturBiz" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="YouTube">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M9.50814 4.44183C7.99586 4.44182 6.78886 4.4418 5.83756 4.56296C4.85605 4.68796 4.04153 4.9526 3.37935 5.56009C3.28946 5.64255 3.20316 5.72885 3.1207 5.81874C2.51321 6.48092 2.24857 7.29544 2.12357 8.27695C2.00241 9.22825 2.00243 10.4353 2.00244 11.9475V12.0525C2.00243 13.5647 2.00241 14.7718 2.12357 15.723C2.24857 16.7046 2.51321 17.5191 3.1207 18.1813C3.20316 18.2712 3.28946 18.3574 3.37935 18.4399C4.04153 19.0474 4.85605 19.312 5.83756 19.437C6.78885 19.5582 7.99585 19.5582 9.50811 19.5582H14.4968C16.009 19.5582 17.216 19.5582 18.1673 19.437C19.1488 19.312 19.9634 19.0474 20.6255 18.4399C20.7154 18.3574 20.8017 18.2712 20.8842 18.1813C21.4917 17.5191 21.7563 16.7046 21.8813 15.723C22.0025 14.7717 22.0025 13.5647 22.0024 12.0525V11.9475C22.0025 10.4353 22.0025 9.22826 21.8813 8.27695C21.7563 7.29544 21.4917 6.48092 20.8842 5.81874C20.8017 5.72885 20.7154 5.64255 20.6255 5.56009C19.9634 4.9526 19.1488 4.68796 18.1673 4.56296C17.216 4.4418 16.009 4.44182 14.4967 4.44183H9.50814Z" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.1213 8.34587C9.88904 8.21561 9.60514 8.21825 9.37536 8.35283C9.14559 8.4874 9.0044 8.73372 9.0044 9V15C9.0044 15.2663 9.14559 15.5126 9.37536 15.6472C9.60513 15.7817 9.88903 15.7844 10.1213 15.6541L15.4701 12.6542C15.7067 12.5215 15.8532 12.2714 15.8532 12.0001C15.8532 11.7288 15.7067 11.4786 15.4701 11.3459L10.1213 8.34587ZM10.5044 13.7194V10.2806L13.57 12L10.5044 13.7194Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <p class="footer__description">
+                Центр цифровых решений. Находим точки потерь и собираем бренд, сайт, автоматизацию и лояльность в единый контур.
+            </p>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="footer__legal-block">
+                <p class="footer__copyright">© 2026 KONTURBIZ. Все права защищены.</p>
+                <p class="footer__requisites">
+                    ИП Колмаков Александр Борисович · ИНН 245009591703 · ОГРНИП 326246800108832
+                </p>
+            </div>
+            <nav class="footer__legal" aria-label="Юридическая информация">
+                <a href="/pages/about/legal.html">Политика конфиденциальности</a>
+                <a href="/pages/about/legal.html#terms">Пользовательское соглашение</a>
+            </nav>
+        </div>
+    </div>
+</footer>
+
+    <script src="/assets/js/app.js" defer></script>
+    <script src="/assets/js/navigation.js" defer></script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.webvisor.org/metrika/tag_ww.js?id=113120522', 'ym');
+    ym(113120522, 'init', {ssr:true, webvisor:true, trackHash:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.webisor.org/watch/113120522" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

@@ -1,0 +1,73 @@
+/* assets/css/accessibility.css
+   ДОСТУПНОСТЬ KONTURBIZ v2.9-PREMIUM
+   ======================================== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+    outline: 3px solid var(--color-secondary, #295D8A);
+    outline-offset: 2px;
+    border-radius: var(--border-radius-sm, 4px);
+}
+
+.skip-to-content {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-primary, #112B4A);
+    color: var(--color-on-primary, #FFFFFF);
+    padding: 12px 24px;
+    border-radius: var(--border-radius-sm, 4px);
+    z-index: 9999;
+    font-weight: var(--fw-medium, 500);
+    text-decoration: none;
+}
+.skip-to-content:focus {
+    top: 16px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+.sr-only-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+@media (prefers-contrast: high) {
+    :root {
+        --color-outline: #4A5A6A;
+        --color-outline-variant: #6A7A8A;
+        --color-text-secondary: #1A2A3A;
+        --color-text-muted: #3A4A5A;
+    }
+    .card { border-width: 2px; }
+    .button { border-width: 2px; }
+}

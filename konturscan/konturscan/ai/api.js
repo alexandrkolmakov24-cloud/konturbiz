@@ -1,0 +1,1 @@
+export async function requestAI(payload){const res=await fetch('api/diagnose.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const data=await res.json();if(!res.ok||!data.ok)throw new Error(data.error||'AI Core недоступен');return data.result}

@@ -1,0 +1,1923 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Калькулятор программы лояльности RC CITY — ЮНИТ | KONTURBIZ</title>
+<meta name="description" content="Калькулятор ЮНИТ: дополнительная прибыль от RC CITY за 12 месяцев. Баллы, отток, эквайринг, тарифы Лайт, Промо, Про+.">
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --kb-bg:#F4F6FA; --kb-card:#FFFFFF; --kb-blue:#0D3156; --kb-blue-2:#1E3A5F;
+  --kb-blue-3:#5A6B80; --kb-blue-soft:#E7EEF8; --kb-gold:#A97A1C;
+  --kb-gold-soft:#FBF2DC; --kb-line:#DCE3EE; --kb-line-strong:#C4CFDD;
+  --kb-good:#12704A; --kb-good-soft:#E3F4EC; --kb-bad:#B0261B; --kb-bad-soft:#FBE7E4;
+  --r:4px; --shadow-sm:0 1px 2px rgba(13,49,86,.06); --shadow:0 4px 16px rgba(13,49,86,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--kb-bg);color:var(--kb-blue-2);
+  font-family:"Montserrat","Segoe UI",Roboto,sans-serif;font-weight:500;font-size:15px;line-height:1.55;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:1100px;margin:auto;padding:24px 20px 48px}
+
+.topbar{display:flex;align-items:center;justify-content:space-between;
+  padding:14px 20px;background:#fff;border:1px solid var(--kb-line);
+  border-radius:var(--r);box-shadow:var(--shadow-sm);margin-bottom:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.brand-mark{width:36px;height:36px;border:2px solid var(--kb-blue);border-radius:var(--r);
+  display:grid;place-items:center;color:var(--kb-blue);font-weight:800;font-size:13px;letter-spacing:.05em}
+.brand-name{font-weight:800;letter-spacing:.08em;color:var(--kb-blue);font-size:14px;line-height:1.2}
+.brand-sub{font-size:11px;color:var(--kb-blue-3);letter-spacing:.04em;text-transform:uppercase}
+.topbar .right{font-size:11px;color:var(--kb-blue-3);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+
+.hero{margin-bottom:20px}
+.hero .badge{display:inline-flex;align-items:center;gap:8px;
+  background:var(--kb-blue-soft);color:var(--kb-blue);
+  border:1px solid #D3DFEF;border-radius:var(--r);
+  padding:6px 12px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+.hero .badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--kb-gold)}
+h1{font-weight:800;font-size:clamp(24px,3vw,34px);line-height:1.15;color:var(--kb-blue);letter-spacing:-.01em;margin:0 0 8px}
+.hero .sub{color:var(--kb-blue-3);max-width:75ch;margin:0;font-size:14px}
+
+.glossary{background:var(--kb-card);border:1px solid var(--kb-line);
+  border-radius:var(--r);padding:0 20px;margin-bottom:20px;box-shadow:var(--shadow-sm)}
+.glossary summary{cursor:pointer;font-weight:700;font-size:13px;color:var(--kb-blue);
+  padding:14px 0;list-style:none;display:flex;align-items:center;justify-content:space-between;letter-spacing:.02em;text-transform:uppercase}
+.glossary summary::-webkit-details-marker{display:none}
+.glossary summary::after{content:"+";font-weight:800;color:var(--kb-gold);font-size:18px}
+.glossary[open] summary::after{content:"−"}
+.glossary[open] summary{border-bottom:1px solid var(--kb-line)}
+.glossary-body{padding:14px 0 18px;font-size:13px;color:var(--kb-blue-3);line-height:1.7;font-weight:500}
+.glossary-body b{color:var(--kb-blue);font-weight:700}
+.glossary-body table{margin-top:10px;font-size:12px;width:100%;border-collapse:collapse}
+.glossary-body th,.glossary-body td{padding:6px 8px;border-bottom:1px solid var(--kb-line);text-align:left;vertical-align:top;color:var(--kb-blue-2)}
+.glossary-body th{color:var(--kb-blue);font-weight:700;background:var(--kb-blue-soft);font-size:11px;text-transform:uppercase}
+.glossary-body tr:last-child td{border-bottom:0}
+
+.section{margin-bottom:24px}
+.section-title{display:flex;align-items:baseline;gap:12px;margin:0 0 14px}
+.section-title .num{
+  display:inline-grid;place-items:center;width:26px;height:26px;border-radius:var(--r);
+  background:var(--kb-blue);color:#fff;font-weight:800;font-size:12px;flex:0 0 auto}
+.section-title h2{margin:0;font-weight:800;font-size:16px;color:var(--kb-blue);letter-spacing:.01em}
+.section-title .sub{font-size:12px;color:var(--kb-blue-3);margin-left:auto;font-weight:500}
+
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:820px){.grid{grid-template-columns:1fr}}
+
+.card{background:var(--kb-card);border:1px solid var(--kb-line);border-radius:var(--r);padding:20px;box-shadow:var(--shadow-sm)}
+.card h3{font-weight:700;font-size:14px;color:var(--kb-blue);margin:0 0 4px;letter-spacing:.01em}
+.card .lead{color:var(--kb-blue-3);font-size:12px;margin:0 0 14px;font-weight:500;line-height:1.5}
+
+.module{border:1px solid var(--kb-line);border-radius:var(--r);background:var(--kb-card);box-shadow:var(--shadow-sm);
+  transition:border-color .2s,box-shadow .2s}
+.module.active{border-color:var(--kb-gold);box-shadow:0 0 0 1px var(--kb-gold),var(--shadow-sm)}
+.module-head{display:flex;align-items:center;gap:12px;padding:16px 20px;cursor:pointer;user-select:none;border-bottom:1px solid transparent}
+.module.active .module-head{border-bottom-color:var(--kb-line)}
+.module-head h3{margin:0;font-weight:700;font-size:14px;color:var(--kb-blue);flex:1;letter-spacing:.01em}
+.module-head .sub{font-size:11px;color:var(--kb-blue-3);font-weight:500;display:block;margin-top:2px}
+
+.switch{position:relative;width:44px;height:24px;flex:0 0 auto}
+.switch input{opacity:0;width:0;height:0;position:absolute}
+.switch .slider{position:absolute;inset:0;background:#C4CFDD;border-radius:999px;transition:background .2s;cursor:pointer}
+.switch .slider::before{content:"";position:absolute;left:3px;top:3px;width:18px;height:18px;
+  background:#fff;border-radius:50%;transition:transform .2s;box-shadow:0 1px 3px rgba(13,49,86,.25)}
+.switch input:checked + .slider{background:var(--kb-gold)}
+.switch input:checked + .slider::before{transform:translateX(20px)}
+.switch input:focus-visible + .slider{outline:2px solid var(--kb-blue);outline-offset:2px}
+
+.module-body{padding:0 20px 20px}
+.module:not(.active) .module-body{display:none}
+
+.f{margin-bottom:12px;display:flex;flex-direction:column;min-width:0}
+.f:last-child{margin-bottom:0}
+.f label{display:flex;align-items:flex-end;font-weight:700;font-size:12px;margin-bottom:6px;color:var(--kb-blue);letter-spacing:.01em;min-height:2.4em;line-height:1.3}
+.f .hint{display:block;font-size:11px;color:var(--kb-blue-3);font-weight:500;margin-top:5px;line-height:1.45;min-height:2.6em}
+.in{position:relative}
+.in input,.in select{width:100%;height:44px;min-height:44px;padding:0 48px 0 12px;border:1px solid var(--kb-line-strong);
+  border-radius:var(--r);background:#fff;color:var(--kb-blue);font:inherit;font-weight:600;font-size:15px;
+  transition:border-color .15s,box-shadow .15s}
+.in input:hover,.in select:hover{border-color:#A9B7CA}
+.in input:focus,.in select:focus{outline:none;border-color:var(--kb-blue);box-shadow:0 0 0 3px rgba(13,49,86,.12)}
+.in input[readonly]{background:var(--kb-blue-soft);cursor:not-allowed;color:var(--kb-blue)}
+.in i{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-style:normal;color:var(--kb-blue-3);font-size:11px;pointer-events:none;font-weight:600}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;align-items:start}
+@media(max-width:560px){.row2,.row3{grid-template-columns:1fr}}
+.info-box{background:var(--kb-blue-soft);border:1px solid #D3DFEF;border-radius:var(--r);padding:12px 14px;margin:12px 0;font-size:12px;color:var(--kb-blue-2);line-height:1.55}
+.info-box b{color:var(--kb-blue);font-weight:700}
+.info-box ul{margin:6px 0 0;padding-left:18px}
+.info-box li{margin:3px 0}
+
+.tier-list{display:flex;flex-direction:column;gap:10px;margin-bottom:12px}
+.tier-row{display:grid;grid-template-columns:28px 1fr 1fr 1fr auto;gap:8px;align-items:end;padding:10px;background:var(--kb-blue-soft);border-radius:var(--r);border:1px solid var(--kb-line)}
+.tier-row .tier-num{font-weight:800;font-size:13px;color:var(--kb-blue);padding-bottom:10px;text-align:center}
+.tier-row .f{margin-bottom:0}
+.tier-row .btn-del{border:1px solid var(--kb-line-strong);background:#fff;color:var(--kb-bad);width:36px;height:40px;border-radius:var(--r);cursor:pointer;font-weight:800;font-size:16px;line-height:1;padding:0}
+.tier-row .btn-del:hover{background:var(--kb-bad-soft);border-color:var(--kb-bad)}
+.tier-row .btn-del:disabled{opacity:.35;cursor:not-allowed}
+.btn-add{border:1px dashed var(--kb-line-strong);background:#fff;color:var(--kb-blue);padding:10px 14px;border-radius:var(--r);font:inherit;font-size:12px;font-weight:700;cursor:pointer;width:100%;margin-bottom:8px;transition:.15s}
+.btn-add:hover{border-color:var(--kb-gold);background:var(--kb-gold-soft);color:var(--kb-gold)}
+@media(max-width:700px){.tier-row{grid-template-columns:28px 1fr 1fr;gap:8px}.tier-row .btn-del{grid-column:1/-1;width:100%;height:36px}}
+
+.chips{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:10px}
+.chips button{border:1px solid var(--kb-line-strong);background:#fff;color:var(--kb-blue);
+  padding:10px 8px;border-radius:var(--r);font:inherit;font-size:12.5px;font-weight:600;cursor:pointer;transition:.15s;
+  min-height:42px;width:100%;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chips button:hover{border-color:var(--kb-blue);background:var(--kb-blue-soft)}
+.chips button[aria-pressed="true"]{background:var(--kb-gold);color:#fff;border-color:var(--kb-gold);box-shadow:0 2px 6px rgba(169,122,28,.25)}
+.examples{font-size:11px;color:var(--kb-blue-3);min-height:30px;line-height:1.5;font-weight:500}
+@media(max-width:560px){.chips{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.opt{display:grid;gap:8px}
+.opt label{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--kb-line-strong);
+  border-radius:var(--r);padding:10px 12px;cursor:pointer;margin:0;font-weight:600;transition:.15s;background:#fff}
+.opt label:hover{border-color:var(--kb-blue);background:var(--kb-blue-soft)}
+.opt input{margin-top:3px;accent-color:var(--kb-blue);flex:0 0 auto;width:16px;height:16px}
+.opt label:has(input:checked){border-color:var(--kb-gold);background:var(--kb-gold-soft);box-shadow:inset 0 0 0 1px var(--kb-gold)}
+.opt .pr{margin-left:auto;white-space:nowrap;font-weight:800;color:var(--kb-blue);font-size:13px}
+.opt .hint{display:block;font-size:11px;color:var(--kb-blue-3);font-weight:500;margin-top:3px}
+
+.auto-display{font-size:12px;color:var(--kb-blue-3);font-weight:600;padding:10px 12px;background:var(--kb-blue-soft);border-radius:var(--r);margin-top:10px;line-height:1.55}
+.auto-display b{color:var(--kb-blue);font-weight:700}
+
+.preview{background:var(--kb-gold-soft);border:1px solid var(--kb-gold);border-radius:var(--r);
+  padding:14px 16px;margin:10px 0;font-size:13px;line-height:1.7}
+.preview .line{margin:3px 0;color:var(--kb-blue-2)}
+.preview b{font-weight:800;color:var(--kb-blue)}
+.preview .line.dash{border-top:1px dashed #E2C98A;padding-top:6px;margin-top:6px}
+
+.go{width:100%;border:0;border-radius:var(--r);padding:14px;background:var(--kb-blue);color:#fff;
+  font-family:"Montserrat";font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;
+  cursor:pointer;transition:.12s;box-shadow:0 4px 12px rgba(13,49,86,.25);margin-top:8px}
+.go:hover{background:#154273;transform:translateY(-1px);box-shadow:0 6px 18px rgba(13,49,86,.32)}
+
+.empty{padding:48px 20px;text-align:center;color:var(--kb-blue-3);
+  border:1px dashed var(--kb-line-strong);border-radius:var(--r);background:var(--kb-card);font-size:14px;font-weight:500}
+.verdict{border-radius:var(--r);padding:14px 18px;margin-bottom:16px;font-weight:700;font-size:14px;line-height:1.5}
+.verdict.good{background:var(--kb-good-soft);color:var(--kb-good)}
+.verdict.bad{background:var(--kb-bad-soft);color:var(--kb-bad)}
+.big{font-weight:800;font-size:38px;line-height:1.05;letter-spacing:-.02em;margin:4px 0}
+.big-label{color:var(--kb-blue-3);font-size:12px;margin-bottom:2px;text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+.good{color:var(--kb-good)}
+.bad{color:var(--kb-bad)}
+.kp{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}
+.kp>div{border:1px solid var(--kb-line);border-radius:var(--r);padding:14px;background:var(--kb-card)}
+.kp span{display:block;font-size:10.5px;color:var(--kb-blue-3);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px}
+.kp b{font-size:17px;font-weight:800;color:var(--kb-blue)}
+@media(max-width:700px){.kp{grid-template-columns:1fr 1fr}}
+@media(max-width:400px){.kp{grid-template-columns:1fr}}
+
+.chart-wrap{margin:20px 0;padding:18px;border:1px solid var(--kb-line);border-radius:var(--r);background:var(--kb-card);box-shadow:var(--shadow-sm)}
+.chart-wrap h3{font-weight:700;font-size:15px;color:var(--kb-blue);margin:0 0 4px}
+.chart-sub{font-size:12px;color:var(--kb-blue-3);margin-bottom:14px;font-weight:500}
+.chart-svg{width:100%;height:240px;display:block}
+.chart-legend{display:flex;gap:16px;font-size:11px;color:var(--kb-blue-3);margin-top:10px;flex-wrap:wrap;font-weight:600}
+.chart-legend span{display:flex;align-items:center;gap:6px}
+.chart-legend i{width:12px;height:12px;border-radius:2px;display:inline-block}
+
+.month-slider{margin:18px 0 8px;padding:14px 16px;background:var(--kb-card);border:1px solid var(--kb-line);border-radius:var(--r)}
+.month-slider .head{display:flex;justify-content:space-between;align-items:baseline;font-weight:700;font-size:13px;margin-bottom:10px;color:var(--kb-blue)}
+.month-slider .head .muted{font-weight:500;color:var(--kb-blue-3);font-size:11px}
+.month-slider input[type=range]{width:100%;height:6px;cursor:pointer;appearance:none;-webkit-appearance:none;
+  background:linear-gradient(to right,var(--kb-blue),var(--kb-gold));border-radius:3px;outline:none}
+.month-slider input[type=range]::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:20px;height:20px;border-radius:2px;
+  background:#fff;border:2px solid var(--kb-blue);box-shadow:0 2px 6px rgba(13,49,86,.25);cursor:grab}
+.month-ticks{display:flex;justify-content:space-between;font-size:11px;color:var(--kb-blue-3);margin-top:6px;font-weight:600;padding:0 2px}
+.month-card{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:12px}
+.month-card>div{border:1px solid var(--kb-line);border-radius:var(--r);padding:12px;text-align:center;background:var(--kb-card)}
+.month-card span{display:block;font-size:10px;color:var(--kb-blue-3);font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:3px}
+.month-card b{font-size:14px;font-weight:800;color:var(--kb-blue)}
+@media(max-width:700px){.month-card{grid-template-columns:1fr 1fr}}
+
+.breakdown{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}
+@media(max-width:820px){.breakdown{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.breakdown{grid-template-columns:1fr}}
+.bd{border:1px solid var(--kb-line);border-radius:var(--r);padding:14px;background:var(--kb-card)}
+.bd.on{border-color:var(--kb-gold);background:var(--kb-gold-soft)}
+.bd.off{opacity:.45}
+.bd h4{font-weight:700;font-size:13px;color:var(--kb-blue);margin:0 0 6px}
+.bd .v{font-size:20px;font-weight:800;color:var(--kb-blue);margin:4px 0}
+.bd .d{font-size:11px;color:var(--kb-blue-3);font-weight:500;line-height:1.45}
+.bd .d b{color:var(--kb-blue)}
+
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:10px 8px;border-bottom:1px solid var(--kb-line);text-align:right;vertical-align:top;color:var(--kb-blue-2)}
+th:first-child,td:first-child{text-align:left}
+th{font-size:10.5px;color:var(--kb-blue);font-weight:700;text-transform:uppercase;letter-spacing:.05em;background:var(--kb-blue-soft)}
+tbody tr:last-child td{border-bottom:0}
+.scroll{overflow-x:auto}
+.sec{margin-top:22px}
+.sec h2{font-weight:700;font-size:16px;color:var(--kb-blue);margin-bottom:8px}
+.sec .lead{color:var(--kb-blue-3);font-size:12.5px;margin-bottom:10px;font-weight:500}
+
+.opt-box{border:1px solid var(--kb-gold);border-radius:var(--r);padding:16px 18px;margin:16px 0;background:var(--kb-gold-soft);box-shadow:0 2px 10px rgba(169,122,28,.08)}
+.opt-box h3{font-weight:700;font-size:14px;color:var(--kb-blue);margin:0 0 8px}
+.opt-box .peak{font-size:22px;font-weight:800;color:var(--kb-blue)}
+.opt-box .warn-high{color:var(--kb-bad);font-weight:700;margin-top:8px;font-size:12px;line-height:1.5}
+.opt-box .ok-txt{color:var(--kb-good);font-weight:700;margin-top:8px;font-size:12px}
+
+.sc{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.sc>div{border:1px solid var(--kb-line);border-radius:var(--r);padding:14px;background:var(--kb-card)}
+.sc>div.on{border-color:var(--kb-gold);background:var(--kb-gold-soft)}
+.sc span{font-size:12px;color:var(--kb-blue-3);display:block;margin-bottom:4px;font-weight:600}
+.sc b{font-size:20px;font-weight:800;color:var(--kb-blue)}
+@media(max-width:560px){.sc{grid-template-columns:1fr}}
+
+.note{font-size:12px;color:var(--kb-blue-3);border-left:3px solid var(--kb-gold);padding:8px 0 8px 14px;margin-top:16px;line-height:1.6;font-weight:500;background:linear-gradient(90deg,var(--kb-gold-soft),transparent 70%)}
+.stale{font-size:12px;color:var(--kb-gold);font-weight:700;margin-bottom:12px;padding:10px 14px;border-radius:var(--r);background:var(--kb-gold-soft);border:1px solid #F0E0B8}
+/* .footer override removed — site footer uses footer.css */
+
+details.tight{border:1px solid var(--kb-line);border-radius:var(--r);padding:10px 14px;margin-top:12px;background:var(--kb-card)}
+details.tight summary{cursor:pointer;font-weight:700;font-size:12.5px;color:var(--kb-blue);list-style:none;display:flex;justify-content:space-between;align-items:center}
+details.tight summary::-webkit-details-marker{display:none}
+details.tight summary::after{content:"+";color:var(--kb-gold);font-weight:800;font-size:16px}
+details.tight[open] summary::after{content:"−"}
+
+body{padding-top:var(--header-height,90px)!important}
+@media(max-width:1024px){body{padding-top:72px!important}}
+@media(max-width:768px){body{padding-top:64px!important}}
+.page-hero{position:relative;overflow:hidden;background:#01091C;width:100%}
+.page-hero__inner{position:relative;max-width:1200px;margin:0 auto;height:400px}
+.page-hero__media{position:absolute;inset:0;z-index:0}
+.page-hero__media picture,.page-hero__media img{width:100%;height:100%;object-fit:cover;object-position:center right;display:block}
+.page-hero__overlay{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,#01091C 0%,rgba(1,9,28,.97) 22%,rgba(1,9,28,.7) 34%,rgba(1,9,28,.35) 42%,rgba(1,9,28,.1) 46%,transparent 50%,transparent 100%)}
+.page-hero__body{position:relative;z-index:2;max-width:560px;height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 24px;color:#fff}
+.page-hero__eyebrow{margin:0 0 10px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#C8A24A;font-family:Montserrat,sans-serif}
+.page-hero h1{margin:0 0 12px!important;font-family:Montserrat,sans-serif!important;font-weight:300!important;font-size:clamp(26px,3.2vw,36px)!important;line-height:1.15!important;color:#fff!important}
+.page-hero__lead{margin:0 0 22px;font-size:15px;line-height:1.55;color:rgba(255,255,255,.72);max-width:48ch;font-weight:400}
+.page-hero .button-group{display:flex;flex-wrap:wrap;gap:12px;margin:0}
+@media(max-width:900px){.page-hero__inner{height:auto;min-height:320px}.page-hero__body{padding:40px 20px}.page-hero__overlay{background:linear-gradient(180deg,rgba(1,9,28,.92),rgba(1,9,28,.75))}.page-hero__media{opacity:.5}}
+.ue-intro{max-width:680px;margin:8px auto 28px;text-align:center;padding:0 16px}
+.ue-intro__kicker{margin:0 0 8px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#C8A24A}
+.ue-intro__badge{margin:0 0 18px;font-size:12px;font-weight:600;letter-spacing:.04em;color:#5A6B80}
+.ue-intro h2{margin:0 0 14px;font-family:Montserrat,sans-serif;font-weight:500;font-size:clamp(22px,2.6vw,28px);color:#0D3156;letter-spacing:-.02em;line-height:1.25}
+.ue-intro p{margin:0 auto;max-width:52ch;font-size:14.5px;line-height:1.7;color:#5A6B80;font-weight:400}
+.wrap{max-width:1200px!important;margin:0 auto!important;padding:28px 20px 48px!important}
+.glossary{max-width:none!important;width:100%!important}
+.faq-section{max-width:1200px;margin:0 auto;padding:48px 20px 24px}
+.faq-section h2{text-align:center;font-family:Montserrat,sans-serif;font-weight:500;font-size:clamp(22px,2.5vw,28px);color:#0D3156;margin:0 0 8px}
+.faq-section .faq-lead{text-align:center;color:#5A6B80;font-size:14px;margin:0 0 28px}
+.faq-list{max-width:800px;margin:0 auto}
+.faq-item{border:1px solid #DCE3EE;border-radius:4px;background:#fff;margin-bottom:10px;overflow:hidden}
+.faq-item summary{cursor:pointer;padding:16px 18px;font-weight:600;font-size:14px;color:#0D3156;list-style:none;display:flex;justify-content:space-between;align-items:center;font-family:Montserrat,sans-serif}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";color:#C8A24A;font-weight:700;font-size:18px}
+.faq-item[open] summary::after{content:"−"}
+.faq-item[open] summary{border-bottom:1px solid #DCE3EE}
+.faq-answer{padding:14px 18px 18px;font-size:14px;line-height:1.65;color:#5A6B80}
+.faq-answer p{margin:0}
+.widget-section{max-width:720px;margin:32px auto 48px;padding:0 20px}
+.widget-section h2{text-align:center;font-family:Montserrat,sans-serif;font-weight:500;font-size:22px;color:#0D3156;margin:0 0 8px}
+.widget-section .lead{text-align:center;color:#5A6B80;font-size:14px;margin:0 0 20px}
+.geo-promo{margin:28px auto 0;max-width:1200px;padding:22px 24px;background:linear-gradient(135deg,#01091C,#0D3156);border-radius:4px;color:#fff;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+.geo-promo h3{margin:0 0 6px;font-family:Montserrat,sans-serif;font-weight:600;font-size:16px;color:#fff}
+.geo-promo p{margin:0;font-size:13px;color:rgba(255,255,255,.7);line-height:1.5}
+.ue-footer-brand{text-align:center;margin:28px 0 8px;font-size:12px;font-weight:600;letter-spacing:.04em;color:#5A6B80;text-transform:uppercase}
+.footnotes{max-width:800px;margin:20px auto;padding:14px 16px;background:#fff;border:1px solid #DCE3EE;border-radius:4px;font-size:13px;color:#5A6B80;line-height:1.55}
+.footnotes a{color:#295D8A;font-weight:600;text-decoration:none}
+.aeo-answer{max-width:680px;margin:0 auto 24px;padding:16px 18px;background:#E7EEF8;border-left:3px solid #0D3156;border-radius:0 4px 4px 0;font-size:14px;line-height:1.65;color:#1E3A5F}
+.aeo-answer strong{color:#0D3156}
+
+.tariff-cards{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:16px;
+}
+.tariff-card{
+  border:1px solid var(--kb-line,#DCE3EE);border-radius:4px;padding:16px 16px 18px;
+  background:#fff;box-shadow:0 1px 2px rgba(13,49,86,.05);
+}
+.tariff-card--promo{
+  border-color:var(--kb-gold,#A97A1C);background:var(--kb-gold-soft,#FBF2DC);
+  box-shadow:inset 0 0 0 1px var(--kb-gold,#A97A1C);
+}
+.tariff-card__name{
+  margin:0 0 6px;font-family:Montserrat,sans-serif;font-weight:700;font-size:15px;color:var(--kb-blue,#0D3156);
+}
+.tariff-card__price{
+  margin:0;font-family:Montserrat,sans-serif;font-weight:800;font-size:20px;color:var(--kb-blue,#0D3156);line-height:1.2;
+}
+.tariff-card__price-sub{
+  margin:2px 0 0;font-size:12px;font-weight:600;color:var(--kb-blue-3,#5A6B80);
+}
+.tariff-card__limits{
+  margin:10px 0 12px;font-size:12px;line-height:1.45;color:var(--kb-blue-3,#5A6B80);font-weight:500;
+}
+.tariff-card__list{
+  margin:0;padding:0;list-style:none;
+}
+.tariff-card__list li{
+  position:relative;padding:4px 0 4px 18px;font-size:12.5px;line-height:1.4;color:var(--kb-blue-2,#1E3A5F);font-weight:500;
+}
+.tariff-card__list li::before{
+  content:"✓";position:absolute;left:0;top:4px;color:var(--kb-gold,#A97A1C);font-weight:700;font-size:12px;
+}
+@media(max-width:900px){.tariff-cards{grid-template-columns:1fr}}
+
+.tariff-card{
+  transition:border-color .15s,box-shadow .15s,background .15s,opacity .15s;
+  opacity:.72;
+}
+.tariff-card.is-selected,
+.tariff-card.tariff-card--promo.is-selected{
+  opacity:1;
+  border-color:var(--kb-gold,#A97A1C)!important;
+  background:var(--kb-gold-soft,#FBF2DC)!important;
+  box-shadow:inset 0 0 0 1px var(--kb-gold,#A97A1C),0 4px 14px rgba(169,122,28,.12)!important;
+}
+.tariff-card:not(.is-selected){
+  border-color:var(--kb-line,#DCE3EE)!important;
+  background:#fff!important;
+  box-shadow:0 1px 2px rgba(13,49,86,.05)!important;
+}
+
+/* Locked modules on Lite tariff */
+.module.locked{opacity:.55;position:relative}
+.module.locked .module-head{cursor:not-allowed}
+.module.locked .switch{opacity:.5;cursor:not-allowed}
+.module.locked.active{border-color:var(--kb-line);box-shadow:var(--shadow-sm)}
+.module.locked .module-body{display:none!important}
+.module-lock-badge{display:none;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;
+  color:var(--kb-blue-3);background:var(--kb-blue-soft);border:1px solid var(--kb-line);border-radius:var(--r);
+  padding:3px 8px;margin-left:8px;white-space:nowrap}
+.module.locked .module-lock-badge{display:inline-block}
+.field-locked{opacity:.55;pointer-events:none;position:relative}
+.field-locked .in input{background:var(--kb-blue-soft);cursor:not-allowed}
+
+.tariff-toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);
+  background:var(--kb-blue);color:#fff;padding:14px 20px;border-radius:var(--r);
+  box-shadow:0 8px 28px rgba(13,49,86,.28);font-size:13px;font-weight:600;line-height:1.45;
+  max-width:min(420px,calc(100vw - 32px));z-index:9999;opacity:0;pointer-events:none;
+  transition:opacity .2s,transform .2s}
+.tariff-toast.show{opacity:1;transform:translateX(-50%) translateY(0);pointer-events:auto}
+.tariff-toast b{color:var(--kb-gold-soft)}
+
+.ue-footer-brand,.topbar{display:none!important}.footnotes{display:none!important}
+main .footer, .wrap > .footer, div.footer:not([class*="footer__"]){display:none!important}
+
+/* Report: lighter, elegant typography */
+#out .big {
+  font-family: Montserrat, sans-serif !important;
+  font-weight: 300 !important;
+  font-size: clamp(32px, 4vw, 40px) !important;
+  letter-spacing: -0.03em !important;
+}
+#out .big-label {
+  font-family: Inter, system-ui, sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 11px !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: var(--kb-blue-3, #5A6B80) !important;
+}
+#out .verdict {
+  font-family: Inter, system-ui, sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 13.5px !important;
+  line-height: 1.55 !important;
+}
+#out .kp b,
+#out .month-card b,
+#out .sc b,
+#out .bd .v,
+#out .peak {
+  font-family: Montserrat, sans-serif !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.02em !important;
+}
+#out .kp span,
+#out .month-card span,
+#out .bd h4,
+#out .sc span {
+  font-family: Inter, system-ui, sans-serif !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.04em !important;
+}
+#out h2, #out h3, #out .opt-box h3, #out .chart-wrap h3 {
+  font-family: Montserrat, sans-serif !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.01em !important;
+}
+#out .lead, #out .note, #out td, #out .d {
+  font-family: Inter, system-ui, sans-serif !important;
+  font-weight: 400 !important;
+}
+#out td b, #out th {
+  font-weight: 500 !important;
+}
+#out .kp > div, #out .month-card > div, #out .bd {
+  padding: 14px 16px !important;
+}
+
+/* Standalone: no site header offset */
+body{margin:0!important;padding-top:0!important;background:var(--kb-bg,#F4F6FA);}
+.page-hero{margin:0;}
+</style>
+    <link rel="stylesheet" href="/assets/css/konturbiz-redesign.css?v=20261020-hero">
+</head>
+<body>
+<main id="main">
+
+  <section class="page-hero" aria-labelledby="calc-title">
+    <div class="page-hero__inner">
+      <div class="page-hero__media" aria-hidden="true">
+        <picture>
+          <source srcset="/images/services/loyalty-calculator-hero.webp" type="image/webp">
+          <img src="/images/services/loyalty-calculator-hero.png" alt="" width="1200" height="400" decoding="async" fetchpriority="high">
+        </picture>
+      </div>
+      <div class="page-hero__overlay" aria-hidden="true"></div>
+      <div class="page-hero__body">
+        <p class="page-hero__eyebrow">KONTUR · ЮНИТ</p>
+        <h1 id="calc-title">Калькулятор программы лояльности RC CITY</h1>
+        <p class="page-hero__lead">Сколько дополнительной прибыли принесёт торговой точке программа RC CITY — онлайн-инструмент считает бонусную программу за 12 месяцев: накопление участников, отток, welcome-баллы и эквайринг.</p>
+</div></div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    
+    <div class="ue-intro">
+      <p class="ue-intro__kicker">Экономика удержания клиентов</p>
+      <p class="ue-intro__badge">RC CITY · юнит-экономика программы лояльности</p>
+      <h2>Сколько бизнес заработает на программе лояльности RC CITY?</h2>
+      <p>Вы вводите средний чек, число клиентов и процент бонусов — калькулятор показывает, сколько потратите на баллы и сколько заработаете на повторных визитах за 12&nbsp;месяцев.</p>
+    </div>
+    <div class="aeo-answer">
+      <strong>Калькулятор программы лояльности RC CITY</strong> — онлайн-инструмент KONTURBIZ (ЮНИТ), который считает дополнительную прибыль от бонусной программы за 12 месяцев. Учитываются накопление участников, отток, welcome-баллы и эквайринг. <strong>RC CITY</strong> — кабинет предпринимателя: начисление и списание баллов через QR-код, оцифровка клиентов в RC PAY, тарифы Лайт, Промо и Про+.
+    </div>
+
+<details class="glossary">
+  <summary>Словарь терминов RC CITY</summary>
+  <div class="glossary-body">
+    <b>Баллы</b> — вознаграждение за покупки. 1 балл RC = 1 ₽.<br>
+    <b>Внутренний клиент</b> — оцифрован вами (QR / промокод). <b>Внешний</b> — оцифрован другим ТСП.<br>
+    <b>Группы начисления</b> — пороги суммы покупки с повышенным % баллов.<br>
+    <b>Акции</b> — временные promotions с повышенным начислением. До 3 одновременно. Заменяют базовое начисление на время акции.<br>
+    <b>Предзаказы</b> — заказы через RC PAY. Дополнительный канал продаж.<br>
+    <b>RFM</b> — сегментация по давности, частоте и суммам. <b>Push-реактивация</b> — возврат спящих через push.<br>
+    <b>RC CITY</b> — кабинет предпринимателя. <b>RC KASSA</b> — приложение кассира. <b>RC PAY</b> — приложение клиента.<br><br>
+    <b>Сценарии распределения вознаграждения:</b>
+    <table>
+      <tr><th>№</th><th>Сценарий</th><th>Клиент</th><th>Компания</th><th>Вы</th></tr>
+      <tr><td>1</td><td>Оцифрованный вами, Free, покупка у вас</td><td>50%</td><td>—</td><td>50%</td></tr>
+      <tr><td>2</td><td>Оцифрованный вами, Smart, покупка у вас</td><td>50%</td><td>—</td><td>50%</td></tr>
+      <tr><td>3</td><td>Оцифрованный вами, Free, покупка у партнёра</td><td>25%</td><td>67,5%</td><td>7,5%</td></tr>
+      <tr><td>4</td><td>Оцифрованный вами, Smart, покупка у партнёра</td><td>50%</td><td>42,5%</td><td>7,5%</td></tr>
+      <tr><td>7</td><td>Внешний, Free, покупка у вас</td><td>25%</td><td>75%</td><td>—</td></tr>
+      <tr><td>8</td><td>Внешний, Smart, покупка у вас</td><td>50%</td><td>50%</td><td>—</td></tr>
+    </table>
+    Внутренний клиент получает 50% от начисления, остальные 50% — у вас. С покупок ваших клиентов у партнёров вы получаете 7,5%.
+  </div>
+</details>
+
+<!-- ========== 1. БАЗА ========== -->
+<div class="section">
+  <div class="section-title">
+    <span class="num">1</span>
+    <h2>Базовые параметры</h2>
+    <span class="sub">Сфера, точка, тариф и программа</span>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Сфера деятельности</h3>
+      <p class="lead">Подставим типовые значения — потом замените своими.</p>
+      <div class="chips" id="chips"></div>
+      <div class="examples" id="examples"></div>
+    </div>
+
+    <div class="card">
+      <h3>Ваша торговая точка</h3>
+      <p class="lead">Средний чек и трафик определяют масштаб выручки.</p>
+      <div class="f">
+        <label>Средний чек</label>
+        <div class="in"><input id="check" type="number" min="0" inputmode="decimal"><i>₽</i></div>
+        <span class="hint">Из кассовой аналитики или выручка ÷ число чеков.</span>
+      </div>
+      <div class="row2">
+        <div class="f">
+          <label>Покупок в день</label>
+          <div class="in"><input id="perDay" type="number" min="0" inputmode="decimal"><i>шт</i></div>
+        </div>
+        <div class="f">
+          <label>Рабочих дней в месяц</label>
+          <div class="in"><input id="days" type="number" min="1" max="31" inputmode="numeric"><i>дн</i></div>
+        </div>
+      </div>
+      <div class="row2">
+        <div class="f">
+          <label>Маржа</label>
+          <div class="in"><input id="margin" type="number" min="1" max="100" inputmode="decimal"><i>%</i></div>
+          <span class="hint">Салон ~70%, кафе ~12–25%, аптека ~25%.</span>
+        </div>
+        <div class="f">
+          <label>Покупок в месяц у клиента</label>
+          <div class="in"><input id="freq" type="number" min="0.1" step="0.1" inputmode="decimal"><i>раз</i></div>
+          <span class="hint">Нужна для расчёта базы участников.</span>
+        </div>
+      </div>
+      <div class="row3">
+        <div class="f">
+          <label>Эквайринг<span style="color:#C62828;font-weight:700">*</span></label>
+          <div class="in"><input id="acquiring" type="number" min="0" max="10" step="0.1" inputmode="decimal"><i>%</i></div>
+          <span class="hint">Комиссия банка за <b>оплату рублями</b>. SoftPOS — индивидуально.</span>
+        </div>
+        <div class="f">
+          <label>Доля чека баллами</label>
+          <div class="in"><input id="pointsPay" type="number" min="0" max="100" step="1" inputmode="decimal"><i>%</i></div>
+          <span class="hint">Часть чека баллами — <b>без</b> эквайринга. 50 = схема 50/50.</span>
+        </div>
+        <div class="f">
+          <label>Доля возвратов</label>
+          <div class="in"><input id="returns" type="number" min="0" max="50" step="0.5" inputmode="decimal"><i>%</i></div>
+          <span class="hint">Баллы по возвратам списываются. Снижает выручку и затраты на баллы.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Тариф RC CITY</h3>
+      <p class="lead">Раздел «Мои предприятия» → «Тарифы».</p>
+      <div class="opt" id="tariffs">
+        <label><input type="radio" name="tariff" value="0"><span>Лайт<span class="hint">Бесплатно. Базовая аналитика; на новой точке мало оцифрованных.</span></span><span class="pr">0 ₽</span></label>
+        <label><input type="radio" name="tariff" value="1500" checked><span>Промо<span class="hint">18 000 ₽/год. Группы, акции, push, предзаказы, монетизация.</span></span><span class="pr">1 500 ₽/мес</span></label>
+        <label><input type="radio" name="tariff" value="3250"><span>Про+<span class="hint">39 000 ₽/год. Всё из Промо, до 30 точек.</span></span><span class="pr">3 250 ₽/мес</span></label>
+      </div>
+    
+      
+      <div class="tariff-cards" id="tariff-diff">
+        <article class="tariff-card" data-tariff="0">
+          <h3 class="tariff-card__name">Лайт</h3>
+          <p class="tariff-card__price">0 ₽</p>
+          <p class="tariff-card__limits">1 юрлицо · 5 точек · 20 товаров</p>
+          <ul class="tariff-card__list">
+            <li>Базовая аналитика</li>
+            <li>Начисление и списание в RC KASSA</li>
+            <li>Способы оплаты</li>
+            <li>Размещение в RC PAY</li>
+            <li>Онлайн-заказы</li>
+            <li>Продвижение точек</li>
+          </ul>
+        </article>
+        <article class="tariff-card tariff-card--promo" data-tariff="1500">
+          <h3 class="tariff-card__name">Промо</h3>
+          <p class="tariff-card__price">18 000 ₽ / год</p>
+          <p class="tariff-card__price-sub">1 500 ₽ / мес</p>
+          <p class="tariff-card__limits">15 юрлиц · 15 точек · 150 товаров · 2 Telegram/нед.</p>
+          <ul class="tariff-card__list">
+            <li>Всё из Лайт</li>
+            <li>Расширенная аналитика</li>
+            <li>Оценка кассиров</li>
+            <li>Оцифровка и список клиентов</li>
+            <li>Push на Wallet</li>
+            <li>Баллы по группам</li>
+            <li>Дизайн Wallet, подарочные карты</li>
+            <li>Монетизация до 30%</li>
+            <li>Приоритетная поддержка</li>
+          </ul>
+        </article>
+        <article class="tariff-card" data-tariff="3250">
+          <h3 class="tariff-card__name">Про+</h3>
+          <p class="tariff-card__price">39 000 ₽ / год</p>
+          <p class="tariff-card__price-sub">3 250 ₽ / мес</p>
+          <p class="tariff-card__limits">30 юрлиц · 30 точек · товары безлимит · 1 Telegram/день</p>
+          <ul class="tariff-card__list">
+            <li>Всё из Промо</li>
+            <li>Максимум лимитов</li>
+            <li>Ежедневные рассылки</li>
+            <li>Полный CRM-контур</li>
+          </ul>
+        </article>
+      </div>
+
+</div>
+
+    <div class="card">
+      <h3>Программа лояльности</h3>
+      <p class="lead">Баллы начисляются только оцифрованным клиентам (зарегистрированы в RC PAY). Не оцифрованные покупают как обычно — баллов не получают.</p>
+      <div class="info-box" id="loyalty-lite-note" style="display:none;margin-top:0">
+        <b>Тариф Лайт.</b> Своей оцифровки нет: «из них ваши внутренние» = <b>0%</b>, все оцифрованные — внешние (платите полную ставку).
+        Можно принимать клиентов, оцифрованных на других точках, и начислять/списывать баллы в RC KASSA.
+        Ставка ТСП в настройках как обычно (например 4% → клиент получает 2% баллами при покупке у вас, если бы был внутренний; для внешних — иная схема).
+        На новой точке доля оцифрованных обычно низкая — подставьте оценку потока.
+      </div>
+      <div class="row2">
+        <div class="f">
+          <label>Начисление баллов RC (ставка ТСП)</label>
+          <div class="in"><input id="accrual" type="number" min="4" max="25" step="0.5" inputmode="decimal"><i>%</i></div>
+          <span class="hint" id="aH">Ставка ТСП в кабинете (обычно 4–25%). Клиент получает половину баллами: при 4% → 2% клиенту, 2% остаётся у вас.</span>
+        </div>
+        <div class="f">
+          <label>Redemption (списание)</label>
+          <div class="in"><input id="redeem" type="number" min="0" max="100" step="1" inputmode="decimal"><i>%</i></div>
+          <span class="hint">Сколько начисленных баллов клиенты реально тратят. Реалистично 40–70%.</span>
+        </div>
+      </div>
+      <div class="info-box">
+        <b>Как начисляются баллы</b>
+        <ul>
+          <li>Ставка в кабинете — то, что ставит ТСП (например 4%). Клиент при покупке у вас получает половину баллами (при 4% → 2%).</li>
+          <li>Не оцифрован — баллы не начисляются, вы ничего не платите.</li>
+          <li>Оцифрован вами (внутренний) — клиент 50% баллами, 50% остаётся у вас (сценарии 1–2).</li>
+          <li>Оцифрован другим ТСП (внешний) — вы платите полную ставку за свой счёт (сценарии 7–8).</li>
+        </ul>
+      </div>
+      <div class="row2">
+        <div class="f">
+          <label>Доля оцифрованных клиентов</label>
+          <div class="in"><input id="conn" type="number" min="0" max="100" inputmode="decimal"><i>%</i></div>
+          <span class="hint">Сколько клиентов зарегистрировались в RC PAY. Реалистично 40–70%.</span>
+        </div>
+        <div class="f">
+          <label>Из них ваши внутренние</label>
+          <div class="in"><input id="innerShare" type="number" min="0" max="100" inputmode="decimal"><i>%</i></div>
+          <span class="hint">Доля тех, кто оцифрован вами. Остальные — оцифрованы другими ТСП.</span>
+        </div>
+      </div>
+      <div class="f">
+        <label>Из них внешние (оцифрованы другими ТСП)</label>
+        <div class="in"><input id="ext" type="number" min="0" max="100" readonly inputmode="decimal"><i>%</i></div>
+        <span class="hint">Считается автоматически: (100% − доля ваших внутренних) × доля оцифрованных.</span>
+      </div>
+      <div class="row3">
+        <div class="f">
+          <label>Приветственные баллы</label>
+          <div class="in"><input id="welcome" type="number" min="0" inputmode="decimal"><i>RC</i></div>
+          <span class="hint">Разово каждому новому оцифрованному.</span>
+        </div>
+        <div class="f">
+          <label>CAC на участника</label>
+          <div class="in"><input id="cac" type="number" min="0" step="10" inputmode="decimal"><i>₽</i></div>
+          <span class="hint">Разовая стоимость привлечения: реклама, стикеры, обучение. Если не считаете — 0.</span>
+        </div>
+        <div class="f">
+          <label>Отток оцифрованных</label>
+          <div class="in"><input id="churn" type="number" min="0" max="50" step="0.5" inputmode="decimal"><i>%/мес</i></div>
+          <span class="hint">Доля перестающих покупать за месяц. Реалистично 3–8%.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== 2. МЕХАНИКИ ========== -->
+<div class="section">
+  <div class="section-title">
+    <span class="num">2</span>
+    <h2>Механики RC CITY</h2>
+    <span class="sub">Включайте нужные переключателями</span>
+  </div>
+
+  <div class="grid">
+    <!-- Группы — Промо+ -->
+    <div class="module" id="mod-tier" data-requires-tariff="promo">
+      <div class="module-head">
+        <h3>Группы начисления и пороги<span class="sub">Стимулируйте рост чека</span><span class="module-lock-badge">Промо / Про+</span></h3>
+        <label class="switch"><input type="checkbox" id="tierEnabled"><span class="slider"></span></label>
+      </div>
+      <div class="module-body">
+        <p class="lead" style="margin-top:0">Пороги суммы чека. Клиенты из «зоны досягаемости» (доля чеков ниже порога) могут подтянуть покупку до следующего уровня.</p>
+        <div class="tier-list" id="tierList"></div>
+        <button type="button" class="btn-add" id="tierAdd">+ Добавить группу</button>
+        <div class="f">
+          <label>Доля реагирующих клиентов</label>
+          <div class="in"><input id="tierElasticity" type="number" min="0" max="100" inputmode="decimal"><i>%</i></div>
+          <span class="hint">Какой % клиентов из зоны досягаемости реально увеличит чек. Реалистично 10–20%.</span>
+        </div>
+        <div class="auto-display" id="tierAuto"></div>
+      </div>
+    </div>
+
+    <!-- Акции — Промо+ -->
+    <div class="module" id="mod-promo" data-requires-tariff="promo">
+      <div class="module-head">
+        <h3>Акции<span class="sub">До 3 одновременно</span><span class="module-lock-badge">Промо / Про+</span></h3>
+        <label class="switch"><input type="checkbox" id="promoEnabled"><span class="slider"></span></label>
+      </div>
+      <div class="module-body">
+        <div class="row2">
+          <div class="f">
+            <label>% баллов в акции</label>
+            <div class="in"><input id="promoAccrual" type="number" min="4" max="25" step="0.5" inputmode="decimal"><i>%</i></div>
+            <span class="hint">Должно быть выше базового.</span>
+          </div>
+          <div class="f">
+            <label>% скидки в акции</label>
+            <div class="in"><input id="promoDiscount" type="number" min="0" max="100" step="0.5" inputmode="decimal"><i>%</i></div>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="f">
+            <label>Доля транзакций в акции</label>
+            <div class="in"><input id="promoShare" type="number" min="0" max="100" inputmode="decimal"><i>%</i></div>
+            <span class="hint">Для «счастливых часов» — 10–25%.</span>
+          </div>
+          <div class="f">
+            <label>Доп. трафик от акции</label>
+            <div class="in"><input id="promoUplift" type="number" min="0" max="100" inputmode="decimal"><i>%</i></div>
+            <span class="hint">Реалистично 10–20%.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Предзаказы -->
+    <div class="module" id="mod-preorder">
+      <div class="module-head">
+        <h3>Предзаказы и электронное меню<span class="sub">Доп. канал продаж</span></h3>
+        <label class="switch"><input type="checkbox" id="preorderEnabled"><span class="slider"></span></label>
+      </div>
+      <div class="module-body">
+        <div class="row2">
+          <div class="f">
+            <label>Доля предзаказов</label>
+            <div class="in"><input id="preorderShare" type="number" min="0" max="100" inputmode="decimal"><i>%</i></div>
+            <span class="hint">Какой % выручки можно перевести в онлайн. 5–10%.</span>
+          </div>
+          <div class="f">
+            <label>Прирост продаж через предзаказы</label>
+            <div class="in"><input id="preorderUplift" type="number" min="0" max="100" inputmode="decimal"><i>%</i></div>
+            <span class="hint">Доп. продажи поверх существующих. 10–20%.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RFM / Push — Промо+ -->
+    <div class="module" id="mod-rfm" data-requires-tariff="promo">
+      <div class="module-head">
+        <h3>RFM и Push-реактивация<span class="sub">Возврат спящих · Wallet</span><span class="module-lock-badge">Промо / Про+</span></h3>
+        <label class="switch"><input type="checkbox" id="rfmEnabled"><span class="slider"></span></label>
+      </div>
+      <div class="module-body">
+        <div class="f">
+          <label>Доля спящих клиентов</label>
+          <div class="in"><input id="sleepingShare" type="number" min="0" max="100" inputmode="decimal"><i>%</i></div>
+          <span class="hint">Реалистично 20–40%.</span>
+        </div>
+        <div class="f">
+          <label>Реактивация через Push</label>
+          <div class="in"><input id="reactivationRate" type="number" min="0" max="100" step="0.5" inputmode="decimal"><i>%/мес</i></div>
+          <span class="hint">Какую долю спящих возвращает push. 5–10%.</span>
+        </div>
+        <div class="f">
+          <label>Покупок реактивированного в первый месяц</label>
+          <div class="in"><input id="reactFreq" type="number" min="0.1" step="0.1" inputmode="decimal"><i>раз</i></div>
+          <span class="hint">Обычно 1–2, а не обычная частота.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Клиентское путешествие / монетизация — Промо+ -->
+    <div class="module active" id="mod-monet" data-requires-tariff="promo">
+      <div class="module-head">
+        <h3>Клиентское путешествие<span class="sub">Монетизация до 30% · сценарии 3–4</span><span class="module-lock-badge">Промо / Про+</span></h3>
+        <label class="switch"><input type="checkbox" id="monetEnabled" checked><span class="slider"></span></label>
+      </div>
+      <div class="module-body">
+        <div class="info-box">
+          <b>Сценарии 3–4.</b> Оцифрованный вами клиент делает покупку в другом заведении → вы получаете <b>7,5%</b> от суммы начисления у партнёра (и Free, и Smart).
+        </div>
+        <div class="row2">
+          <div class="f">
+            <label>Траты вашего клиента у партнёров</label>
+            <div class="in"><input id="externalSpend" type="number" min="0" step="50" inputmode="decimal"><i>₽/мес</i></div>
+            <span class="hint">Средние траты одного вашего оцифрованного вне вашей точки.</span>
+          </div>
+          <div class="f">
+            <label>Начисление у партнёров</label>
+            <div class="in"><input id="partnerAccrual" type="number" min="4" max="25" step="0.5" inputmode="decimal"><i>%</i></div>
+            <span class="hint">Ставка начисления у партнёра. Обычно 4%.</span>
+          </div>
+        </div>
+        <div class="auto-display" id="awayAuto"></div>
+      </div>
+    </div>
+
+    <!-- Реакция -->
+    <div class="card">
+      <h3>Реакция клиентов</h3>
+      <p class="lead">Как сильно вырастут покупки на выгоду программы.</p>
+      <div class="row2">
+        <div class="f">
+          <label>Дополнительная скидка участникам</label>
+          <div class="in"><input id="disc" type="number" min="0" max="100" step="0.5" inputmode="decimal"><i>%</i></div>
+          <span class="hint">Скидка поверх баллов. Если нет — 0.</span>
+        </div>
+        <div class="f">
+          <label>Доля роста без программы</label>
+          <div class="in"><input id="cann" type="number" min="0" max="100" step="1" inputmode="decimal"><i>%</i></div>
+          <span class="hint">Сезон, привычка, сервис — рост, который был бы и без баллов. Честно: 20–30%.</span>
+        </div>
+      </div>
+      <div class="opt">
+        <label><input type="radio" name="mode" value="safe" checked><span>Осторожный расчёт<span class="hint">Рост только у оцифрованных клиентов.</span></span></label>
+        <label id="modeFullLabel"><input type="radio" name="mode" value="full"><span>С полным эффектом<span class="hint">Рост на всю клиентскую базу (верхняя граница). На Лайте недоступно.</span></span></label>
+      </div>
+      <div class="chips" id="react" style="margin-top:12px">
+        <button type="button" data-c="2.05" data-f="2.75">Осторожно</button>
+        <button type="button" data-c="3.45" data-f="4.8" aria-pressed="true">Умеренно</button>
+        <button type="button" data-c="5.5" data-f="8.25">Оптимистично</button>
+      </div>
+      <div class="preview" id="reactPreview">
+        <div class="line">Клиент реально получает: <b id="pvEff">—</b></div>
+        <div class="line">Средний чек вырастет на <b id="pvGc">—</b></div>
+        <div class="line">Число покупок вырастет на <b id="pvGf">—</b></div>
+        <div class="line"><b>Выручка участника вырастет на <span id="pvF">—</span></b></div>
+        <div class="line dash">Вам это стоит: <b id="pvCost">—</b> от выручки участников</div>
+      </div>
+      <details class="tight">
+        <summary>Тонкая настройка реакции</summary>
+        <div class="row2" style="margin-top:12px">
+          <div class="f">
+            <label>Коэффициент чека</label>
+            <div class="in"><input id="kc" type="number" min="0" step="0.05" value="3.45"><i>п.п.</i></div>
+            <span class="hint">% роста чека на 1% выгоды. Реалистично 3,45.</span>
+          </div>
+          <div class="f">
+            <label>Коэффициент частоты</label>
+            <div class="in"><input id="kf" type="number" min="0" step="0.05" value="4.8"><i>п.п.</i></div>
+            <span class="hint">% роста частоты на 1% выгоды. Реалистично 4,8.</span>
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+</div>
+
+<!-- Кнопка -->
+<div class="section">
+  <button class="go" id="go" type="button">Рассчитать экономику</button>
+  <div class="hint" style="margin-top:8px;text-align:center">Значения по сферам примерные. Для точного результата введите свои цифры.</div>
+</div>
+
+<!-- Результаты -->
+<div class="section" id="results">
+  <div class="card" id="out" aria-live="polite">
+    <div class="empty">Выберите сферу и тариф, проверьте цифры и нажмите <b>«Рассчитать экономику»</b>.</div>
+  </div>
+</div>
+
+</div>
+    </div>
+
+</main>
+<script>
+
+(function(){
+"use strict";
+
+const P = {
+  beauty:  {n:'Бьюти',ex:'Салоны, маникюр, барбершопы, косметология, массаж',check:2000,perDay:10,margin:65,freq:1.5,accrual:4},
+  horeca:  {n:'HoReCa',ex:'Кафе, рестораны, кофейни, бары, пекарни',check:1000,perDay:30,margin:25,freq:4,accrual:4},
+  retail:  {n:'Розница',ex:'Магазины одежды, косметики, цветов, товаров для дома',check:2500,perDay:15,margin:40,freq:1.5,accrual:4},
+  services:{n:'Услуги',ex:'Автосервис, ремонт, химчистка, фотостудии',check:3000,perDay:8,margin:60,freq:1,accrual:4},
+  tutor:   {n:'Репетиторство',ex:'Репетиторы, языковые школы, образовательные услуги',check:2000,perDay:6,margin:70,freq:6,accrual:4},
+  med:     {n:'Медицина',ex:'Стоматология, клиники, оптика, ветеринария',check:4000,perDay:10,margin:55,freq:1,accrual:4},
+  fitness: {n:'Фитнес',ex:'Фитнес-клубы, студии, спортивные секции',check:3000,perDay:12,margin:60,freq:1.5,accrual:4},
+  other:   {n:'Другое',ex:'Введите свои параметры вручную',check:1500,perDay:15,margin:50,freq:2,accrual:4}
+};
+
+const $=id=>document.getElementById(id);
+const F=['check','perDay','days','margin','freq','accrual','conn','innerShare','redeem','welcome','churn','ext','tierElasticity',
+  'promoAccrual','promoDiscount','promoShare','promoUplift',
+  'preorderShare','preorderUplift',
+  'sleepingShare','reactivationRate','reactFreq',
+  'externalSpend','partnerAccrual','acquiring','pointsPay','returns','cac','cann','disc','kc','kf'];
+
+const rub=n=>{if(!Number.isFinite(n))return'—';return Math.round(n).toLocaleString('ru-RU').replace('-','−')+' ₽'};
+const sgn=n=>(n>0?'+':'')+rub(n);
+const p1=n=>{if(!Number.isFinite(n))return'—';return(Math.round(n*10)/10).toLocaleString('ru-RU')+'%'};
+const chk=n=>document.querySelector('input[name="'+n+'"]:checked').value;
+
+let lastMonthly=[],lastCumulative=[],lastYear=null;
+
+/* ===== Dynamic accrual groups ===== */
+const MAX_TIERS=5;
+let tiers=[{threshold:1500,accrual:10,share:20},{threshold:3000,accrual:15,share:15}];
+
+function renderTiers(){
+  const list=$('tierList');
+  if(!list)return;
+  list.innerHTML=tiers.map((t,i)=>`
+    <div class="tier-row" data-i="${i}">
+      <div class="tier-num">${i+1}</div>
+      <div class="f">
+        <label>Порог</label>
+        <div class="in"><input type="number" min="0" class="tier-threshold" value="${t.threshold}" inputmode="decimal"><i>₽</i></div>
+      </div>
+      <div class="f">
+        <label>% начисления</label>
+        <div class="in"><input type="number" min="4" max="25" step="0.5" class="tier-accrual" value="${t.accrual}" inputmode="decimal"><i>%</i></div>
+      </div>
+      <div class="f">
+        <label>Доля чеков ниже</label>
+        <div class="in"><input type="number" min="0" max="100" class="tier-share" value="${t.share}" inputmode="decimal"><i>%</i></div>
+      </div>
+      <button type="button" class="btn-del" data-del="${i}" title="Удалить" ${tiers.length<=1?'disabled':''}>×</button>
+    </div>`).join('');
+  list.querySelectorAll('input').forEach(inp=>{
+    inp.addEventListener('input',()=>{syncTiersFromDom();updTierAuto();upd();});
+  });
+  list.querySelectorAll('.btn-del').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const i=+btn.dataset.del;
+      if(tiers.length<=1)return;
+      tiers.splice(i,1);
+      renderTiers();updTierAuto();upd();
+    });
+  });
+  const addBtn=$('tierAdd');
+  if(addBtn)addBtn.disabled=tiers.length>=MAX_TIERS;
+}
+
+function syncTiersFromDom(){
+  const rows=document.querySelectorAll('#tierList .tier-row');
+  tiers=[...rows].map(row=>({
+    threshold:Math.max(0,+(row.querySelector('.tier-threshold')?.value)||0),
+    accrual:Math.min(25,Math.max(4,+(row.querySelector('.tier-accrual')?.value)||4)),
+    share:Math.min(100,Math.max(0,+(row.querySelector('.tier-share')?.value)||0))
+  }));
+  /* sort by threshold ascending for calculation, keep UI order as user set */
+}
+
+function getSortedTiers(){
+  syncTiersFromDom();
+  return tiers.slice().sort((a,b)=>a.threshold-b.threshold);
+}
+
+function updTierAuto(){
+  const c=+$('check').value||0;
+  const sorted=getSortedTiers();
+  if(!sorted.length){$('tierAuto').innerHTML='';return}
+  const lines=sorted.map((t,i)=>{
+    const prev=i===0?c:Math.max(c,sorted[i-1].threshold);
+    const inc=c<t.threshold?Math.round(t.threshold-c):0;
+    return `До порога ${i+1} (${rub(t.threshold)}, ${t.accrual}%): нужно добавить <b>${inc.toLocaleString('ru-RU')} ₽</b> · зона <b>${t.share}%</b> чеков`;
+  });
+  $('tierAuto').innerHTML=lines.join('<br>')+
+    '<br><span style="font-size:11px;color:var(--kb-blue-3)">«Доля чеков ниже» — какая часть чеков чуть не дотягивает до этого порога.</span>';
+}
+
+function updAwayAuto(){
+  const el=$('awayAuto');
+  if(!el)return;
+  const spend=+$('externalSpend')?.value||0;
+  const pa=+$('partnerAccrual')?.value||0;
+  const perClient=spend*(pa/100)*0.075;
+  el.innerHTML='С одного <b>вашего</b> оцифрованного: <b>'+rub(perClient)+'/мес</b> '+
+    '(траты '+rub(spend)+' × '+pa+'% × 7,5%). '+
+    'В расчёте за год умножается на число <b>ваших</b> активных каждого месяца — база растёт, доход растёт.';
+}
+
+/* ===== Тарифные ограничения (Лайт) =====
+   Лайт: можно принимать оцифрованных (с других ТСП) и начислять/списывать баллы.
+   Нельзя: оцифровывать самому → innerShare=0; группы, push, монетизация, акции. */
+const PROMO_ONLY_MODULES={
+  tierEnabled:{name:'Начисление баллов по группам клиентов'},
+  promoEnabled:{name:'Акции'},
+  rfmEnabled:{name:'Push-уведомления клиентам на карту Wallet'},
+  monetEnabled:{name:'Монетизация / клиентское путешествие'}
+};
+const LITE_LOCK_FIELDS=['innerShare','welcome','cac'];
+const LITE_DEFAULT_CONN=20;
+
+function isLiteTariff(){
+  const r=document.querySelector('input[name="tariff"]:checked');
+  return r&&r.value==='0';
+}
+
+function showTariffToast(featureName){
+  let el=document.getElementById('tariffToast');
+  if(!el){
+    el=document.createElement('div');
+    el.id='tariffToast';
+    el.className='tariff-toast';
+    el.setAttribute('role','status');
+    document.body.appendChild(el);
+  }
+  el.innerHTML='Опция <b>«'+(featureName||'эта функция')+'»</b> недоступна на выбранном тарифе.<br>Доступно на тарифах <b>Промо</b> и <b>Про+</b>.';
+  el.classList.add('show');
+  clearTimeout(showTariffToast._t);
+  showTariffToast._t=setTimeout(()=>el.classList.remove('show'),3800);
+}
+
+/* Снимок полей до Лайта — чтобы вернуть значения при возврате на Промо/Про+ */
+let _savedBeforeLite=null;
+
+function snapshotBeforeLite(){
+  if(_savedBeforeLite)return; /* уже сохранён — не перезаписываем повторным кликом на Лайт */
+  const mods={};
+  Object.keys(PROMO_ONLY_MODULES).forEach(id=>{
+    const cb=$(id);
+    if(cb) mods[id]=!!cb.checked;
+  });
+  _savedBeforeLite={
+    innerShare:$('innerShare')?$('innerShare').value:'60',
+    welcome:$('welcome')?$('welcome').value:'50',
+    cac:$('cac')?$('cac').value:'0',
+    conn:$('conn')?$('conn').value:'70',
+    mode:(document.querySelector('input[name="mode"]:checked')||{}).value||'safe',
+    modules:mods
+  };
+}
+
+function restoreAfterLite(){
+  if(!_savedBeforeLite)return;
+  const s=_savedBeforeLite;
+  if($('innerShare')) $('innerShare').value=s.innerShare;
+  if($('welcome')) $('welcome').value=s.welcome;
+  if($('cac')) $('cac').value=s.cac;
+  if($('conn')) $('conn').value=s.conn;
+  if(s.mode){
+    const m=document.querySelector('input[name="mode"][value="'+s.mode+'"]');
+    if(m){ m.disabled=false; m.checked=true; }
+  }
+  Object.keys(s.modules||{}).forEach(id=>{
+    const cb=$(id);
+    if(!cb)return;
+    cb.checked=!!s.modules[id];
+    const mod=cb.closest('.module');
+    if(mod) mod.classList.toggle('active',cb.checked);
+  });
+  _savedBeforeLite=null;
+}
+
+function applyTariffLimits(){
+  const lite=isLiteTariff();
+
+  if(lite){
+    snapshotBeforeLite();
+  }else{
+    restoreAfterLite();
+  }
+
+  document.querySelectorAll('.module[data-requires-tariff="promo"]').forEach(mod=>{
+    const cb=mod.querySelector('input[type=checkbox]');
+    mod.classList.toggle('locked',lite);
+    if(lite&&cb){
+      cb.checked=false;
+      mod.classList.remove('active');
+    }
+  });
+  LITE_LOCK_FIELDS.forEach(id=>{
+    const inp=$(id);
+    if(!inp)return;
+    const wrap=inp.closest('.f');
+    if(wrap)wrap.classList.toggle('field-locked',lite);
+    inp.readOnly=!!lite;
+    if(lite){
+      if(id==='innerShare')inp.value=0;
+      if(id==='welcome')inp.value=0;
+      if(id==='cac')inp.value=0;
+    }
+  });
+  /* Доля оцифрованных на Лайте — только внешний поток, потолок 40% */
+  const connInp=$('conn');
+  if(connInp){
+    const wrap=connInp.closest('.f');
+    if(wrap)wrap.classList.remove('field-locked');
+    if(lite){
+      const cur=+$('conn').value||0;
+      if(cur===0||cur>40) $('conn').value=LITE_DEFAULT_CONN;
+    }
+  }
+  /* «С полным эффектом» — только Промо/Про+ */
+  const fullRadio=document.querySelector('input[name="mode"][value="full"]');
+  const fullLabel=$('modeFullLabel')||fullRadio?.closest('label');
+  if(fullRadio){
+    fullRadio.disabled=!!lite;
+    if(lite){
+      fullRadio.checked=false;
+      const safe=document.querySelector('input[name="mode"][value="safe"]');
+      if(safe) safe.checked=true;
+    }
+  }
+  if(fullLabel){
+    fullLabel.classList.toggle('field-locked',lite);
+    fullLabel.style.cursor=lite?'not-allowed':'';
+    fullLabel.title=lite?'Недоступно на тарифе Лайт. Доступно на Промо и Про+.':'';
+  }
+  syncExt();
+  const note=$('loyalty-lite-note');
+  if(note) note.style.display=lite?'block':'none';
+  upd();
+}
+
+/* Module toggles with tariff gate */
+document.querySelectorAll('.module').forEach(mod=>{
+  const cb=mod.querySelector('input[type=checkbox]');
+  if(!cb)return;
+  const toggle=()=>mod.classList.toggle('active',cb.checked);
+
+  const tryEnable=(wantOn)=>{
+    const requiresPromo=mod.getAttribute('data-requires-tariff')==='promo';
+    if(wantOn&&requiresPromo&&isLiteTariff()){
+      cb.checked=false;
+      mod.classList.remove('active');
+      const meta=PROMO_ONLY_MODULES[cb.id];
+      showTariffToast(meta?meta.name:mod.querySelector('h3')?.childNodes[0]?.textContent?.trim()||'эта опция');
+      return false;
+    }
+    cb.checked=wantOn;
+    toggle();
+    upd();
+    return true;
+  };
+
+  cb.addEventListener('click',e=>{
+    if(isLiteTariff()&&mod.getAttribute('data-requires-tariff')==='promo'){
+      e.preventDefault();
+      e.stopPropagation();
+      cb.checked=false;
+      mod.classList.remove('active');
+      const meta=PROMO_ONLY_MODULES[cb.id];
+      showTariffToast(meta?meta.name:'эта опция');
+    }
+  });
+  cb.addEventListener('change',()=>{
+    if(cb.checked&&isLiteTariff()&&mod.getAttribute('data-requires-tariff')==='promo'){
+      cb.checked=false;
+      mod.classList.remove('active');
+      const meta=PROMO_ONLY_MODULES[cb.id];
+      showTariffToast(meta?meta.name:'эта опция');
+      return;
+    }
+    toggle();
+    upd();
+  });
+  toggle();
+
+  mod.querySelector('.module-head')?.addEventListener('click',e=>{
+    if(e.target.closest('.switch'))return;
+    if(isLiteTariff()&&mod.getAttribute('data-requires-tariff')==='promo'){
+      const meta=PROMO_ONLY_MODULES[cb.id];
+      showTariffToast(meta?meta.name:(mod.querySelector('h3')?.childNodes[0]?.textContent||'эта опция').toString().trim());
+      return;
+    }
+    tryEnable(!cb.checked);
+  });
+});
+
+/* Клик по заблокированным полям «своя оцифровка» */
+LITE_LOCK_FIELDS.forEach(id=>{
+  const inp=$(id);
+  if(!inp)return;
+  const wrap=inp.closest('.f')||inp.parentElement;
+  wrap?.addEventListener('click',e=>{
+    if(!isLiteTariff())return;
+    e.preventDefault();
+    showTariffToast(id==='innerShare'?'Оцифровка клиентов вами':id==='welcome'?'Приветственные баллы (своя оцифровка)':'CAC на привлечение');
+  },true);
+});
+
+/* «С полным эффектом» на Лайте — toast */
+(function(){
+  const fullLabel=$('modeFullLabel')||document.querySelector('input[name="mode"][value="full"]')?.closest('label');
+  if(!fullLabel)return;
+  fullLabel.addEventListener('click',e=>{
+    if(!isLiteTariff())return;
+    e.preventDefault();
+    e.stopPropagation();
+    const safe=document.querySelector('input[name="mode"][value="safe"]');
+    if(safe) safe.checked=true;
+    const full=document.querySelector('input[name="mode"][value="full"]');
+    if(full){ full.checked=false; full.disabled=true; }
+    showTariffToast('С полным эффектом');
+  },true);
+})();
+
+document.querySelectorAll('input[name=tariff]').forEach(r=>{
+  r.addEventListener('change',()=>{
+    applyTariffLimits();
+    /* sync visual cards if present */
+    document.querySelectorAll('.tariff-card[data-tariff]').forEach(card=>{
+      card.classList.toggle('is-selected',card.getAttribute('data-tariff')===(document.querySelector('input[name="tariff"]:checked')?.value||''));
+    });
+  });
+});
+
+$('tierAdd')?.addEventListener('click',()=>{
+  if(tiers.length>=MAX_TIERS)return;
+  const last=tiers[tiers.length-1]||{threshold:1000,accrual:8,share:15};
+  tiers.push({
+    threshold:Math.round(last.threshold*1.5),
+    accrual:Math.min(25,last.accrual+5),
+    share:Math.max(5,Math.round(last.share*0.7))
+  });
+  renderTiers();updTierAuto();upd();
+});
+
+function syncExt(){
+  const conn=Math.min(100,Math.max(0,+$('conn').value||0));
+  const inner=Math.min(100,Math.max(0,+$('innerShare').value||0));
+  const ext=Math.round((100-inner)/100*conn*10)/10;
+  $('ext').value=ext;
+}
+
+function pick(k){
+  const p=P[k]||P.other;
+  ['check','perDay','margin','freq','accrual'].forEach(f=>$(f).value=p[f]);
+  $('days').value=26; $('conn').value=70; $('innerShare').value=60; $('redeem').value=60;
+  $('welcome').value=50; $('churn').value=3; $('cac').value=0;
+  syncExt();
+  tiers=[{threshold:1500,accrual:10,share:20},{threshold:3000,accrual:15,share:15}];
+  renderTiers();
+  $('tierElasticity').value=15;
+  $('promoAccrual').value=10; $('promoDiscount').value=0;
+  $('promoShare').value=20; $('promoUplift').value=15;
+  $('preorderShare').value=5; $('preorderUplift').value=15;
+  $('sleepingShare').value=30; $('reactivationRate').value=8; $('reactFreq').value=1.2;
+  $('externalSpend').value=500; $('partnerAccrual').value=4;
+  $('acquiring').value=2.6; $('pointsPay').value=50; $('returns').value=3;
+  $('cann').value=20; $('disc').value=0;
+  $('kc').value=3.45; $('kf').value=4.8;
+  $('tierEnabled').checked=false; $('promoEnabled').checked=false;
+  $('preorderEnabled').checked=false; $('rfmEnabled').checked=false;
+  $('monetEnabled').checked=!isLiteTariff();
+  document.querySelectorAll('.module').forEach(m=>{
+    const cb=m.querySelector('input[type=checkbox]');
+    if(cb)m.classList.toggle('active',cb.checked);
+  });
+  document.querySelectorAll('#chips button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.k===k));
+  $('examples').textContent=p.ex;
+  applyTariffLimits();
+  upd(); updTierAuto(); updAwayAuto();
+}
+
+function upd(){
+  const c=+$('check').value||0, a=+$('accrual').value||0;
+  const innerPts=Math.round(c*a/200);
+  const extPts=Math.round(c*a/100);
+  $('aH').textContent='Ставка ТСП в кабинете (обычно 4–25%). Клиент получает половину баллами: при 4% → 2% клиенту, 2% остаётся у вас. При чеке '+
+    rub(c)+' внутренний клиент получит '+innerPts.toLocaleString('ru-RU')+' баллов, вы заплатите '+
+    innerPts.toLocaleString('ru-RU')+' ₽. Внешнему клиенту вы платите полную ставку '+a+'% — '+
+    extPts.toLocaleString('ru-RU')+' ₽ с чека.';
+
+  const accrual=+$('accrual').value||0, disc=+$('disc').value||0;
+  const kc=+$('kc').value||0, kf=+$('kf').value||0, redeem=+$('redeem').value||0;
+  const eff=accrual*0.5+disc;
+  const gc=Math.min(30,kc*eff), gf=Math.min(40,kf*eff);
+  const f=(1+gc/100)*(1+gf/100)-1;
+  const costToBiz=accrual*0.5*(redeem/100)+disc;
+  $('pvEff').textContent=p1(eff);
+  $('pvGc').textContent='+'+p1(gc);
+  $('pvGf').textContent='+'+p1(gf);
+  $('pvF').textContent='+'+p1(f*100);
+  $('pvCost').textContent=p1(costToBiz);
+  document.querySelectorAll('#react button').forEach(b=>
+    b.setAttribute('aria-pressed',b.dataset.c==$('kc').value&&b.dataset.f==$('kf').value));
+  updAwayAuto();
+
+  const o=$('out');
+  if(o.querySelector('.verdict')&&!o.querySelector('.stale'))
+    o.insertAdjacentHTML('afterbegin','<div class="stale">Параметры изменены — нажмите «Рассчитать экономику».</div>');
+}
+
+function read(){
+  const v={};
+  F.forEach(f=>{const el=$(f);v[f]=el?Math.max(0,+el.value||0):0});
+  v.days=Math.max(1,v.days);
+  v.margin=Math.min(100,Math.max(1,v.margin));
+  v.accrual=Math.min(25,Math.max(4,v.accrual||4));
+  v.conn=Math.min(100,v.conn);
+  v.innerShare=Math.min(100,v.innerShare||0);
+  v.redeem=Math.min(100,v.redeem);
+  /* ext = (100 − innerShare)/100 × conn — доля внешних от всей базы */
+  v.ext=Math.round((100-v.innerShare)/100*v.conn*10)/10;
+  v.cann=Math.min(100,v.cann);
+  v.churn=Math.min(50,v.churn);
+  v.returns=Math.min(50,v.returns);
+  v.pointsPay=Math.min(100,v.pointsPay||0);
+  v.tariff=+chk('tariff');
+  v.mode=chk('mode');
+  v.tierEnabled=$('tierEnabled').checked;
+  v.promoEnabled=$('promoEnabled').checked;
+  v.preorderEnabled=$('preorderEnabled').checked;
+  v.rfmEnabled=$('rfmEnabled').checked;
+  v.monetEnabled=$('monetEnabled').checked;
+  /* Лайт: механики Промо выкл.; своя оцифровка = 0; только осторожный режим */
+  if(v.tariff===0){
+    v.tierEnabled=false;
+    v.promoEnabled=false;
+    v.rfmEnabled=false;
+    v.monetEnabled=false;
+    v.innerShare=0;
+    v.welcome=0;
+    v.cac=0;
+    v.ext=Math.round(v.conn*10)/10;
+    v.mode='safe';
+  }
+  return v;
+}
+
+/* ===== Исправленная месячная модель ===== */
+function monthModel(v,mode,activeParticipants,newJoiners){
+  const cv=v.conn/100, ex=v.ext/100;
+  const base=v.check*v.perDay*v.days;
+  const own=v.accrual*0.5;
+  const eff=own+v.disc;
+  const gc=Math.min(30,v.kc*eff)/100;
+  const gf=Math.min(40,v.kf*eff)/100;
+  const f=(1+gc)*(1+gf)-1;
+  const s=mode==='safe'?cv:1;
+  const keep=1-v.cann/100;
+  const rf=1-v.returns/100;
+
+  const baseForGain=base*s;
+  /* Баллы только оцифрованным: выручка оцифрованных */
+  const digRevBase=base*cv;
+  const digRev=digRevBase*(1+f*keep*rf);
+  const participantRevenueBase=mode==='safe'?base*cv:base;
+  const baseGain=baseForGain*f*keep*rf*(v.margin/100);
+  const partRev=participantRevenueBase*(1+f*keep*rf);
+
+  /* Внутренние / внешние среди оцифрованных */
+  const innerOfDig=Math.min(1,Math.max(0,(v.innerShare||0)/100));
+  const outerOfDig=1-innerOfDig;
+  const digRevForPoints=mode==='safe'?partRev:digRev;
+  const innerRev=digRevForPoints*innerOfDig;
+  const outerRev=digRevForPoints*outerOfDig;
+
+  /* Внутренние: бизнес платит 50% начисления; внешние — 100% */
+  const baseEarnedInner=innerRev*(own/100);
+  const baseEarnedExt=outerRev*(v.accrual/100);
+  const baseEarned=baseEarnedInner+baseEarnedExt;
+  const baseSpentInner=baseEarnedInner*(v.redeem/100)*rf;
+  const baseSpentExt=baseEarnedExt*(v.redeem/100)*rf;
+  const baseSpent=baseSpentInner+baseSpentExt;
+
+  /* Тариф, эквайринг, CAC — всегда.
+     Клиентское путешествие (сценарии 3–4): 7,5% только с ВАШИХ оцифрованных.
+     activeParticipants растёт в runYear каждый месяц → awayInc растёт вместе с базой.
+     Затраты на внешних уже в baseSpentExt (сц. 7–8) — не дублируем в fixed. */
+  const tariffCost=v.tariff;
+  const extCost=baseSpentExt;
+  const welcome=newJoiners*v.welcome;
+  const sleeping=activeParticipants*(v.sleepingShare/100);
+  const activeBuyers=Math.max(0,activeParticipants-sleeping);
+  const innerActive=activeParticipants*innerOfDig;
+  const awayInc=v.monetEnabled?innerActive*v.externalSpend*(v.partnerAccrual/100)*0.075:0;
+  const discount=partRev*(v.disc/100);
+  const deltaRevenue=baseForGain*f*keep*rf;
+  const pointsPayShare=Math.min(100,Math.max(0,v.pointsPay||0))/100;
+  const acquiringCost=deltaRevenue*(1-pointsPayShare)*(v.acquiring/100);
+  const cacCost=newJoiners*v.cac;
+
+  const fixed=tariffCost+acquiringCost+cacCost-awayInc;
+  const baseNet=baseGain-baseSpent-discount-fixed;
+
+  /* --- Группы начисления (динамический список) --- */
+  const tierResults=[];
+  let tierGainTotal=0,tierCostTotal=0;
+  if(v.tierEnabled&&activeBuyers>0){
+    const sorted=getSortedTiers();
+    const elasticity=v.tierElasticity/100;
+    sorted.forEach((t,i)=>{
+      /* Доп. выручка: клиенты из зоны ниже порога дотягивают чек до порога */
+      const inc=v.check<t.threshold?(t.threshold-v.check):0;
+      let gain=0,cost=0;
+      if(inc>0&&t.share>0){
+        const clients=activeBuyers*(t.share/100)*elasticity;
+        const rev=clients*inc*v.freq;
+        gain=rev*(v.margin/100)*rf;
+        /* Доп. стоимость баллов: (ставка группы − база) × 50% бизнеса */
+        const higherOwn=Math.max(0,(t.accrual-v.accrual)*0.5/100);
+        cost=rev*higherOwn*(v.redeem/100)*rf;
+      }
+      tierResults.push({i,threshold:t.threshold,accrual:t.accrual,share:t.share,gain,cost,net:gain-cost});
+      tierGainTotal+=gain;
+      tierCostTotal+=cost;
+    });
+  }
+
+  /* --- Акции --- */
+  let promoGain=0,promoCost=0,promoBaseExtraCost=0;
+  if(v.promoEnabled){
+    const promoTrafficBase=base*(v.promoShare/100);
+    const promoRev=promoTrafficBase*(v.promoUplift/100);
+    promoGain=promoRev*(v.margin/100)*rf;
+    const promoOwn=v.promoAccrual*0.5/100;
+    promoCost=promoRev*promoOwn*(v.redeem/100)*rf;
+    promoBaseExtraCost=promoTrafficBase*Math.max(0,v.promoAccrual-v.accrual)*0.5/100*(v.redeem/100)*rf;
+    promoCost+=promoRev*(v.promoDiscount/100);
+  }
+
+  /* --- Предзаказы --- */
+  let preGain=0,preCost=0;
+  if(v.preorderEnabled){
+    const preRev=base*(v.preorderShare/100)*(v.preorderUplift/100);
+    preGain=preRev*(v.margin/100)*rf;
+    preCost=preRev*(own/100)*(v.redeem/100)*rf;
+  }
+
+  /* --- RFM / Push --- */
+  let reactGain=0,reactCost=0;
+  if(v.rfmEnabled&&sleeping>0){
+    const reactivated=sleeping*(v.reactivationRate/100);
+    const reactRev=reactivated*v.check*v.reactFreq;
+    reactGain=reactRev*(v.margin/100)*rf*keep;
+    reactCost=reactRev*(own/100)*(v.redeem/100)*rf;
+  }
+
+  const mechSum=tierGainTotal-tierCostTotal
+    +promoGain-promoCost-promoBaseExtraCost
+    +preGain-preCost
+    +reactGain-reactCost;
+  const overlapRate=0.15;
+  const overlapCorrection=mechSum*overlapRate;
+  const mechNet=mechSum-overlapCorrection;
+
+  const totalNet=baseNet+mechNet-welcome;
+
+  return{
+    base,baseGain,baseSpent,baseSpentInner,baseSpentExt,baseNet,baseEarned,baseEarnedInner,baseEarnedExt,
+    extCost,welcome,awayInc,discount,
+    acquiringCost,cacCost,fixed,tariffCost,
+    tierResults,tierGainTotal,tierCostTotal,
+    promoGain,promoCost,promoBaseExtraCost,
+    preGain,preCost,reactGain,reactCost,
+    overlapCorrection,mechNet,totalNet,
+    partRev,deltaRevenue,activeBuyers,sleeping,
+    cost:baseSpent+discount+fixed+welcome+tierCostTotal+promoCost+promoBaseExtraCost+preCost+reactCost
+  };
+}
+
+function runYear(v){
+  const monthly=[],cumulative=[],months=[];
+  const cvTarget=v.conn/100;
+  const clients=v.freq>0?(v.perDay*v.days)/v.freq:0;
+  let activeParticipants=0,cum=0;
+  for(let m=1;m<=12;m++){
+    const ramp=Math.min(1,m/6);
+    const cvNow=cvTarget*ramp;
+    const targetActive=clients*cvNow;
+    const churned=activeParticipants*(v.churn/100);
+    activeParticipants=Math.max(0,activeParticipants-churned);
+    const gapJoiners=Math.max(0,targetActive-activeParticipants);
+    activeParticipants+=gapJoiners;
+    const newJoiners=gapJoiners+churned;
+    const r=monthModel(v,v.mode,activeParticipants,newJoiners);
+    monthly.push(r.totalNet);
+    cum+=r.totalNet;
+    cumulative.push(cum);
+    months.push({month:m,activeParticipants,newJoiners,net:r.totalNet,cum,r});
+  }
+  return{monthly,cumulative,months,activeEnd:activeParticipants,cum};
+}
+
+function buildChart(monthly,cumulative,activeMonth){
+  const W=600,H=240,padL=62,padR=20,padT=24,padB=38;
+  const plotW=W-padL-padR,plotH=H-padT-padB;
+  const maxVal=Math.max(...cumulative.map(Math.abs),...monthly.map(Math.abs),1);
+  const minVal=Math.min(0,...cumulative,...monthly);
+  const range=maxVal-minVal||1;
+  const x=i=>padL+(i/11)*plotW;
+  const y=v=>padT+plotH-((v-minVal)/range)*plotH;
+  const zeroY=y(0);
+  let area=`M${x(0).toFixed(1)},${zeroY.toFixed(1)}`;
+  cumulative.forEach((v,i)=>{area+=` L${x(i).toFixed(1)},${y(v).toFixed(1)}`});
+  area+=` L${x(11).toFixed(1)},${zeroY.toFixed(1)} Z`;
+  let line='';
+  cumulative.forEach((v,i)=>{line+=(i===0?'M':'L')+x(i).toFixed(1)+','+y(v).toFixed(1)+' '});
+  const barW=plotW/12*0.55;
+  let bars='';
+  monthly.forEach((v,i)=>{
+    const bx=x(i)-barW/2,by=v>=0?y(v):zeroY,bh=Math.abs(y(v)-zeroY);
+    const isActive=i===activeMonth-1;
+    const fill=v>=0?'var(--kb-good)':'var(--kb-bad)';
+    const op=isActive?0.75:0.28;
+    bars+=`<rect x="${bx.toFixed(1)}" y="${by.toFixed(1)}" width="${barW.toFixed(1)}" height="${Math.max(bh,1.5).toFixed(1)}" fill="${fill}" opacity="${op}" rx="2"/>`;
+    if(isActive)bars+=`<rect x="${bx.toFixed(1)}" y="${by.toFixed(1)}" width="${barW.toFixed(1)}" height="${Math.max(bh,1.5).toFixed(1)}" fill="none" stroke="var(--kb-blue)" stroke-width="2" rx="2"/>`;
+  });
+  let points='';
+  cumulative.forEach((v,i)=>{
+    const isActive=i===activeMonth-1;
+    points+=`<circle cx="${x(i).toFixed(1)}" cy="${y(v).toFixed(1)}" r="${isActive?5:3}" fill="var(--kb-blue)" ${isActive?'stroke="#fff" stroke-width="2"':''}/>`;
+  });
+  const gx=x(activeMonth-1);
+  const guide=`<line x1="${gx.toFixed(1)}" y1="${padT}" x2="${gx.toFixed(1)}" y2="${padT+plotH}" stroke="var(--kb-gold)" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.85"/>`;
+  let xLabels='';
+  for(let i=0;i<12;i++){
+    const active=i===activeMonth-1;
+    xLabels+=`<text x="${x(i).toFixed(1)}" y="${H-12}" text-anchor="middle" font-size="${active?12:10}" font-weight="${active?700:500}" fill="${active?'var(--kb-blue)':'var(--kb-blue-3)'}">${i+1}</text>`;
+  }
+  const yTicks=[minVal,0,maxVal].filter((v,i,a)=>a.indexOf(v)===i);
+  let yLabels='';
+  yTicks.forEach(v=>{
+    const label=Math.abs(v)>=1000?(Math.round(v/1000)+'к'):Math.round(v);
+    yLabels+=`<text x="${padL-10}" y="${y(v)+4}" text-anchor="end" font-size="10" fill="var(--kb-blue-3)">${label}</text>`;
+    yLabels+=`<line x1="${padL}" y1="${y(v)}" x2="${W-padR}" y2="${y(v)}" stroke="var(--kb-line)" stroke-dasharray="3,3"/>`;
+  });
+  return`<svg class="chart-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Динамика прибыли">${yLabels}<line x1="${padL}" y1="${zeroY}" x2="${W-padR}" y2="${zeroY}" stroke="var(--kb-blue-3)" stroke-width="1.2"/><path d="${area}" fill="var(--kb-gold)" opacity="0.15"/>${bars}${guide}<path d="${line}" fill="none" stroke="var(--kb-blue)" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round"/>${points}${xLabels}</svg><div class="chart-legend"><span><i style="background:var(--kb-blue)"></i> Накопительная прибыль</span><span><i style="background:var(--kb-good);opacity:.6"></i> Прибыль месяца</span><span><i style="background:var(--kb-bad);opacity:.6"></i> Убыток месяца</span><span><i style="background:var(--kb-gold)"></i> Выбранный месяц</span></div>`;
+}
+
+function updateMonthView(m){
+  if(!lastMonthly.length||!lastYear)return;
+  const info=lastYear.months[m-1];
+  const net=info.net,cum=info.cum;
+  const chartEl=document.getElementById('chartArea');
+  if(chartEl)chartEl.innerHTML=buildChart(lastMonthly,lastCumulative,m);
+  const card=document.getElementById('monthCard');
+  if(card)card.innerHTML=`<div><span>Месяц</span><b>${m}</b></div><div><span>Активных</span><b>${Math.round(info.activeParticipants).toLocaleString('ru-RU')}</b></div><div><span>Новых</span><b>${Math.round(info.newJoiners).toLocaleString('ru-RU')}</b></div><div><span>Прибыль</span><b class="${net>=0?'good':'bad'}">${sgn(net)}</b></div><div><span>Накопительно</span><b class="${cum>=0?'good':'bad'}">${sgn(cum)}</b></div>`;
+  const label=document.getElementById('monthLabel');
+  if(label)label.textContent=m+'-й месяц';
+}
+
+function findOptimal(v){
+  let bestA=4,bestNet=-Infinity;
+  for(let a=4;a<=25;a+=0.5){
+    const vv=Object.assign({},v,{accrual:a});
+    const y=runYear(vv);
+    if(y.cum>bestNet){bestNet=y.cum;bestA=a}
+  }
+  return{bestA,bestNet};
+}
+
+function sensitivityRows(v){
+  const rates=[4,5,10,15,17.5,20,25];
+  return rates.map(a=>{
+    const vv=Object.assign({},v,{accrual:a});
+    const y=runYear(vv);
+    const cost=y.months[11].r.cost;
+    const roi=cost?(y.monthly[11]/cost)*100:0;
+    return{a,cost,net:y.monthly[11],roi};
+  });
+}
+
+function calc(){
+  const v=read();
+  const y=runYear(v);
+  const ySafe=runYear(Object.assign({},v,{mode:'safe'}));
+  const yFull=runYear(Object.assign({},v,{mode:'full'}));
+  lastMonthly=y.monthly; lastCumulative=y.cumulative; lastYear=y;
+  const ok=y.months[11].net>=0;
+  const yearOk=y.cum>=0;
+  const opt=findOptimal(v);
+  const abovePeak=v.accrual>opt.bestA+0.25;
+  const sens=sensitivityRows(v);
+  let payback='не окупается';
+  for(let i=0;i<12;i++){if(y.cumulative[i]>=0){payback=(i+1)+'-й месяц';break}}
+
+  const rEnd=y.months[11].r;
+
+  /* Breakdown: только net механики, без реконструкции выручки */
+  const mkBd=(title,net,on,hint)=>`<div class="bd ${on?'on':'off'}"><h4>${title}</h4><div class="v ${net>=0?'good':'bad'}">${sgn(net)}</div><div class="d">${hint||'Доп. прибыль / мес'}</div></div>`;
+
+  const sum=(fn)=>y.months.reduce((s,x)=>s+fn(x.r),0);
+  const totalNew=y.months.reduce((s,x)=>s+x.newJoiners,0);
+  const avgActive=y.months.reduce((s,x)=>s+x.activeParticipants,0)/12;
+  const costYear=sum(r=>r.cost);
+  const gainYear=sum(r=>r.baseGain+(r.tierGainTotal||0)+r.promoGain+r.preGain+r.reactGain);
+  const roi=costYear>0?(y.cum/costYear)*100:0;
+  /* Юнит: на одного активного в 12-м месяце */
+  const act=Math.max(1,y.activeEnd);
+  const unitNetM=y.months[11].net/act;
+  const unitCostM=(rEnd.cost||0)/act;
+  const unitRevM=(rEnd.deltaRevenue||0)/act;
+  const unitMarginM=(rEnd.baseGain||0)/act;
+  const acqPerNew=v.welcome+v.cac;
+  const unitPayback=unitNetM>0?Math.ceil(acqPerNew/unitNetM):null;
+
+  $('out').innerHTML=`
+    <div class="verdict ${ok?'good':'bad'}">${ok
+      ?'При заданных параметрах программа лояльности приносит больше дополнительной прибыли, чем стоит. Внедрять выгодно.'
+      :'При заданных параметрах программа пока не окупается. Попробуйте снизить процент вознаграждения, повысить долю оцифрованных клиентов или выбрать другой тариф.'}</div>
+    <div class="big-label">Чистая дополнительная прибыль в 12-м месяце</div>
+    <div class="big ${ok?'good':'bad'}">${sgn(y.months[11].net)}</div>
+    <div class="lead" style="color:var(--kb-blue-3);font-size:12px">после всех затрат, с учётом оттока, возвратов и welcome</div>
+
+    <div class="kp">
+      <div><span>За 12 месяцев</span><b class="${yearOk?'good':'bad'}">${sgn(y.cum)}</b></div>
+      <div><span>Среднее в месяц</span><b class="${yearOk?'good':'bad'}">${sgn(y.cum/12)}</b></div>
+      <div><span>Активных к концу года</span><b>${Math.round(y.activeEnd).toLocaleString('ru-RU')}</b></div>
+      <div><span>Окупаемость</span><b>${payback}</b></div>
+    </div>
+
+    <div class="sec">
+      <h2>Эффект на бизнес и юнит-экономика</h2>
+      <p class="lead">Сверху — программа целиком (ROI). Ниже — один оцифрованный клиент. Так видно и масштаб, и «сходится ли» привлечение.</p>
+      <div class="kp" style="grid-template-columns:repeat(4,1fr)">
+        <div><span>Инкрементальная прибыль / год</span><b class="${yearOk?'good':'bad'}">${sgn(y.cum)}</b></div>
+        <div><span>Затраты на программу / год</span><b>${rub(costYear)}</b></div>
+        <div><span>ROI программы</span><b class="${roi>=0?'good':'bad'}">${p1(roi)}</b></div>
+        <div><span>Новых оцифрованных за год</span><b>${Math.round(totalNew).toLocaleString('ru-RU')}</b></div>
+      </div>
+      <div class="scroll" style="margin-top:12px"><table><tbody>
+        <tr><td colspan="2" style="font-weight:700;color:var(--kb-blue);background:var(--kb-blue-soft)">На одного активного участника (месяц 12)</td></tr>
+        <tr><td>Доп. выручка</td><td><b>${sgn(unitRevM)}</b></td></tr>
+        <tr><td>Доп. валовая маржа (до баллов)</td><td><b>${sgn(unitMarginM)}</b></td></tr>
+        <tr><td>Затраты программы на участника</td><td><b>${rub(unitCostM)}</b></td></tr>
+        <tr><td>Чистая доп. прибыль на участника</td><td><b class="${unitNetM>=0?'good':'bad'}">${sgn(unitNetM)}</b></td></tr>
+        <tr><td>Стоимость привлечения (welcome + CAC)</td><td><b>${rub(acqPerNew)}</b></td></tr>
+        <tr><td>Окупаемость привлечения</td><td><b>${unitPayback?unitPayback+' мес.':'не окупается при текущем net'}</b></td></tr>
+        <tr><td>Среднее активных за год</td><td><b>${Math.round(avgActive).toLocaleString('ru-RU')}</b></td></tr>
+      </tbody></table></div>
+      <p class="lead" style="margin-top:10px">ROI = инкрементальная прибыль ÷ затраты на программу. Юнит показывает, сколько «весит» один оцифрованный после баллов, тарифа и эквайринга.</p>
+    </div>
+
+    <div class="opt-box">
+      <h3>Оптимальное начисление баллов</h3>
+      <div class="peak">${opt.bestA}% → ${sgn(opt.bestNet)} за 12 месяцев</div>
+      <div style="margin:8px 0 0;color:var(--kb-blue-3);font-size:12px">При ваших параметрах максимум прибыли достигается при начислении <b>${opt.bestA}%</b>.
+        ${abovePeak
+          ?`<div class="warn-high">Сейчас у вас ${v.accrual}% — выше пика. Каждый лишний процент после ${opt.bestA}% увеличивает затраты без роста отдачи.</div>`
+          :v.accrual<opt.bestA-0.5
+            ?`<div class="ok-txt">Можно поднять начисление до ${opt.bestA}% — прибыль вырастет.</div>`
+            :`<div class="ok-txt">Вы рядом с оптимумом — хороший выбор.</div>`}
+      </div>
+    </div>
+
+    <div class="chart-wrap">
+      <h3>Динамика прибыли за 12 месяцев</h3>
+      <div class="chart-sub">Модель накопления участников с оттоком. Тяните бегунок — смотрите конкретный месяц.</div>
+      <div id="chartArea">${buildChart(y.monthly,y.cumulative,12)}</div>
+      <div class="month-slider">
+        <div class="head"><span id="monthLabel">12-й месяц</span><span class="muted">1 → 12</span></div>
+        <input type="range" id="monthRange" min="1" max="12" value="12" step="1" aria-label="Выбор месяца">
+        <div class="month-ticks"><span>1</span><span>3</span><span>6</span><span>9</span><span>12</span></div>
+      </div>
+      <div class="month-card" id="monthCard">
+        <div><span>Месяц</span><b>12</b></div>
+        <div><span>Активных</span><b>${Math.round(y.months[11].activeParticipants).toLocaleString('ru-RU')}</b></div>
+        <div><span>Новых</span><b>${Math.round(y.months[11].newJoiners).toLocaleString('ru-RU')}</b></div>
+        <div><span>Прибыль</span><b class="${y.monthly[11]>=0?'good':'bad'}">${sgn(y.monthly[11])}</b></div>
+        <div><span>Накопительно</span><b class="${y.cumulative[11]>=0?'good':'bad'}">${sgn(y.cumulative[11])}</b></div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <h2>Структура прироста (месяц 12)</h2>
+      <p class="lead">Вклад каждой механики в дополнительную прибыль. Fixed-затраты (тариф, welcome, эквайринг, CAC) — в базовом эффекте.</p>
+      <div class="breakdown">
+        ${mkBd('Базовый эффект',rEnd.baseNet,true,'Баллы + скидка − тариф − welcome − CAC − эквайринг')}
+        ${(rEnd.tierResults||[]).map((t,i)=>mkBd(
+          'Группа '+(i+1)+' (≥'+rub(t.threshold)+', '+t.accrual+'%)',
+          t.net,
+          v.tierEnabled,
+          'Зона '+t.share+'% чеков'
+        )).join('')}
+        ${mkBd('Акции',rEnd.promoGain-rEnd.promoCost-rEnd.promoBaseExtraCost,v.promoEnabled,'Uplift − баллы − замена базового %')}
+        ${mkBd('Предзаказы',rEnd.preGain-rEnd.preCost,v.preorderEnabled)}
+        ${mkBd('RFM / Push',rEnd.reactGain-rEnd.reactCost,v.rfmEnabled)}
+        <div class="bd on">
+          <h4>Итого</h4>
+          <div class="v ${y.months[11].net>=0?'good':'bad'}">${sgn(y.months[11].net)}</div>
+          <div class="d">База + механики</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <h2>Как программа повлияет на покупки</h2>
+      <p class="lead">Клиент реально получает ${p1(v.accrual*0.5+v.disc)} выгоды с покупки баллами и скидкой.</p>
+      <div class="scroll"><table><tbody>
+        <tr><td>Средняя покупка вырастет на</td><td><b>+${p1(Math.min(30,v.kc*(v.accrual*0.5+v.disc)))}</b></td></tr>
+        <tr><td>Число покупок вырастет на</td><td><b>+${p1(Math.min(40,v.kf*(v.accrual*0.5+v.disc)))}</b></td></tr>
+        <tr><td>Выручка одного участника вырастет на</td><td><b>+${p1(((1+Math.min(30,v.kc*(v.accrual*0.5+v.disc))/100)*(1+Math.min(40,v.kf*(v.accrual*0.5+v.disc))/100)-1)*100)}</b></td></tr>
+      </tbody></table></div>
+    </div>
+
+    <div class="sec">
+      <h2>Из чего сложился результат за год</h2>
+      <div class="scroll"><table><tbody>
+        <tr><td>Дополнительная прибыль (база, до fixed)</td><td>${sgn(sum(r=>r.baseGain))}</td></tr>
+        <tr><td>Активных участников к 12-му месяцу</td><td>${Math.round(y.activeEnd).toLocaleString('ru-RU')}</td></tr>
+        <tr><td>Баллов списано внутренним (вы платите 50%)</td><td>${rub(sum(r=>r.baseSpentInner))}</td></tr>
+        <tr><td>Баллов списано внешним (вы платите 100%)</td><td>${rub(sum(r=>r.baseSpentExt))}</td></tr>
+        <tr><td>Всего затрат на баллы</td><td>${rub(sum(r=>r.baseSpent))}</td></tr>
+        <tr><td>Скидка участникам</td><td>${rub(sum(r=>r.discount))}</td></tr>
+        <tr><td>Тариф</td><td>${rub(v.tariff*12)}</td></tr>
+        <tr><td>Приветственные баллы</td><td>${rub(sum(r=>r.welcome))}</td></tr>
+        <tr><td>CAC на привлечение оцифрованных</td><td>${rub(sum(r=>r.cacCost))}</td></tr>
+        <tr><td>Эквайринг с доп. выручки (только рублёвая доля)</td><td>${rub(sum(r=>r.acquiringCost))}</td></tr>
+        ${v.monetEnabled?`<tr><td>Клиентское путешествие за год (7,5% × ваши активные по месяцам)</td><td>${sgn(sum(r=>r.awayInc))}</td></tr>`:''}
+        ${v.monetEnabled?`<tr><td>— в т.ч. в 12-м месяце</td><td>${sgn(rEnd.awayInc)}</td></tr>`:''}
+        ${v.tierEnabled?(rEnd.tierResults||[]).map((t,i)=>
+          `<tr><td>Вклад группы ${i+1} (≥${rub(t.threshold)}, ${t.accrual}%)</td><td>${sgn(sum(r=>(r.tierResults&&r.tierResults[i]?r.tierResults[i].net:0)))}</td></tr>`
+        ).join(''):''}
+        ${v.promoEnabled?`<tr><td>Вклад акций</td><td>${sgn(sum(r=>r.promoGain-r.promoCost-r.promoBaseExtraCost))}</td></tr>`:''}
+        ${v.preorderEnabled?`<tr><td>Вклад предзаказов</td><td>${sgn(sum(r=>r.preGain-r.preCost))}</td></tr>`:''}
+        ${v.rfmEnabled?`<tr><td>Вклад Push-реактивации</td><td>${sgn(sum(r=>r.reactGain-r.reactCost))}</td></tr>`:''}
+      </tbody></table></div>
+    </div>
+
+    <div class="sec">
+      <h2>Чувствительность к начислению</h2>
+      <p class="lead">Как меняется экономика при разных процентах начисления баллов.</p>
+      <div class="scroll"><table>
+        <thead><tr><th>Начисление</th><th>Затраты / мес</th><th>Прибыль / мес</th><th>ROI</th></tr></thead>
+        <tbody>
+          ${sens.map(x=>`<tr><td>${x.a}%</td><td>${rub(x.cost)}</td><td class="${x.net>=0?'good':'bad'}">${sgn(x.net)}</td><td>${p1(x.roi)}</td></tr>`).join('')}
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="sec">
+      <h2>Два способа посчитать</h2>
+      <div class="sc">
+        <div class="${v.mode==='safe'?'on':''}"><span>Осторожный: рост только у участников</span><b class="${ySafe.cum>=0?'good':'bad'}">${sgn(ySafe.cum)} / год</b></div>
+        <div class="${v.mode==='full'?'on':''}"><span>С полным эффектом: рост на всю базу</span><b class="${yFull.cum>=0?'good':'bad'}">${sgn(yFull.cum)} / год</b></div>
+      </div>
+    </div>
+
+    <div class="note">Ориентир по балансу RC CITY: держите не меньше ${rub(rEnd.baseEarned+rEnd.extCost)} — столько вознаграждения выплачивается за месяц. Рекомендуемая задержка начисления — 14 дней.</div>
+    <div class="note">Рост покупок выведен из процента вознаграждения по допущениям о поведении. Uplift ограничен: чек +30%, частота +40%. Все цифры — прогноз, а не факт.</div>
+  `;
+
+  const range=document.getElementById('monthRange');
+  if(range)range.oninput=()=>updateMonthView(+range.value);
+}
+
+/* Events */
+$('chips').innerHTML=Object.keys(P).map(k=>`<button type="button" data-k="${k}" aria-pressed="false">${P[k].n}</button>`).join('');
+$('chips').onclick=e=>{const b=e.target.closest('button[data-k]');if(b)pick(b.dataset.k)};
+$('go').onclick=function(e){
+  if(e&&e.preventDefault)e.preventDefault();
+  var y=window.scrollY||window.pageYOffset;
+  calc();
+  requestAnimationFrame(function(){window.scrollTo(0,y);});
+};
+$('react').onclick=e=>{
+  const t=e.target.closest('button');if(!t)return;
+  $('kc').value=t.dataset.c;$('kf').value=t.dataset.f;upd();
+};
+document.querySelectorAll('input').forEach(e=>{
+  e.addEventListener('input',()=>{
+    if(e.id==='conn'||e.id==='innerShare')syncExt();
+    upd();
+    if(e.id==='check')updTierAuto();
+  });
+});
+document.querySelectorAll('input[name=tariff],input[name=mode]').forEach(e=>e.addEventListener('change',upd));
+
+renderTiers();
+pick('beauty');
+})();
+
+(function syncTariffCards(){
+  function paint(){
+    var checked=document.querySelector('input[name="tariff"]:checked');
+    var val=checked?checked.value:'1500';
+    document.querySelectorAll('.tariff-card[data-tariff]').forEach(function(card){
+      card.classList.toggle('is-selected', card.getAttribute('data-tariff')===val);
+    });
+  }
+  document.querySelectorAll('input[name="tariff"]').forEach(function(r){
+    r.addEventListener('change', paint);
+  });
+  // click on card selects radio
+  document.querySelectorAll('.tariff-card[data-tariff]').forEach(function(card){
+    card.style.cursor='pointer';
+    card.addEventListener('click', function(){
+      var v=card.getAttribute('data-tariff');
+      var radio=document.querySelector('input[name="tariff"][value="'+v+'"]');
+      if(radio){ radio.checked=true; radio.dispatchEvent(new Event('change',{bubbles:true})); }
+      paint();
+    });
+  });
+  paint();
+})();
+
+</script>
+
+<!-- Max: floating + exit modal -->
+<a href="https://max.ru/channel_konturbiz" class="max-fab" id="maxFab" target="_blank" rel="noopener noreferrer" aria-label="Канал KONTURBIZ в Max">
+  <img src="/images/max_icon.png" width="56" height="56" alt="Max" decoding="async">
+</a>
+
+<div id="maxExitModal" class="max-exit" hidden aria-hidden="true">
+  <div class="max-exit__backdrop" data-max-close></div>
+  <div class="max-exit__dialog" role="dialog" aria-modal="true" aria-labelledby="maxExitTitle">
+    <button type="button" class="max-exit__x" data-max-close aria-label="Закрыть">×</button>
+    <div class="max-exit__icon">
+      <img src="/images/max_icon.png" width="64" height="64" alt="" decoding="async">
+    </div>
+    <h2 id="maxExitTitle" class="max-exit__title">Оставайтесь на связи с KONTURBIZ</h2>
+    <p class="max-exit__text">В Max мы разбираем, как связать бренд, продажи, CRM, автоматизацию, платежи и лояльность в единую систему.</p>
+    <p class="max-exit__text max-exit__text--muted">Короткие разборы и практические решения для бизнеса.</p>
+    <div class="max-exit__actions">
+      <a class="max-exit__btn max-exit__btn--primary" href="https://max.ru/channel_konturbiz" target="_blank" rel="noopener noreferrer">Подписаться на канал →</a>
+      <button type="button" class="max-exit__btn max-exit__btn--ghost" data-max-close>Нет, спасибо</button>
+    </div>
+  </div>
+</div>
+
+<style>
+.max-fab{
+  position:fixed; right:20px; bottom:20px; z-index:99990;
+  width:56px; height:56px; border-radius:50%;
+  display:block; overflow:hidden;
+  box-shadow:0 6px 20px rgba(13,49,86,.28);
+  transition:transform .2s, box-shadow .2s;
+  animation: maxWobble 5s ease-in-out infinite;
+}
+.max-fab img{width:100%;height:100%;display:block;object-fit:cover;border-radius:50%}
+.max-fab:hover{transform:scale(1.08);box-shadow:0 8px 28px rgba(13,49,86,.35);animation-play-state:paused}
+@keyframes maxWobble{
+  0%,72%,100%{transform:rotate(0deg)}
+  76%{transform:rotate(-10deg)}
+  80%{transform:rotate(9deg)}
+  84%{transform:rotate(-7deg)}
+  88%{transform:rotate(5deg)}
+  92%{transform:rotate(-3deg)}
+  96%{transform:rotate(1deg)}
+}
+@media (max-width:480px){
+  .max-fab{right:14px;bottom:14px;width:48px;height:48px}
+}
+
+.max-exit[hidden]{display:none!important}
+.max-exit{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;padding:20px}
+.max-exit__backdrop{position:absolute;inset:0;background:rgba(1,9,28,.55);backdrop-filter:blur(2px)}
+.max-exit__dialog{
+  position:relative;z-index:1;width:100%;max-width:420px;
+  background:#fff;border-radius:16px;padding:28px 24px 24px;
+  box-shadow:0 20px 50px rgba(13,49,86,.22);
+  font-family:"Montserrat","Segoe UI",Roboto,sans-serif;text-align:center
+}
+.max-exit__x{
+  position:absolute;top:10px;right:12px;width:36px;height:36px;border:0;
+  background:transparent;font-size:26px;line-height:1;color:#8794A6;cursor:pointer;border-radius:8px
+}
+.max-exit__x:hover{background:#F4F6FA;color:#0D3156}
+.max-exit__icon{margin:4px auto 14px;width:64px;height:64px;border-radius:50%;overflow:hidden;box-shadow:0 4px 14px rgba(13,49,86,.15)}
+.max-exit__icon img{width:100%;height:100%;display:block;object-fit:cover}
+.max-exit__title{margin:0 0 12px;font-size:20px;font-weight:700;line-height:1.25;color:#0D3156;letter-spacing:-.02em}
+.max-exit__text{margin:0 0 8px;font-size:14px;line-height:1.55;color:#3A4A5C;font-weight:500}
+.max-exit__text--muted{color:#5F6B7A;font-size:13px;margin-bottom:18px}
+.max-exit__actions{display:flex;flex-direction:column;gap:10px}
+.max-exit__btn{
+  display:inline-flex;align-items:center;justify-content:center;min-height:44px;
+  padding:10px 16px;border-radius:4px;font-size:14px;font-weight:700;
+  text-decoration:none;cursor:pointer;border:1px solid transparent;font-family:inherit
+}
+.max-exit__btn--primary{background:#0D3156;color:#fff}
+.max-exit__btn--primary:hover{background:#1E3A5F}
+.max-exit__btn--ghost{background:#fff;color:#0D3156;border-color:#DCE3EE}
+.max-exit__btn--ghost:hover{background:#F4F6FA}
+</style>
+
+<script>
+(function(){
+  var KEY='kb_max_exit_shown';
+  var modal=document.getElementById('maxExitModal');
+  if(!modal) return;
+  var shown=false;
+  function open(){
+    if(shown) return;
+    try{ if(sessionStorage.getItem(KEY)==='1') return; }catch(e){}
+    shown=true;
+    try{ sessionStorage.setItem(KEY,'1'); }catch(e){}
+    modal.hidden=false;
+    modal.setAttribute('aria-hidden','false');
+    document.documentElement.style.overflow='hidden';
+    if(typeof ym==='function'){ try{ ym(113120522,'reachGoal','max_exit_modal_open'); }catch(e){} }
+  }
+  function close(){
+    modal.hidden=true;
+    modal.setAttribute('aria-hidden','true');
+    document.documentElement.style.overflow='';
+  }
+  modal.querySelectorAll('[data-max-close]').forEach(function(el){
+    el.addEventListener('click', close);
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key==='Escape' && !modal.hidden) close();
+  });
+  /* курсор уходит вверх — к крестику вкладки */
+  document.addEventListener('mouseout', function(e){
+    if(e.clientY > 0) return;
+    if(e.relatedTarget || e.toElement) return;
+    open();
+  });
+  var armed=false;
+  setTimeout(function(){ armed=true; }, 10000);
+  window.addEventListener('beforeunload', function(e){
+    if(!armed) return;
+    try{ if(sessionStorage.getItem(KEY)==='1') return; }catch(err){}
+    e.preventDefault();
+    e.returnValue='';
+  });
+})();
+</script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.webvisor.org/metrika/tag_ww.js?id=113120522', 'ym');
+
+    ym(113120522, 'init', {ssr:true, webvisor:true, trackHash:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>
