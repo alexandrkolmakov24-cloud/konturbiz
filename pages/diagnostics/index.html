@@ -62,6 +62,34 @@
 <meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://konturbiz.ru/images/hero.webp">
+<style id="diagnostics-hero-p0">
+/* P0: keep both primary actions on one row where space allows and prevent clipping */
+#main > .page-hero { overflow: visible; }
+#main > .page-hero .container { min-width: 0; }
+#main > .page-hero .button-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  padding-bottom: 2px;
+}
+#main > .page-hero .button-group .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  line-height: 1.25;
+  white-space: normal;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+@media (max-width: 560px) {
+  #main > .page-hero .button-group { align-items: stretch; }
+  #main > .page-hero .button-group .button { width: 100%; }
+}
+</style>
 </head>
 <body>
     <a class="skip-to-content" href="#main">Перейти к содержанию</a>
