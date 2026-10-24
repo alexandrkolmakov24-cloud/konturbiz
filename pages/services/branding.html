@@ -124,8 +124,14 @@
         font-size: 12px; color: #fff;
       }
       .page-hero__crumbs li:not(:last-child)::after { content: "·"; margin-left: 6px; opacity: 1; }
-      .page-hero__crumbs a { color: #fff; text-decoration: none; }
-      .page-hero__crumbs a:hover { color: #fff; }
+      .page-hero__crumbs a,
+      .page-hero__crumbs a:link,
+      .page-hero__crumbs a:visited {
+        color: #fff !important;
+        text-decoration: none;
+      }
+      .page-hero__crumbs li[aria-current="page"] { color: #fff !important; }
+      .page-hero__crumbs a:hover { color: #fff !important; }
       .page-hero h1 {
         margin: 0 0 12px; font-family: var(--font-headers, Montserrat, sans-serif);
         font-weight: 300; font-size: clamp(28px, 4vw, 42px); line-height: 1.12;
