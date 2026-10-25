@@ -7,7 +7,7 @@
   var reduce = mq('(prefers-reduced-motion: reduce)');
   var fine = mq('(hover: hover) and (pointer: fine)');
   var small = w.innerWidth < 760;
-  var HERO = '.page-hero,.kb-hero,.k-hero,.rp-hero,.samo-hero,.rdo-hero,.bc-hero,.ao-hero,.hero';
+  var HERO = '.page-hero,.kb-hero,.k-hero,.rp-hero,.samo-hero,.rdo-hero,.bc-hero,.ao-hero,.dd-hero,.hero';
   var raf = w.requestAnimationFrame || function (f) { return setTimeout(f, 16); };
 
   function ready(fn) { d.readyState === 'loading' ? d.addEventListener('DOMContentLoaded', fn) : fn(); }
@@ -144,7 +144,7 @@
       }
       if (fine) { spot = d.createElement('div'); spot.className = 'kb-fx__spot'; stage.appendChild(spot); }
       // слой эффектов кладём ПОСЛЕ фоновых блоков hero (они непрозрачные), но до содержимого
-      var bgs = Array.prototype.filter.call(hero.children, function (c) { return /__bg|__media|__visual|__overlay/.test(String(c.className)); });
+      var bgs = Array.prototype.filter.call(hero.children, function (c) { return /__bg|__media|__visual|__overlay|__grad/.test(String(c.className)); });
       var anchor = bgs.length ? bgs[bgs.length - 1] : null;
       if (anchor) anchor.insertAdjacentElement('afterend', fx); else hero.insertBefore(fx, hero.firstChild);
 
