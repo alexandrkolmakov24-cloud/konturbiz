@@ -81,6 +81,20 @@ html body .kb-nomedia .page-hero__bg{background:none!important}
 html body .kb-nomedia > .container::after,html body .kb-nomedia .page-hero__overlay{display:none!important}
 /* Контейнер hero тоже может иметь непрозрачный фон без изображения */
 html body .kb-nomedia > .container{background:none!important}
+/* No-media hero: keep the stack visible through legacy opaque gradient overlays. */
+html body .kb-nomedia :is([class*="__grad"],[class*="__overlay"]){
+  background:linear-gradient(90deg,#01091C 0%,#01091C 24%,rgba(1,9,28,.72) 43%,rgba(1,9,28,.18) 67%,transparent 84%)!important;
+}
+html body .kb-nomedia::before{
+  background:linear-gradient(90deg,#01091C 0%,#01091C 24%,rgba(1,9,28,.72) 43%,rgba(1,9,28,.18) 67%,transparent 84%)!important;
+}
+/* Kontur product hero: one CTA legend — gold primary, blue secondary. */
+html body .page-hero--client-search .btn-hero-secondary{
+  background:#366AF3!important;color:#fff!important;border:1px solid #366AF3!important;
+}
+html body .page-hero--client-search .btn-hero-secondary:hover{
+  background:#2a56c9!important;border-color:#2a56c9!important;
+}
 /* края фоновых картинок hero растворяются в фоне шапки, без жёсткой границы */
 html body :is(.page-hero__bg,.page-hero__media,.hero__visual,.kb-hero__media){
   -webkit-mask-image:linear-gradient(90deg,#000 0,#000 84%,transparent 100%);
