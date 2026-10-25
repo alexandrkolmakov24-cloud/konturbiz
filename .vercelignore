@@ -1,0 +1,6 @@
+# Не публиковать на превью: PHP не работает на Vercel, а config/knowledge
+# были бы доступны как обычные файлы.
+konturscan/
+test-govsupport/proxy.php
+api/
+*.md

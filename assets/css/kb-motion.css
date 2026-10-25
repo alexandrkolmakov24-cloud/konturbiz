@@ -1,0 +1,145 @@
+/* =====================================================================
+   KB MOTION v1 (2026-10-22) — «технологичный» слой KONTURBIZ
+   Прогресс-бар, стеклянная шапка, hero-эффекты, кнопки, карточки, reveal.
+   Это надстройка: без JS и этого файла страницы выглядят как раньше.
+   При prefers-reduced-motion все анимации отключены.
+   ===================================================================== */
+:root{
+  --kbm-gold:#C8A24A; --kbm-gold-2:#E6C877; --kbm-blue:#2F6DB5; --kbm-blue-2:#5B9BE6;
+  --kbm-ease:cubic-bezier(.2,.7,.2,1);
+}
+
+/* ---------- 1. Прогресс прокрутки ---------- */
+.kb-progress{position:fixed;top:0;left:0;width:100%;height:3px;z-index:10001;pointer-events:none;
+  transform-origin:0 50%;transform:scaleX(0);
+  background:linear-gradient(90deg,var(--kbm-blue),var(--kbm-blue-2) 45%,var(--kbm-gold-2));
+  box-shadow:0 0 14px rgba(230,200,119,.55)}
+
+/* ---------- 2. Шапка: стекло при прокрутке ---------- */
+html body header.header{transition:background-color .35s ease,box-shadow .35s ease,backdrop-filter .35s ease}
+html body header.header.kb-scrolled{
+  background-color:rgba(1,9,28,.93)!important;
+  -webkit-backdrop-filter:saturate(1.5) blur(16px);backdrop-filter:saturate(1.5) blur(16px);
+  box-shadow:0 1px 0 rgba(200,162,74,.28),0 14px 40px rgba(0,0,0,.35)}
+
+/* ---------- 3. Hero: вход контента ---------- */
+@media (prefers-reduced-motion:no-preference){
+  :is(.page-hero,.kb-hero,.k-hero,.rp-hero,.samo-hero,.rdo-hero,.bc-hero,.ao-hero,.hero)
+  :is(p[class*="eyebrow"],span[class*="eyebrow"],div[class*="eyebrow"],nav[class*="crumb"],nav[class*="breadcrumb"],h1,p[class*="lead"],.button-group,[class*="__actions"]){
+    animation:kbmRise .95s var(--kbm-ease) both}
+  :is(.page-hero,.kb-hero,.k-hero,.rp-hero,.samo-hero,.rdo-hero,.bc-hero,.ao-hero,.hero) :is(p[class*="eyebrow"],span[class*="eyebrow"],div[class*="eyebrow"]){animation-delay:.05s}
+  :is(.page-hero,.kb-hero,.k-hero,.rp-hero,.samo-hero,.rdo-hero,.bc-hero,.ao-hero,.hero) :is(nav[class*="crumb"],nav[class*="breadcrumb"]){animation-delay:.14s}
+  :is(.page-hero,.kb-hero,.k-hero,.rp-hero,.samo-hero,.rdo-hero,.bc-hero,.ao-hero,.hero) h1{animation-delay:.24s;animation-duration:1.15s}
+  :is(.page-hero,.kb-hero,.k-hero,.rp-hero,.samo-hero,.rdo-hero,.bc-hero,.ao-hero,.hero) p[class*="lead"]{animation-delay:.42s}
+  :is(.page-hero,.kb-hero,.k-hero,.rp-hero,.samo-hero,.rdo-hero,.bc-hero,.ao-hero,.hero) :is(.button-group,[class*="__actions"]){animation-delay:.58s}
+}
+@keyframes kbmRise{from{opacity:0;translate:0 26px}to{opacity:1;translate:0 0}}
+
+/* ---------- 4. Hero: FX-слой (создаётся скриптом) ----------
+   Схема: .kb-fx (на всю ширину, только мягкий свет без жёстких краёв)
+          └ .kb-fx__stage (колонка 1200px по центру, края растворяются в фоне)
+              ├ сетка, сканирующая полоса, световое пятно за курсором
+              └ canvas со сценой «стопка контура» (только если в hero нет картинки) */
+.kb-fx{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.kb-fx__ambient{position:absolute;inset:0;
+  background:
+    radial-gradient(760px 340px at calc(50% - 360px) 62%,rgba(47,109,181,.38),transparent 72%),
+    radial-gradient(540px 300px at calc(50% + 470px) 112%,rgba(200,162,74,.22),transparent 70%),
+    radial-gradient(520px 220px at calc(50% + 40px) 0%,rgba(91,155,230,.11),transparent 70%);
+  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 36%,#000 100%);
+  mask-image:linear-gradient(180deg,transparent 0,#000 36%,#000 100%);
+  animation:kbmAmbient 18s ease-in-out infinite alternate}
+@keyframes kbmAmbient{from{transform:translate3d(0,0,0) scale(1);opacity:.82}to{transform:translate3d(2.5%,1.5%,0) scale(1.08);opacity:1}}
+.kb-fx__stage{position:absolute;top:0;bottom:0;left:50%;width:min(1200px,100%);transform:translateX(-50%);overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 10%,#000 90%,transparent 100%);
+  mask-image:linear-gradient(90deg,transparent 0,#000 10%,#000 90%,transparent 100%)}
+.kb-fx__grid{position:absolute;inset:-60px;
+  background-image:linear-gradient(rgba(230,200,119,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(91,155,230,.10) 1px,transparent 1px);
+  background-size:56px 56px;
+  -webkit-mask-image:radial-gradient(ellipse 62% 120% at 74% 52%,#000 6%,transparent 74%);
+  mask-image:radial-gradient(ellipse 62% 120% at 74% 52%,#000 6%,transparent 74%);
+  animation:kbmGrid 38s linear infinite}
+@keyframes kbmGrid{to{transform:translate3d(56px,56px,0)}}
+.kb-fx__scan{position:absolute;left:0;right:0;top:0;height:140px;
+  background:linear-gradient(180deg,transparent,rgba(230,200,119,.09) 50%,transparent);animation:kbmScan 9s ease-in-out infinite}
+@keyframes kbmScan{0%{transform:translateY(-160px)}60%,100%{transform:translateY(560px)}}
+.kb-fx__spot{position:absolute;left:0;top:0;width:560px;height:560px;margin:-280px 0 0 -280px;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(230,200,119,.18),rgba(230,200,119,.05) 55%,transparent 72%);
+  mix-blend-mode:screen;opacity:0;transition:opacity .5s ease;will-change:transform}
+.kb-fx.is-active .kb-fx__spot{opacity:1}
+.kb-fx__scene{position:absolute;inset:0;width:100%;height:100%;display:none}
+@media (min-width:1100px){.kb-fx.has-scene .kb-fx__scene{display:block}}
+
+/* тексты и кнопки hero всегда выше слоя эффектов */
+html body :is(.page-hero,.kb-hero,.k-hero,.rp-hero,.samo-hero,.rdo-hero,.bc-hero,.ao-hero,.hero)
+  > :is(.container,.page-hero__inner,.page-hero__shell,.kb-hero__inner,.k-hero__inner,.hero__inner,.hero__content){z-index:3}
+/* порядок слоёв на странице РДО: текст выше затемнения и баннера */
+html body .page-hero .page-hero__overlay{z-index:2!important}
+html body .page-hero .page-hero__shell{z-index:4!important}
+/* без картинки в hero непрозрачная панель фона не нужна: вместо неё сцена и свет */
+html body .kb-nomedia .page-hero__bg{background:none!important}
+html body .kb-nomedia > .container::after,html body .kb-nomedia .page-hero__overlay{display:none!important}
+/* края фоновых картинок hero растворяются в фоне шапки, без жёсткой границы */
+html body :is(.page-hero__bg,.page-hero__media,.hero__visual,.kb-hero__media){
+  -webkit-mask-image:linear-gradient(90deg,#000 0,#000 84%,transparent 100%);
+  mask-image:linear-gradient(90deg,#000 0,#000 84%,transparent 100%)}
+
+/* лёгкий параллакс картинки hero от указателя */
+.kb-has-parallax :is(.page-hero__media,.kb-hero__media) img{
+  translate:var(--px,0px) var(--py,0px);scale:1.06;transition:translate .5s ease-out}
+
+/* ---------- 5. Кнопки ---------- */
+html body .button{position:relative;overflow:hidden;isolation:isolate;
+  transition:transform .28s var(--kbm-ease),box-shadow .28s ease,background-color .28s ease,border-color .28s ease,color .28s ease}
+html body .button::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(112deg,transparent 32%,rgba(255,255,255,.55) 50%,transparent 68%);
+  transform:translateX(-130%);transition:transform .8s var(--kbm-ease)}
+html body .button:hover::after,html body .button:focus-visible::after{transform:translateX(130%)}
+html body .button:hover{transform:translateY(-2px)}
+html body .button:active{transform:translateY(0) scale(.985)}
+html body .button.button--gold:hover{box-shadow:0 10px 32px rgba(200,162,74,.42),0 0 0 1px rgba(255,236,170,.35) inset}
+html body .button.button--blue:hover{box-shadow:0 10px 32px rgba(47,109,181,.55)}
+html body .button.button--white-outline:hover,
+html body .button.button--gold-outline:hover{box-shadow:0 10px 28px rgba(0,0,0,.4),0 0 0 1px rgba(230,200,119,.55);border-color:rgba(230,200,119,.9)}
+/* главная кнопка hero «дышит» свечением */
+@media (prefers-reduced-motion:no-preference){
+  :is(.page-hero,.kb-hero,.k-hero,.rp-hero,.samo-hero,.rdo-hero,.bc-hero,.ao-hero,.hero) .button--gold{animation:kbmPulse 3.6s ease-in-out 1.6s infinite}
+}
+@keyframes kbmPulse{0%,100%{box-shadow:0 0 0 0 rgba(200,162,74,0)}50%{box-shadow:0 0 0 7px rgba(200,162,74,.16),0 8px 30px rgba(200,162,74,.28)}}
+
+/* ---------- 6. Карточки ---------- */
+html body .card:not(.card--hover-expand){transition:transform .35s var(--kbm-ease),box-shadow .35s ease,border-color .35s ease}
+@media (hover:hover) and (pointer:fine){
+  html body .card:not(.card--hover-expand):hover{transform:translateY(-4px);
+    box-shadow:0 22px 48px -20px rgba(10,25,47,.45),0 0 0 1px rgba(200,162,74,.38)}
+}
+.kbm-tilt{transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(var(--ty,0px));
+  transition:transform .28s ease-out,box-shadow .35s ease;will-change:transform}
+.kbm-tilt.is-hover{--ty:-5px;box-shadow:0 26px 54px -22px rgba(10,25,47,.55),0 0 0 1px rgba(200,162,74,.45)}
+
+/* ---------- 7. Появление блоков при прокрутке ---------- */
+.kb-r{opacity:0;translate:0 30px;
+  transition:opacity .85s var(--kbm-ease),translate .85s var(--kbm-ease),transform .35s var(--kbm-ease),box-shadow .35s ease;
+  transition-delay:var(--d,0ms)}
+.kb-r.kb-in{opacity:1;translate:0 0}
+.kb-count{font-variant-numeric:tabular-nums}
+
+/* ---------- 9. Контраст (WCAG) ---------- */
+html body .cta-band :is(h1,h2,h3,h4){color:#fff!important}
+html body .arch__box h3{color:#8A6A1F}
+html body .product-group__title{color:#4A5B78}
+/* контурные кнопки на светлом фоне: тёмно-синие вместо золотых/белых (были 1.0–2.4:1) */
+html body .button.button--navy-outline,html body .btn.btn--navy-outline{
+  background:transparent!important;color:#112B4A!important;border:1px solid rgba(17,43,74,.55)!important}
+html body .button.button--navy-outline:hover,html body .btn.btn--navy-outline:hover,
+html body .button.button--navy-outline:focus-visible,html body .btn.btn--navy-outline:focus-visible{
+  background:#112B4A!important;color:#fff!important;border-color:#112B4A!important;box-shadow:0 10px 26px rgba(17,43,74,.28)}
+
+/* ---------- 8. Доступность и печать ---------- */
+@media (prefers-reduced-motion:reduce){
+  .kb-progress,.kb-fx{display:none!important}
+  *{animation:none!important}
+  .kb-r{opacity:1!important;translate:none!important;transition:none!important}
+  html body .button::after{display:none}
+}
+@media print{.kb-progress,.kb-fx{display:none!important}.kb-r{opacity:1!important;translate:none!important}}

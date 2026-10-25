@@ -1049,3 +1049,23 @@ section:has(#faq-title) .faq-a,
     padding: 24px 20px 30px !important;
   }
 }
+
+/* =====================================================================
+   КНОПКИ HERO — логика цветов (2026-10-22)
+   золотая  (.button--gold)        — главное действие, переход на другую страницу
+   синяя    (.button--blue)        — якорь на этой же странице («К тарифам», «Как это работает»)
+   контурная(.button--white-outline)— второстепенный переход на другую страницу
+   ===================================================================== */
+html body .button.button--blue,
+html body .btn.btn--blue {
+  background: #2F6DB5 !important;
+  border-color: #2F6DB5 !important;
+  color: #fff !important;
+}
+html body .button.button--blue:hover,
+html body .button.button--blue:focus-visible,
+html body .btn.btn--blue:hover,
+html body .btn.btn--blue:focus-visible {
+  background: #3A7BC8 !important;
+  border-color: #3A7BC8 !important;
+}

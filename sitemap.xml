@@ -1,28 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://konturbiz.ru/</loc></url>
-  <url><loc>https://konturbiz.ru/konturscan/konturscan/</loc></url>
-  <url><loc>https://konturbiz.ru/pages/about/</loc></url>
   <url><loc>https://konturbiz.ru/pages/about/contacts.html</loc></url>
+  <url><loc>https://konturbiz.ru/pages/about/</loc></url>
   <url><loc>https://konturbiz.ru/pages/about/legal.html</loc></url>
   <url><loc>https://konturbiz.ru/pages/about/partners.html</loc></url>
   <url><loc>https://konturbiz.ru/pages/about/team.html</loc></url>
+  <url><loc>https://konturbiz.ru/pages/cases/automation/</loc></url>
+  <url><loc>https://konturbiz.ru/pages/cases/branding/</loc></url>
   <url><loc>https://konturbiz.ru/pages/cases/</loc></url>
-  <url><loc>https://konturbiz.ru/pages/diagnostics/</loc></url>
+  <url><loc>https://konturbiz.ru/pages/cases/loyalty/</loc></url>
+  <url><loc>https://konturbiz.ru/pages/cases/websites/</loc></url>
   <url><loc>https://konturbiz.ru/pages/diagnostics/digital-portrait.html</loc></url>
   <url><loc>https://konturbiz.ru/pages/diagnostics/geo-audit.html</loc></url>
+  <url><loc>https://konturbiz.ru/pages/diagnostics/</loc></url>
   <url><loc>https://konturbiz.ru/pages/diagnostics/konturscan.html</loc></url>
-  <url><loc>https://konturbiz.ru/pages/industries/</loc></url>
   <url><loc>https://konturbiz.ru/pages/industries/ho-re-ca.html</loc></url>
+  <url><loc>https://konturbiz.ru/pages/industries/</loc></url>
   <url><loc>https://konturbiz.ru/pages/industries/retail.html</loc></url>
   <url><loc>https://konturbiz.ru/pages/industries/services.html</loc></url>
   <url><loc>https://konturbiz.ru/pages/industries/small-business.html</loc></url>
-  <url><loc>https://konturbiz.ru/pages/partners/</loc></url>
+  <url><loc>https://konturbiz.ru/pages/knowledge/automation/chto-avtomatizirovat-v-malom-biznese.html</loc></url>
+  <url><loc>https://konturbiz.ru/pages/knowledge/automation/crm-nuzhna-li-malomu-biznesu.html</loc></url>
+  <url><loc>https://konturbiz.ru/pages/knowledge/automation/</loc></url>
+  <url><loc>https://konturbiz.ru/pages/knowledge/branding/chem-brending-otlichaetsya-ot-logotipa.html</loc></url>
+  <url><loc>https://konturbiz.ru/pages/knowledge/branding/</loc></url>
+  <url><loc>https://konturbiz.ru/pages/knowledge/branding/kogda-nuzhen-rebrending.html</loc></url>
+  <url><loc>https://konturbiz.ru/pages/knowledge/digitalization/chto-takoe-cifrovoj-kontur.html</loc></url>
+  <url><loc>https://konturbiz.ru/pages/knowledge/digitalization/</loc></url>
+  <url><loc>https://konturbiz.ru/pages/knowledge/digitalization/s-chego-nachat-cifrovizaciyu.html</loc></url>
+  <url><loc>https://konturbiz.ru/pages/knowledge/finance/ekonomika-programmy-loyalnosti.html</loc></url>
+  <url><loc>https://konturbiz.ru/pages/knowledge/finance/</loc></url>
+  <url><loc>https://konturbiz.ru/pages/knowledge/grants/</loc></url>
+  <url><loc>https://konturbiz.ru/pages/knowledge/</loc></url>
+  <url><loc>https://konturbiz.ru/pages/knowledge/loyalty/bonusy-ili-skidki.html</loc></url>
+  <url><loc>https://konturbiz.ru/pages/knowledge/loyalty/chto-takoe-programma-loyalnosti.html</loc></url>
+  <url><loc>https://konturbiz.ru/pages/knowledge/loyalty/</loc></url>
+  <url><loc>https://konturbiz.ru/pages/knowledge/loyalty/kak-rabotaet-rc-city.html</loc></url>
+  <url><loc>https://konturbiz.ru/pages/knowledge/management/</loc></url>
+  <url><loc>https://konturbiz.ru/pages/knowledge/management/kakie-pokazateli-otlezhivat.html</loc></url>
+  <url><loc>https://konturbiz.ru/pages/knowledge/marketing/</loc></url>
+  <url><loc>https://konturbiz.ru/pages/knowledge/marketing/pochemu-sajt-ne-prinosit-klientov.html</loc></url>
+  <url><loc>https://konturbiz.ru/pages/knowledge/partners/</loc></url>
+  <url><loc>https://konturbiz.ru/pages/knowledge/partners/kak-vybrat-partnera-po-loyalnosti.html</loc></url>
+  <url><loc>https://konturbiz.ru/pages/knowledge/retail/</loc></url>
+  <url><loc>https://konturbiz.ru/pages/knowledge/retail/povtornye-prodazhi-v-magazine.html</loc></url>
+  <url><loc>https://konturbiz.ru/pages/knowledge/small-business/cifrovye-instrumenty-dlya-ip.html</loc></url>
+  <url><loc>https://konturbiz.ru/pages/knowledge/small-business/</loc></url>
   <url><loc>https://konturbiz.ru/pages/partners/cyberuniversity/</loc></url>
   <url><loc>https://konturbiz.ru/pages/partners/frappe/</loc></url>
+  <url><loc>https://konturbiz.ru/pages/partners/</loc></url>
   <url><loc>https://konturbiz.ru/pages/partners/infintech/</loc></url>
   <url><loc>https://konturbiz.ru/pages/partners/ip-registration/</loc></url>
-  <url><loc>https://konturbiz.ru/pages/partners/kontur/</loc></url>
   <url><loc>https://konturbiz.ru/pages/partners/kontur/bank/</loc></url>
   <url><loc>https://konturbiz.ru/pages/partners/kontur/client-search/</loc></url>
   <url><loc>https://konturbiz.ru/pages/partners/kontur/diadoc/</loc></url>
@@ -30,6 +59,7 @@
   <url><loc>https://konturbiz.ru/pages/partners/kontur/elba/</loc></url>
   <url><loc>https://konturbiz.ru/pages/partners/kontur/focus/</loc></url>
   <url><loc>https://konturbiz.ru/pages/partners/kontur/hotel/</loc></url>
+  <url><loc>https://konturbiz.ru/pages/partners/kontur/</loc></url>
   <url><loc>https://konturbiz.ru/pages/partners/kontur/logistics/</loc></url>
   <url><loc>https://konturbiz.ru/pages/partners/kontur/power-of-attorney/</loc></url>
   <url><loc>https://konturbiz.ru/pages/partners/kontur/procurement/</loc></url>
@@ -41,7 +71,6 @@
   <url><loc>https://konturbiz.ru/pages/partners/samo/</loc></url>
   <url><loc>https://konturbiz.ru/pages/partners/sovcombank/</loc></url>
   <url><loc>https://konturbiz.ru/pages/partners/svo-support/</loc></url>
-  <url><loc>https://konturbiz.ru/pages/services/</loc></url>
   <url><loc>https://konturbiz.ru/pages/services/account-opening.html</loc></url>
   <url><loc>https://konturbiz.ru/pages/services/bank-comparison.html</loc></url>
   <url><loc>https://konturbiz.ru/pages/services/branding.html</loc></url>
@@ -50,6 +79,7 @@
   <url><loc>https://konturbiz.ru/pages/services/digital-audit.html</loc></url>
   <url><loc>https://konturbiz.ru/pages/services/grants.html</loc></url>
   <url><loc>https://konturbiz.ru/pages/services/graphic-design.html</loc></url>
+  <url><loc>https://konturbiz.ru/pages/services/</loc></url>
   <url><loc>https://konturbiz.ru/pages/services/integration.html</loc></url>
   <url><loc>https://konturbiz.ru/pages/services/location-assessment.html</loc></url>
   <url><loc>https://konturbiz.ru/pages/services/loyalty-calculator-guide.html</loc></url>
@@ -62,10 +92,10 @@
   <url><loc>https://konturbiz.ru/pages/services/tariffs.html</loc></url>
   <url><loc>https://konturbiz.ru/pages/services/telegram-bots.html</loc></url>
   <url><loc>https://konturbiz.ru/pages/services/web-development.html</loc></url>
-  <url><loc>https://konturbiz.ru/pages/solutions/</loc></url>
   <url><loc>https://konturbiz.ru/pages/solutions/acquisition.html</loc></url>
   <url><loc>https://konturbiz.ru/pages/solutions/analytics.html</loc></url>
   <url><loc>https://konturbiz.ru/pages/solutions/automation.html</loc></url>
+  <url><loc>https://konturbiz.ru/pages/solutions/</loc></url>
   <url><loc>https://konturbiz.ru/pages/solutions/infrastructure.html</loc></url>
   <url><loc>https://konturbiz.ru/pages/solutions/retention.html</loc></url>
 </urlset>
