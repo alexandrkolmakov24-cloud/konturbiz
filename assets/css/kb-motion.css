@@ -24,14 +24,14 @@ html body header.header.kb-scrolled{
 
 /* ---------- 3. Hero: вход контента ---------- */
 @media (prefers-reduced-motion:no-preference){
-  :is(.page-hero,.kb-hero,.k-hero,.rp-hero,.samo-hero,.rdo-hero,.bc-hero,.ao-hero,.hero)
+  :is(.page-hero,.kb-hero,.k-hero,.rp-hero,.samo-hero,.rdo-hero,.bc-hero,.ao-hero,.dd-hero,.hero)
   :is(p[class*="eyebrow"],span[class*="eyebrow"],div[class*="eyebrow"],nav[class*="crumb"],nav[class*="breadcrumb"],h1,p[class*="lead"],.button-group,[class*="__actions"]){
     animation:kbmRise .95s var(--kbm-ease) both}
-  :is(.page-hero,.kb-hero,.k-hero,.rp-hero,.samo-hero,.rdo-hero,.bc-hero,.ao-hero,.hero) :is(p[class*="eyebrow"],span[class*="eyebrow"],div[class*="eyebrow"]){animation-delay:.05s}
-  :is(.page-hero,.kb-hero,.k-hero,.rp-hero,.samo-hero,.rdo-hero,.bc-hero,.ao-hero,.hero) :is(nav[class*="crumb"],nav[class*="breadcrumb"]){animation-delay:.14s}
-  :is(.page-hero,.kb-hero,.k-hero,.rp-hero,.samo-hero,.rdo-hero,.bc-hero,.ao-hero,.hero) h1{animation-delay:.24s;animation-duration:1.15s}
-  :is(.page-hero,.kb-hero,.k-hero,.rp-hero,.samo-hero,.rdo-hero,.bc-hero,.ao-hero,.hero) p[class*="lead"]{animation-delay:.42s}
-  :is(.page-hero,.kb-hero,.k-hero,.rp-hero,.samo-hero,.rdo-hero,.bc-hero,.ao-hero,.hero) :is(.button-group,[class*="__actions"]){animation-delay:.58s}
+  :is(.page-hero,.kb-hero,.k-hero,.rp-hero,.samo-hero,.rdo-hero,.bc-hero,.ao-hero,.dd-hero,.hero) :is(p[class*="eyebrow"],span[class*="eyebrow"],div[class*="eyebrow"]){animation-delay:.05s}
+  :is(.page-hero,.kb-hero,.k-hero,.rp-hero,.samo-hero,.rdo-hero,.bc-hero,.ao-hero,.dd-hero,.hero) :is(nav[class*="crumb"],nav[class*="breadcrumb"]){animation-delay:.14s}
+  :is(.page-hero,.kb-hero,.k-hero,.rp-hero,.samo-hero,.rdo-hero,.bc-hero,.ao-hero,.dd-hero,.hero) h1{animation-delay:.24s;animation-duration:1.15s}
+  :is(.page-hero,.kb-hero,.k-hero,.rp-hero,.samo-hero,.rdo-hero,.bc-hero,.ao-hero,.dd-hero,.hero) p[class*="lead"]{animation-delay:.42s}
+  :is(.page-hero,.kb-hero,.k-hero,.rp-hero,.samo-hero,.rdo-hero,.bc-hero,.ao-hero,.dd-hero,.hero) :is(.button-group,[class*="__actions"]){animation-delay:.58s}
 }
 @keyframes kbmRise{from{opacity:0;translate:0 26px}to{opacity:1;translate:0 0}}
 
@@ -71,7 +71,7 @@ html body header.header.kb-scrolled{
 @media (min-width:1100px){.kb-fx.has-scene .kb-fx__scene{display:block}}
 
 /* тексты и кнопки hero всегда выше слоя эффектов */
-html body :is(.page-hero,.kb-hero,.k-hero,.rp-hero,.samo-hero,.rdo-hero,.bc-hero,.ao-hero,.hero)
+html body :is(.page-hero,.kb-hero,.k-hero,.rp-hero,.samo-hero,.rdo-hero,.bc-hero,.ao-hero,.dd-hero,.hero)
   > :is(.container,.page-hero__inner,.page-hero__shell,.kb-hero__inner,.k-hero__inner,.hero__inner,.hero__content){z-index:3}
 /* порядок слоёв на странице РДО: текст выше затемнения и баннера */
 html body .page-hero .page-hero__overlay{z-index:2!important}
@@ -85,6 +85,8 @@ html body .kb-nomedia > .container{background:none!important}
 html body .kb-nomedia :is([class*="__grad"],[class*="__overlay"]){
   background:linear-gradient(90deg,#01091C 0%,#01091C 24%,rgba(1,9,28,.72) 43%,rgba(1,9,28,.18) 67%,transparent 84%)!important;
 }
+/* Diadoc no-media hero: keep the stack visible on a flat navy background. */
+html body .kb-nomedia.dd-hero .dd-hero__grad{background:none!important;}
 html body .kb-nomedia::before{
   background:linear-gradient(90deg,#01091C 0%,#01091C 24%,rgba(1,9,28,.72) 43%,rgba(1,9,28,.18) 67%,transparent 84%)!important;
 }
@@ -119,7 +121,7 @@ html body .button.button--white-outline:hover,
 html body .button.button--gold-outline:hover{box-shadow:0 10px 28px rgba(0,0,0,.4),0 0 0 1px rgba(230,200,119,.55);border-color:rgba(230,200,119,.9)}
 /* главная кнопка hero «дышит» свечением */
 @media (prefers-reduced-motion:no-preference){
-  :is(.page-hero,.kb-hero,.k-hero,.rp-hero,.samo-hero,.rdo-hero,.bc-hero,.ao-hero,.hero) .button--gold{animation:kbmPulse 3.6s ease-in-out 1.6s infinite}
+  :is(.page-hero,.kb-hero,.k-hero,.rp-hero,.samo-hero,.rdo-hero,.bc-hero,.ao-hero,.dd-hero,.hero) .button--gold{animation:kbmPulse 3.6s ease-in-out 1.6s infinite}
 }
 @keyframes kbmPulse{0%,100%{box-shadow:0 0 0 0 rgba(200,162,74,0)}50%{box-shadow:0 0 0 7px rgba(200,162,74,.16),0 8px 30px rgba(200,162,74,.28)}}
 
