@@ -79,6 +79,8 @@ html body .page-hero .page-hero__shell{z-index:4!important}
 /* без картинки в hero непрозрачная панель фона не нужна: вместо неё сцена и свет */
 html body .kb-nomedia .page-hero__bg{background:none!important}
 html body .kb-nomedia > .container::after,html body .kb-nomedia .page-hero__overlay{display:none!important}
+/* Контейнер hero тоже может иметь непрозрачный фон без изображения */
+html body .kb-nomedia > .container{background:none!important}
 /* края фоновых картинок hero растворяются в фоне шапки, без жёсткой границы */
 html body :is(.page-hero__bg,.page-hero__media,.hero__visual,.kb-hero__media){
   -webkit-mask-image:linear-gradient(90deg,#000 0,#000 84%,transparent 100%);
