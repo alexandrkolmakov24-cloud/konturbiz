@@ -763,8 +763,9 @@ main > .page-hero:first-child { margin-top: 0 !important; }
 }
 </style>
     <link rel="stylesheet" href="/assets/css/konturbiz-redesign.css?v=20261020-hero">
+    <link rel="stylesheet" href="/assets/css/kb-motion.css?v=20261022-m4">
 <style id="ks-hero-fix-20261026">
-/* KONTURSCAN-only hero: align the text column to the shared 1200px site grid. */
+/* KONTURSCAN hero follows the shared graphic-design hero rhythm. */
 .page-hero.page-hero--scan {
   position: relative !important;
   width: 100% !important;
@@ -775,9 +776,38 @@ main > .page-hero:first-child { margin-top: 0 !important; }
   padding: 0 !important;
   overflow: hidden !important;
   background: #01091C !important;
+  color: #fff;
   box-sizing: border-box !important;
 }
-.page-hero.page-hero--scan > .scan-hero-bg,
+.page-hero.page-hero--scan > .scan-hero-bg {
+  position: absolute !important;
+  top: 0 !important;
+  right: auto !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  width: min(100%, 1200px) !important;
+  max-width: 1200px !important;
+  height: 100% !important;
+  margin: 0 !important;
+  transform: translateX(-50%) !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  z-index: 0 !important;
+}
+.page-hero.page-hero--scan > .scan-hero-bg img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: right center !important;
+  transition: transform .6s ease !important;
+}
+@media (hover:hover) and (pointer:fine) {
+  .page-hero.page-hero--scan > .scan-hero-bg:hover img,
+  .page-hero.page-hero--scan:hover > .scan-hero-bg img {
+    transform: scale(1.035);
+  }
+}
 .page-hero.page-hero--scan > .scan-hero-grad {
   position: absolute !important;
   top: 0 !important;
@@ -786,17 +816,21 @@ main > .page-hero:first-child { margin-top: 0 !important; }
   left: 50% !important;
   width: min(100%, 1200px) !important;
   max-width: 1200px !important;
-  height: 400px !important;
+  height: 100% !important;
   margin: 0 !important;
   transform: translateX(-50%) !important;
   box-sizing: border-box !important;
-}
-.page-hero.page-hero--scan > .scan-hero-bg img {
-  display: block !important;
-  width: 100% !important;
-  height: 400px !important;
-  object-fit: cover !important;
-  object-position: center right !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  background: linear-gradient(
+    90deg,
+    #01091C 0%,
+    #01091C 22%,
+    rgba(1, 9, 28, 0.92) 32%,
+    rgba(1, 9, 28, 0.55) 48%,
+    rgba(1, 9, 28, 0.15) 58%,
+    transparent 68%
+  ) !important;
 }
 .page-hero.page-hero--scan > .page-hero__body {
   position: relative !important;
@@ -813,65 +847,65 @@ main > .page-hero:first-child { margin-top: 0 !important; }
   height: 400px !important;
   min-height: 0 !important;
   margin: 0 auto !important;
-  padding: 24px 24px 0 !important;
+  padding: 28px 40px 0 !important;
   box-sizing: border-box !important;
   z-index: 2 !important;
 }
 .page-hero.page-hero--scan .page-hero__inner {
   position: relative !important;
-  inset: auto !important;
-  left: auto !important;
-  right: auto !important;
-  transform: none !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: flex-start !important;
-  width: min(100%, 460px) !important;
+  width: 100% !important;
   max-width: 460px !important;
   height: 100% !important;
+  min-height: 0 !important;
   margin: 0 !important;
-  padding: 0 0 36px !important;
+  padding: 0 0 48px !important;
   box-sizing: border-box !important;
 }
-.page-hero.page-hero--scan .page-hero__inner > .eyebrow {
-  display: inline-flex !important;
-  width: auto !important;
-  max-width: 100% !important;
-  height: auto !important;
+.page-hero.page-hero--scan .kb-breadcrumbs {
+  order: 0;
+  width: 100%;
   margin: 0 0 8px !important;
   padding: 0 !important;
+  line-height: 1.35;
+}
+.page-hero.page-hero--scan .eyebrow {
+  order: 1;
+  display: block !important;
+  margin: 0 0 8px !important;
+  padding: 0 !important;
+  color: #C8A24A !important;
+  background: transparent !important;
   border: 0 !important;
   border-radius: 0 !important;
-  background: transparent !important;
-  color: #C8A24A !important;
-  font-size: 11px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: .06em !important;
   line-height: 1.4 !important;
-  letter-spacing: .08em !important;
-  text-transform: uppercase !important;
-  white-space: normal !important;
-}
-.page-hero.page-hero--scan .kb-breadcrumbs {
-  position: static !important;
-  width: auto !important;
-  max-width: 100% !important;
-  margin: 0 0 10px !important;
-  padding: 0 !important;
+  text-transform: uppercase;
 }
 .page-hero.page-hero--scan h1 {
-  margin: 0 0 10px !important;
+  order: 2;
+  margin: 0 0 12px !important;
   max-width: 14ch !important;
   color: #fff !important;
-  font-size: clamp(24px, 3.2vw, 34px) !important;
-  line-height: 1.15 !important;
+  font-weight: 300 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -.03em;
 }
 .page-hero.page-hero--scan .page-hero__lead {
+  order: 3;
   margin: 0 !important;
   max-width: 36ch !important;
   color: rgba(255,255,255,.82) !important;
   font-size: 14px !important;
-  line-height: 1.45 !important;
+  line-height: 1.5 !important;
 }
 .page-hero.page-hero--scan .page-hero__actions {
+  order: 4;
   position: relative !important;
   inset: auto !important;
   transform: none !important;
@@ -879,18 +913,26 @@ main > .page-hero:first-child { margin-top: 0 !important; }
   flex-direction: row !important;
   align-items: center !important;
   flex-wrap: wrap !important;
-  gap: 10px !important;
+  gap: 12px !important;
   width: auto !important;
   max-width: 100% !important;
   height: auto !important;
   margin: auto 0 0 !important;
   padding: 0 !important;
+  /* 48px = one button-height of breathing room from the hero bottom. */
+  margin-bottom: 0 !important;
 }
 .page-hero.page-hero--scan .page-hero__actions .button {
   flex: 0 0 auto !important;
   width: auto !important;
   max-width: 100% !important;
   min-width: 0 !important;
+  min-height: 48px !important;
+  padding: 12px 20px !important;
+  font-size: 14px !important;
+  line-height: 1.2 !important;
+  letter-spacing: .04em !important;
+  /* Keep the shared button backgrounds, shine pseudo-element and shadows. */
 }
 @media (max-width: 768px) {
   .page-hero.page-hero--scan {
@@ -914,14 +956,22 @@ main > .page-hero:first-child { margin-top: 0 !important; }
     height: auto !important;
     min-height: 0 !important;
     margin: 0 auto !important;
-    padding: 28px 16px 28px !important;
+    padding: 28px 16px 0 !important;
   }
   .page-hero.page-hero--scan .page-hero__inner {
     width: 100% !important;
     max-width: 460px !important;
     height: auto !important;
     margin: 0 !important;
-    padding: 0 !important;
+    padding: 0 0 28px !important;
+  }
+  .page-hero.page-hero--scan > .scan-hero-grad {
+    background: linear-gradient(
+      180deg,
+      rgba(1,9,28,.88) 0%,
+      rgba(1,9,28,.82) 40%,
+      rgba(1,9,28,.78) 100%
+    ) !important;
   }
   .page-hero.page-hero--scan h1 {
     max-width: none !important;
@@ -930,21 +980,28 @@ main > .page-hero:first-child { margin-top: 0 !important; }
   }
   .page-hero.page-hero--scan .page-hero__lead {
     max-width: none !important;
+    font-size: 14px !important;
   }
   .page-hero.page-hero--scan .page-hero__actions {
-    margin: 16px 0 0 !important;
+    margin-top: 24px !important;
+    margin-bottom: 0 !important;
     gap: 10px !important;
+  }
+  .page-hero.page-hero--scan .page-hero__actions .button {
+    min-height: 48px !important;
+    padding: 12px 16px !important;
+    font-size: 13px !important;
   }
 }
 @media (max-width: 420px) {
   .page-hero.page-hero--scan .page-hero__actions {
-    align-items: stretch !important;
     flex-direction: column !important;
+    align-items: stretch !important;
     width: 100% !important;
   }
   .page-hero.page-hero--scan .page-hero__actions .button {
     width: 100% !important;
-    justify-content: center !important;
+    max-width: 100% !important;
   }
 }
 </style>
@@ -1102,14 +1159,15 @@ main > .page-hero:first-child { margin-top: 0 !important; }
 </header>
 
 <main id="main">
-  <section class="page-hero page-hero--scan" aria-label="Цифровой портрет бизнеса">    <div class="scan-hero-bg" aria-hidden="true">
+  <section class="page-hero page-hero--scan" aria-label="Цифровой портрет бизнеса">    <div class="scan-hero-bg page-hero__media" aria-hidden="true">
       <img src="/images/services/konturscan.webp" alt="" width="1200" height="400" decoding="async" fetchpriority="high">
     </div>
-    <div class="scan-hero-grad" aria-hidden="true"></div>
+    <div class="scan-hero-grad page-hero__overlay" aria-hidden="true"></div>
     <div class="page-hero__body">
       <div class="page-hero__inner">
+        <nav class="kb-breadcrumbs" aria-label="Хлебные крошки"><ol><li><a href="/">Главная</a></li><li><a href="/pages/diagnostics/">Диагностика</a></li><li aria-current="page">Цифровой портрет бизнеса</li></ol></nav>
         <span class="eyebrow">Диагностика · Минцифры</span>
-        <nav class="kb-breadcrumbs" aria-label="Хлебные крошки"><ol><li><a href="/">Главная</a></li><li><a href="/pages/diagnostics/">Диагностика</a></li><li aria-current="page">Цифровой портрет бизнеса</li></ol></nav><h1 id="scan-h1">Цифровой портрет бизнеса</h1>
+        <h1 id="scan-h1">Цифровой портрет бизнеса</h1>
         <p class="page-hero__lead">59 практик стандарта → карта разрывов → маршрут развития и PDF-отчёт.</p><div class="button-group page-hero__actions"><a class="button button--gold" href="#full-scan">Начать диагностику</a><a class="button button--white-outline" href="/pages/about/contacts.html">Обсудить задачу</a></div>
       </div>
     </div>
@@ -1491,6 +1549,7 @@ main > .page-hero:first-child { margin-top: 0 !important; }
 
 <script src="/assets/js/app.js" defer></script>
 <script src="/assets/js/navigation.js" defer></script>
+<script src="/assets/js/kb-motion.js?v=20261022-m4" defer></script>
 
 <script id="full-portrait-js">
 (function(){
