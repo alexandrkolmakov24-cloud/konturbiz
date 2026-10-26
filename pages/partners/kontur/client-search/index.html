@@ -145,20 +145,15 @@
   background:linear-gradient(90deg, rgba(1,9,28,.92) 0%, rgba(13,49,86,.75) 42%, rgba(13,49,86,.25) 72%, transparent 100%);
 }
 .page-hero--client-search .container{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:48px 20px;width:100%}
-.page-hero--client-search .eyebrow{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#C9A24E;margin:0 0 12px}
-.page-hero--client-search h1{font-size:clamp(26px,3.2vw,36px);font-weight:700;line-height:1.15;margin:0 0 14px;max-width:18ch;letter-spacing:-.02em}
-.page-hero--client-search .lead{font-size:16px;line-height:1.55;color:rgba(255,255,255,.85);max-width:52ch;margin:0 0 22px}
-.page-hero--client-search .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
-.btn-hero-primary{
-  display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 20px;
-  background:#C9A24E;color:#0D3156;border-radius:4px;font-weight:700;font-size:14px;text-decoration:none;border:0
+.page-hero--client-search .eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#C8A24A;margin:0 0 12px}
+.page-hero--client-search h1{font-size:clamp(28px,3.5vw,42px);font-weight:300;line-height:1.12;margin:0 0 14px;max-width:18ch;letter-spacing:-.02em}
+.page-hero--client-search .lead{font-size:15px;line-height:1.55;color:rgba(255,255,255,.8);max-width:52ch;margin:0 0 22px}
+.page-hero--client-search .page-hero__actions{display:flex;flex-wrap:wrap;gap:12px}
+@media(max-width:600px){
+  .page-hero--client-search .container{padding:36px 20px 48px}
+  .page-hero--client-search .page-hero__actions{align-items:stretch}
+  .page-hero--client-search .page-hero__actions .button{width:100%}
 }
-.btn-hero-primary:hover{background:#d4b05c;color:#0D3156}
-.btn-hero-secondary{
-  display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 20px;
-  background:transparent;color:#fff;border:1px solid rgba(255,255,255,.45);border-radius:4px;font-weight:600;font-size:14px;text-decoration:none
-}
-.btn-hero-secondary:hover{border-color:#fff;background:rgba(255,255,255,.08)}
 .hero-note{margin-top:14px;font-size:13px;color:rgba(255,255,255,.65);max-width:48ch}
 
 .aeo-answer{
@@ -429,12 +424,13 @@
 <main>
   <section class="page-hero page-hero--client-search page-hero--no-media" aria-labelledby="client-search-title">
     <div class="container">
-      <p class="eyebrow">Привлечение B2B-клиентов · Контур.Поиск клиентов</p>
-      <nav class="kb-breadcrumbs" aria-label="Хлебные крошки"><ol><li><a href="/">Главная</a></li><li><a href="/pages/partners/">Продукты</a></li><li><a href="/pages/partners/kontur/">Контур</a></li><li aria-current="page">Поиск клиентов для B2B-продаж</li></ol></nav><h1 id="client-search-title">Поиск клиентов для B2B-продаж</h1>
+      <nav class="kb-breadcrumbs" aria-label="Хлебные крошки"><ol><li><a href="/">Главная</a></li><li><a href="/pages/partners/">Продукты</a></li><li><a href="/pages/partners/kontur/">Контур</a></li><li aria-current="page">Поиск клиентов для B2B-продаж</li></ol></nav>
+      <p class="eyebrow">Продукт · Контур.Поиск клиентов</p>
+      <h1 id="client-search-title">Поиск клиентов для B2B-продаж</h1>
       <p class="lead">Находите компании, которым действительно может быть нужно ваше предложение. Формируйте целевые базы по отрасли, региону, выручке, ОКВЭД, участию в закупках — для отдела продаж, маркетинга и CRM.</p>
-      <div class="hero-actions">
-        <a href="#widget" class="btn-hero-primary">Оставить заявку</a>
-        <a href="https://kontur.ru/compass?p=f76143&from=ref_cabinet" class="btn-hero-secondary" target="_blank" rel="noopener noreferrer">Попробовать сервис</a>
+      <div class="button-group page-hero__actions">
+        <a href="#widget" class="button button--gold">Оставить заявку</a>
+        <a href="https://kontur.ru/compass?p=f76143&from=ref_cabinet" class="button button--blue" target="_blank" rel="noopener noreferrer">Попробовать сервис</a>
       </div>
       <p class="hero-note">Сначала определим целевой сегмент, затем подберём параметры поиска и сценарий работы с базой.</p>
     </div>
