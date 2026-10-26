@@ -150,6 +150,18 @@
       display: flex; align-items: center; padding: 0 24px;
     }
     .page-hero__body { max-width: 600px; }
+    .page-hero__inner { height: auto; min-height: 400px; align-items: flex-start; padding: 64px 24px 48px; }
+    .page-hero__eyebrow { color: #C8A24A; font-weight: 600; }
+    .page-hero h1 { font-weight: 300; font-size: clamp(28px, 3.5vw, 42px); line-height: 1.12; }
+    .page-hero__lead { color: rgba(255,255,255,.8); font-size: 15px; }
+    @media (max-width: 900px) {
+      .page-hero__inner { min-height: 0; padding: 40px 24px 48px; }
+    }
+    @media (max-width: 600px) {
+      .page-hero__inner { padding: 32px 20px 48px; }
+      .page-hero__actions { align-items: stretch; }
+      .page-hero__actions .button { width: 100%; }
+    }
     .page-hero__eyebrow {
       margin: 0 0 10px; font-size: 12px; letter-spacing: .08em;
       text-transform: uppercase; color: rgba(255,255,255,.7); font-weight: 600;
@@ -532,12 +544,13 @@
     <div class="page-hero__bg" aria-hidden="true"></div>
     <div class="page-hero__inner">
       <div class="page-hero__body">
+        <nav class="kb-breadcrumbs" aria-label="Хлебные крошки"><ol><li><a href="/">Главная</a></li><li><a href="/pages/services/">Услуги</a></li><li aria-current="page">Сайты</li></ol></nav>
         <p class="page-hero__eyebrow">Услуги · Сайты</p>
-        <nav class="kb-breadcrumbs" aria-label="Хлебные крошки"><ol><li><a href="/">Главная</a></li><li><a href="/pages/services/">Услуги</a></li><li aria-current="page">Сайты</li></ol></nav><h1 id="web-h1">Сайты с индивидуальным дизайном</h1>
+        <h1 id="web-h1">Сайты с индивидуальным дизайном</h1>
         <p class="page-hero__lead">Помогаем новому бизнесу быстро заявить о себе в сети. MVP на старте, развитие — когда появится бюджет и понимание, что работает.</p>
-        <div class="page-hero__actions">
-          <a href="/pages/about/contacts.html" class="btn btn--gold">Обсудить задачу</a>
-          <a href="#mvp" class="btn btn--blue">MVP и развитие</a>
+        <div class="button-group page-hero__actions">
+          <a href="/pages/about/contacts.html" class="button button--gold">Обсудить задачу</a>
+          <a href="#mvp" class="button button--blue">MVP и развитие</a>
         </div>
       </div>
     </div>
