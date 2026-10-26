@@ -137,6 +137,15 @@
         border-color: rgba(200, 162, 74, 0.5);
       }
       .k-hero .button-group { position: relative; z-index: 1; }
+      .k-hero .page-hero__actions { margin-top: 0; }
+      /* Keep the generated contour scene visually subordinate on this hub page. */
+      .k-hero .kb-fx__stage { top: 12%; bottom: auto; height: 70%; }
+      .k-hero__tabs--below { display: block; background: #0A192F; padding: 12px 0 16px; margin: 0; }
+      .k-hero__tabs--below .container { display: flex; flex-wrap: wrap; gap: 8px; }
+      @media (max-width: 600px) {
+        .k-hero .kb-fx__stage { top: 18%; height: 58%; }
+        .k-hero__tabs--below .container { gap: 6px; }
+      }
 
       /* ===== SECTIONS ===== */
       .k-section { padding: 56px 0 24px; }
@@ -636,25 +645,26 @@
     <section class="k-hero">
         <div class="container">
             <div class="k-hero__capsule">
-                <span class="k-hero__eyebrow">Цифровой контур · Контур</span>
-                <nav class="kb-breadcrumbs" aria-label="Хлебные крошки"><ol><li><a href="/">Главная</a></li><li><a href="/pages/partners/">Продукты</a></li><li aria-current="page">Контур</li></ol></nav><h1>Контур.Эльба, Диадок, Фокус, Банк</h1>
+                <nav class="kb-breadcrumbs" aria-label="Хлебные крошки"><ol><li><a href="/">Главная</a></li><li><a href="/pages/partners/">Продукты</a></li><li aria-current="page">Контур</li></ol></nav>
+                <span class="k-hero__eyebrow">Партнёры · Сервисы Контура</span>
+                <h1>Контур.Эльба, Диадок, Фокус, Банк</h1>
                 <p class="k-hero__lead">
           Учёт, ЭДО, проверка контрагентов, расчётный счёт, подпись и маркировка — сервисы Контура рядом с сайтом, CRM и лояльностью.
         </p>
-                <div class="k-hero__tabs">
-<a href="#products" class="is-active">Продукты</a>
-                    
-                    <a href="#faq">FAQ</a>
-                    <a href="#connect">Подключение</a>
-                </div>
-                <div class="button-group">
+                <div class="button-group page-hero__actions">
+                    <a href="#products" class="button button--gold">Выбрать продукт</a>
                     <a href="#products" class="button button--blue">Смотреть продукты</a>
-                    <a href="#products" class="button button--white-outline">Выбрать продукт</a>
                 </div>
             </div>
         </div>
     </section>
-
+    <nav class="k-hero__tabs k-hero__tabs--below" aria-label="Разделы страницы">
+      <div class="container">
+        <a href="#products" class="is-active">Продукты</a>
+        <a href="#faq">FAQ</a>
+        <a href="#connect">Подключение</a>
+      </div>
+    </nav>
     <section class="k-section" style="padding-top:32px;padding-bottom:8px;">
         <div class="container">
             <p style="font-size:16px;line-height:1.7;color:#0A192F;padding:20px 24px;background:#f8f9fa;border-left:4px solid #C9A24E;border-radius:0 8px 8px 0;margin:0 auto;max-width:48rem;">
