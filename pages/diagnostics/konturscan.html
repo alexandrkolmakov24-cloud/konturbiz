@@ -248,74 +248,84 @@ body { margin: 0; padding-top: var(--header-height, 90px); background: #F4F6F9; 
 /* убрать белую полосу между хедером и херо */
 .page-hero.page-hero--scan { margin-top: 0 !important; margin-bottom: 0 !important; border: none !important; }
 main > .page-hero:first-child { margin-top: 0 !important; }
-/* Hero 1200×400: картинка + градиент слева */
+/* KONTURSCAN hero: content aligned to the shared 1200px header grid */
 .page-hero.page-hero--scan {
   position: relative;
-  background: #01091C;
-  color: #fff;
-  overflow: hidden;
+  width: 100%;
   min-height: 400px;
   height: 400px;
+  margin: 0 !important;
   padding: 0;
-  margin: 0;
+  overflow: hidden;
+  background: #01091C;
+  color: #fff;
 }
 .page-hero--scan > .scan-hero-bg {
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  inset: 0;
   width: 100%;
-  max-width: 1200px;
   height: 400px;
   z-index: 0;
-  pointer-events: none;
   overflow: hidden;
+  pointer-events: none;
   background: #01091C;
 }
 .page-hero--scan > .scan-hero-bg img {
+  position: absolute;
+  top: 0;
+  right: max(0px, calc((100% - 1200px) / 2));
   display: block;
-  width: 100%;
+  width: min(58%, 696px);
   height: 400px;
   object-fit: cover;
-  object-position: center right;
+  object-position: right center;
 }
 .page-hero--scan > .scan-hero-grad {
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 1200px;
-  height: 400px;
+  inset: 0;
   z-index: 1;
   pointer-events: none;
   background: linear-gradient(
     90deg,
     #01091C 0%,
-    #01091C 18%,
-    rgba(1, 9, 28, 0.96) 28%,
-    rgba(1, 9, 28, 0.78) 36%,
-    rgba(1, 9, 28, 0.40) 44%,
-    rgba(1, 9, 28, 0.12) 50%,
-    transparent 58%
+    #01091C 34%,
+    rgba(1, 9, 28, .96) 43%,
+    rgba(1, 9, 28, .78) 51%,
+    rgba(1, 9, 28, .40) 59%,
+    rgba(1, 9, 28, .12) 66%,
+    transparent 76%
   );
 }
 .page-hero--scan > .page-hero__body {
   position: relative;
   z-index: 2;
-  max-width: 1200px;
   width: 100%;
+  max-width: 1200px;
   height: 400px;
   margin: 0 auto;
-  padding: 28px 40px;
+  padding: 28px 24px 48px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  box-sizing: border-box;
+  align-items: stretch;
+  justify-content: flex-start;
+  text-align: left;
 }
 .page-hero--scan .page-hero__inner {
-  max-width: 420px;
   width: 100%;
+  max-width: 600px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+.page-hero--scan .kb-breadcrumbs,
+.page-hero--scan .eyebrow,
+.page-hero--scan h1,
+.page-hero--scan .page-hero__lead {
+  align-self: flex-start;
+  text-align: left;
 }
 .page-hero--scan .eyebrow {
   color: #C8A24A;
@@ -323,78 +333,93 @@ main > .page-hero:first-child { margin-top: 0 !important; }
   letter-spacing: .08em;
   text-transform: uppercase;
   font-weight: 600;
-  display: block;
-  margin-bottom: 8px;
+  margin: 0 0 8px;
 }
 .page-hero--scan h1 {
   margin: 0 0 10px;
+  font-family: var(--font-headers, Montserrat, sans-serif);
   font-weight: 300;
-  font-size: clamp(24px, 3.2vw, 34px);
+  font-size: clamp(28px, 3.6vw, 40px);
   color: #fff !important;
-  line-height: 1.15;
-  max-width: 14ch;
+  line-height: 1.12;
+  max-width: 16ch;
 }
-.page-hero--scan .page-hero__lead,
-.page-hero--scan p {
+.page-hero--scan .page-hero__lead {
   margin: 0;
   color: rgba(255,255,255,.82);
-  max-width: 36ch;
+  max-width: 38ch;
   line-height: 1.45;
   font-size: 14px;
+}
+.page-hero--scan .page-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 16px;
+  padding-bottom: 0;
+}
+.page-hero--scan .page-hero__actions .button {
+  min-height: 48px;
+  box-sizing: border-box;
 }
 @media (max-width: 768px) {
   .page-hero.page-hero--scan {
     height: auto !important;
-    min-height: 320px !important;
-    margin: 0 !important;
+    min-height: 0 !important;
   }
-  .page-hero--scan > .scan-hero-bg,
-  .page-hero--scan > .scan-hero-bg img,
-  .page-hero--scan > .scan-hero-grad {
+  .page-hero--scan > .scan-hero-bg {
     height: 100% !important;
-    min-height: 320px !important;
-    max-width: 100% !important;
-    left: 0 !important;
-    transform: none !important;
-    width: 100% !important;
+    min-height: 100% !important;
   }
   .page-hero--scan > .scan-hero-bg img {
-    object-fit: cover;
-    object-position: center center;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    object-position: center;
   }
   .page-hero--scan > .scan-hero-grad {
-    background: linear-gradient(
-      180deg,
-      rgba(1,9,28,.88) 0%,
-      rgba(1,9,28,.82) 40%,
-      rgba(1,9,28,.78) 100%
-    ) !important;
+    background: linear-gradient(180deg, rgba(1,9,28,.90) 0%, rgba(1,9,28,.86) 52%, #01091C 100%);
   }
   .page-hero--scan > .page-hero__body {
     height: auto !important;
-    min-height: 320px !important;
-    padding: 28px 20px 32px !important;
-    justify-content: center;
+    min-height: 0 !important;
+    padding: 24px 20px 28px !important;
   }
   .page-hero--scan .page-hero__inner {
-    max-width: 100% !important;
+    height: auto;
+    max-width: 600px;
   }
   .page-hero--scan h1 {
-    max-width: none !important;
-    font-size: 26px !important;
-    line-height: 1.2 !important;
+    max-width: 100%;
+    font-size: 28px;
+    line-height: 1.2;
   }
-  .page-hero--scan .page-hero__lead,
-  .page-hero--scan p {
-    max-width: none !important;
-    font-size: 14px !important;
+  .page-hero--scan .page-hero__lead {
+    max-width: 100%;
+    font-size: 14px;
   }
-  .page-hero--scan .eyebrow {
-    background: rgba(1,9,28,.45) !important;
-    border: 1px solid rgba(200,162,74,.35) !important;
-    border-radius: 20px !important;
-    padding: 6px 12px !important;
-    display: inline-block !important;
+  .page-hero--scan .page-hero__actions {
+    margin-top: 24px;
+    padding-top: 0;
+    gap: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .page-hero--scan > .page-hero__body {
+    padding: 22px 16px 28px !important;
+  }
+  .page-hero--scan .page-hero__actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .page-hero--scan .page-hero__actions .button {
+    width: 100%;
+    justify-content: center;
   }
 }
 .ks-note { max-width: 720px; margin: -8px auto 16px; padding: 0 16px; font-size: 12px; color: #8FA0B5; text-align: center; }
