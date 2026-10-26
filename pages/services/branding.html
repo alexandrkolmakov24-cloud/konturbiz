@@ -118,6 +118,9 @@
         min-height: 280px; display: flex; align-items: center;
       }
       .page-hero__body { position: relative; z-index: 2; max-width: 640px; padding: 40px 40px 48px; }
+      .page-hero__actions { margin-top: 0; }
+      .page-hero .eyebrow { color: #C8A24A; font-size: 12px; font-weight: 600; text-transform: uppercase; }
+      .page-hero h1 { font-weight: 300; }
       .page-hero__crumbs { margin: 0 0 14px; }
       .page-hero__crumbs ol {
         display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0;
@@ -603,14 +606,14 @@
     <section class="page-hero" aria-labelledby="brand-h1">
         <div class="page-hero__shell">
             <div class="page-hero__body">
-<span class="eyebrow" style="color:#C8A24A;">Услуги · Брендинг</span>
-        <nav class="kb-breadcrumbs" aria-label="Хлебные крошки">
+<nav class="kb-breadcrumbs" aria-label="Хлебные крошки">
                     <ol>
                         <li><a href="/">Главная</a></li>
                         <li><a href="/pages/services/">Услуги</a></li>
                         <li aria-current="page">Брендинг</li>
                     </ol>
                 </nav>
+                <span class="eyebrow">Услуги · Брендинг</span>
                 <h1 id="brand-h1">Брендинг, который делает бизнес узнаваемым</h1>
                 <p class="lead">
                     Создадим бренд от логотипа до полной системы — под вашу задачу и масштаб бизнеса.
@@ -619,9 +622,9 @@
                     <span><strong>Логотип · Айдентика · Бренд-система · Брендбук</strong></span>
                     <span>от 25 000 ₽</span>
                 </div>
-                <div class="button-group">
-                    <a href="/pages/about/contacts.html?from=branding" class="kb-button kb-button--primary">Обсудить бренд</a>
-                    <a href="#ladder" class="kb-button kb-button--outline-light">Выбрать уровень</a>
+                <div class="button-group page-hero__actions">
+                    <a href="/pages/about/contacts.html?from=branding" class="button button--gold">Обсудить бренд</a>
+                    <a href="#ladder" class="button button--blue">Выбрать уровень</a>
                 </div>
             </div>
         </div>
