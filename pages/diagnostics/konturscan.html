@@ -764,7 +764,21 @@ main > .page-hero:first-child { margin-top: 0 !important; }
 </style>
     <link rel="stylesheet" href="/assets/css/konturbiz-redesign.css?v=20261020-hero">
 <style id="ks-hero-fix-20261026">
-/* KONTURSCAN-only overrides: keep global redesign rules untouched. */
+/* KONTURSCAN-only layout overrides. Button appearance remains in buttons.css. */
+.page-hero.page-hero--scan {
+  position: relative !important;
+  height: 400px !important;
+  min-height: 400px !important;
+  max-height: 400px !important;
+  overflow: hidden !important;
+  background: #01091C !important;
+}
+.page-hero.page-hero--scan > .scan-hero-bg,
+.page-hero.page-hero--scan > .scan-hero-grad {
+  top: 0 !important;
+  bottom: 0 !important;
+  height: 400px !important;
+}
 .page-hero.page-hero--scan .page-hero__body {
   position: relative !important;
   inset: auto !important;
@@ -773,21 +787,24 @@ main > .page-hero:first-child { margin-top: 0 !important; }
   height: 400px !important;
   min-height: 0 !important;
   margin: 0 auto !important;
-  padding: 28px 40px !important;
+  padding: 24px 40px 0 !important;
   display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
   box-sizing: border-box !important;
 }
 .page-hero.page-hero--scan .page-hero__inner {
   position: relative !important;
   inset: auto !important;
-  display: block !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
   width: min(100%, 440px) !important;
   max-width: 440px !important;
-  height: auto !important;
+  height: 100% !important;
   margin: 0 auto 0 0 !important;
-  padding: 0 !important;
+  padding: 0 0 36px !important;
+  box-sizing: border-box !important;
 }
 .page-hero.page-hero--scan .page-hero__inner > .eyebrow {
   display: inline-flex !important;
@@ -812,32 +829,46 @@ main > .page-hero:first-child { margin-top: 0 !important; }
   flex-direction: row !important;
   align-items: center !important;
   flex-wrap: wrap !important;
-  gap: 12px !important;
+  gap: 10px !important;
   width: auto !important;
   height: auto !important;
-  margin: 20px 0 0 !important;
+  margin: auto 0 0 !important;
+  padding: 0 !important;
 }
-.page-hero.page-hero--scan .page-hero__actions > a {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+.page-hero.page-hero--scan .page-hero__actions .button {
+  /* Size, shine, hover and colors come from assets/css/buttons.css. */
   flex: 0 0 auto !important;
   width: auto !important;
   max-width: 100% !important;
-  min-height: 44px !important;
 }
 @media (max-width: 768px) {
+  .page-hero.page-hero--scan {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+  .page-hero.page-hero--scan > .scan-hero-bg,
+  .page-hero.page-hero--scan > .scan-hero-grad {
+    top: 0 !important;
+    bottom: 0 !important;
+    height: 100% !important;
+    min-height: 100% !important;
+  }
   .page-hero.page-hero--scan .page-hero__body {
     height: auto !important;
     min-height: 0 !important;
-    padding: 28px 16px 30px !important;
+    padding: 28px 16px 28px !important;
   }
   .page-hero.page-hero--scan .page-hero__inner {
     width: 100% !important;
     max-width: 100% !important;
+    height: auto !important;
     margin: 0 !important;
+    padding: 0 !important;
   }
   .page-hero.page-hero--scan .page-hero__actions {
+    margin: 16px 0 0 !important;
+    gap: 10px !important;
     flex-direction: row !important;
     flex-wrap: wrap !important;
   }
