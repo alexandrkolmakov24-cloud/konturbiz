@@ -1108,6 +1108,44 @@ main > .page-hero:first-child { margin-top: 0 !important; }
   }
 }
 </style>
+
+<style id="fp-start-button-shine">
+/* Subtle gold highlight on the primary KONTUR SCAN start button. */
+#fp_startBtn {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+#fp_startBtn::after {
+  content: "";
+  position: absolute;
+  top: -35%;
+  bottom: -35%;
+  left: -65%;
+  width: 38%;
+  pointer-events: none;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    rgba(255,255,255,0.08) 28%,
+    rgba(255,255,255,0.62) 50%,
+    rgba(255,255,255,0.12) 72%,
+    transparent 100%
+  );
+  transform: skewX(-18deg);
+  animation: fpStartButtonShine 3.8s ease-in-out infinite;
+}
+@keyframes fpStartButtonShine {
+  0%, 58% { left: -65%; opacity: 0; }
+  65% { opacity: 1; }
+  88% { left: 135%; opacity: 0.8; }
+  100% { left: 135%; opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #fp_startBtn::after { animation: none; display: none; }
+}
+</style>
+
 </head>
 <body>
 <header class="header" role="banner">
