@@ -1271,3 +1271,33 @@ html body.samo-page .page-hero .page-hero__actions > .button {
     margin-top: 24px !important;
   }
 }
+
+
+/* Homepage hero uses the same CTA dimensions and bottom rhythm as interior heroes. */
+html body .hero .hero__content {
+  padding-bottom: 48px !important;
+}
+html body .hero .hero__actions {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding-top: 20px !important;
+}
+html body .hero .hero__actions > .button {
+  display: inline-flex !important;
+  height: 48px !important;
+  min-height: 48px !important;
+  max-height: 48px !important;
+  padding: 0 18px !important;
+  font-family: Inter, "Segoe UI", Arial, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+@media (max-width: 768px) {
+  html body .hero .hero__content { padding-bottom: 48px !important; }
+  html body .hero .hero__actions { flex-wrap: wrap !important; }
+}
