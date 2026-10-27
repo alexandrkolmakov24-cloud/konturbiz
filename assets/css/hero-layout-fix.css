@@ -1,0 +1,130 @@
+/* KONTURBIZ — hero layout fix (load AFTER konturbiz-redesign.css)
+   Root cause: redesign used .page-hero__shell { left:50%; transform:translateX(-50%) }
+   which pushed text to the right on partner pages (SAMO etc).
+   Fix: relative shell, text absolute left, media from 42%.
+*/
+html body .page-hero {
+  position: relative !important;
+  width: 100% !important;
+  height: 400px !important;
+  min-height: 400px !important;
+  overflow: hidden !important;
+  background: #01091c !important;
+  color: #fff !important;
+}
+html body .page-hero .page-hero__shell,
+html body .page-hero .page-hero__inner {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  transform: none !important;
+  width: min(100%, 1200px) !important;
+  max-width: 1200px !important;
+  height: 400px !important;
+  min-height: 400px !important;
+  max-height: 400px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  box-sizing: border-box !important;
+  z-index: 4 !important;
+}
+html body .page-hero .page-hero__body {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: auto !important;
+  bottom: 0 !important;
+  width: 520px !important;
+  max-width: 48% !important;
+  height: 100% !important;
+  min-height: 400px !important;
+  margin: 0 !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  padding: 36px 24px 48px 40px !important;
+  transform: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  box-sizing: border-box !important;
+  z-index: 5 !important;
+  color: #fff !important;
+  text-align: left !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+html body .page-hero .page-hero__media {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 42% !important;
+  width: auto !important;
+  max-width: none !important;
+  height: 100% !important;
+  inset: 0 0 0 42% !important;
+  transform: none !important;
+  overflow: hidden !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+}
+html body .page-hero > .page-hero__media {
+  left: 42% !important;
+  right: 0 !important;
+  inset: 0 0 0 42% !important;
+  transform: none !important;
+  width: auto !important;
+}
+html body .page-hero .page-hero__media img {
+  object-position: right center !important;
+  opacity: 1 !important;
+}
+html body .page-hero .page-hero__overlay,
+html body .page-hero > .page-hero__overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  transform: none !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  background: linear-gradient(
+    90deg,
+    #01091c 0%,
+    #01091c 28%,
+    rgba(1, 9, 28, .95) 38%,
+    rgba(1, 9, 28, .7) 50%,
+    rgba(1, 9, 28, .3) 62%,
+    transparent 86%
+  ) !important;
+}
+@media (max-width: 768px) {
+  html body .page-hero {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+  html body .page-hero .page-hero__shell {
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0 20px !important;
+  }
+  html body .page-hero .page-hero__media,
+  html body .page-hero .page-hero__overlay {
+    display: none !important;
+  }
+  html body .page-hero .page-hero__body {
+    position: relative !important;
+    inset: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    max-width: 520px !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 28px 0 32px !important;
+  }
+}
