@@ -1,11 +1,38 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>САМО — temporary restore notice</title>
-</head>
+<!-- RESTORE_FAILED_USE_LOCAL -->
+<html lang="ru"><head><meta charset="UTF-8"><title>SAMO restore needed</title>
+<link rel="stylesheet" href="/assets/css/konturbiz.css">
+<link rel="stylesheet" href="/assets/css/buttons.css">
+<link rel="stylesheet" href="/assets/css/konturbiz-redesign.css">
+<style id="samo-hero-layer-fix">
+html body.samo-page section.page-hero{position:relative!important;height:400px!important;min-height:400px!important;overflow:hidden!important;background:#01091C!important;color:#fff!important}
+html body.samo-page section.page-hero .page-hero__shell{position:relative!important;max-width:1200px!important;height:400px!important;margin:0 auto!important;z-index:5!important}
+html body.samo-page section.page-hero .page-hero__body{position:relative!important;z-index:50!important;display:flex!important;flex-direction:column!important;width:520px!important;max-width:52%!important;height:400px!important;padding:36px 24px 48px 40px!important;color:#fff!important;opacity:1!important;visibility:visible!important}
+html body.samo-page section.page-hero .page-hero__body *{opacity:1!important;visibility:visible!important;color:inherit}
+html body.samo-page section.page-hero .eyebrow{color:#C8A24A!important}
+html body.samo-page section.page-hero h1{color:#fff!important;font-weight:400!important}
+html body.samo-page section.page-hero .lead{color:rgba(255,255,255,.88)!important}
+html body.samo-page section.page-hero .page-hero__media{position:absolute!important;z-index:1!important;top:0!important;right:0!important;bottom:0!important;left:42%!important}
+html body.samo-page section.page-hero .page-hero__overlay{position:absolute!important;z-index:2!important;inset:0!important;pointer-events:none!important;background:linear-gradient(90deg,#01091C 0%,#01091C 28%,rgba(1,9,28,.75) 46%,rgba(1,9,28,0) 82%)!important}
+html body.samo-page section.page-hero .kb-fx{z-index:0!important;pointer-events:none!important;opacity:.35!important}
+@media(max-width:768px){html body.samo-page section.page-hero{height:auto!important;min-height:480px!important}html body.samo-page section.page-hero .page-hero__media,html body.samo-page section.page-hero .page-hero__overlay{display:none!important}}
+</style></head>
 <body class="samo-page">
-<p>Restoring full page…</p>
-</body>
-</html>
+<header class="header"><div class="container"><a href="/">KONTURBIZ</a></div></header>
+<section class="page-hero" aria-labelledby="samo-title">
+<div class="page-hero__shell">
+<div class="page-hero__body">
+<nav class="kb-breadcrumbs" aria-label="Хлебные крошки"><ol><li><a href="/">Главная</a></li><li><a href="/pages/partners/">Продукты</a></li><li aria-current="page">САМО</li></ol></nav>
+<p class="eyebrow">Партнёр · Управленческий учёт</p>
+<h1 id="samo-title">САМО для учёта малого бизнеса</h1>
+<p class="lead">Разберём, поможет ли САМО видеть финансовую картину бизнеса и как встроить сервис в цифровой контур.</p>
+<div class="button-group page-hero__actions">
+<a class="button button--gold" href="/pages/about/contacts.html?from=samo">Обсудить задачу</a>
+<a class="button button--blue" href="https://samo.business" target="_blank" rel="noopener noreferrer">Сайт САМО</a>
+</div></div>
+<div class="page-hero__media" aria-hidden="true"><img src="/images/samo/samo-hero.png" alt="" width="1964" height="394"></div>
+<div class="page-hero__overlay" aria-hidden="true"></div>
+</div></section>
+<main class="container" style="padding:40px 20px"><p>Страница восстановлена частично. Полный контент нужно вернуть из предыдущего коммита ветки claude-rebuild-review (blob d83b57fb). Hero-слой исправлен: текст поверх media.</p>
+<p><a href="https://github.com/alexandrkolmakov24-cloud/konturbiz/blob/claude-rebuild-review/pages/partners/samo/index.html">Файл на GitHub</a></p>
+</main></body></html>
