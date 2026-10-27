@@ -428,6 +428,22 @@
 <meta name="twitter:image" content="https://konturbiz.ru/images/samo/samo-hero.png">
 <link rel="stylesheet" href="/assets/css/kb-motion.css?v=20261022-m4">
 <script src="/assets/js/kb-motion.js?v=20261022-m4" defer></script>
+<style>
+  /* Final hero overrides: keep the shared KONTURBIZ image-led layout after redesign.css. */
+  .page-hero { position:relative !important; width:100% !important; height:auto !important; min-height:400px !important; max-height:none !important; margin:0 !important; padding:0 !important; overflow:hidden !important; background:#01091C !important; }
+  .page-hero__shell { position:relative !important; display:flex !important; align-items:center !important; width:100% !important; max-width:1200px !important; height:auto !important; min-height:400px !important; max-height:none !important; margin:0 auto !important; padding:0 !important; overflow:hidden !important; }
+  .page-hero__media { position:absolute !important; inset:0 0 0 42% !important; z-index:0 !important; max-width:none !important; overflow:hidden !important; }
+  .page-hero__media img { position:absolute !important; inset:0 !important; width:100% !important; height:100% !important; object-fit:cover !important; object-position:right center !important; }
+  .page-hero__overlay { position:absolute !important; inset:0 !important; z-index:1 !important; background:linear-gradient(90deg,#01091C 0%,#01091C 25%,rgba(1,9,28,.82) 39%,rgba(1,9,28,.5) 52%,rgba(1,9,28,.16) 66%,transparent 80%) !important; pointer-events:none !important; }
+  .page-hero__body { position:relative !important; z-index:2 !important; width:100% !important; max-width:520px !important; margin:0 !important; padding:42px 0 44px 40px !important; display:flex !important; flex-direction:column !important; align-items:flex-start !important; justify-content:center !important; box-sizing:border-box !important; }
+  @media (max-width:768px) {
+    .page-hero,.page-hero__shell { min-height:420px !important; }
+    .page-hero__shell { padding:0 20px !important; }
+    .page-hero__media { inset:0 !important; }
+    .page-hero__overlay { background:linear-gradient(90deg,rgba(1,9,28,.96) 0%,rgba(1,9,28,.84) 54%,rgba(1,9,28,.56) 100%) !important; }
+    .page-hero__body { max-width:560px !important; padding:32px 0 !important; }
+  }
+</style>
 </head>
 <body>
 <header class="header" role="banner">
@@ -569,7 +585,7 @@
         <p class="lead">Разберём, поможет ли САМО видеть финансовую картину бизнеса и как встроить сервис в цифровой контур.</p>
         <div class="button-group page-hero__actions">
           <a class="button button--gold" href="/pages/about/contacts.html?from=samo">Обсудить задачу</a>
-          <a class="button button--blue" href="https://samo.business" target="_blank" rel="noopener noreferrer">Материалы партнёра</a>
+          <a class="button button--blue" href="https://samo.business" target="_blank" rel="noopener noreferrer">Сайт САМО</a>
         </div>
       </div>
     </div>
