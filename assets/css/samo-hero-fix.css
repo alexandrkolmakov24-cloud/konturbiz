@@ -180,7 +180,7 @@ body.samo-page .page-hero .page-hero__overlay {
     max-width: 520px !important;
     height: auto !important;
     min-height: 480px !important;
-    padding: 28px 0 32px !important;
+    padding: 28px 0 48px !important;
   }
   body.samo-page .page-hero .page-hero__actions {
     margin-top: 28px !important;
@@ -210,7 +210,7 @@ body.samo-page .page-hero > .page-hero__shell > .page-hero__body {
     height: auto !important;
     min-height: 480px !important;
     margin: 0 !important;
-    padding: 28px 0 32px !important;
+    padding: 28px 0 48px !important;
     transform: none !important;
     translate: none !important;
   }
@@ -218,5 +218,35 @@ body.samo-page .page-hero > .page-hero__shell > .page-hero__body {
   body.samo-page .page-hero > .page-hero__shell > .page-hero__media,
   body.samo-page .page-hero > .page-hero__shell > .page-hero__overlay {
     display: none !important;
+  }
+}
+
+
+/* SAMO CTA alignment: same 48px controls and bottom inset as the site-wide hero standard. */
+html body.samo-page .page-hero .page-hero__actions {
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin-top: auto !important;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+}
+html body.samo-page .page-hero .page-hero__actions > .button,
+html body.samo-page .page-hero .page-hero__actions > a.button {
+  height: 48px !important;
+  min-height: 48px !important;
+  max-height: 48px !important;
+  padding: 0 18px !important;
+  font-family: Inter, "Segoe UI", Arial, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+@media (max-width: 768px) {
+  html body.samo-page .page-hero .page-hero__actions {
+    flex-wrap: wrap !important;
+    margin-top: 24px !important;
   }
 }
