@@ -1,1 +1,83 @@
-PLACEHOLDER
+/* KONTURBIZ redesign — emergency restore 2026-10-27
+   Full rules recovered; hero left:50% neutralized by hero-layout-fix import.
+*/
+@import url("/assets/css/hero-layout-fix.css");
+
+:root {
+  --kb-ink: #112b4a;
+  --kb-navy: #01091c;
+  --kb-navy-2: #112b4a;
+  --kb-blue: #295d8a;
+  --kb-gold: #c8a24a;
+  --kb-paper: #ffffff;
+  --kb-canvas: #f6f8fb;
+  --kb-line: #e8edf3;
+  --kb-muted: #52667a;
+  --kb-radius: 14px;
+  --kb-shadow: 0 12px 32px rgba(13, 35, 59, .08);
+  --container-max: 1200px;
+  --header-height: 90px;
+  --header-height-tablet: 72px;
+  --header-height-mobile: 64px;
+}
+html { scroll-behavior: smooth; background: var(--kb-canvas); }
+body { color: var(--kb-ink); background: var(--kb-canvas); font-family: Inter, "Segoe UI", Arial, sans-serif; font-size: 16px; line-height: 1.65; }
+body:has(.header) { padding-top: var(--header-height); }
+main { color: var(--kb-ink); }
+main h1, main h2, main h3, main h4 {
+  color: var(--kb-ink);
+  font-family: Montserrat, Inter, "Segoe UI", sans-serif;
+  letter-spacing: -.025em;
+}
+.container { max-width: 1240px; padding-left: clamp(18px, 3.3vw, 40px); padding-right: clamp(18px, 3.3vw, 40px); }
+.header {
+  height: var(--header-height) !important;
+  background: #01091c !important;
+  border-bottom: 1px solid rgba(255,255,255,.08) !important;
+}
+.hero, .page-hero {
+  height: 400px !important;
+  min-height: 400px !important;
+  max-height: 400px !important;
+  overflow: hidden !important;
+  background-color: var(--kb-navy) !important;
+  color: #fff !important;
+}
+.page-hero h1, .hero h1 { color: #fff !important; font-weight: 400 !important; }
+.page-hero .lead, .hero .lead { color: rgba(255,255,255,.86) !important; }
+.page-hero .eyebrow, .hero .eyebrow { color: #e1c16f !important; font-weight: 600 !important; }
+.section, .sec { padding-top: clamp(52px, 6.2vw, 84px) !important; padding-bottom: clamp(52px, 6.2vw, 84px) !important; }
+.button--gold, .btn--gold {
+  background: var(--kb-gold) !important;
+  border-color: var(--kb-gold) !important;
+  color: #152238 !important;
+}
+.button--blue, .btn--primary {
+  background: var(--kb-navy-2) !important;
+  border-color: var(--kb-navy-2) !important;
+  color: #fff !important;
+}
+.footer { background: #01091c !important; }
+.kb-breadcrumbs {
+  margin: 0 0 8px !important;
+  color: rgba(255,255,255,.68) !important;
+  font: 500 12px/1.45 Inter, "Segoe UI", sans-serif !important;
+}
+.kb-breadcrumbs ol { display: flex; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; gap: 0; }
+.kb-breadcrumbs li + li::before { content: "/"; margin: 0 8px; color: rgba(255,255,255,.4); }
+.kb-breadcrumbs a { color: rgba(255,255,255,.68) !important; text-decoration: none !important; }
+@media (max-width: 1024px) {
+  body:has(.header) { padding-top: var(--header-height-tablet); }
+  .header { height: var(--header-height-tablet) !important; }
+}
+@media (max-width: 900px) {
+  .hero, .page-hero {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+}
+@media (max-width: 768px) {
+  body:has(.header) { padding-top: var(--header-height-mobile); }
+  .header { height: var(--header-height-mobile) !important; }
+}
