@@ -186,3 +186,37 @@ body.samo-page .page-hero .page-hero__overlay {
     margin-top: 28px !important;
   }
 }
+
+
+/* Final specificity guard: keep SAMO hero copy anchored to the left.
+   Must remain at the end of this file so shared/legacy positioning cannot win. */
+body.samo-page .page-hero > .page-hero__shell > .page-hero__body {
+  left: 0 !important;
+  right: auto !important;
+  transform: none !important;
+  translate: none !important;
+}
+
+@media (max-width: 768px) {
+  body.samo-page .page-hero > .page-hero__shell > .page-hero__body {
+    position: relative !important;
+    inset: auto !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    max-width: 520px !important;
+    height: auto !important;
+    min-height: 480px !important;
+    margin: 0 !important;
+    padding: 28px 0 32px !important;
+    transform: none !important;
+    translate: none !important;
+  }
+
+  body.samo-page .page-hero > .page-hero__shell > .page-hero__media,
+  body.samo-page .page-hero > .page-hero__shell > .page-hero__overlay {
+    display: none !important;
+  }
+}
