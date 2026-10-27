@@ -250,3 +250,32 @@ html body.samo-page .page-hero .page-hero__actions > a.button {
     margin-top: 24px !important;
   }
 }
+
+
+/* Typography correction: match the refined, light-weight homepage hero. */
+html body.samo-page .page-hero .page-hero__body,
+html body.samo-page .page-hero .page-hero__body *:not(.button):not(svg):not(path) {
+  font-synthesis: none !important;
+}
+html body.samo-page .page-hero .page-hero__body h1,
+html body.samo-page .page-hero .page-hero__body h1 *,
+html body.samo-page .page-hero h1 {
+  font-family: Montserrat, Inter, sans-serif !important;
+  font-weight: 300 !important;
+  letter-spacing: -0.025em !important;
+}
+html body.samo-page .page-hero .page-hero__body .lead,
+html body.samo-page .page-hero .page-hero__body p,
+html body.samo-page .page-hero .page-hero__body .kb-breadcrumbs,
+html body.samo-page .page-hero .page-hero__body .kb-breadcrumbs a {
+  font-family: Inter, "Segoe UI", Arial, sans-serif !important;
+  font-weight: 300 !important;
+}
+html body.samo-page .page-hero .page-hero__body .eyebrow {
+  font-family: Inter, "Segoe UI", Arial, sans-serif !important;
+  font-weight: 500 !important;
+}
+html body.samo-page .page-hero .page-hero__actions > .button,
+html body.samo-page .page-hero .page-hero__actions > a.button {
+  font-weight: 500 !important;
+}
