@@ -431,6 +431,31 @@
 <link rel="stylesheet" href="/assets/css/kb-motion.css?v=20261022-m4">
 <script src="/assets/js/kb-motion.js?v=20261022-m4" defer></script>
 
+<!-- SAMO hero safety override: intentionally loaded after shared redesign CSS. -->
+<style id="samo-hero-layer-fix">
+  .page-hero { position:relative !important; height:400px !important; min-height:400px !important; overflow:hidden !important; isolation:isolate !important; background:#01091C !important; }
+  .page-hero > .page-hero__shell { position:relative !important; display:block !important; width:100% !important; max-width:1200px !important; height:400px !important; min-height:400px !important; margin:0 auto !important; padding:0 !important; overflow:visible !important; }
+  .page-hero > .page-hero__shell > .page-hero__body { position:relative !important; z-index:30 !important; display:flex !important; flex-direction:column !important; align-items:flex-start !important; justify-content:flex-start !important; width:520px !important; max-width:520px !important; height:400px !important; margin:0 !important; padding:34px 0 48px 40px !important; box-sizing:border-box !important; text-align:left !important; color:#fff !important; }
+  .page-hero > .page-hero__shell > .page-hero__media { position:absolute !important; z-index:1 !important; top:0 !important; right:0 !important; bottom:0 !important; left:38% !important; width:auto !important; height:100% !important; margin:0 !important; padding:0 !important; overflow:hidden !important; }
+  .page-hero > .page-hero__shell > .page-hero__media img { position:absolute !important; inset:0 !important; display:block !important; width:100% !important; height:100% !important; max-width:none !important; object-fit:cover !important; object-position:right center !important; }
+  .page-hero > .page-hero__shell > .page-hero__overlay { position:absolute !important; z-index:2 !important; inset:0 !important; pointer-events:none !important; background:linear-gradient(90deg,#01091C 0%,#01091C 26%,rgba(1,9,28,.97) 34%,rgba(1,9,28,.78) 43%,rgba(1,9,28,.42) 55%,rgba(1,9,28,.12) 68%,rgba(1,9,28,0) 78%) !important; }
+  .page-hero .kb-breadcrumbs, .page-hero .eyebrow, .page-hero h1, .page-hero .lead, .page-hero .page-hero__actions { position:relative !important; z-index:31 !important; text-align:left !important; }
+  .page-hero .kb-breadcrumbs { margin:0 0 16px !important; }
+  .page-hero .eyebrow { display:inline-block !important; color:#C8A24A !important; margin:0 0 10px !important; }
+  .page-hero h1 { max-width:18ch !important; margin:0 0 12px !important; color:#fff !important; font-weight:400 !important; }
+  .page-hero .lead { max-width:440px !important; margin:0 !important; color:rgba(255,255,255,.88) !important; }
+  .page-hero .page-hero__actions { display:flex !important; align-items:center !important; justify-content:flex-start !important; flex-wrap:wrap !important; gap:10px !important; margin-top:auto !important; padding:0 !important; }
+  @media (max-width:768px) {
+    .page-hero { height:auto !important; min-height:480px !important; }
+    .page-hero > .page-hero__shell { width:100% !important; height:auto !important; min-height:480px !important; padding:0 20px !important; }
+    .page-hero > .page-hero__shell > .page-hero__media, .page-hero > .page-hero__shell > .page-hero__overlay { display:none !important; }
+    .page-hero > .page-hero__shell > .page-hero__body { width:100% !important; max-width:520px !important; height:auto !important; min-height:480px !important; padding:28px 0 32px !important; }
+    .page-hero .page-hero__actions { margin-top:28px !important; }
+    .page-hero .lead { max-width:100% !important; }
+  }
+</style>
+
+
 </head>
 <body>
 <header class="header" role="banner">
