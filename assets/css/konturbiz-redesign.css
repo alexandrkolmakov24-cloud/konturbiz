@@ -682,7 +682,7 @@ section:has(.faq-section) > .section-title,
   padding: 18px 56px 18px 20px !important;
   color: var(--kb-ink) !important;
   background: #fff !important;
-  font: 650 16px/1.45 Inter, "Segoe UI", Arial, sans-serif !important;
+  font: 500 16px/1.45 Inter, "Segoe UI", Arial, sans-serif !important;
   text-align: left !important;
   cursor: pointer;
   list-style: none;
