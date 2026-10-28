@@ -267,28 +267,6 @@ input:focus, select:focus, textarea:focus { border-color: var(--kb-blue); box-sh
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
 
-/* Desktop hero rhythm: keep copy at the top and actions near the lower edge.
-   Mobile retains auto-height and normal document flow. */
-@media (min-width: 901px) {
-  .page-hero__body { justify-content: flex-start !important; }
-  .page-hero > .container { justify-content: flex-start !important; }
-  .page-hero__body > .page-hero__actions,
-  .page-hero__body > .button-group,
-  .page-hero > .container > .page-hero__actions,
-  .page-hero > .container > .button-group {
-    margin-top: auto !important;
-    padding-bottom: 0 !important;
-  }
-}
-@media (max-width: 900px) {
-  .page-hero__body,
-  .page-hero > .container { justify-content: flex-start !important; }
-  .page-hero__body > .page-hero__actions,
-  .page-hero__body > .button-group,
-  .page-hero > .container > .page-hero__actions,
-  .page-hero > .container > .button-group { margin-top: 24px !important; }
-}
-
 /* Shared hero rhythm, breadcrumbs and CTA sizing across the site's page variants. */
 .kb-breadcrumbs {
   width: 100%;
@@ -604,7 +582,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--kb-blue); box-sh
   padding: 18px 56px 18px 20px !important;
   color: var(--kb-ink) !important;
   background: #fff !important;
-  font: 650 16px/1.45 Inter, "Segoe UI", Arial, sans-serif !important;
+  font: 500 16px/1.45 Inter, "Segoe UI", Arial, sans-serif !important;
   cursor: pointer;
   list-style: none;
 }
@@ -1323,4 +1301,33 @@ html body .hero .hero__actions > .button {
 @media (max-width: 768px) {
   html body .hero .hero__content { padding-bottom: 48px !important; }
   html body .hero .hero__actions { flex-wrap: wrap !important; }
+}
+
+/* Final hero overrides: declared last so local legacy selectors cannot pull CTAs upward. */
+@media (min-width: 901px) {
+  body .page-hero .page-hero__body {
+    justify-content: flex-start !important;
+  }
+  body .page-hero > .container {
+    justify-content: flex-start !important;
+  }
+  body .page-hero .page-hero__body > .page-hero__actions,
+  body .page-hero .page-hero__body > .button-group,
+  body .page-hero > .container > .page-hero__actions,
+  body .page-hero > .container > .button-group {
+    margin-top: auto !important;
+    padding-bottom: 0 !important;
+  }
+}
+@media (max-width: 900px) {
+  body .page-hero .page-hero__body,
+  body .page-hero > .container {
+    justify-content: flex-start !important;
+  }
+  body .page-hero .page-hero__body > .page-hero__actions,
+  body .page-hero .page-hero__body > .button-group,
+  body .page-hero > .container > .page-hero__actions,
+  body .page-hero > .container > .button-group {
+    margin-top: 24px !important;
+  }
 }
