@@ -1451,3 +1451,32 @@ html body .hero .hero__actions > .button {
     margin-top: 24px !important;
   }
 }
+
+/* 2026-10-28 P0: solutions hero — force the actual flex parent to fill the hero.
+   Higher-specificity final override; do not rely on margin-top:auto without a full-height parent. */
+@media (min-width: 901px) {
+  html body section.page-hero > div.container,
+  html body section.page-hero > .container,
+  html body .page-hero__body {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    height: 100% !important;
+    min-height: 400px !important;
+    box-sizing: border-box !important;
+    padding-bottom: 48px !important;
+  }
+
+  html body section.page-hero .button-group,
+  html body section.page-hero .page-hero__actions,
+  html body .page-hero__body .button-group,
+  html body .page-hero__body .page-hero__actions {
+    margin-top: auto !important;
+    flex-shrink: 0 !important;
+  }
+
+  html body section.page-hero h1,
+  html body .page-hero__body h1 {
+    font-weight: 300 !important;
+  }
+}
