@@ -266,51 +266,36 @@
   .page-hero.page-hero--no-media > .container > .page-hero__actions {
     margin-top:auto !important;
   }
-  /* This page uses the labeled HTML stack as its single hero illustration. */
-  .page-hero > .kb-fx { display:none !important; }
-  .solutions-hero-scene {
-    position:absolute;
-    z-index:1;
-    top:24px;
-    right:max(3%, calc((100% - 1200px) / 2 + 12px));
-    width:min(44%, 520px);
-    height:344px;
-    box-sizing:border-box;
-    pointer-events:none;
-    overflow:hidden;
-    contain:layout paint;
+  /* Original perspective stack: a single kb-motion canvas illustration. */
+  .page-hero > .kb-fx {
+    display:block !important;
+    position:absolute !important;
+    inset:0 !important;
+    z-index:1 !important;
+    overflow:hidden !important;
+    pointer-events:none !important;
   }
-  .solutions-hero-scene__plate {
-    position:absolute;
-    right:8%;
-    width:78%;
-    min-height:46px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:11px 16px;
-    box-sizing:border-box;
-    border:1px solid rgba(190,215,245,.32);
-    border-radius:8px;
-    background:linear-gradient(105deg,rgba(12,32,66,.96),rgba(6,18,40,.88));
-    box-shadow:0 12px 28px rgba(0,0,0,.20), inset 0 1px rgba(255,255,255,.06);
-    color:rgba(224,235,251,.82);
-    font:500 13px/1.25 Inter,"Segoe UI",sans-serif;
-    letter-spacing:.04em;
-    transform:skewY(-4deg);
+  .page-hero > .kb-fx .kb-fx__ambient,
+  .page-hero > .kb-fx .kb-fx__grid,
+  .page-hero > .kb-fx .kb-fx__scan,
+  .page-hero > .kb-fx .kb-fx__spot {
+    display:none !important;
   }
-  .solutions-hero-scene__plate::after {
-    content:"";
-    width:6px;height:6px;border-radius:50%;
-    background:#6e9fce;
-    box-shadow:0 0 14px rgba(110,159,206,.45);
-    flex:0 0 auto;
+  .page-hero > .kb-fx .kb-fx__stage {
+    position:absolute !important;
+    top:24px !important;
+    right:max(3%, calc((100% - 1200px) / 2 + 12px)) !important;
+    left:auto !important;
+    width:min(44%, 520px) !important;
+    height:344px !important;
+    overflow:visible !important;
+    background:transparent !important;
   }
-  .solutions-hero-scene__plate:nth-child(1){top:10px;right:10%;border-color:rgba(200,162,74,.58);color:#f0d58b;background:linear-gradient(105deg,rgba(55,43,20,.94),rgba(7,18,39,.94));}
-  .solutions-hero-scene__plate:nth-child(2){top:72px;right:7%;}
-  .solutions-hero-scene__plate:nth-child(3){top:134px;right:9%;border-color:rgba(110,159,206,.48);}
-  .solutions-hero-scene__plate:nth-child(4){top:196px;right:6%;}
-  .solutions-hero-scene__plate:nth-child(5){top:258px;right:8%;border-color:rgba(200,162,74,.36);}
+  .page-hero > .kb-fx .kb-fx__scene {
+    display:block !important;
+    width:100% !important;
+    height:100% !important;
+  }
 }
 @media (max-width:900px) {
   .solutions-hero-scene { display:none !important; }
@@ -479,8 +464,7 @@
                     <a href="#directions" class="button button--gold">Выбрать направление</a>
                 </div>
             </div>
-        <div class="solutions-hero-scene" aria-hidden="true">
-  <div class="solutions-hero-scene__plate">Бренд</div>
+        
   <div class="solutions-hero-scene__plate">Сайт</div>
   <div class="solutions-hero-scene__plate">CRM</div>
   <div class="solutions-hero-scene__plate">Лояльность</div>
