@@ -410,7 +410,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--kb-blue); box-sh
   background: #fff !important;
   font-family: Inter, "Segoe UI", Arial, sans-serif !important;
   font-size: 16px !important;
-  font-weight: 650 !important;
+  font-weight: 500 !important;
   line-height: 1.45 !important;
   cursor: pointer;
   list-style: none;
@@ -848,7 +848,7 @@ section:has(#faq-title) details > summary,
   background: #fff !important;
   font-family: Inter, "Segoe UI", Arial, sans-serif !important;
   font-size: 16px !important;
-  font-weight: 650 !important;
+  font-weight: 500 !important;
   line-height: 1.4 !important;
   text-align: left !important;
   list-style: none;
