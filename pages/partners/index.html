@@ -197,6 +197,32 @@
 <meta name="twitter:image" content="https://konturbiz.ru/images/hero.webp">
 <link rel="stylesheet" href="/assets/css/kb-motion.css?v=20261022-m4">
 <script src="/assets/js/kb-motion.js?v=20261022-m4" defer></script>
+
+<style>
+/* Partner catalog hero: visible category chips and restrained image overlay. */
+html body .partners-hero::after {
+  background: linear-gradient(90deg, #01091C 0%, rgba(1,9,28,.96) 27%, rgba(1,9,28,.72) 42%, rgba(1,9,28,.18) 60%, transparent 76%) !important;
+}
+html body .partners-hero .partners-hero__chips {
+  display: flex !important; flex-wrap: wrap !important; gap: 7px !important;
+  margin: 12px 0 0 !important; padding: 0 !important; position: relative !important; z-index: 3 !important;
+}
+html body .partners-hero .partners-hero__chips a {
+  display: inline-flex !important; align-items: center !important; justify-content: center !important;
+  min-height: 28px !important; padding: 5px 11px !important; box-sizing: border-box !important;
+  border: 1px solid rgba(200,162,74,.48) !important; border-radius: 3px !important;
+  background: rgba(1,9,28,.78) !important; color: #E8EDF3 !important;
+  font: 400 11px/1.2 Inter, sans-serif !important; letter-spacing: .02em !important;
+  text-decoration: none !important; white-space: nowrap !important;
+}
+html body .partners-hero .partners-hero__chips a:hover {
+  border-color: #C8A24A !important; background: rgba(200,162,74,.14) !important; color: #fff !important;
+}
+html body .partners-hero .hero__actions { padding-top: 12px !important; }
+@media (max-width: 768px) {
+  html body .partners-hero .partners-hero__chips { margin-top: 12px !important; }
+}
+</style>
 </head>
 <body>
 <header class="header" role="banner">
@@ -327,13 +353,16 @@
 </header>
 
 <main id="main">
-  <section class="hero" aria-labelledby="partners-hero-title" aria-label="Партнёрские продукты">
+  <section class="hero partners-hero" aria-labelledby="partners-hero-title" aria-label="Партнёрские продукты">
     <div class="container">
       <div class="hero__grid">
         <div class="hero__content">
           <p class="eyebrow eyebrow--gold hero__eyebrow">KONTURBIZ · Партнёрские продукты</p>
           <h1 id="partners-hero-title">Решения, которые подключаем <span class="text-gold">к задаче бизнеса</span></h1>
           <p class="lead hero__lead">Подбираем сервисы для учёта, ЭДО, банковских операций, лояльности и развития бизнеса — исходя из вашей задачи, а не списка продуктов.</p>
+          <nav class="partners-hero__chips" aria-label="Быстрые направления">
+            <a href="#kontur">Контур</a><a href="#rc">RC</a><a href="#community">РДО · САМО</a><a href="#infra">ИнФинТех</a>
+          </nav>
           <div class="hero__actions button-group">
             <a href="/pages/about/contacts.html" class="button button--gold">Обсудить задачу</a>
             <a href="#kontur" class="button button--white-outline">Смотреть продукты</a>
