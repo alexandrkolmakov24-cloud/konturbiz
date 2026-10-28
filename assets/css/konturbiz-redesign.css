@@ -1331,3 +1331,23 @@ html body .hero .hero__actions > .button {
     margin-top: 24px !important;
   }
 }
+
+
+/* Desktop hero CTA baseline: keep short-content pages aligned to the shared 400px hero. */
+@media (min-width: 901px) {
+  body .page-hero > .container {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    height: 100% !important;
+    min-height: 400px !important;
+    box-sizing: border-box !important;
+    padding-bottom: 48px !important;
+  }
+  body .page-hero > .container > .button-group,
+  body .page-hero > .container > .page-hero__actions,
+  body .page-hero .page-hero__body > .button-group,
+  body .page-hero .page-hero__body > .page-hero__actions {
+    margin-top: auto !important;
+  }
+}
