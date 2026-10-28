@@ -254,54 +254,63 @@
   .page-hero.page-hero--no-media > .container {
     position:relative !important;
     z-index:3 !important;
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:flex-start !important;
+    height:100% !important;
+    min-height:400px !important;
     box-sizing:border-box !important;
     padding-top:34px !important;
-    padding-bottom:40px !important;
-    justify-content:flex-start !important;
+    padding-bottom:48px !important;
   }
   .page-hero.page-hero--no-media > .container > .page-hero__actions {
     margin-top:auto !important;
   }
+  /* This page uses the labeled HTML stack as its single hero illustration. */
+  .page-hero > .kb-fx { display:none !important; }
   .solutions-hero-scene {
     position:absolute;
     z-index:1;
-    top:22px;
-    right:max(4%, calc((100% - 1200px) / 2 + 20px));
-    width:min(47%, 540px);
-    height:350px;
+    top:24px;
+    right:max(3%, calc((100% - 1200px) / 2 + 12px));
+    width:min(44%, 520px);
+    height:344px;
+    box-sizing:border-box;
     pointer-events:none;
-    overflow:visible;
+    overflow:hidden;
+    contain:layout paint;
   }
   .solutions-hero-scene__plate {
     position:absolute;
-    right:4%;
-    width:76%;
-    min-height:48px;
+    right:8%;
+    width:78%;
+    min-height:46px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:12px 18px;
+    padding:11px 16px;
     box-sizing:border-box;
     border:1px solid rgba(190,215,245,.32);
     border-radius:8px;
     background:linear-gradient(105deg,rgba(12,32,66,.96),rgba(6,18,40,.88));
-    box-shadow:0 14px 34px rgba(0,0,0,.22), inset 0 1px rgba(255,255,255,.06);
+    box-shadow:0 12px 28px rgba(0,0,0,.20), inset 0 1px rgba(255,255,255,.06);
     color:rgba(224,235,251,.82);
     font:500 13px/1.25 Inter,"Segoe UI",sans-serif;
     letter-spacing:.04em;
-    transform:skewY(-7deg);
+    transform:skewY(-4deg);
   }
   .solutions-hero-scene__plate::after {
     content:"";
     width:6px;height:6px;border-radius:50%;
     background:#6e9fce;
-    box-shadow:0 0 14px rgba(110,159,206,.55);
+    box-shadow:0 0 14px rgba(110,159,206,.45);
+    flex:0 0 auto;
   }
-  .solutions-hero-scene__plate:nth-child(1){top:16px;right:12%;border-color:rgba(200,162,74,.58);color:#f0d58b;background:linear-gradient(105deg,rgba(55,43,20,.94),rgba(7,18,39,.94));}
-  .solutions-hero-scene__plate:nth-child(2){top:78px;right:6%;}
-  .solutions-hero-scene__plate:nth-child(3){top:140px;right:10%;border-color:rgba(110,159,206,.48);}
-  .solutions-hero-scene__plate:nth-child(4){top:202px;right:2%;}
-  .solutions-hero-scene__plate:nth-child(5){top:264px;right:8%;border-color:rgba(200,162,74,.36);}
+  .solutions-hero-scene__plate:nth-child(1){top:10px;right:10%;border-color:rgba(200,162,74,.58);color:#f0d58b;background:linear-gradient(105deg,rgba(55,43,20,.94),rgba(7,18,39,.94));}
+  .solutions-hero-scene__plate:nth-child(2){top:72px;right:7%;}
+  .solutions-hero-scene__plate:nth-child(3){top:134px;right:9%;border-color:rgba(110,159,206,.48);}
+  .solutions-hero-scene__plate:nth-child(4){top:196px;right:6%;}
+  .solutions-hero-scene__plate:nth-child(5){top:258px;right:8%;border-color:rgba(200,162,74,.36);}
 }
 @media (max-width:900px) {
   .solutions-hero-scene { display:none !important; }
