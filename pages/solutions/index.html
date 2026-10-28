@@ -249,7 +249,64 @@
 <meta name="twitter:image" content="https://konturbiz.ru/images/hero.webp">
 <link rel="stylesheet" href="/assets/css/kb-motion.css?v=20261022-m4">
 <script src="/assets/js/kb-motion.js?v=20261022-m4" defer></script>
-<style id="hero-standard-solutions">.page-hero h1{font-weight:300}.page-hero .container{padding-bottom:48px}</style>
+<style id="hero-standard-solutions">
+@media (min-width:901px) {
+  .page-hero.page-hero--no-media > .container {
+    position:relative !important;
+    z-index:3 !important;
+    box-sizing:border-box !important;
+    padding-top:34px !important;
+    padding-bottom:40px !important;
+    justify-content:flex-start !important;
+  }
+  .page-hero.page-hero--no-media > .container > .page-hero__actions {
+    margin-top:auto !important;
+  }
+  .solutions-hero-scene {
+    position:absolute;
+    z-index:1;
+    top:22px;
+    right:max(4%, calc((100% - 1200px) / 2 + 20px));
+    width:min(47%, 540px);
+    height:350px;
+    pointer-events:none;
+    overflow:visible;
+  }
+  .solutions-hero-scene__plate {
+    position:absolute;
+    right:4%;
+    width:76%;
+    min-height:48px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:12px 18px;
+    box-sizing:border-box;
+    border:1px solid rgba(190,215,245,.32);
+    border-radius:8px;
+    background:linear-gradient(105deg,rgba(12,32,66,.96),rgba(6,18,40,.88));
+    box-shadow:0 14px 34px rgba(0,0,0,.22), inset 0 1px rgba(255,255,255,.06);
+    color:rgba(224,235,251,.82);
+    font:500 13px/1.25 Inter,"Segoe UI",sans-serif;
+    letter-spacing:.04em;
+    transform:skewY(-7deg);
+  }
+  .solutions-hero-scene__plate::after {
+    content:"";
+    width:6px;height:6px;border-radius:50%;
+    background:#6e9fce;
+    box-shadow:0 0 14px rgba(110,159,206,.55);
+  }
+  .solutions-hero-scene__plate:nth-child(1){top:16px;right:12%;border-color:rgba(200,162,74,.58);color:#f0d58b;background:linear-gradient(105deg,rgba(55,43,20,.94),rgba(7,18,39,.94));}
+  .solutions-hero-scene__plate:nth-child(2){top:78px;right:6%;}
+  .solutions-hero-scene__plate:nth-child(3){top:140px;right:10%;border-color:rgba(110,159,206,.48);}
+  .solutions-hero-scene__plate:nth-child(4){top:202px;right:2%;}
+  .solutions-hero-scene__plate:nth-child(5){top:264px;right:8%;border-color:rgba(200,162,74,.36);}
+}
+@media (max-width:900px) {
+  .solutions-hero-scene { display:none !important; }
+}
+</style>
 </head>
 <body>
     <a class="skip-to-content" href="#main">Перейти к содержанию</a>
@@ -413,7 +470,14 @@
                     <a href="#directions" class="button button--gold">Выбрать направление</a>
                 </div>
             </div>
-        </section>
+        <div class="solutions-hero-scene" aria-hidden="true">
+  <div class="solutions-hero-scene__plate">Бренд</div>
+  <div class="solutions-hero-scene__plate">Сайт</div>
+  <div class="solutions-hero-scene__plate">CRM</div>
+  <div class="solutions-hero-scene__plate">Лояльность</div>
+  <div class="solutions-hero-scene__plate">Аналитика</div>
+</div>
+</section>
 
         <section class="section section--grey" aria-label="Что такое решение">
             <div class="container">
