@@ -266,35 +266,134 @@
   .page-hero.page-hero--no-media > .container > .page-hero__actions {
     margin-top:auto !important;
   }
-  /* Original perspective stack: a single kb-motion canvas illustration. */
-  .page-hero > .kb-fx {
-    display:block !important;
-    position:absolute !important;
-    inset:0 !important;
-    z-index:1 !important;
+  /* The CSS 3D stack is the only hero illustration on this page. */
+  .page-hero.page-hero--no-media {
+    position:relative !important;
+    height:400px !important;
+    min-height:400px !important;
+    max-height:400px !important;
+    background:#01091C !important;
     overflow:hidden !important;
-    pointer-events:none !important;
   }
-  .page-hero > .kb-fx .kb-fx__ambient,
-  .page-hero > .kb-fx .kb-fx__grid,
-  .page-hero > .kb-fx .kb-fx__scan,
-  .page-hero > .kb-fx .kb-fx__spot {
-    display:none !important;
+  .page-hero.page-hero--no-media h1 {
+    font-weight:300 !important;
+    color:#fff !important;
   }
-  .page-hero > .kb-fx .kb-fx__stage {
-    position:absolute !important;
-    top:24px !important;
-    right:max(3%, calc((100% - 1200px) / 2 + 12px)) !important;
-    left:auto !important;
-    width:min(44%, 520px) !important;
-    height:344px !important;
-    overflow:visible !important;
-    background:transparent !important;
-  }
-  .page-hero > .kb-fx .kb-fx__scene {
-    display:block !important;
-    width:100% !important;
+  .page-hero.page-hero--no-media > .container {
+    position:relative !important;
+    z-index:3 !important;
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:flex-start !important;
     height:100% !important;
+    min-height:400px !important;
+    max-width:1200px !important;
+    box-sizing:border-box !important;
+    padding-top:34px !important;
+    padding-bottom:48px !important;
+  }
+  .page-hero.page-hero--no-media > .container > .page-hero__actions,
+  .page-hero.page-hero--no-media > .container > .button-group {
+    margin-top:auto !important;
+  }
+  .page-hero.page-hero--no-media > .kb-fx { display:none !important; }
+
+  .solutions-hero-scene {
+    display:block !important;
+    position:absolute !important;
+    z-index:2 !important;
+    top:28px !important;
+    right:max(2%, calc((100% - 1200px) / 2 + 8px)) !important;
+    width:min(48%, 560px) !important;
+    height:350px !important;
+    perspective:900px !important;
+    pointer-events:none !important;
+    overflow:visible !important;
+  }
+  .solutions-hero-scene__stack {
+    position:absolute;
+    inset:0;
+    transform-style:preserve-3d;
+    transform:rotateY(-28deg) rotateX(8deg);
+  }
+  .solutions-hero-scene__plate {
+    position:absolute;
+    left:8%;
+    width:78%;
+    height:52px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 20px;
+    box-sizing:border-box;
+    border-radius:10px;
+    border:1px solid rgba(190,215,245,.28);
+    background:linear-gradient(105deg,rgba(14,36,72,.92),rgba(6,18,40,.78));
+    box-shadow:0 18px 40px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.08);
+    color:rgba(230,238,250,.92);
+    font:500 13px/1.2 Inter,"Segoe UI",sans-serif;
+    letter-spacing:.04em;
+    transform-style:preserve-3d;
+    animation:solPlateIn .85s cubic-bezier(.22,1,.36,1) both;
+  }
+  .solutions-hero-scene__plate::after {
+    content:"";
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#6e9fce;
+    box-shadow:0 0 12px rgba(110,159,206,.65);
+    flex-shrink:0;
+  }
+  .solutions-hero-scene__plate:nth-child(1) {
+    top:18px;
+    transform:translateZ(60px);
+    border-color:rgba(200,162,74,.55);
+    color:#f0d58b;
+    background:linear-gradient(105deg,rgba(55,43,20,.94),rgba(7,18,39,.9));
+    animation-delay:.05s;
+  }
+  .solutions-hero-scene__plate:nth-child(1)::after {
+    background:#c8a24a;
+    box-shadow:0 0 12px rgba(200,162,74,.7);
+  }
+  .solutions-hero-scene__plate:nth-child(2) { top:78px; transform:translateZ(40px) translateX(18px); animation-delay:.12s; }
+  .solutions-hero-scene__plate:nth-child(3) { top:138px; transform:translateZ(20px) translateX(36px); border-color:rgba(110,159,206,.45); animation-delay:.19s; }
+  .solutions-hero-scene__plate:nth-child(4) { top:198px; transform:translateZ(0) translateX(54px); animation-delay:.26s; }
+  .solutions-hero-scene__plate:nth-child(5) { top:258px; transform:translateZ(-20px) translateX(72px); border-color:rgba(200,162,74,.32); animation-delay:.33s; }
+  @keyframes solPlateIn {
+    from { opacity:0; transform:translateZ(-40px) translateY(24px); }
+    to { opacity:1; }
+  }
+  .solutions-hero-scene::before {
+    content:"";
+    position:absolute;
+    right:10%;
+    top:20%;
+    width:55%;
+    height:60%;
+    background:radial-gradient(ellipse,rgba(41,93,138,.35),transparent 70%);
+    filter:blur(20px);
+    z-index:-1;
+  }
+  @media (max-width:900px) {
+    .solutions-hero-scene { display:none !important; }
+    .page-hero.page-hero--no-media {
+      height:auto !important;
+      min-height:0 !important;
+      max-height:none !important;
+    }
+    .page-hero.page-hero--no-media > .container {
+      height:auto !important;
+      min-height:0 !important;
+      padding-top:24px !important;
+      padding-bottom:28px !important;
+    }
+    .page-hero.page-hero--no-media > .container > .page-hero__actions,
+    .page-hero.page-hero--no-media > .container > .button-group { margin-top:20px !important; }
+  }
+  @media (prefers-reduced-motion:reduce) {
+    .solutions-hero-scene__plate { animation:none !important; }
   }
 }
 </style>
@@ -462,6 +561,17 @@
                 </div>
             </div>
 
+
+            <!-- 3D glass plates — pure CSS, independent of kb-motion -->
+            <div class="solutions-hero-scene" aria-hidden="true">
+                <div class="solutions-hero-scene__stack">
+                    <div class="solutions-hero-scene__plate">Бренд</div>
+                    <div class="solutions-hero-scene__plate">Сайт</div>
+                    <div class="solutions-hero-scene__plate">CRM</div>
+                    <div class="solutions-hero-scene__plate">Лояльность</div>
+                    <div class="solutions-hero-scene__plate">Аналитика</div>
+                </div>
+            </div>
 </section>
 
         <section class="section section--grey" aria-label="Что такое решение">
