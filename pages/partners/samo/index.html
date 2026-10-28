@@ -423,6 +423,45 @@
     }
     .samo-trio__arrow:hover { background: #d5dbe8; }
 
+  
+    /* SAMO mobile hero: prevent lead and CTA clipping caused by desktop overflow:hidden.
+       Scoped to this page; desktop geometry remains unchanged. */
+    @media (max-width: 900px) {
+      body.samo-page .page-hero {
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        overflow: visible !important;
+      }
+      body.samo-page .page-hero > .page-hero__shell {
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        overflow: visible !important;
+        padding: 0 16px !important;
+      }
+      body.samo-page .page-hero .page-hero__body {
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        overflow: visible !important;
+        padding: 24px 0 28px !important;
+      }
+      body.samo-page .page-hero .page-hero__actions {
+        margin-top: 24px !important;
+        flex-wrap: wrap !important;
+        gap: 10px !important;
+      }
+      body.samo-page .page-hero .page-hero__actions > .button {
+        min-height: 48px !important;
+        height: 48px !important;
+      }
+      body.samo-page .page-hero .page-hero__media,
+      body.samo-page .page-hero .page-hero__overlay {
+        display: none !important;
+      }
+    }
+
   </style>
     <link rel="stylesheet" href="/assets/css/konturbiz-redesign.css?v=20261027-hero6">
 <meta property="og:image" content="https://konturbiz.ru/images/samo/samo-hero.png">
