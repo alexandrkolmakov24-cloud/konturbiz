@@ -102,7 +102,20 @@
         display: flex; align-items: center; max-width: 1200px;
         padding-top: 48px; padding-bottom: 48px; box-sizing: border-box;
       }
-      .dd-hero__content { max-width: 560px; }
+      .dd-hero__content {
+        max-width: 560px;
+        display: flex;
+        flex-direction: column;
+        min-height: 304px;
+      }
+      @media (min-width: 901px) {
+        .dd-hero .container {
+          align-items: flex-start;
+          justify-content: flex-start;
+          flex-direction: column;
+        }
+        .dd-hero .button-group { margin-top: auto; }
+      }
       .dd-hero .eyebrow {
         color: #C8A24A; display: block; margin-bottom: 12px;
         font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600;
