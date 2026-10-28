@@ -1351,3 +1351,103 @@ html body .hero .hero__actions > .button {
     margin-top: auto !important;
   }
 }
+
+
+/* 2026-10-28 hero acceptance: final shared desktop rhythm + FAQ weights */
+@media (min-width: 901px) {
+  body .page-hero {
+    height: 400px !important;
+    min-height: 400px !important;
+    max-height: 400px !important;
+  }
+  body .page-hero > .container {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+    height: 400px !important;
+    min-height: 400px !important;
+    max-height: 400px !important;
+    box-sizing: border-box !important;
+    padding: 32px 40px 48px !important;
+  }
+  body .page-hero > .container > .button-group,
+  body .page-hero > .container > .page-hero__actions,
+  body .page-hero .page-hero__body > .button-group,
+  body .page-hero .page-hero__body > .page-hero__actions {
+    margin-top: auto !important;
+    flex-shrink: 0 !important;
+  }
+  body .page-hero h1,
+  body .page-hero .page-hero__title {
+    font-weight: 300 !important;
+  }
+  body .page-hero__shell {
+    display: flex !important;
+    align-items: stretch !important;
+    height: 400px !important;
+    min-height: 400px !important;
+    max-height: 400px !important;
+    box-sizing: border-box !important;
+  }
+  body .page-hero__shell > .page-hero__body {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    height: 400px !important;
+    min-height: 400px !important;
+    max-height: 400px !important;
+    box-sizing: border-box !important;
+    padding: 32px 40px 48px !important;
+  }
+  body .page-hero__shell > .page-hero__body > .page-hero__actions,
+  body .page-hero__shell > .page-hero__body > .button-group {
+    margin-top: auto !important;
+    flex-shrink: 0 !important;
+  }
+}
+:is(.faq-list, .accordion-list, .faq-section, .faq-sec, .faq-wrap, .faq) :is(.faq-item, .accordion) > summary,
+#faq details > summary,
+#bp-faq .faq-item > summary,
+.faq-section > details > summary,
+.faq-sec details > summary {
+  font-weight: 500 !important;
+}
+:is(.faq-item, .accordion) > :is(.faq-answer, .faq-a, .faq__a, .faq-item__body),
+:is(.faq, .faq-section, .faq-sec, .faq-wrap) > details > :not(summary),
+#bp-faq .faq-item > :not(summary),
+.faq details > :not(summary),
+#faq > details > :not(summary) {
+  font-weight: 400 !important;
+}
+@media (max-width: 900px) {
+  body .page-hero {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+  body .page-hero > .container {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    padding: 28px 20px 32px !important;
+  }
+  body .page-hero__shell {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+  body .page-hero__shell > .page-hero__body {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    padding: 28px 20px 32px !important;
+  }
+  body .page-hero > .container > .button-group,
+  body .page-hero > .container > .page-hero__actions,
+  body .page-hero__shell > .page-hero__body > .page-hero__actions,
+  body .page-hero__shell > .page-hero__body > .button-group {
+    margin-top: 24px !important;
+  }
+}
