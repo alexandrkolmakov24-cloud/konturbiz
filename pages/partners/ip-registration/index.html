@@ -552,96 +552,14 @@
       @media (max-width: 480px) { .footer__grid { grid-template-columns: 1fr !important; } }
     </style>
 
-<style id="ip-hero-local">
-/* Hero: градиент слева, текст в левом контейнере */
-.page-hero {
-  position: relative;
-  height: 400px;
-  min-height: 400px;
-  max-height: 400px;
-  overflow: hidden;
-  background: #01091C;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-.page-hero__media {
-  position: absolute;
-  top: 0; bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 1200px;
-  height: 400px;
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-.page-hero__media img,
-.page-hero__media picture {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  object-position: right center;
-  display: block;
-}
-.page-hero::after {
-  content: "";
-  position: absolute;
-  top: 0; bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 1200px;
-  height: 400px;
-  z-index: 1;
-  pointer-events: none;
-  background: linear-gradient(
-    90deg,
-    #01091C 0%,
-    #01091C 28%,
-    rgba(1,9,28,0.85) 42%,
-    rgba(1,9,28,0.35) 55%,
-    transparent 68%
-  );
-}
-.page-hero__shell {
-  position: relative;
-  z-index: 2;
-  max-width: 1200px;
-  height: 400px;
-  margin: 0 auto;
-  padding: 0 40px;
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-}
-.page-hero__body {
-  max-width: 520px;
-  color: #fff;
-}
-.page-hero__lead {
-  color: rgba(255,255,255,0.88);
-  max-width: 480px;
-}
-body { padding-top: var(--header-height, 90px); margin: 0; }
-@media (max-width: 1024px) { body { padding-top: 72px; } }
-@media (max-width: 768px) {
-  body { padding-top: 64px; }
-  .page-hero { height: auto; min-height: 0; max-height: none; }
-  .page-hero__media, .page-hero::after { left: 0; transform: none; max-width: none; width: 100%; height: 100%; }
-  .page-hero::after {
-    background: linear-gradient(180deg, rgba(1,9,28,0.88) 0%, #01091C 100%);
-  }
-  .page-hero__shell { height: auto; padding: 28px 16px; }
-}
-</style>
 
     <link rel="stylesheet" href="/assets/css/konturbiz-redesign.css?v=20261022-hero4">
 <meta property="og:site_name" content="KONTURBIZ">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://konturbiz.ru/images/hero.webp">
 <link rel="stylesheet" href="/assets/css/kb-motion.css?v=20261022-m4">
-<script src="/assets/js/kb-motion.js?v=20261022-m4" defer></script>
+<script src="/assets/js/kb-motion.js?v=20261028-m5" defer></script>
+<link rel="stylesheet" href="/assets/css/hero-layout-fix.css?v=20261028-hero-std">
 </head>
 <body>
     <a class="skip-to-content" href="#main">Перейти к содержанию</a>
@@ -769,8 +687,8 @@ body { padding-top: var(--header-height, 90px); margin: 0; }
     </div>
     <div class="page-hero__shell">
       <div class="page-hero__body">
-        <p class="page-hero__eyebrow">Продукт · СКБ Контур · НПД</p>
-        <nav class="kb-breadcrumbs" aria-label="Хлебные крошки"><ol><li><a href="/">Главная</a></li><li><a href="/pages/partners/">Продукты</a></li><li aria-current="page">Регистрация ИП</li></ol></nav><h1 id="ip-title">Регистрация ИП на НПД: бесплатно и онлайн</h1>
+        <nav class="kb-breadcrumbs" aria-label="Хлебные крошки"><ol><li><a href="/">Главная</a></li><li><a href="/pages/partners/">Продукты</a></li><li aria-current="page">Регистрация ИП</li></ol></nav>
+                <p class="page-hero__eyebrow eyebrow--gold">Продукт · СКБ Контур · НПД</p><h1 id="ip-title">Регистрация ИП на НПД: <span class="hero-accent">бесплатно</span> и онлайн</h1>
         <p class="page-hero__lead">Всё для открытия ИП на налоге на профессиональный доход: документы, КЭП, без госпошлины и визита в налоговую. 4% / 6%, без обязательных взносов и кассы.</p>
         <div class="button-group">
           <a href="https://open.kontur.ru/business/registration/ip/phone?p=f76143" class="button button--gold" target="_blank" rel="noopener noreferrer" data-analytics="ip_reg_cta" data-label="hero" aria-label="Начать регистрацию ИП на НПД онлайн">Начать регистрацию</a>

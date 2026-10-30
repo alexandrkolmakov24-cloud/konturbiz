@@ -301,13 +301,6 @@
   box-sizing: border-box;
   overflow: hidden;
 }
-.page-hero--grants .page-hero__media {
-  position: absolute;
-  inset: 0;
-  background: url("/images/services/grants.webp") center right / cover no-repeat;
-  opacity: 1;
-  pointer-events: none;
-}
 .page-hero--grants .page-hero__overlay {
   position: absolute;
   inset: 0;
@@ -1007,9 +1000,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://konturbiz.ru/images/hero.webp">
 <link rel="stylesheet" href="/assets/css/kb-motion.css?v=20261022-m4">
-<script src="/assets/js/kb-motion.js?v=20261022-m4" defer></script>
-<style id="hero-standard-grants">.page-hero--grants h1{font-weight:300}.page-hero--grants .page-hero__body{padding-bottom:48px}</style>
+<script src="/assets/js/kb-motion.js?v=20261028-m5" defer></script>
 <link rel="stylesheet" href="/assets/css/buttons.css?v=20261026-hero-standard">
+<link rel="stylesheet" href="/assets/css/hero-layout-fix.css?v=20261028-hero-std">
 </head>
 <body>
 <a class="skip-to-content" href="#main">Перейти к содержанию</a>
@@ -1145,12 +1138,12 @@
 
   <section class="page-hero page-hero--grants" aria-labelledby="gr-title">
     <div class="page-hero__shell">
-      <div class="page-hero__media" role="img" aria-label="Подбор мер господдержки"></div>
+      <div class="page-hero__media"><img src="/images/services/grants.webp" alt="Подбор мер господдержки" width="1200" height="400" decoding="async" fetchpriority="high"></div>
       <div class="page-hero__overlay" aria-hidden="true"></div>
       <div class="page-hero__body">
         <nav class="kb-breadcrumbs" aria-label="Хлебные крошки"><ol><li><a href="/">Главная</a></li><li><a href="/pages/services/">Услуги</a></li><li aria-current="page">Подбор мер государственной поддержки по ИНН</li></ol></nav>
- <p class="page-hero__eyebrow">Услуги · Господдержка</p>
- <p class="page-hero__product"><strong>КонтурГрант</strong> — сервис подбора мер господдержки и льготного финансирования</p><h1 id="gr-title">Подбор мер государственной поддержки по ИНН</h1>
+ <p class="page-hero__eyebrow eyebrow--gold">Услуги · Господдержка</p>
+ <p class="page-hero__product"><strong>КонтурГрант</strong> — сервис подбора мер господдержки и льготного финансирования</p><h1 id="gr-title">Подбор мер <span class="hero-accent">государственной поддержки</span> по ИНН</h1>
         <p class="page-hero__lead">Введите ИНН организации или ИП — сервис сверит вид деятельности, регион и размер бизнеса с условиями субсидий и грантов из официальных каталогов.</p>
         <div class="button-group page-hero__actions">
           <a href="/pages/about/contacts.html" class="button button--gold">Обсудить задачу</a>

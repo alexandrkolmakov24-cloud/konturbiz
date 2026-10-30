@@ -134,7 +134,11 @@
       if (hero.querySelector(':scope > .kb-fx')) return;
       var cs = w.getComputedStyle(hero);
       if (cs.position === 'static') hero.style.position = 'relative';
-      var hasMedia = !!hero.querySelector('img,video,picture,[class*="__visual"],[class*="__media"],[class*="__img"],.hero__img');
+      var hasMedia = !!hero.querySelector('img,video,picture,.hero__img') ||
+        Array.prototype.some.call(hero.querySelectorAll('[class*="__visual"],[class*="__media"],[class*="__img"]'), function (m) {
+          /* пустая обёртка без картинки = картинки нет -> рисуем пластины */
+          return m.children.length > 0 || /url\(/.test(w.getComputedStyle(m).backgroundImage);
+        });
       var fx = d.createElement('div'); fx.className = 'kb-fx'; fx.setAttribute('aria-hidden', 'true');
       fx.innerHTML = '<div class="kb-fx__ambient"></div><div class="kb-fx__stage"><div class="kb-fx__grid"></div><div class="kb-fx__scan"></div></div>';
       var stage = fx.querySelector('.kb-fx__stage'), spot = null, scene = null, canvas = null;
