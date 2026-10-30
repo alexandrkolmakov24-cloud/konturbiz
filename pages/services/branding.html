@@ -118,6 +118,9 @@
         min-height: 280px; display: flex; align-items: center;
       }
       .page-hero__body { position: relative; z-index: 2; max-width: 640px; padding: 40px 40px 48px; }
+      .page-hero__actions { margin-top: 0; }
+      .page-hero .eyebrow { color: #C8A24A; font-size: 12px; font-weight: 600; text-transform: uppercase; }
+      .page-hero h1 { font-weight: 300; }
       .page-hero__crumbs { margin: 0 0 14px; }
       .page-hero__crumbs ol {
         display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0;
@@ -460,12 +463,16 @@
 
       }
     </style>
-    <link rel="stylesheet" href="/assets/css/konturbiz-redesign.css?v=20261020-hero">
-    <link rel="stylesheet" href="/assets/css/kb-components.css?v=20261021-pilot1">
+    <link rel="stylesheet" href="/assets/css/konturbiz-redesign.css?v=20261022-hero4">
+    <link rel="stylesheet" href="/assets/css/kb-components.css?v=20261022-hero4">
 <meta property="og:site_name" content="KONTURBIZ">
 <meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://konturbiz.ru/images/hero.webp">
+<link rel="stylesheet" href="/assets/css/kb-motion.css?v=20261022-m4">
+<script src="/assets/js/kb-motion.js?v=20261028-m5" defer></script>
+<link rel="stylesheet" href="/assets/css/buttons.css?v=20261026-hero-standard">
+<link rel="stylesheet" href="/assets/css/hero-layout-fix.css?v=20261028-hero-std">
 </head>
 <body class="kb-ds-pilot">
 <a class="kb-skip-link" href="#main">Перейти к содержимому</a>
@@ -576,7 +583,7 @@
 
         <!-- HEADER ACTIONS -->
         <div class="header__actions">
-            <a href="/pages/diagnostics/konturscan.html" class="button button--gold">
+            <a href="/pages/diagnostics/konturscan.html" class="button button--gold-outline header-cta-button">
                 Пройти диагностику
             </a>
             <button
@@ -601,15 +608,15 @@
     <section class="page-hero" aria-labelledby="brand-h1">
         <div class="page-hero__shell">
             <div class="page-hero__body">
-                <nav class="page-hero__crumbs" aria-label="Хлебные крошки">
+<nav class="kb-breadcrumbs" aria-label="Хлебные крошки">
                     <ol>
                         <li><a href="/">Главная</a></li>
                         <li><a href="/pages/services/">Услуги</a></li>
                         <li aria-current="page">Брендинг</li>
                     </ol>
                 </nav>
-                <span class="eyebrow" style="color:#C8A24A;">Услуги · Брендинг</span>
-                <h1 id="brand-h1">Брендинг, который делает бизнес узнаваемым</h1>
+                <span class="eyebrow eyebrow--gold">Услуги · Брендинг</span>
+                <h1 id="brand-h1">Брендинг, который делает бизнес <span class="hero-accent">узнаваемым</span></h1>
                 <p class="lead">
                     Создадим бренд от логотипа до полной системы — под вашу задачу и масштаб бизнеса.
                 </p>
@@ -617,9 +624,9 @@
                     <span><strong>Логотип · Айдентика · Бренд-система · Брендбук</strong></span>
                     <span>от 25 000 ₽</span>
                 </div>
-                <div class="button-group">
-                    <a href="/pages/about/contacts.html?from=branding" class="kb-button kb-button--primary">Обсудить задачу по бренду</a>
-                    <a href="#ladder" class="kb-button kb-button--outline-light">Выбрать уровень</a>
+                <div class="button-group page-hero__actions">
+                    <a href="/pages/about/contacts.html?from=branding" class="button button--gold">Обсудить бренд</a>
+                    <a href="#ladder" class="button button--blue">Выбрать уровень</a>
                 </div>
             </div>
         </div>
@@ -729,7 +736,7 @@
                     <div class="ladder__price">
                         <strong>от 25 000 ₽</strong>
                         <span class="time">ориентир 3–4 нед.</span>
-                        <a href="/pages/about/contacts.html?from=branding-logo" class="button button--gold-outline button--sm">Обсудить логотип</a>
+                        <a href="/pages/about/contacts.html?from=branding-logo" class="button button--navy-outline button--sm">Обсудить логотип</a>
                     </div>
                 </article>
 
@@ -751,7 +758,7 @@
                     <div class="ladder__price">
                         <strong>от 42 000 ₽</strong>
                         <span class="time">ориентир 3–5 нед.</span>
-                        <a href="/pages/about/contacts.html?from=branding-identity" class="button button--gold-outline button--sm">Обсудить айдентику</a>
+                        <a href="/pages/about/contacts.html?from=branding-identity" class="button button--navy-outline button--sm">Обсудить айдентику</a>
                     </div>
                 </article>
 
@@ -772,7 +779,7 @@
                     <div class="ladder__price">
                         <strong>от 60 000 ₽</strong>
                         <span class="time">ориентир 4–6 нед.</span>
-                        <a href="/pages/about/contacts.html?from=branding-system" class="button button--gold-outline button--sm">Спроектировать систему</a>
+                        <a href="/pages/about/contacts.html?from=branding-system" class="button button--navy-outline button--sm">Спроектировать систему</a>
                     </div>
                 </article>
 
@@ -792,7 +799,7 @@
                     <div class="ladder__price">
                         <strong>от 95 000 ₽</strong>
                         <span class="time">ориентир 6–8 нед.</span>
-                        <a href="/pages/about/contacts.html?from=branding-book" class="button button--gold-outline button--sm">Обсудить брендбук</a>
+                        <a href="/pages/about/contacts.html?from=branding-book" class="button button--navy-outline button--sm">Обсудить брендбук</a>
                     </div>
                 </article>
 

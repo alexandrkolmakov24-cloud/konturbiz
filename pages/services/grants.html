@@ -301,13 +301,6 @@
   box-sizing: border-box;
   overflow: hidden;
 }
-.page-hero--grants .page-hero__media {
-  position: absolute;
-  inset: 0;
-  background: url("/images/services/grants.webp") center right / cover no-repeat;
-  opacity: 1;
-  pointer-events: none;
-}
 .page-hero--grants .page-hero__overlay {
   position: absolute;
   inset: 0;
@@ -1001,11 +994,15 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="stylesheet" href="/assets/css/konturbiz-redesign.css?v=20261020-hero">
+    <link rel="stylesheet" href="/assets/css/konturbiz-redesign.css?v=20261022-hero4">
 <meta property="og:image" content="https://konturbiz.ru/images/hero.webp">
 <meta property="og:site_name" content="KONTURBIZ">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://konturbiz.ru/images/hero.webp">
+<link rel="stylesheet" href="/assets/css/kb-motion.css?v=20261022-m4">
+<script src="/assets/js/kb-motion.js?v=20261028-m5" defer></script>
+<link rel="stylesheet" href="/assets/css/buttons.css?v=20261026-hero-standard">
+<link rel="stylesheet" href="/assets/css/hero-layout-fix.css?v=20261028-hero-std">
 </head>
 <body>
 <a class="skip-to-content" href="#main">Перейти к содержанию</a>
@@ -1117,7 +1114,7 @@
 
         <!-- HEADER ACTIONS -->
         <div class="header__actions">
-            <a href="/pages/diagnostics/konturscan.html" class="button button--gold">
+            <a href="/pages/diagnostics/konturscan.html" class="button button--gold-outline header-cta-button">
                 Пройти диагностику
             </a>
             <button
@@ -1141,16 +1138,16 @@
 
   <section class="page-hero page-hero--grants" aria-labelledby="gr-title">
     <div class="page-hero__shell">
-      <div class="page-hero__media" role="img" aria-label="Подбор мер господдержки"></div>
+      <div class="page-hero__media"><img src="/images/services/grants.webp" alt="Подбор мер господдержки" width="1200" height="400" decoding="async" fetchpriority="high"></div>
       <div class="page-hero__overlay" aria-hidden="true"></div>
       <div class="page-hero__body">
-        <p class="page-hero__eyebrow">Господдержка · МСП · 2026</p>
-        <p class="page-hero__product"><strong>КонтурГрант</strong> — сервис подбора мер господдержки и льготного финансирования</p>
-        <nav class="kb-breadcrumbs" aria-label="Хлебные крошки"><ol><li><a href="/">Главная</a></li><li><a href="/pages/services/">Услуги</a></li><li aria-current="page">Подбор мер государственной поддержки по ИНН</li></ol></nav><h1 id="gr-title">Подбор мер государственной поддержки по ИНН</h1>
+        <nav class="kb-breadcrumbs" aria-label="Хлебные крошки"><ol><li><a href="/">Главная</a></li><li><a href="/pages/services/">Услуги</a></li><li aria-current="page">Подбор мер государственной поддержки по ИНН</li></ol></nav>
+ <p class="page-hero__eyebrow eyebrow--gold">Услуги · Господдержка</p>
+ <p class="page-hero__product"><strong>КонтурГрант</strong> — сервис подбора мер господдержки и льготного финансирования</p><h1 id="gr-title">Подбор мер <span class="hero-accent">государственной поддержки</span> по ИНН</h1>
         <p class="page-hero__lead">Введите ИНН организации или ИП — сервис сверит вид деятельности, регион и размер бизнеса с условиями субсидий и грантов из официальных каталогов.</p>
-        <div class="button-group">
-          <a href="#inn-search" class="button button--gold">Подобрать по ИНН</a>
-          <a href="/pages/about/contacts.html" class="button button--white-outline">Обсудить задачу</a>
+        <div class="button-group page-hero__actions">
+          <a href="/pages/about/contacts.html" class="button button--gold">Обсудить задачу</a>
+          <a href="#inn-search" class="button button--blue">Подобрать по ИНН</a>
         </div>
       </div>
     </div>

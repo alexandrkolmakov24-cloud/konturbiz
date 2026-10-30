@@ -51,156 +51,6 @@ body {
     @media (max-width: 900px) {
         .aeo-answer--loyalty { padding: 16px 16px 8px; font-size: 14px; }
     }
-    .page-hero--loyalty .lead {
-        margin-bottom: 0;
-        max-width: 360px;
-    }
-    .hero-loyalty-inner {
-        max-width: 400px;
-    }
-
-    /* Loyalty hero: max image, glass UI readable, text top/bottom split */
-    .page-hero--loyalty {
-        position: relative;
-        height: 400px;
-        min-height: 400px;
-        max-height: 400px;
-        padding: 0 !important;
-        overflow: hidden;
-        background: #01091C;
-        color: #fff;
-    }
-    .page-hero--loyalty::before {
-        content: "";
-        position: absolute;
-        top: 0; bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        max-width: 1200px;
-        height: 400px;
-        z-index: 0;
-        pointer-events: none;
-        background-color: #01091C;
-        background-image: url("/images/services/loyalty-program-hero.webp?v=20260927");
-        background-repeat: no-repeat;
-        /* чуть правее — стеклянные экраны в кадре */
-        background-position: 70% center;
-        background-size: cover;
-    }
-    /* Градиент только у левого края (тёмная «волна»), экраны UI не трогаем */
-    .page-hero--loyalty::after {
-        content: "";
-        position: absolute;
-        top: 0; bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        max-width: 1200px;
-        height: 400px;
-        z-index: 1;
-        pointer-events: none;
-        background: linear-gradient(
-            90deg,
-            rgba(1, 9, 28, 0.82) 0%,
-            rgba(1, 9, 28, 0.35) 6%,
-            rgba(1, 9, 28, 0.08) 11%,
-            transparent 15%
-        );
-    }
-    .page-hero--loyalty .container {
-        position: relative;
-        z-index: 2;
-        max-width: 1200px;
-        height: 400px;
-        margin: 0 auto;
-        padding: 0 40px;
-        display: flex;
-        align-items: stretch;
-        box-sizing: border-box;
-        background: transparent;
-    }
-    .hero-loyalty-inner {
-        width: 100%;
-        max-width: 380px;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 28px 0 32px;
-        box-sizing: border-box;
-        position: relative;
-        z-index: 2;
-    }
-    .hero-loyalty-top {
-        flex: 0 0 auto;
-    }
-    .hero-loyalty-bottom {
-        flex: 0 0 auto;
-    }
-    .page-hero--loyalty .eyebrow {
-        color: var(--color-gold-bus, #C8A24A);
-        display: block;
-        margin: 0;
-        font-size: 11px;
-        letter-spacing: 0.12em;
-    }
-    .page-hero--loyalty h1 {
-        color: #fff;
-        font-weight: 300;
-        font-size: clamp(22px, 2.4vw, 28px);
-        line-height: 1.15;
-        margin: 0 0 8px;
-        text-shadow: 0 1px 12px rgba(1, 9, 28, 0.55);
-    }
-    .page-hero--loyalty .lead {
-        color: rgba(255,255,255,0.88);
-        max-width: 340px;
-        font-size: 14px;
-        margin: 0 0 16px;
-        text-shadow: 0 1px 10px rgba(1, 9, 28, 0.5);
-    }
-    .hero-loyalty-actions {
-        margin-top: 0;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-    @media (max-width: 900px) {
-        .page-hero--loyalty {
-            height: auto;
-            min-height: 0;
-            max-height: none;
-        }
-        .page-hero--loyalty::before {
-            left: 0; transform: none; max-width: none; width: 100%; height: 100%;
-            opacity: 0.45; background-position: center center;
-        }
-        .page-hero--loyalty::after {
-            left: 0; transform: none; max-width: none; width: 100%; height: 100%;
-            background: linear-gradient(180deg, rgba(1,9,28,0.75) 0%, rgba(1,9,28,0.92) 100%);
-        }
-        .page-hero--loyalty .container {
-            height: auto; padding: 24px 16px 28px;
-        }
-        .hero-loyalty-inner {
-            height: auto;
-            max-width: 100%;
-            padding: 0;
-            gap: 28px;
-        }
-    }
-
-
-    /* --- RC.city-inspired layout on KONTURBIZ tokens --- */
-    .page-hero--immersive {
-        background: var(--color-navy-dark, #0A192F);
-        color: #fff;
-        padding: 64px 0 72px;
-    }
-    .page-hero--immersive h1 { color: #fff; font-weight: 300; }
-    .page-hero--immersive .lead { color: rgba(255,255,255,0.72); max-width: 560px; }
-    .page-hero--immersive .eyebrow { color: var(--color-gold-bus, #C8A24A); }
     .stat-strip {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -557,195 +407,6 @@ body {
         }
     }
 
-
-
-section.page-hero.page-hero--loyalty .hero-loyalty-bottom {
-  padding-bottom: 8px !important;
-}
-section.page-hero.page-hero--loyalty .hero-loyalty-top {
-  padding-top: 8px !important;
-}
-/* title block compact so H1 sits lower in left column */
-section.page-hero.page-hero--loyalty h1 {
-  max-width: 320px !important;
-}
-
-/* ===== LOYALTY HERO: локально, глобальный hero отключён ===== */
-section.page-hero.page-hero--loyalty,
-.page-hero.page-hero--loyalty {
-  margin-top: 0 !important;
-  position: relative !important;
-  height: 400px !important;
-  min-height: 400px !important;
-  max-height: 400px !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  overflow: hidden !important;
-  background: #01091C !important;
-  color: #fff !important;
-  border: 0 !important;
-}
-/* Сброс псевдо от hero.css / konturbiz / home */
-section.page-hero.page-hero--loyalty::before,
-section.page-hero.page-hero--loyalty::after,
-.page-hero--loyalty .container::before,
-.page-hero--loyalty .container::after,
-.page-hero--loyalty .page-hero__overlay {
-  content: none !important;
-  display: none !important;
-  background: none !important;
-  background-image: none !important;
-}
-/* Картинка — единственный ::before */
-
-
-section.page-hero.page-hero--loyalty > .loy-hero-bg {
-  position: absolute !important;
-  top: 0 !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  width: 100% !important;
-  max-width: 1200px !important;
-  height: 400px !important;
-  z-index: 0 !important;
-  pointer-events: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  border: 0 !important;
-  overflow: hidden !important;
-  background: #01091C !important;
-  background-image: none !important;
-}
-section.page-hero.page-hero--loyalty > .loy-hero-bg img {
-  display: block !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  height: 400px !important;
-  object-fit: fill !important;
-  object-position: center center !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  border: 0 !important;
-  /* без scale/zoom — кадр 3:1 ровно в 1200×400 */
-  transform: none !important;
-}
-
-/* Узкий градиент только слева — отдельный слой, не ::after секции */
-section.page-hero.page-hero--loyalty > .loy-hero-grad {
-  position: absolute !important;
-  top: 0 !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  width: 100% !important;
-  max-width: 1200px !important;
-  height: 400px !important;
-  z-index: 1 !important;
-  pointer-events: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  /* сильный градиент только под колонкой текста (~1/3), дальше чисто */
-  background: linear-gradient(
-    90deg,
-    #01091C 0%,
-    #01091C 12%,
-    rgba(1, 9, 28, 0.92) 20%,
-    rgba(1, 9, 28, 0.65) 26%,
-    rgba(1, 9, 28, 0.28) 32%,
-    rgba(1, 9, 28, 0.08) 36%,
-    transparent 40%
-  ) !important;
-}
-section.page-hero.page-hero--loyalty > .container {
-  position: relative !important;
-  z-index: 2 !important;
-  max-width: 1200px !important;
-  width: 100% !important;
-  height: 400px !important;
-  margin: 0 auto !important;
-  padding: 0 40px !important;
-  background: transparent !important;
-  background-image: none !important;
-  display: flex !important;
-  align-items: stretch !important;
-  box-sizing: border-box !important;
-}
-section.page-hero.page-hero--loyalty .hero-loyalty-inner {
-  width: 100% !important;
-  max-width: 380px !important;
-  height: 100% !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: space-between !important;
-  padding: 28px 0 32px !important;
-  box-sizing: border-box !important;
-  background: transparent !important;
-  position: relative !important;
-  z-index: 2 !important;
-}
-section.page-hero.page-hero--loyalty .eyebrow {
-  color: #C8A24A !important;
-  display: block !important;
-  margin: 0 !important;
-}
-section.page-hero.page-hero--loyalty h1 {
-  color: #fff !important;
-  font-weight: 300 !important;
-  font-size: clamp(22px, 2.4vw, 28px) !important;
-  line-height: 1.15 !important;
-  margin: 0 0 8px !important;
-  text-shadow: 0 1px 14px rgba(1,9,28,0.65) !important;
-}
-section.page-hero.page-hero--loyalty .lead {
-  color: rgba(255,255,255,0.9) !important;
-  max-width: none !important; white-space: nowrap !important; font-size: 13px !important;
-  font-size: 14px !important;
-  margin: 0 0 16px !important;
-  text-shadow: 0 1px 12px rgba(1,9,28,0.55) !important;
-}
-@media (max-width: 900px) {
-  section.page-hero.page-hero--loyalty {
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
-  }
-  section.page-hero.page-hero--loyalty > .loy-hero-bg {
-    left: 0 !important;
-    transform: none !important;
-    max-width: none !important;
-    width: 100% !important;
-    height: 100% !important;
-    min-height: 220px !important;
-    opacity: 0.45 !important;
-  }
-  section.page-hero.page-hero--loyalty > .loy-hero-bg img {
-    width: 100% !important;
-    height: 100% !important;
-    min-height: 220px !important;
-    object-fit: cover !important;
-    object-position: 70% center !important;
-  }
-  section.page-hero.page-hero--loyalty > .loy-hero-grad {
-    left: 0 !important;
-    transform: none !important;
-    max-width: none !important;
-    width: 100% !important;
-    height: 100% !important;
-    background: linear-gradient(180deg, rgba(1,9,28,0.7) 0%, #01091C 100%) !important;
-  }
-  section.page-hero.page-hero--loyalty > .container {
-    height: auto !important;
-    padding: 24px 16px 28px !important;
-  }
-  section.page-hero.page-hero--loyalty .hero-loyalty-inner {
-    height: auto !important;
-    max-width: 100% !important;
-    padding: 0 !important;
-    gap: 24px !important;
-  }
-}
-
     </style>
 
     <script type="application/ld+json">
@@ -926,71 +587,6 @@ section.page-hero.page-hero--loyalty .lead {
   ]
 }
 </script>
-<style id="page-hero-h-fix">
-.page-hero, .page-hero__shell { height: 400px !important; min-height: 400px !important; max-height: 400px !important; }
-@media (max-width: 900px) {
-  .page-hero, .page-hero__shell { height: auto !important; min-height: 0 !important; max-height: none !important; }
-}
-</style>
-<style id="page-hero-unified">
-.page-hero {
-  height: 400px !important; min-height: 400px !important; max-height: 400px !important;
-  padding: 0 !important; margin: 0 !important; overflow: hidden !important;
-  background: #01091C !important;
-}
-.page-hero .container,
-.page-hero__shell {
-  max-width: 1200px !important; height: 400px !important;
-  min-height: 400px !important; max-height: 400px !important;
-  margin: 0 auto !important; padding: 0 40px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;
-  justify-content: center !important;
-  position: relative !important; box-sizing: border-box !important;
-  gap: 0 !important;
-}
-.page-hero .container > * {
-  max-width: 560px !important;
-  width: 100% !important;
-  flex: 0 0 auto !important;
-  position: relative !important;
-  z-index: 2 !important;
-}
-.page-hero .container > .button-group {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: wrap !important;
-  gap: 12px !important;
-}
-.page-hero h1, .page-hero__title {
-  font-family: Montserrat, sans-serif !important;
-  font-size: clamp(24px, 2.6vw, 32px) !important;
-  font-weight: 300 !important; line-height: 1.15 !important;
-  color: #fff !important; max-width: 560px !important; margin: 0 0 12px !important;
-  display: block !important;
-}
-.page-hero .lead, .page-hero__lead {
-  font-size: 14px !important; font-weight: 300 !important;
-  line-height: 1.5 !important; color: rgba(255,255,255,0.88) !important;
-  max-width: 520px !important; margin: 0 0 18px !important;
-  display: block !important;
-}
-.page-hero .eyebrow, .page-hero__eyebrow {
-  font-size: 11px !important; font-weight: 600 !important;
-  letter-spacing: 0.12em !important; text-transform: uppercase !important;
-  color: #C8A24A !important; margin: 0 0 10px !important;
-  display: block !important;
-}
-.page-hero .button-group { gap: 12px !important; margin: 0 !important; }
-@media (max-width: 900px) {
-  .page-hero, .page-hero .container, .page-hero__shell {
-    height: auto !important; min-height: 0 !important; max-height: none !important;
-  }
-  .page-hero .container, .page-hero__shell { padding: 24px 16px !important; }
-  .page-hero h1, .page-hero__title { font-size: 22px !important; }
-}
-</style>
 <style id="footer-grid-5col-fix">
 .footer__grid {
   display: grid !important;
@@ -1012,11 +608,15 @@ section.page-hero.page-hero--loyalty .lead {
   .footer__grid { grid-template-columns: 1fr !important; }
 }
 </style>
-    <link rel="stylesheet" href="/assets/css/konturbiz-redesign.css?v=20261020-hero">
+    <link rel="stylesheet" href="/assets/css/konturbiz-redesign.css?v=20261022-hero4">
 <meta property="og:site_name" content="KONTURBIZ">
 <meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://konturbiz.ru/images/hero.webp">
+<link rel="stylesheet" href="/assets/css/kb-motion.css?v=20261022-m4">
+<script src="/assets/js/kb-motion.js?v=20261028-m5" defer></script>
+<link rel="stylesheet" href="/assets/css/buttons.css?v=20261026-hero-standard">
+<link rel="stylesheet" href="/assets/css/hero-layout-fix.css?v=20261028-hero-std">
 </head>
 <body>
     <a class="skip-to-content" href="#main">Перейти к содержанию</a>
@@ -1137,7 +737,7 @@ section.page-hero.page-hero--loyalty .lead {
 
         <!-- HEADER ACTIONS -->
         <div class="header__actions">
-            <a href="/pages/diagnostics/konturscan.html" class="button button--gold">
+            <a href="/pages/diagnostics/konturscan.html" class="button button--gold-outline header-cta-button">
                 Пройти диагностику
             </a>
             <button
@@ -1158,26 +758,21 @@ section.page-hero.page-hero--loyalty .lead {
 </header>
     <main id="main">
 
-        <section class="page-hero page-hero--immersive page-hero--loyalty" aria-labelledby="loy-title">
-            <div class="loy-hero-bg" aria-hidden="true">
-              <img src="/images/services/loyalty-program-hero.webp?v=20260927" alt="" width="1200" height="400" decoding="async" fetchpriority="high">
-            </div>
-            <div class="loy-hero-grad" aria-hidden="true"></div>
+        <section class="page-hero page-hero--loyalty" aria-labelledby="loy-title">
             <div class="container">
-                <div class="hero-loyalty-inner">
-                    <div class="hero-loyalty-top">
-                        <span class="eyebrow">ЛОЯЛЬНОСТЬ · WALLET · АКЦИИ</span>
-                    </div>
-                    <div class="hero-loyalty-bottom">
-                        <nav class="kb-breadcrumbs" aria-label="Хлебные крошки"><ol><li><a href="/">Главная</a></li><li><a href="/pages/services/">Услуги</a></li><li aria-current="page">Программа лояльности для бизнеса</li></ol></nav><h1 id="loy-title">Программа лояльности для бизнеса</h1>
-                        <p class="lead">Баллы, Wallet, акции и аналитика в одном кабинете.</p>
-                        <div class="button-group hero-loyalty-actions">
-                            <a href="/pages/services/loyalty-calculator.html" class="button button--gold" data-analytics="loy_calc">Калькулятор</a>
-                            <a href="/pages/services/tariffs.html" class="button button--white-outline" data-analytics="loy_tariffs">Сравнить тарифы</a>
-                        </div>
-                    </div>
+                <nav class="kb-breadcrumbs" aria-label="Хлебные крошки"><ol><li><a href="/">Главная</a></li><li><a href="/pages/services/">Услуги</a></li><li aria-current="page">Программа лояльности для бизнеса</li></ol></nav>
+                <span class="eyebrow eyebrow--gold">Услуги · Программа лояльности</span>
+                <h1 id="loy-title">Программа <span class="hero-accent">лояльности</span> для бизнеса</h1>
+                <p class="lead">Баллы, Wallet, акции и аналитика в одном кабинете.</p>
+                <div class="button-group page-hero__actions">
+                    <a href="/pages/services/loyalty-calculator.html" class="button button--gold" data-analytics="loy_calc">Калькулятор</a>
+                    <a href="/pages/services/tariffs.html" class="button button--blue" data-analytics="loy_tariffs">Сравнить тарифы</a>
                 </div>
             </div>
+            <div class="page-hero__media" aria-hidden="true">
+              <img src="/images/services/loyalty-program-hero.webp?v=20260927" alt="" width="1200" height="400" decoding="async" fetchpriority="high">
+            </div>
+            <div class="page-hero__overlay" aria-hidden="true"></div>
         </section>
         <p class="aeo-answer aeo-answer--loyalty">Программа лояльности для бизнеса — это система повторных продаж: клиент получает баллы или бонусы за покупки и возвращается, потому что накопленное вознаграждение выгодно потратить у вас. KONTURBIZ внедряет готовую программу на базе RC CITY: начисление и списание баллов, цифровая карта Wallet, акции, push и аналитика в одном кабинете. Подходит ритейлу, услугам, HoReCa и сети точек — от одной локации до сети.</p>
 
@@ -1447,7 +1042,7 @@ section.page-hero.page-hero--loyalty .lead {
                     <article class="card">
                         <h3>KONTURBIZ — под вашу задачу</h3>
                         <p>Проектирование механики, интеграции, автоматизация и связка с сайтом и CRM.</p>
-                        <a href="/pages/about/contacts.html?from=loyalty-custom" class="button button--gold-outline">Обсудить внедрение</a>
+                        <a href="/pages/about/contacts.html?from=loyalty-custom" class="button button--navy-outline">Обсудить внедрение</a>
                     </article>
                 </div>
             </div>
