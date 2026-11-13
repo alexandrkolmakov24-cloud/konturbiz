@@ -114,28 +114,35 @@
                     return heading && heading.textContent.trim().toLocaleLowerCase("ru") === title.toLocaleLowerCase("ru");
                 });
             }
-            function ensureLink(column, href, label, afterHref) {
+            function placeLink(column, href, label, afterHref) {
                 if (!column) return;
                 var menu = column.querySelector(".footer__menu");
-                if (!menu || menu.querySelector('a[href="' + href + '"]')) return;
-                var item = document.createElement("li");
-                var link = document.createElement("a");
-                link.href = href;
-                link.className = "footer__link";
-                link.textContent = label;
-                item.appendChild(link);
+                if (!menu) return;
+                var existing = footer.querySelector('a[href="' + href + '"]');
+                var item = existing ? existing.closest("li") : null;
+                if (!item) {
+                    item = document.createElement("li");
+                    var link = document.createElement("a");
+                    link.href = href;
+                    link.className = "footer__link";
+                    link.textContent = label;
+                    item.appendChild(link);
+                }
                 var after = afterHref && menu.querySelector('a[href="' + afterHref + '"]');
-                if (after && after.parentNode === menu) after.parentNode.insertBefore(item, after.nextSibling);
-                else menu.appendChild(item);
+                if (after && after.parentNode === menu) {
+                    if (item !== after.parentNode && item.previousElementSibling !== after) after.parentNode.insertBefore(item, after.nextSibling);
+                } else if (item.parentNode !== menu) {
+                    menu.appendChild(item);
+                }
             }
 
             var services = findColumn("Услуги");
-            ensureLink(services, "/pages/services/seo-aeo-geo-audit.html#sec-tz", "SEO / AEO / GEO-аудит", "/pages/services/web-development.html");
-            ensureLink(services, "/pages/diagnostics/pdnscan.html", "Проверка ПДн", "/pages/services/seo-aeo-geo-audit.html#sec-tz");
+            placeLink(services, "/pages/services/seo-aeo-geo-audit.html#sec-tz", "SEO / AEO / GEO-аудит", "/pages/services/web-development.html");
+            placeLink(services, "/pages/diagnostics/pdnscan.html", "Проверка ПДн", "/pages/services/seo-aeo-geo-audit.html#sec-tz");
 
             var about = findColumn("О KONTURBIZ");
-            ensureLink(about, "/pages/services/prices.html", "Цены и тарифы");
-            ensureLink(about, "/pages/services/payment-methods.html", "Способы оплаты");
+            placeLink(about, "/pages/services/prices.html", "Цены и тарифы");
+            placeLink(about, "/pages/services/payment-methods.html", "Способы оплаты");
         });
     }
 
