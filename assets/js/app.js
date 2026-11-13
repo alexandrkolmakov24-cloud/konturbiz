@@ -55,6 +55,7 @@
                 }
             });
         } else {
+            if (id === "footer") syncFooterLinks(el);
             loadScripts(scripts || []);
         }
     }
@@ -98,39 +99,48 @@
     }
 
 
-    // Единые ссылки на новые инструменты и услуги во всех встроенных футерах.
-    function syncFooterLinks() {
-        var links = [
-            {
-                anchor: '/pages/diagnostics/',
-                href: '/pages/diagnostics/pdnscan.html',
-                label: 'Проверка ПДн'
-            },
-            {
-                anchor: '/pages/services/digital-audit.html',
-                href: '/pages/services/seo-aeo-geo-audit.html#sec-tz',
-                label: 'SEO / AEO / GEO-аудит'
-            }
-        ];
+    // Единая структура ссылок во встроенных футерах старых страниц.
+    function syncFooterLinks(root) {
+        var scope = root || document;
+        var footers = scope.matches && scope.matches("footer.footer")
+            ? [scope]
+            : Array.prototype.slice.call(scope.querySelectorAll("footer.footer"));
 
-        document.querySelectorAll('footer.footer').forEach(function (footer) {
-            links.forEach(function (item) {
-                if (footer.querySelector('a[href="' + item.href + '"]')) return;
-                var anchor = footer.querySelector('a[href="' + item.anchor + '"]');
-                if (!anchor || !anchor.parentNode) return;
-                var li = document.createElement('li');
-                var link = document.createElement('a');
-                link.href = item.href;
-                link.className = anchor.className || 'footer__link';
-                link.textContent = item.label;
-                li.appendChild(link);
-                anchor.parentNode.insertBefore(li, anchor.nextSibling);
-            });
+        footers.forEach(function (footer) {
+            var columns = Array.prototype.slice.call(footer.querySelectorAll(".footer__grid > div"));
+            function findColumn(title) {
+                return columns.find(function (column) {
+                    var heading = column.querySelector(".footer__title");
+                    return heading && heading.textContent.trim().toLocaleLowerCase("ru") === title.toLocaleLowerCase("ru");
+                });
+            }
+            function ensureLink(column, href, label, afterHref) {
+                if (!column) return;
+                var menu = column.querySelector(".footer__menu");
+                if (!menu || menu.querySelector('a[href="' + href + '"]')) return;
+                var item = document.createElement("li");
+                var link = document.createElement("a");
+                link.href = href;
+                link.className = "footer__link";
+                link.textContent = label;
+                item.appendChild(link);
+                var after = afterHref && menu.querySelector('a[href="' + afterHref + '"]');
+                if (after && after.parentNode === menu) after.parentNode.insertBefore(item, after.nextSibling);
+                else menu.appendChild(item);
+            }
+
+            var services = findColumn("Услуги");
+            ensureLink(services, "/pages/services/seo-aeo-geo-audit.html#sec-tz", "SEO / AEO / GEO-аудит", "/pages/services/web-development.html");
+            ensureLink(services, "/pages/diagnostics/pdnscan.html", "Проверка ПДн", "/pages/services/seo-aeo-geo-audit.html#sec-tz");
+
+            var about = findColumn("О KONTURBIZ");
+            ensureLink(about, "/pages/services/prices.html", "Цены и тарифы");
+            ensureLink(about, "/pages/services/payment-methods.html", "Способы оплаты");
         });
     }
 
     function init() {
-        syncFooterLinks();
+        syncFooterLinks(document);
         console.log('[KONTURBIZ] app.js · компоненты');
         Object.keys(COMPONENTS).forEach(function (k) {
             loadComponent(COMPONENTS[k]);
