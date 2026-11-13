@@ -130,6 +130,7 @@
     }
 
     function init() {
+        syncFooterLinks();
         console.log('[KONTURBIZ] app.js · компоненты');
         Object.keys(COMPONENTS).forEach(function (k) {
             loadComponent(COMPONENTS[k]);
