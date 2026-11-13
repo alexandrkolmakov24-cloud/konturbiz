@@ -97,6 +97,38 @@
         });
     }
 
+
+    // Единые ссылки на новые инструменты и услуги во всех встроенных футерах.
+    function syncFooterLinks() {
+        var links = [
+            {
+                anchor: '/pages/diagnostics/',
+                href: '/pages/diagnostics/pdnscan.html',
+                label: 'Проверка ПДн'
+            },
+            {
+                anchor: '/pages/services/digital-audit.html',
+                href: '/pages/services/seo-aeo-geo-audit.html#sec-tz',
+                label: 'SEO / AEO / GEO-аудит'
+            }
+        ];
+
+        document.querySelectorAll('footer.footer').forEach(function (footer) {
+            links.forEach(function (item) {
+                if (footer.querySelector('a[href="' + item.href + '"]')) return;
+                var anchor = footer.querySelector('a[href="' + item.anchor + '"]');
+                if (!anchor || !anchor.parentNode) return;
+                var li = document.createElement('li');
+                var link = document.createElement('a');
+                link.href = item.href;
+                link.className = anchor.className || 'footer__link';
+                link.textContent = item.label;
+                li.appendChild(link);
+                anchor.parentNode.insertBefore(li, anchor.nextSibling);
+            });
+        });
+    }
+
     function init() {
         console.log('[KONTURBIZ] app.js · компоненты');
         Object.keys(COMPONENTS).forEach(function (k) {
