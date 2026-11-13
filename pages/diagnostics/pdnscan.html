@@ -107,7 +107,31 @@ textarea{min-height:70px;resize:vertical}
 .report-meta { color:#52667A; font-size:9pt; margin-bottom:7mm; }
 .report-cta { margin-top:7mm; padding:14px; border:1px solid #E8EDF3; border-radius:8px; }
 .report-cta a { color:#956A0A; font-weight:700; }
-.legal-note { font-size:8.5pt; color:#52667A; margin:2mm 0 4mm; }
+.legal-note { font-size:8.5pt; color:#52667A; margin:2mm 0 4mm; line-height:1.55; max-width:100%; }
+.legal-table{
+  width:100%; table-layout:fixed; border-collapse:separate; border-spacing:0;
+  font-size:8.2pt; line-height:1.42; margin:3mm 0 6mm;
+  border:1px solid #D9E1EA; border-radius:7px; overflow:hidden;
+}
+.legal-table th,.legal-table td{
+  border:0; border-bottom:1px solid #E4EAF0; border-right:1px solid #E4EAF0;
+  padding:7px 8px; vertical-align:top; text-align:left;
+  overflow-wrap:break-word; word-break:normal; hyphens:auto;
+}
+.legal-table th:last-child,.legal-table td:last-child{border-right:0}
+.legal-table tbody tr:last-child td{border-bottom:0}
+.legal-table th{background:#F1F4F7!important;color:#112B4A!important;font-weight:700}
+.legal-table td:not(:first-child),.legal-table th:not(:first-child){font-weight:600}
+.legal-table td:not(:first-child){font-variant-numeric:tabular-nums}
+.legal-table tbody tr:nth-child(even) td{background:#FAFBFC}
+.legal-table tr{break-inside:avoid;page-break-inside:avoid}
+.report-cta{margin-top:8mm;padding:16px 18px;border:1px solid #D9E1EA;border-left:3px solid #C8A24A;border-radius:8px;background:#FAFBFC;break-inside:avoid}
+.report-cta p{line-height:1.55}
+.report-cta a{display:inline-block;color:#956A0A!important;font-weight:700;text-decoration:underline;text-underline-offset:2px}
+@media(max-width:640px){
+  .legal-table{font-size:12px}
+  .legal-table th,.legal-table td{padding:8px 7px}
+}
 
 
 /* KONTURBIZ page shell */
@@ -312,6 +336,7 @@ body{background:#F7F8FA}
 
       <h4 style="font-size:13px;margin:12px 0 6px">Основные штрафы</h4>
       <table class="legal-table">
+        <colgroup><col style="width:58%"><col style="width:20%"><col style="width:22%"></colgroup>
         <thead><tr><th>Нарушение</th><th>ИП</th><th>Юридическое лицо</th></tr></thead>
         <tbody>
           <tr><td>Обработка ПДн вне закона либо не по заявленным целям, ч. 1 ст. 13.11</td><td>50–100 тыс. ₽</td><td>150–300 тыс. ₽</td></tr>
@@ -327,6 +352,7 @@ body{background:#F7F8FA}
 
       <h4 style="font-size:13px;margin:12px 0 6px">Штрафы за утечки</h4>
       <table class="legal-table">
+        <colgroup><col style="width:68%"><col style="width:32%"></colgroup>
         <thead><tr><th>Ситуация</th><th>Штраф для ИП и юридических лиц</th></tr></thead>
         <tbody>
           <tr><td>Не уведомили РКН об утечке</td><td>1–3 млн ₽</td></tr>
@@ -982,12 +1008,9 @@ async function downloadPdf(){
     if(btn){ btn.disabled = true; btn.textContent = 'Формируем PDF…'; }
     if(document.fonts && document.fonts.ready) await document.fonts.ready;
 
-    // Отчёт копируется в отдельную область фиксированной ширины —
-    // тот же клиентский принцип html2canvas + jsPDF, что и в KONTURSCAN.
     host = document.createElement('div');
     host.style.cssText = 'position:fixed;left:-12000px;top:0;width:794px;background:#fff;z-index:-1;';
-    const source = document.getElementById('screen-results');
-    const clone = source.cloneNode(true);
+    const clone = document.getElementById('screen-results').cloneNode(true);
     clone.classList.add('active');
     clone.style.cssText = 'display:block!important;width:794px;max-width:794px;background:#fff;';
     const card = clone.querySelector('.card');
@@ -996,49 +1019,75 @@ async function downloadPdf(){
     if(controls) controls.remove();
     const footer = clone.querySelector('.report-footer');
     if(footer) footer.style.display = 'block';
-    clone.querySelectorAll('a').forEach(a=>{ a.style.color='#956A0A'; a.style.textDecoration='none'; });
-    clone.querySelectorAll('.page-break').forEach(el=>{ el.style.breakBefore='auto'; el.style.pageBreakBefore='auto'; });
+    clone.querySelectorAll('a').forEach(a=>{
+      a.style.color='#956A0A'; a.style.textDecoration='underline'; a.style.textUnderlineOffset='2px';
+    });
+    clone.querySelectorAll('.page-break').forEach(el=>{
+      el.style.breakBefore='auto'; el.style.pageBreakBefore='auto';
+    });
     host.appendChild(clone);
     document.body.appendChild(host);
 
     await Promise.all([...clone.querySelectorAll('img')].map(im=>im.decode ? im.decode().catch(()=>{}) : Promise.resolve()));
     const canvas = await html2canvas(clone, {
-      scale: 2, backgroundColor: '#ffffff', useCORS: true, logging: false,
-      width: 794, windowWidth: 794, scrollX: 0, scrollY: 0
+      scale:2, backgroundColor:'#ffffff', useCORS:true, logging:false,
+      width:794, windowWidth:794, scrollX:0, scrollY:0
     });
 
-    const { jsPDF } = window.jspdf;
-    const pdf = new jsPDF({ unit:'mm', format:'a4', orientation:'portrait', compress:true });
-    pdf.setProperties({ title:'KONTURSCAN ПДн — отчёт самооценки', author:'KONTURBIZ', subject:'Самооценка организации обработки персональных данных' });
-    // Делим длинный снимок на страницы A4, не уменьшая весь отчёт до нечитаемого размера.
-    const pageHeightPx = Math.floor(canvas.width * 297 / 210);
-    let pageIndex = 0;
-    for(let y=0; y<canvas.height; y+=pageHeightPx){
-      const sliceHeight = Math.min(pageHeightPx, canvas.height-y);
-      const pageCanvas = document.createElement('canvas');
-      pageCanvas.width = canvas.width;
-      pageCanvas.height = sliceHeight;
-      const ctx = pageCanvas.getContext('2d');
-      ctx.fillStyle = '#ffffff';
-      ctx.fillRect(0,0,pageCanvas.width,pageCanvas.height);
-      ctx.drawImage(canvas, 0,y,canvas.width,sliceHeight, 0,0,canvas.width,sliceHeight);
+    const {jsPDF} = window.jspdf;
+    const pdf = new jsPDF({unit:'mm',format:'a4',orientation:'portrait',compress:true});
+    pdf.setProperties({title:'KONTURSCAN ПДн — отчёт самооценки',author:'KONTURBIZ',subject:'Самооценка организации обработки персональных данных'});
+
+    // Сохраняем координаты ссылок для создания настоящих PDF-аннотаций.
+    const scale=2, pxToMm=210/canvas.width, rootRect=clone.getBoundingClientRect();
+    const links=[...clone.querySelectorAll('a[href]')].map(a=>{
+      const r=a.getBoundingClientRect();
+      return {href:a.href,x:(r.left-rootRect.left)*scale,y:(r.top-rootRect.top)*scale,w:Math.max(8,r.width*scale),h:Math.max(8,r.height*scale)};
+    }).filter(l=>/^https?:/i.test(l.href));
+
+    // Границы строк таблиц становятся предпочтительными местами разрыва страниц.
+    const idealPageHeight=Math.floor(canvas.width*297/210);
+    const rowEdges=[...clone.querySelectorAll('table tr')].map(tr=>{
+      const r=tr.getBoundingClientRect();
+      return Math.round((r.bottom-rootRect.top)*scale);
+    }).filter(y=>y>0&&y<canvas.height).sort((a,b)=>a-b);
+
+    let y=0,pageIndex=0;
+    while(y<canvas.height){
+      const target=Math.min(y+idealPageHeight,canvas.height);
+      let end=target;
+      if(target<canvas.height){
+        const minEnd=y+Math.floor(idealPageHeight*.62);
+        const candidates=rowEdges.filter(edge=>edge>minEnd&&edge<=target);
+        if(candidates.length) end=candidates[candidates.length-1];
+      }
+      const sliceHeight=Math.max(1,end-y);
+      const pageCanvas=document.createElement('canvas');
+      pageCanvas.width=canvas.width; pageCanvas.height=sliceHeight;
+      const ctx=pageCanvas.getContext('2d');
+      ctx.fillStyle='#fff'; ctx.fillRect(0,0,pageCanvas.width,pageCanvas.height);
+      ctx.drawImage(canvas,0,y,canvas.width,sliceHeight,0,0,canvas.width,sliceHeight);
       if(pageIndex>0) pdf.addPage();
-      // Последняя неполная страница сохраняет масштаб и выравнивается по верхнему краю.
-      const renderedHeight = 297 * sliceHeight / pageHeightPx;
-      pdf.addImage(pageCanvas.toDataURL('image/jpeg',0.94),'JPEG',0,0,210,renderedHeight,undefined,'FAST');
-      pageIndex++;
+      const renderedHeight=297*sliceHeight/idealPageHeight;
+      pdf.addImage(pageCanvas.toDataURL('image/jpeg',.96),'JPEG',0,0,210,renderedHeight,undefined,'FAST');
+
+      links.forEach(link=>{
+        const top=Math.max(link.y,y), bottom=Math.min(link.y+link.h,y+sliceHeight);
+        if(bottom<=top) return;
+        pdf.link(link.x*pxToMm,(top-y)*pxToMm,link.w*pxToMm,Math.max(2,(bottom-top)*pxToMm),{url:link.href});
+      });
+      y=end; pageIndex++;
     }
-    const date = new Date().toISOString().slice(0,10);
+    const date=new Date().toISOString().slice(0,10);
     pdf.save(`konturscan-pdn-report-${date}.pdf`);
   } catch(err){
     console.error('PDF error:',err);
-    alert('Не удалось сформировать PDF. ' + (err && err.message ? err.message : String(err)) + '\nПопробуйте Chrome или Edge и проверьте подключение к интернету.');
+    alert('Не удалось сформировать PDF. '+(err&&err.message?err.message:String(err))+'\nПопробуйте Chrome или Edge и проверьте подключение к интернету.');
   } finally {
     if(host) host.remove();
-    if(btn){ btn.disabled=false; btn.textContent=oldLabel; }
+    if(btn){btn.disabled=false;btn.textContent=oldLabel;}
   }
 }
-
 function restart(){
   state.profile = {};
   state.answers = {};
