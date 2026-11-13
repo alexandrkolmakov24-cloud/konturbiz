@@ -103,10 +103,10 @@
 .hero__actions .button,
 .cta-block .button-group .button,
 .section .button-group .button {
-    min-height: 36px;
-    padding: 8px 18px;
-    font-size: 10px;
-    letter-spacing: 0.08em;
+    min-height: 48px;
+    padding: 12px 20px;
+    font-size: 14px;
+    letter-spacing: 0.04em;
     flex: 0 0 auto;
     width: auto;
     min-width: 160px;
@@ -125,6 +125,33 @@
     background: var(--color-gold-dark, #B8923A);
     border-color: var(--color-gold-dark, #B8923A);
     color: var(--color-on-gold, #091322);
+}
+
+/* Фирменный блик для золотых CTA: единый источник для hero и других блоков. */
+.button--gold {
+    isolation: isolate;
+}
+.button--gold::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(
+        112deg,
+        transparent 0%,
+        transparent 38%,
+        rgba(255, 255, 255, 0.34) 49%,
+        transparent 60%,
+        transparent 100%
+    );
+    background-size: 230% 100%;
+    background-position: 100% 0;
+    transition: background-position 0.55s ease;
+}
+.button--gold:hover::after,
+.button--gold:focus-visible::after {
+    background-position: 0 0;
 }
 
 .button--gold-outline,
@@ -261,8 +288,12 @@
         min-width: 140px !important;
         max-width: 240px !important;
         justify-content: center;
-        min-height: 36px !important;
-        padding: 8px 14px !important;
+    }
+    .page-hero .button-group .button,
+    .page-hero .hero__actions .button {
+        min-height: 48px !important;
+        padding: 12px 20px !important;
+        font-size: 14px !important;
     }
 }
 
@@ -291,9 +322,12 @@
         width: auto !important;
         min-width: 130px !important;
         max-width: 100% !important;
-        padding: 7px 12px !important;
-        min-height: 34px !important;
-        font-size: 9px !important;
+    }
+    .page-hero .button-group .button,
+    .page-hero .hero__actions .button {
+        min-height: 48px !important;
+        padding: 12px 16px !important;
+        font-size: 13px !important;
     }
 }
 

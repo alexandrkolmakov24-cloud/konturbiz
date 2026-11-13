@@ -65,8 +65,8 @@ main h1, main h2, main h3, main h4 {
   letter-spacing: -.025em;
   text-wrap: balance;
 }
-main h1 { font-size: clamp(1.8rem, 3.2vw, 2.5rem); font-weight: 500; line-height: 1.16; }
-main h2 { font-size: clamp(1.5rem, 2.7vw, 2.25rem); font-weight: 500; line-height: 1.2; }
+main h1 { font-size: clamp(1.8rem, 3.2vw, 2.5rem); font-weight: 400; line-height: 1.16; }
+main h2 { font-size: clamp(1.5rem, 2.7vw, 2.25rem); font-weight: 400; line-height: 1.2; }
 main h3 { font-size: clamp(1.08rem, 1.5vw, 1.35rem); font-weight: 600; line-height: 1.3; }
 main p { color: inherit; }
 main p a, main li a:not(.button):not(.btn), .faq-answer a {
@@ -136,7 +136,7 @@ main p a:hover, main li a:not(.button):not(.btn):hover, .faq-answer a:hover { co
 
 /* Rhythm and alternating surfaces */
 .section, .sec { padding-top: clamp(52px, 6.2vw, 84px) !important; padding-bottom: clamp(52px, 6.2vw, 84px) !important; }
-.sec h2 { color: var(--kb-ink); font-family: Montserrat, Inter, "Segoe UI", sans-serif; font-size: clamp(1.7rem, 3.1vw, 2.55rem); font-weight: 600; line-height: 1.16; }
+.sec h2 { color: var(--kb-ink); font-family: Montserrat, Inter, "Segoe UI", sans-serif; font-size: clamp(1.7rem, 3.1vw, 2.55rem); font-weight: 300; line-height: 1.16; }
 .section--grey, .section--platinum, .section--light-gray { background: #eef2f6 !important; }
 .section__header { max-width: 780px; margin: 0 auto clamp(28px, 4vw, 46px) !important; }
 .section__header .lead, .section-lead { color: var(--kb-muted); font-size: clamp(1rem, 1.4vw, 1.12rem); line-height: 1.7; }
@@ -410,7 +410,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--kb-blue); box-sh
   background: #fff !important;
   font-family: Inter, "Segoe UI", Arial, sans-serif !important;
   font-size: 16px !important;
-  font-weight: 650 !important;
+  font-weight: 500 !important;
   line-height: 1.45 !important;
   cursor: pointer;
   list-style: none;
@@ -521,7 +521,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--kb-blue); box-sh
   padding: 18px 56px 18px 20px !important;
   color: var(--kb-ink) !important;
   background: #fff !important;
-  font: 650 16px/1.45 Inter, "Segoe UI", Arial, sans-serif !important;
+  font: 500 16px/1.45 Inter, "Segoe UI", Arial, sans-serif !important;
   cursor: pointer;
   list-style: none;
 }
@@ -582,7 +582,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--kb-blue); box-sh
   padding: 18px 56px 18px 20px !important;
   color: var(--kb-ink) !important;
   background: #fff !important;
-  font: 650 16px/1.45 Inter, "Segoe UI", Arial, sans-serif !important;
+  font: 500 16px/1.45 Inter, "Segoe UI", Arial, sans-serif !important;
   cursor: pointer;
   list-style: none;
 }
@@ -682,7 +682,7 @@ section:has(.faq-section) > .section-title,
   padding: 18px 56px 18px 20px !important;
   color: var(--kb-ink) !important;
   background: #fff !important;
-  font: 650 16px/1.45 Inter, "Segoe UI", Arial, sans-serif !important;
+  font: 500 16px/1.45 Inter, "Segoe UI", Arial, sans-serif !important;
   text-align: left !important;
   cursor: pointer;
   list-style: none;
@@ -848,7 +848,7 @@ section:has(#faq-title) details > summary,
   background: #fff !important;
   font-family: Inter, "Segoe UI", Arial, sans-serif !important;
   font-size: 16px !important;
-  font-weight: 650 !important;
+  font-weight: 500 !important;
   line-height: 1.4 !important;
   text-align: left !important;
   list-style: none;
@@ -870,6 +870,7 @@ section:has(#faq-title) .faq-a,
   font-size: 15px !important;
   line-height: 1.7 !important;
   text-align: left;
+  font-weight: 400 !important;
 }
 @media (max-width: 600px) {
   section:has(.faq-item),
@@ -1047,5 +1048,435 @@ section:has(#faq-title) .faq-a,
     height: auto !important;
     min-height: 0 !important;
     padding: 24px 20px 30px !important;
+  }
+}
+
+/* =====================================================================
+   КНОПКИ HERO — логика цветов (2026-10-22)
+   золотая  (.button--gold)        — главное действие, переход на другую страницу
+   синяя    (.button--blue)        — якорь на этой же странице («К тарифам», «Как это работает»)
+   контурная(.button--white-outline)— второстепенный переход на другую страницу
+   ===================================================================== */
+html body .button.button--blue,
+html body .btn.btn--blue {
+  background: #2F6DB5 !important;
+  border-color: #2F6DB5 !important;
+  color: #fff !important;
+}
+html body .button.button--blue:hover,
+html body .button.button--blue:focus-visible,
+html body .btn.btn--blue:hover,
+html body .btn.btn--blue:focus-visible {
+  background: #3A7BC8 !important;
+  border-color: #3A7BC8 !important;
+}
+
+/* === HERO LAYOUT FIX 2026-10-27 (appended from assets/css/hero-layout-fix.css) === */
+/* KONTURBIZ — hero layout fix (load AFTER konturbiz-redesign.css)
+   Root cause: redesign used .page-hero__shell { left:50%; transform:translateX(-50%) }
+   which pushed text to the right on partner pages (SAMO etc).
+   Fix: relative shell, text absolute left, media from 42%.
+*/
+html body .page-hero {
+  position: relative !important;
+  width: 100% !important;
+  height: 400px !important;
+  min-height: 400px !important;
+  overflow: hidden !important;
+  background: #01091c !important;
+  color: #fff !important;
+}
+html body .page-hero .page-hero__shell,
+html body .page-hero .page-hero__inner {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  transform: none !important;
+  width: min(100%, 1200px) !important;
+  max-width: 1200px !important;
+  height: 400px !important;
+  min-height: 400px !important;
+  max-height: 400px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  box-sizing: border-box !important;
+  z-index: 4 !important;
+}
+html body .page-hero .page-hero__body {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: auto !important;
+  bottom: 0 !important;
+  width: 520px !important;
+  max-width: 48% !important;
+  height: 100% !important;
+  min-height: 400px !important;
+  margin: 0 !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  padding: 36px 24px 48px 40px !important;
+  transform: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  box-sizing: border-box !important;
+  z-index: 5 !important;
+  color: #fff !important;
+  text-align: left !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+html body .page-hero .page-hero__media {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 42% !important;
+  width: auto !important;
+  max-width: none !important;
+  height: 100% !important;
+  inset: 0 0 0 42% !important;
+  transform: none !important;
+  overflow: hidden !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+}
+html body .page-hero > .page-hero__media {
+  left: 42% !important;
+  right: 0 !important;
+  inset: 0 0 0 42% !important;
+  transform: none !important;
+  width: auto !important;
+}
+html body .page-hero .page-hero__media img {
+  object-position: right center !important;
+  opacity: 1 !important;
+}
+html body .page-hero .page-hero__overlay,
+html body .page-hero > .page-hero__overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  transform: none !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  background: linear-gradient(
+    90deg,
+    #01091c 0%,
+    #01091c 28%,
+    rgba(1, 9, 28, .95) 38%,
+    rgba(1, 9, 28, .7) 50%,
+    rgba(1, 9, 28, .3) 62%,
+    transparent 86%
+  ) !important;
+}
+@media (max-width: 768px) {
+  html body .page-hero {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+  html body .page-hero .page-hero__shell {
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0 20px !important;
+  }
+  html body .page-hero .page-hero__media,
+  html body .page-hero .page-hero__overlay {
+    display: none !important;
+  }
+  html body .page-hero .page-hero__body {
+    position: relative !important;
+    inset: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    max-width: 520px !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 28px 0 32px !important;
+  }
+}
+
+
+/* === HERO STANDARD 2026-10-27: shared CTA row, 48px controls, home-like typography === */
+html body .page-hero .page-hero__body,
+html body .page-hero .page-hero__shell > .page-hero__body,
+html body .page-hero .page-hero__inner > .page-hero__body {
+  padding-bottom: 48px !important;
+}
+html body .page-hero .page-hero__body h1,
+html body .page-hero .page-hero__body h1 *,
+html body.samo-page .page-hero h1 {
+  font-family: Montserrat, Inter, sans-serif !important;
+  font-weight: 300 !important;
+}
+html body .page-hero .page-hero__body .lead,
+html body .page-hero .page-hero__body .page-hero__lead,
+html body .page-hero .page-hero__body p {
+  font-family: Inter, "Segoe UI", Arial, sans-serif !important;
+  font-weight: 300 !important;
+}
+html body .page-hero .page-hero__actions,
+html body .page-hero .button-group.page-hero__actions,
+html body.samo-page .page-hero .page-hero__actions {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 10px !important;
+  margin-top: auto !important;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+  width: auto !important;
+  max-width: 100% !important;
+}
+html body .page-hero .page-hero__actions > .button,
+html body .page-hero .page-hero__actions > a.button,
+html body.samo-page .page-hero .page-hero__actions > .button {
+  display: inline-flex !important;
+  flex: 0 1 auto !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  height: 48px !important;
+  min-height: 48px !important;
+  max-height: 48px !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  padding: 0 18px !important;
+  margin: 0 !important;
+  font-family: Inter, "Segoe UI", Arial, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0 !important;
+  white-space: nowrap !important;
+  text-transform: none !important;
+}
+@media (max-width: 768px) {
+  html body .page-hero .page-hero__body,
+  html body .page-hero .page-hero__shell > .page-hero__body,
+  html body .page-hero .page-hero__inner > .page-hero__body {
+    padding: 28px 20px 48px !important;
+  }
+  html body .page-hero .page-hero__actions,
+  html body.samo-page .page-hero .page-hero__actions {
+    flex-wrap: wrap !important;
+    margin-top: 24px !important;
+  }
+}
+
+
+/* Homepage hero uses the same CTA dimensions and bottom rhythm as interior heroes. */
+html body .hero .hero__content {
+  padding-bottom: 48px !important;
+}
+html body .hero .hero__actions {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding-top: 20px !important;
+}
+html body .hero .hero__actions > .button {
+  display: inline-flex !important;
+  height: 48px !important;
+  min-height: 48px !important;
+  max-height: 48px !important;
+  padding: 0 18px !important;
+  font-family: Inter, "Segoe UI", Arial, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+@media (max-width: 768px) {
+  html body .hero .hero__content { padding-bottom: 48px !important; }
+  html body .hero .hero__actions { flex-wrap: wrap !important; }
+}
+
+/* Final hero overrides: declared last so local legacy selectors cannot pull CTAs upward. */
+@media (min-width: 901px) {
+  body .page-hero .page-hero__body {
+    justify-content: flex-start !important;
+  }
+  body .page-hero > .container {
+    justify-content: flex-start !important;
+  }
+  body .page-hero .page-hero__body > .page-hero__actions,
+  body .page-hero .page-hero__body > .button-group,
+  body .page-hero > .container > .page-hero__actions,
+  body .page-hero > .container > .button-group {
+    margin-top: auto !important;
+    padding-bottom: 0 !important;
+  }
+}
+@media (max-width: 900px) {
+  body .page-hero .page-hero__body,
+  body .page-hero > .container {
+    justify-content: flex-start !important;
+  }
+  body .page-hero .page-hero__body > .page-hero__actions,
+  body .page-hero .page-hero__body > .button-group,
+  body .page-hero > .container > .page-hero__actions,
+  body .page-hero > .container > .button-group {
+    margin-top: 24px !important;
+  }
+}
+
+
+/* Desktop hero CTA baseline: keep short-content pages aligned to the shared 400px hero. */
+@media (min-width: 901px) {
+  body .page-hero > .container {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    height: 100% !important;
+    min-height: 400px !important;
+    box-sizing: border-box !important;
+    padding-bottom: 48px !important;
+  }
+  body .page-hero > .container > .button-group,
+  body .page-hero > .container > .page-hero__actions,
+  body .page-hero .page-hero__body > .button-group,
+  body .page-hero .page-hero__body > .page-hero__actions {
+    margin-top: auto !important;
+  }
+}
+
+
+/* 2026-10-28 hero acceptance: final shared desktop rhythm + FAQ weights */
+@media (min-width: 901px) {
+  body .page-hero {
+    height: 400px !important;
+    min-height: 400px !important;
+    max-height: 400px !important;
+  }
+  body .page-hero > .container {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+    height: 400px !important;
+    min-height: 400px !important;
+    max-height: 400px !important;
+    box-sizing: border-box !important;
+    padding: 32px 40px 48px !important;
+  }
+  body .page-hero > .container > .button-group,
+  body .page-hero > .container > .page-hero__actions,
+  body .page-hero .page-hero__body > .button-group,
+  body .page-hero .page-hero__body > .page-hero__actions {
+    margin-top: auto !important;
+    flex-shrink: 0 !important;
+  }
+  body .page-hero h1,
+  body .page-hero .page-hero__title {
+    font-weight: 300 !important;
+  }
+  body .page-hero__shell {
+    display: flex !important;
+    align-items: stretch !important;
+    height: 400px !important;
+    min-height: 400px !important;
+    max-height: 400px !important;
+    box-sizing: border-box !important;
+  }
+  body .page-hero__shell > .page-hero__body {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    height: 400px !important;
+    min-height: 400px !important;
+    max-height: 400px !important;
+    box-sizing: border-box !important;
+    padding: 32px 40px 48px !important;
+  }
+  body .page-hero__shell > .page-hero__body > .page-hero__actions,
+  body .page-hero__shell > .page-hero__body > .button-group {
+    margin-top: auto !important;
+    flex-shrink: 0 !important;
+  }
+}
+:is(.faq-list, .accordion-list, .faq-section, .faq-sec, .faq-wrap, .faq) :is(.faq-item, .accordion) > summary,
+#faq details > summary,
+#bp-faq .faq-item > summary,
+.faq-section > details > summary,
+.faq-sec details > summary {
+  font-weight: 500 !important;
+}
+:is(.faq-item, .accordion) > :is(.faq-answer, .faq-a, .faq__a, .faq-item__body),
+:is(.faq, .faq-section, .faq-sec, .faq-wrap) > details > :not(summary),
+#bp-faq .faq-item > :not(summary),
+.faq details > :not(summary),
+#faq > details > :not(summary) {
+  font-weight: 400 !important;
+}
+@media (max-width: 900px) {
+  body .page-hero {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+  body .page-hero > .container {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    padding: 28px 20px 32px !important;
+  }
+  body .page-hero__shell {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+  body .page-hero__shell > .page-hero__body {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    padding: 28px 20px 32px !important;
+  }
+  body .page-hero > .container > .button-group,
+  body .page-hero > .container > .page-hero__actions,
+  body .page-hero__shell > .page-hero__body > .page-hero__actions,
+  body .page-hero__shell > .page-hero__body > .button-group {
+    margin-top: 24px !important;
+  }
+}
+
+/* 2026-10-28 P0: solutions hero — force the actual flex parent to fill the hero.
+   Higher-specificity final override; do not rely on margin-top:auto without a full-height parent. */
+@media (min-width: 901px) {
+  html body section.page-hero > div.container,
+  html body section.page-hero > .container,
+  html body .page-hero__body {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    height: 100% !important;
+    min-height: 400px !important;
+    box-sizing: border-box !important;
+    padding-bottom: 48px !important;
+  }
+
+  html body section.page-hero .button-group,
+  html body section.page-hero .page-hero__actions,
+  html body .page-hero__body .button-group,
+  html body .page-hero__body .page-hero__actions {
+    margin-top: auto !important;
+    flex-shrink: 0 !important;
+  }
+
+  html body section.page-hero h1,
+  html body .page-hero__body h1 {
+    font-weight: 300 !important;
   }
 }

@@ -881,9 +881,19 @@ a.faq-plain-link:hover {
 }
 
 </style>
-    <link rel="stylesheet" href="/assets/css/konturbiz-redesign.css?v=20261020-hero">
+    <link rel="stylesheet" href="/assets/css/konturbiz-redesign.css?v=20261022-hero4">
 <meta property="og:site_name" content="KONTURBIZ">
 <meta name="twitter:image" content="https://konturbiz.ru/images/hero.webp">
+<link rel="stylesheet" href="/assets/css/kb-motion.css?v=20261022-m4">
+<script src="/assets/js/kb-motion.js?v=20261028-m5" defer></script>
+<style>
+/* РДО: баннер с логотипом в правой части hero, текст слева (без наложения) */
+@media (min-width:901px){
+  html body section.page-hero .page-hero__media{left:auto!important;right:max(0px,calc((100% - 1200px) / 2))!important;width:min(62%,744px)!important;max-width:none!important;transform:none!important}
+  html body section.page-hero .page-hero__media picture,html body section.page-hero .page-hero__media img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:62% 50%!important}
+}
+</style>
+<link rel="stylesheet" href="/assets/css/hero-layout-fix.css?v=20261028-hero-std">
 </head>
 <body>
     <a class="skip-to-content" href="#main">Перейти к содержанию</a>
@@ -1069,15 +1079,15 @@ a.faq-plain-link:hover {
                         <span aria-hidden="true"> / </span>
                         <span aria-current="page">Русский цифровой</span>
                     </nav>
-                    <span class="eyebrow">Продукты · Партнёр</span>
-                    <h1 id="rcb-title">Русский цифровой — IT-экосистема для бизнеса</h1>
+                    <span class="eyebrow eyebrow--gold">Продукты · Партнёр</span>
+                    <h1 id="rcb-title">Русский цифровой — <span class="hero-accent">IT-экосистема</span> для бизнеса</h1>
                     <p class="lead">
                         Российская IT-экосистема для бизнеса: лояльность, клиентский сервис,
                         платежи и учёт — с аккредитацией Минцифры и партнёрской сетью внедрения.
                     </p>
 <div class="button-group">
                         <a href="https://русскийцифровой.рф/" class="button button--gold" target="_blank" rel="noopener noreferrer">русскийцифровой.рф</a>
-                        <a href="/pages/services/loyalty.html" class="button button--white-outline">Платформа лояльности</a>
+                        <a href="/pages/services/loyalty.html" class="button button--blue">Платформа лояльности</a>
                     </div>
                 </div>
             </div>
