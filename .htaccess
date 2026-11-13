@@ -19,6 +19,9 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 RewriteCond %{HTTP_HOST} ^www\.konturbiz\.ru$ [NC]
 RewriteRule ^ https://konturbiz.ru%{REQUEST_URI} [L,R=301]
+
+# Перенесённые материалы: серверный 301 вместо meta refresh
+RewriteRule ^pages/knowledge/grants/gospodderzhka-cifrovizacii\.html$ https://konturbiz.ru/pages/services/grants.html [L,R=301]
 </IfModule>
 
 # --- Управление индексацией (ОДНО МЕСТО) -------------------------------
@@ -43,6 +46,7 @@ SetEnvIf Host "(^|\.)rcbiz\.ru$"                KB_NOINDEX
 <IfModule mod_headers.c>
 Header always set X-Robots-Tag "noindex, follow" env=KB_NOINDEX
 
+Header always set Strict-Transport-Security "max-age=31536000" "expr=%{HTTPS} == 'on' || %{HTTP:X-Forwarded-Proto} == 'https'"
 Header always set X-Content-Type-Options "nosniff"
 Header always set X-Frame-Options "SAMEORIGIN"
 Header always set Referrer-Policy "strict-origin-when-cross-origin"

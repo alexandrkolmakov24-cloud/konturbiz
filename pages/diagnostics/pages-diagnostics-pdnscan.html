@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KONTURSCAN ПДн — диагностика работы с персональными данными | KONTURBIZ</title>
+<meta name="description" content="Пошаговая самооценка организации работы с персональными данными: профиль, 12 разделов, карта пробелов, приоритеты и план исправлений. Не юридическое заключение.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://konturbiz.ru/pages/diagnostics/pdnscan.html">
+
+<meta property="og:title" content="KONTURSCAN ПДн — диагностика работы с персональными данными">
+<meta property="og:description" content="Самооценка организации обработки персональных данных: профиль, карта пробелов, приоритеты и PDF-отчёт. Не юридическое заключение.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://konturbiz.ru/pages/diagnostics/pdnscan.html">
+<meta property="og:image" content="https://konturbiz.ru/images/hero.webp">
+<meta property="og:site_name" content="KONTURBIZ">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://konturbiz.ru/images/hero.webp">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "KONTURSCAN ПДн — диагностика работы с персональными данными",
+      "url": "https://konturbiz.ru/pages/diagnostics/pdnscan.html",
+      "description": "Пошаговая самооценка организации работы с персональными данными: профиль, 12 разделов, карта пробелов, приоритеты и план исправлений. Не юридическое заключение.",
+      "isPartOf": { "@type": "WebSite", "name": "KONTURBIZ", "url": "https://konturbiz.ru/" },
+      "inLanguage": "ru-RU"
+    },
+    {
+      "@type": "Service",
+      "name": "KONTURSCAN ПДн",
+      "serviceType": "Диагностика работы с персональными данными",
+      "provider": {
+        "@type": "Organization",
+        "name": "KONTURBIZ",
+        "url": "https://konturbiz.ru/"
+      },
+      "areaServed": "RU",
+      "description": "Бесплатная онлайн-самооценка организации обработки персональных данных. 12 разделов, карта пробелов, приоритетный план и PDF-отчёт. Не является юридическим заключением.",
+      "url": "https://konturbiz.ru/pages/diagnostics/pdnscan.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://konturbiz.ru/" },
+        { "@type": "ListItem", "position": 2, "name": "Диагностика", "item": "https://konturbiz.ru/pages/diagnostics/" },
+        { "@type": "ListItem", "position": 3, "name": "KONTURSCAN ПДн", "item": "https://konturbiz.ru/pages/diagnostics/pdnscan.html" }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --navy:#112B4A; --navy-deep:#0B1E36; --gold:#C8A24A; --gold-deep:#956A0A;
+  --bg:#F4F6F9; --card:#FFFFFF; --border:#E8EDF3; --text:#52667A;
+  --red:#E15C4E; --amber:#D6A63C; --green:#2E9E6B;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--navy);line-height:1.5}
+a{color:var(--gold-deep)}
+.wrap{max-width:720px;margin:0 auto;padding:24px 16px 48px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;box-shadow:0 16px 40px rgba(17,43,68,.06);padding:32px 28px}
+@media(max-width:600px){.card{padding:22px 16px}}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:600;letter-spacing:.06em;color:var(--gold-deep);background:rgba(200,162,74,.08);border:1px solid rgba(200,162,74,.22);border-radius:20px;padding:5px 14px 5px 10px;margin-bottom:16px}
+.eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-family:Montserrat,sans-serif;font-size:24px;line-height:1.25;margin-bottom:10px}
+h1 span{color:var(--gold-deep)}
+.lead{font-size:14.5px;color:var(--text);margin-bottom:22px;max-width:540px}
+.btn{font-family:Inter,sans-serif;font-weight:700;font-size:14px;border:none;border-radius:6px;cursor:pointer;padding:13px 26px;background:var(--gold);color:var(--navy-deep);transition:.15s}
+.btn:hover{background:var(--gold-deep);color:#fff}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.btn.secondary{background:transparent;color:var(--navy);border:1px solid var(--border)}
+.btn.secondary:hover{background:var(--bg)}
+.btn-row{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
+.progress-wrap{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;font-size:12px;color:var(--text)}
+.progress-track{flex:1;height:4px;background:var(--border);border-radius:2px;margin:0 12px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-deep));border-radius:2px;transition:width .35s}
+.q-title{font-family:Montserrat,sans-serif;font-size:18px;font-weight:700;margin-bottom:6px;line-height:1.35}
+.q-sub{font-size:13px;color:var(--text);margin-bottom:16px}
+.options{display:flex;flex-direction:column;gap:8px}
+.opt{border:1px solid var(--border);border-radius:8px;padding:12px 14px;display:flex;align-items:center;gap:12px;cursor:pointer;font-size:14px;transition:.12s}
+.opt:hover{border-color:var(--gold);background:rgba(200,162,74,.04)}
+.opt.selected{border-color:var(--gold-deep);background:rgba(200,162,74,.08)}
+.opt .mark{width:18px;height:18px;border-radius:50%;border:2px solid var(--border);flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.opt.selected .mark{border-color:var(--gold-deep);background:var(--gold-deep)}
+.opt.selected .mark::after{content:'';width:6px;height:6px;border-radius:50%;background:#fff}
+.opt.multi .mark{border-radius:4px}
+.opt.multi.selected .mark::after{content:'✓';width:auto;height:auto;font-size:11px;color:#fff;font-weight:700}
+.note{font-size:12.5px;color:var(--text);background:rgba(200,162,74,.06);border:1px solid rgba(200,162,74,.2);border-radius:8px;padding:12px 14px;margin-top:16px}
+.screen{display:none}
+.screen.active{display:block}
+.section-label{font-size:12px;font-weight:600;color:var(--gold-deep);letter-spacing:.04em;margin-bottom:8px;text-transform:uppercase}
+.cat-bars{display:flex;flex-direction:column;gap:10px;margin:18px 0}
+.cat-bar .top{display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px}
+.cat-bar .track{height:8px;background:var(--border);border-radius:4px;overflow:hidden}
+.cat-bar .fill{height:100%;border-radius:4px;transition:width .4s}
+.gap-card{border:1px solid var(--border);border-radius:8px;padding:14px;margin-bottom:10px}
+.gap-card h4{font-size:14px;margin-bottom:4px}
+.gap-card p{font-size:13px;color:var(--text)}
+.badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;margin-right:6px}
+.badge-risk{background:rgba(225,92,78,.12);color:var(--red)}
+.badge-warn{background:rgba(214,166,60,.15);color:var(--gold-deep)}
+.badge-ok{background:rgba(46,158,107,.12);color:var(--green)}
+.badge-ask{background:rgba(82,102,122,.1);color:var(--text)}
+.action-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:12px}
+.action-table th,.action-table td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--border);vertical-align:top}
+.action-table th{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--text)}
+.result-head{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-bottom:18px}
+.score-box{width:110px;height:110px;border-radius:50%;border:6px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0}
+.score-box b{font-family:Montserrat,sans-serif;font-size:26px}
+.score-box span{font-size:10px;color:var(--text);text-transform:uppercase}
+.hidden{display:none!important}
+.followup{margin-top:14px;padding-top:14px;border-top:1px dashed var(--border)}
+.followup label{display:block;font-size:12px;font-weight:600;color:var(--text);margin-bottom:6px}
+.followup select,.followup textarea{width:100%;padding:10px;border:1px solid var(--border);border-radius:6px;font-family:inherit;font-size:13px}
+textarea{min-height:70px;resize:vertical}
+.tag-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tag{font-size:11px;padding:3px 8px;border-radius:4px;background:var(--bg);color:var(--text);border:1px solid var(--border)}
+
+@page { size: A4; margin: 16mm 14mm 18mm; }
+@media print {
+  body { background:#fff !important; color:#112B4A !important; font-size:10pt; }
+  .wrap { max-width:none; margin:0; padding:0; }
+  .card { border:0; border-radius:0; box-shadow:none; padding:0; }
+  .btn-row, .progress-wrap, #screen-intro, #screen-profile, #screen-sections { display:none !important; }
+  #screen-results { display:block !important; }
+  #screen-results .card { display:block !important; }
+  h1 { font-size:20pt; margin:0 0 5mm; }
+  h2 { font-size:14pt; margin:7mm 0 3mm; page-break-after:avoid; }
+  h3 { font-size:11pt; margin:5mm 0 2mm; page-break-after:avoid; }
+  p, li, td, th { color:#243B53 !important; }
+  .lead { font-size:10pt; margin-bottom:5mm; }
+  .gap-card, .note, table, tr, .doc-item { break-inside:avoid; page-break-inside:avoid; }
+  .action-table { font-size:9pt; }
+  .action-table th, .action-table td { padding:6px 5px; }
+  .note { background:#F7F8FA !important; border:1px solid #D9E1EA !important; }
+  a { color:#112B4A !important; text-decoration:none; }
+  .report-footer { display:block !important; }
+  .report-section { break-inside:auto; }
+  .legal-table { width:100%; border-collapse:collapse; font-size:8.3pt; margin:3mm 0 5mm; }
+  .legal-table th, .legal-table td { border:1px solid #D9E1EA; padding:5px; vertical-align:top; text-align:left; }
+  .legal-table th { background:#F1F4F7 !important; }
+  .page-break { break-before:page; page-break-before:always; }
+}
+.report-footer { display:none; margin-top:10mm; padding-top:4mm; border-top:1px solid #E8EDF3; font-size:8pt; color:#52667A; }
+.report-meta { color:#52667A; font-size:9pt; margin-bottom:7mm; }
+.report-cta { margin-top:7mm; padding:14px; border:1px solid #E8EDF3; border-radius:8px; }
+.report-cta a { color:#956A0A; font-weight:700; }
+.legal-note { font-size:8.5pt; color:#52667A; margin:2mm 0 4mm; }
+
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ========== INTRO ========== -->
+<div class="screen active" id="screen-intro">
+  <div class="card">
+    <div class="eyebrow"><span class="dot"></span> KONTURSCAN ПДн · САМООЦЕНКА</div>
+    <h1>Проверьте, как у вас организована работа с <span>персональными данными</span></h1>
+    <p class="lead">
+      Ответьте на вопросы о реальных процессах, документах и сервисах.
+      Получите карту пробелов, список действий и план исправлений.
+    </p>
+    <p class="lead" style="margin-top:-8px">
+      Это <strong>самооценка</strong>, а не подтверждённый аудит и не юридическое заключение.
+      Ответы не заменяют проверку документов и настроек.
+    </p>
+    <div class="btn-row">
+      <button class="btn" onclick="startProfile()">Начать диагностику</button>
+    </div>
+    <div class="note">
+      Обычно 12–20 минут. Отвечайте по фактическому положению дел, а не по планам.
+      «Не знаю» — нормальный ответ: он покажет, что нужно выяснить.
+    </div>
+  </div>
+</div>
+
+<!-- ========== PROFILE ========== -->
+<div class="screen" id="screen-profile">
+  <div class="card">
+    <div class="progress-wrap">
+      <span id="prof-step-label">Профиль 1 / 12</span>
+      <div class="progress-track"><div class="progress-fill" id="prof-bar" style="width:8%"></div></div>
+      <span>профиль</span>
+    </div>
+    <div class="section-label">Профиль оператора</div>
+    <div class="q-title" id="prof-q"></div>
+    <div class="q-sub" id="prof-sub"></div>
+    <div class="options" id="prof-opts"></div>
+    <div class="btn-row">
+      <button class="btn secondary" id="prof-back" onclick="profBack()" disabled>Назад</button>
+      <button class="btn" id="prof-next" onclick="profNext()" disabled>Далее</button>
+    </div>
+  </div>
+</div>
+
+<!-- ========== SECTIONS ========== -->
+<div class="screen" id="screen-sections">
+  <div class="card">
+    <div class="progress-wrap">
+      <span id="sec-step-label">Раздел 1</span>
+      <div class="progress-track"><div class="progress-fill" id="sec-bar" style="width:0%"></div></div>
+      <span id="sec-counter">0 / 0</span>
+    </div>
+    <div class="section-label" id="sec-name"></div>
+    <div class="q-title" id="sec-q"></div>
+    <div class="q-sub" id="sec-sub"></div>
+    <div class="options" id="sec-opts"></div>
+    <div class="followup hidden" id="sec-followup">
+      <label id="sec-follow-label">Чем это можно подтвердить?</label>
+      <div class="options" id="sec-follow-opts"></div>
+    </div>
+    <div class="btn-row">
+      <button class="btn secondary" id="sec-back" onclick="secBack()">Назад</button>
+      <button class="btn" id="sec-next" onclick="secNext()" disabled>Далее</button>
+    </div>
+  </div>
+</div>
+
+<!-- ========== RESULTS ========== -->
+<div class="screen" id="screen-results">
+  <div class="card">
+    <div class="eyebrow"><span class="dot"></span> РЕЗУЛЬТАТ САМООЦЕНКИ</div>
+    <h1>Карта работы с персональными данными</h1>
+    <p class="lead">Показатель организованности процессов — по вашим ответам. Это не процент «соответствия закону».</p>
+
+
+    <div class="report-meta">
+      Дата формирования: <strong id="report-date">—</strong><br>
+      Оператор: <strong id="report-operator">—</strong> · Сфера: <strong id="report-sector">—</strong>
+    </div>
+
+    <section class="report-section">
+      <h3 style="font-family:Montserrat,sans-serif;font-size:16px;margin:20px 0 10px">План действий</h3>
+      <p class="lead">Рекомендации сформированы на основании ответов в диагностике. Последовательность выполнения определяйте с учётом фактических процессов и сроков.</p>
+      <div style="overflow-x:auto">
+        <table class="action-table">
+          <thead><tr><th>Действие</th><th>Зачем</th><th>Приоритет</th></tr></thead>
+          <tbody id="actions"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="report-section">
+      <h3 style="font-family:Montserrat,sans-serif;font-size:16px;margin:24px 0 10px">Документы и подтверждения</h3>
+      <div id="docs-list"></div>
+    </section>
+
+    <section class="report-section page-break">
+      <h3 style="font-family:Montserrat,sans-serif;font-size:16px;margin:24px 0 10px">Ответственность за нарушения требований к обработке ПДн</h3>
+      <p class="legal-note">Справочная информация по статье 13.11 КоАП РФ. Приведённые размеры штрафов перенесены в отчёт из информационного материала, использованного при подготовке диагностики. Перед применением необходимо проверить действующую редакцию законодательства и квалификацию конкретного нарушения.</p>
+
+      <h4 style="font-size:13px;margin:12px 0 6px">Основные штрафы</h4>
+      <table class="legal-table">
+        <thead><tr><th>Нарушение</th><th>ИП</th><th>Юридическое лицо</th></tr></thead>
+        <tbody>
+          <tr><td>Обработка ПДн вне закона либо не по заявленным целям, ч. 1 ст. 13.11</td><td>50–100 тыс. ₽</td><td>150–300 тыс. ₽</td></tr>
+          <tr><td>Повторное такое нарушение, ч. 1.1</td><td>300–500 тыс. ₽</td><td>300–500 тыс. ₽</td></tr>
+          <tr><td>Обработка без письменного согласия или с нарушением требований к согласию, ч. 2</td><td>100–300 тыс. ₽</td><td>300–700 тыс. ₽</td></tr>
+          <tr><td>Нет политики обработки ПДн в открытом доступе, ч. 3</td><td>10–20 тыс. ₽</td><td>30–60 тыс. ₽</td></tr>
+          <tr><td>Не предоставили человеку информацию об обработке его данных, ч. 4</td><td>20–30 тыс. ₽</td><td>40–80 тыс. ₽</td></tr>
+          <tr><td>Не исполнили требование об уточнении, блокировании или удалении данных, ч. 5</td><td>20–40 тыс. ₽</td><td>50–90 тыс. ₽</td></tr>
+          <tr><td>Нарушение локализации ПДн россиян в РФ, ч. 8</td><td>1–6 млн ₽</td><td>1–6 млн ₽</td></tr>
+          <tr><td>Не уведомили Роскомнадзор о начале обработки ПДн, ч. 10</td><td>100–300 тыс. ₽</td><td>100–300 тыс. ₽</td></tr>
+        </tbody>
+      </table>
+
+      <h4 style="font-size:13px;margin:12px 0 6px">Штрафы за утечки</h4>
+      <table class="legal-table">
+        <thead><tr><th>Ситуация</th><th>Штраф для ИП и юридических лиц</th></tr></thead>
+        <tbody>
+          <tr><td>Не уведомили РКН об утечке</td><td>1–3 млн ₽</td></tr>
+          <tr><td>Утечка данных 1–10 тыс. человек либо 10–100 тыс. идентификаторов</td><td>3–5 млн ₽</td></tr>
+          <tr><td>Утечка данных 10–100 тыс. человек либо 100 тыс.–1 млн идентификаторов</td><td>5–10 млн ₽</td></tr>
+          <tr><td>Утечка данных более 100 тыс. человек либо более 1 млн идентификаторов</td><td>10–15 млн ₽</td></tr>
+          <tr><td>Повторная утечка</td><td>1–3% годовой выручки, минимум 20 млн ₽, максимум 500 млн ₽</td></tr>
+          <tr><td>Утечка специальных категорий ПДн</td><td>10–15 млн ₽</td></tr>
+          <tr><td>Утечка биометрических ПДн</td><td>15–20 млн ₽</td></tr>
+          <tr><td>Повторная утечка специальных или биометрических ПДн</td><td>1–3% выручки, минимум 25 млн ₽, максимум 500 млн ₽</td></tr>
+        </tbody>
+      </table>
+
+      <h4 style="font-size:13px;margin:12px 0 6px">Типичные основания для привлечения к ответственности</h4>
+      <ul style="margin:4px 0 0 18px;font-size:9pt;color:var(--text)">
+        <li>Сбор или использование данных без правового основания либо не для заявленной цели.</li>
+        <li>Отсутствие согласия там, где оно обязательно, или неправильное оформление согласия.</li>
+        <li>Отсутствие опубликованной политики обработки ПДн.</li>
+        <li>Неисполнение запроса субъекта об удалении или исправлении данных.</li>
+        <li>Неуведомление Роскомнадзора о начале обработки или об утечке.</li>
+        <li>Передача данных за рубеж без соблюдения требований локализации и трансграничной передачи.</li>
+      </ul>
+    </section>
+
+    <section class="report-cta">
+      <h3 style="font-family:Montserrat,sans-serif;font-size:15px;margin:0 0 6px">Разработка комплекта документов по ПДн</h3>
+      <p style="font-size:13px;color:var(--text);margin-bottom:8px">KONTURBIZ может подготовить комплект документов и регламентов с учётом процессов, статуса оператора и используемых сервисов. Состав работ и стоимость определяются после уточнения ситуации.</p>
+      <p style="font-size:13px"><a href="https://konturbiz.ru/pages/about/contacts.html">Запросить разработку комплекта документов</a> · <a href="https://konturbiz.ru/pages/about/contacts.html">Контакты KONTURBIZ</a></p>
+    </section>
+
+    <div class="note" style="margin-top:20px">
+      <strong>Ограничения этой диагностики.</strong>
+      <span id="limitations-text">Выводы основаны на ответах пользователя. Документы, настройки систем и фактическое исполнение процедур не проверялись.</span>
+      Отчёт носит информационный характер, не является юридическим заключением и не подтверждает соответствие требованиям законодательства. Перед принятием решений необходима проверка документов, систем и фактических процессов.
+    </div>
+    <div class="report-footer">KONTURSCAN ПДн · KONTURBIZ · Самооценка, не юридическое заключение</div>
+
+    <div class="btn-row">
+      <button class="btn" onclick="downloadPdf()">Скачать PDF-отчёт</button>
+      <button class="btn secondary" onclick="restart()">Пройти заново</button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+/* ============================================================================
+   KONTURSCAN ПДн — methodology engine
+   Self-assessment · not a legal opinion
+============================================================================ */
+
+const PROFILE = [
+  {id:'p1', q:'В каком статусе вы работаете?', sub:'От статуса зависят формулировки про ответственного и локальные акты.', type:'single',
+    opts:['Организация (юрлицо)','ИП','Плательщик НПД без ИП','Другое / пока не оформился']},
+  {id:'p2', q:'В какой сфере работаете?', sub:'Влияет на особые категории данных и сценарии.', type:'single',
+    opts:['Услуги / B2B','Розница / e-commerce','Образование','Медицина / здоровье','IT / digital','Производство','Другое']},
+  {id:'p3', q:'Проверяем одного оператора или несколько?', sub:'Один общий ответ не должен автоматически считаться подтверждением для группы.', type:'single',
+    opts:['Одного оператора','Несколько организаций / ИП']},
+  {id:'p4', q:'Есть ли работники, соискатели, бывшие работники?', sub:'Можно выбрать несколько.', type:'multi',
+    opts:['Нет работников и соискателей','Соискатели','Действующие работники','Бывшие работники']},
+  {id:'p5', q:'Чьи ещё данные обрабатываете?', sub:'Категории субъектов.', type:'multi',
+    opts:['Клиенты','Потенциальные клиенты / лиды','Представители контрагентов','Посетители сайта','Другие']},
+  {id:'p6', q:'Через какие каналы получаете данные?', type:'multi',
+    opts:['Сайт / формы','Приложение / личный кабинет','Телефон','Почта','Мессенджеры','Бумага','Партнёры / агрегаторы','Другие']},
+  {id:'p7', q:'Какие категории сведений используете?', type:'multi',
+    opts:['Контакты (имя, телефон, email)','Адреса','Документы / удостоверяющие','Финансовые сведения','Данные о здоровье','Изображения / фото','Другие']},
+  {id:'p8', q:'Где обрабатываете и храните данные?', type:'multi',
+    opts:['CRM','Кадровая система','Таблицы (Excel / Google)','Почта','Телефон / мессенджер','Облачное хранилище','Бумага','Другие']},
+  {id:'p9', q:'Есть ли сайт, личный кабинет, приложение или бот?', type:'multi',
+    opts:['Сайт','Личный кабинет','Мобильное приложение','Чат-бот','Нет цифровых каналов сбора']},
+  {id:'p10', q:'Передаёте ли данные подрядчикам или используете внешние сервисы?', type:'single',
+    opts:['Да','Нет','Не знаю']},
+  {id:'p11', q:'Есть ли реклама, рассылки, публикации отзывов или фото людей?', type:'multi',
+    opts:['Рекламные рассылки','Сервисные уведомления','Публикация отзывов','Фото работников / клиентов','Нет такого']},
+  {id:'p12', q:'Кто заполняет аудит и какие процессы ему известны?', type:'single',
+    opts:['Руководитель / предприниматель','Кадровик','Юрист','IT','Несколько ролей','Другое']},
+];
+
+// Answer scale for assessment questions
+const SCALE = [
+  {v:'yes', t:'Да, выполняется'},
+  {v:'partial', t:'Частично'},
+  {v:'no', t:'Нет'},
+  {v:'unknown', t:'Не знаю'},
+  {v:'na', t:'Не применимо'},
+];
+
+const CONFIRM = [
+  {v:'doc', t:'Документом'},
+  {v:'setting', t:'Настройкой системы'},
+  {v:'log', t:'Журналом или записью события'},
+  {v:'example', t:'Примером выполненной процедуры'},
+  {v:'words', t:'Пока только со слов ответственного'},
+];
+
+// Sections with questions — core set implementing the 12-section methodology
+const SECTIONS = [
+  {
+    id:'s1', name:'Данные и цели',
+    when:()=>true,
+    qs:[
+      {id:'s1q1', q:'Можете ли вы перечислить все процессы, в которых получаете или используете сведения о людях?',
+        why:'Без карты процессов обработка накапливается бессистемно.',
+        gap:'Составить карту обработки: процесс → цель → люди → данные → основание → система → получатели → срок.',
+        critical:true},
+      {id:'s1q2', q:'Для каждого процесса понятно, чьи именно данные обрабатываются?',
+        why:'Нужны категории субъектов по каждому процессу.', gap:'Зафиксировать категории субъектов по процессам.'},
+      {id:'s1q3', q:'Для каждого процесса определена конкретная цель обработки?',
+        why:'Цель определяет допустимый состав данных и сроки.', gap:'Описать цель для каждого процесса.', critical:true},
+      {id:'s1q4', q:'Зафиксирован состав данных, необходимый для каждой цели?',
+        why:'Лишние данные — лишний риск.', gap:'Ограничить состав данных необходимой целью.'},
+      {id:'s1q5', q:'Известны все места хранения и системы, включая таблицы, почту, телефоны и бумагу?',
+        why:'Скрытые места хранения ломают сроки и уничтожение.', gap:'Инвентаризировать все места хранения.', critical:true},
+      {id:'s1q6', q:'При запуске нового процесса, формы или сервиса этот перечень обновляется?',
+        why:'Без процедуры изменений карта устаревает.', gap:'Ввести правило обновления карты при изменениях.'},
+    ]
+  },
+  {
+    id:'s2', name:'Основания и согласия',
+    when:()=>true,
+    qs:[
+      {id:'s2q1', q:'Для каждой цели определено, на каком основании вы обрабатываете данные?',
+        why:'Основание — ключ законности обработки.', gap:'Определить основание для каждой цели.', critical:true},
+      {id:'s2q2', q:'Проверено, где согласие действительно нужно, а где достаточно иного основания?',
+        why:'Не на всё требуется согласие.', gap:'Разделить сценарии: согласие / договор / закон / иное.'},
+      {id:'s2q3', q:'Когда согласие нужно — получаете ли его до начала соответствующей обработки?',
+        why:'Согласие после начала обработки не спасает.', gap:'Выстроить получение согласия до старта обработки.'},
+      {id:'s2q4', q:'Оформляется ли согласие отдельно от оферты и других подтверждений?',
+        why:'Согласие не должно «прятаться» в общих галочках.', gap:'Отделить согласие от принятия оферты и иных действий.'},
+      {id:'s2q5', q:'Можете ли вы восстановить текст согласия на момент его получения?',
+        why:'Без версии текста согласие сложно доказать.', gap:'Версионировать тексты согласий.'},
+      {id:'s2q6', q:'Можете подтвердить, кто, когда и каким действием выразил согласие?',
+        why:'Нужна доказуемость.', gap:'Фиксировать субъекта, время, действие и версию текста.', critical:true},
+    ]
+  },
+  {
+    id:'s3', name:'Политика и ответственность',
+    when:()=>true,
+    qs:[
+      {id:'s3q1', q:'Соответствует ли политика фактической работе бизнеса, а не только шаблону?',
+        why:'Шаблонная политика без связи с процессами не выполняет роль.', gap:'Сверить политику с реальной картой обработки.', critical:true},
+      {id:'s3q2', q:'Обеспечен ли публичный доступ к политике (в т.ч. со страниц сбора данных)?',
+        why:'Требование о доступности политики.', gap:'Опубликовать политику и дать доступ со страниц сбора.'},
+      {id:'s3q3', q:'Описаны ли применимые процессы во внутренних документах / регламентах?',
+        why:'Внутренние процедуры поддерживают исполнение.', gap:'Оформить внутренние правила под фактические процессы.'},
+      {id:'s3q4', q:'Определено ли, кто отвечает за организацию обработки и контроль?',
+        why:'Для юрлица назначение ответственного прямо предусмотрено; для ИП — соразмерная ответственность.', gap:'Назначить ответственного / зафиксировать, кто выполняет функции.', critical:true},
+      {id:'s3q5', q:'Понимают ли допущенные лица правила работы с данными?',
+        why:'Без ознакомления правила не работают.', gap:'Ознакомить допущенных лиц и зафиксировать это.'},
+      {id:'s3q6', q:'Пересматриваются ли документы при изменении процессов и сервисов?',
+        why:'Документы должны жить вместе с процессами.', gap:'Ввести периодический и событийный пересмотр документов.'},
+    ]
+  },
+  {
+    id:'s4', name:'Уведомления Роскомнадзора',
+    when:()=>true,
+    qs:[
+      {id:'s4q1', q:'Проверено ли, требуется ли уведомление о намерении осуществлять обработку ПДн?',
+        why:'Не все случаи освобождены от уведомления.', gap:'Проверить основания освобождения и необходимость уведомления.', critical:true},
+      {id:'s4q2', q:'Если требуется — подано ли уведомление?',
+        why:'Подача до начала обработки (с учётом исключений).', gap:'Подготовить и подать уведомление при необходимости.'},
+      {id:'s4q3', q:'Соответствуют ли сведения уведомления фактическим целям, категориям и субъектам?',
+        why:'Запись в реестре без сверки с фактом недостаточна.', gap:'Сверить уведомление с картой обработки.', critical:true},
+      {id:'s4q4', q:'Есть ли порядок актуализации уведомления при изменении деятельности?',
+        why:'Изменения нужно отражать в установленные сроки.', gap:'Завести календарь и ответственного за актуализацию.'},
+      {id:'s4q5', q:'Сохраняются ли подтверждения подачи и изменений?',
+        why:'Нужны доказательства исполнения.', gap:'Хранить подтверждения подачи и изменений.'},
+    ]
+  },
+  {
+    id:'s5', name:'Сайт, формы, приложение, бот',
+    when:(p)=> {
+      const v = p.p9 || [];
+      return !(v.length===1 && v[0]==='Нет цифровых каналов сбора');
+    },
+    qs:[
+      {id:'s5q1', q:'Учтены ли все формы и способы сбора, включая всплывающие, чат и обратный звонок?',
+        why:'Скрытые формы — скрытая обработка.', gap:'Провести инвентаризацию всех точек сбора.'},
+      {id:'s5q2', q:'Собирает ли каждая форма только сведения, нужные для её назначения?',
+        why:'Минимизация данных.', gap:'Убрать лишние поля из форм.'},
+      {id:'s5q3', q:'Доступна ли политика со страниц, где собираются ПДн?',
+        why:'Доступность политики на страницах сбора.', gap:'Разместить ссылку на политику у форм.', critical:true},
+      {id:'s5q4', q:'Проверены ли основания обработки для каждого сценария отправки формы?',
+        why:'Разные формы — разные основания.', gap:'Описать основание для каждого сценария формы.'},
+      {id:'s5q5', q:'Если используется согласие — отделено ли оно от принятия оферты?',
+        why:'Согласие как отдельное действие.', gap:'Разделить действия пользователя на форме.'},
+      {id:'s5q6', q:'Известно ли, куда фактически уходят данные после отправки формы?',
+        why:'Маршрут данных определяет локализацию и подрядчиков.', gap:'Зафиксировать маршрут: форма → сервер → CRM / почта / сервисы.', critical:true},
+    ]
+  },
+  {
+    id:'s6', name:'Маркетинг и публикации',
+    when:(p)=>{
+      const v = p.p11 || [];
+      return v.length && !v.includes('Нет такого');
+    },
+    qs:[
+      {id:'s6q1', q:'Разделены ли сервисные сообщения и рекламные коммуникации?',
+        why:'Разные основания и права отказа.', gap:'Разделить сервисные и рекламные сценарии.', critical:true},
+      {id:'s6q2', q:'Проверены ли основания использования контактов для продвижения?',
+        why:'Реклама по базе без основания — риск.', gap:'Проверить основание для маркетинговых рассылок.'},
+      {id:'s6q3', q:'Можно ли подтвердить необходимые согласия на рекламные коммуникации?',
+        why:'Доказуемость маркетингового согласия.', gap:'Настроить фиксацию согласий на рекламу.'},
+      {id:'s6q4', q:'Работает ли прекращение сообщений после отказа?',
+        why:'Отказ должен исполняться.', gap:'Протестировать и зафиксировать процедуру отказа.', critical:true},
+      {id:'s6q5', q:'Проверены ли основания публикации отзывов, фото и сведений о людях?',
+        why:'Публикация — отдельный сценарий, иногда согласие на распространение.', gap:'Проверить основания публикаций.'},
+      {id:'s6q6', q:'Известно ли, какие данные собирают аналитика и рекламные инструменты?',
+        why:'Сторонние скрипты — часть обработки.', gap:'Описать аналитику и рекламные пиксели в карте обработки.'},
+    ]
+  },
+  {
+    id:'s7', name:'Работники и кадры',
+    when:(p)=>{
+      const v = p.p4 || [];
+      return v.length && !v.includes('Нет работников и соискателей');
+    },
+    qs:[
+      {id:'s7q1', q:'Определён ли необходимый состав данных для подбора и оформления работников?',
+        why:'Минимизация в кадрах.', gap:'Описать состав данных по кадровым целям.'},
+      {id:'s7q2', q:'Разделены ли цели обработки сведений о соискателях и сотрудниках?',
+        why:'Разные цели и сроки.', gap:'Разделить процессы соискателей и сотрудников.'},
+      {id:'s7q3', q:'Ограничен ли доступ к кадровым сведениям теми, кому он нужен?',
+        why:'Кадровые данные — повышенная чувствительность.', gap:'Ограничить и задокументировать доступ к кадрам.', critical:true},
+      {id:'s7q4', q:'Проверены ли основания передачи кадровых данных внешней бухгалтерии и иным получателям?',
+        why:'Передача — отдельное действие.', gap:'Оформить основания и условия передачи кадровых данных.'},
+      {id:'s7q5', q:'Установлены ли сроки хранения кадровых документов и данных соискателей?',
+        why:'Сроки и уничтожение.', gap:'Зафиксировать сроки хранения кадровых данных.'},
+      {id:'s7q6', q:'При увольнении или смене обязанностей своевременно пересматриваются доступы?',
+        why:'«Мёртвые» доступы — типичный инцидент.', gap:'Встроить отзыв доступа в процедуру увольнения.', critical:true},
+    ]
+  },
+  {
+    id:'s8', name:'Подрядчики и передачи',
+    when:(p)=> p.p10 === 'Да' || p.p10 === 'Не знаю',
+    qs:[
+      {id:'s8q1', q:'Есть ли перечень лиц и сервисов, получающих ПДн?',
+        why:'Без перечня нельзя контролировать передачи.', gap:'Составить перечень получателей ПДн.', critical:true},
+      {id:'s8q2', q:'Определена ли роль каждого получателя (обработчик / самостоятельный оператор / иной)?',
+        why:'От роли зависят документы и обязанности.', gap:'Квалифицировать роль каждого получателя.'},
+      {id:'s8q3', q:'Если обработка поручается — оформлены ли необходимые условия поручения?',
+        why:'Поручение требует существенных условий, а не общей фразы «соблюдать 152-ФЗ».', gap:'Проверить договоры поручения на обязательные условия.', critical:true},
+      {id:'s8q4', q:'Проверено ли, какие сведения и для каких целей получает каждый подрядчик?',
+        why:'Минимизация при передаче.', gap:'Зафиксировать состав и цели для каждого подрядчика.'},
+      {id:'s8q5', q:'Есть ли порядок прекращения доступа, возврата или уничтожения при завершении отношений?',
+        why:'Иначе данные остаются у подрядчика.', gap:'Описать процедуру завершения отношений с подрядчиком.'},
+      {id:'s8q6', q:'Обязан ли подрядчик сообщать об инцидентах и давать подтверждения?',
+        why:'Инцидент у подрядчика — ваш риск.', gap:'Включить обязанности по инцидентам в договоры.'},
+    ]
+  },
+  {
+    id:'s9', name:'Локализация и трансграничность',
+    when:()=>true,
+    qs:[
+      {id:'s9q1', q:'Установлено ли, где находятся базы, используемые при сборе ПД граждан РФ?',
+        why:'Локализация — отдельное требование.', gap:'Зафиксировать место размещения баз при сборе.', critical:true},
+      {id:'s9q2', q:'Проверен ли фактический маршрут данных от источника до места хранения?',
+        why:'Российский хостинг сайта не доказывает локализацию всей цепочки.', gap:'Проследить маршрут формы → системы → копии.'},
+      {id:'s9q3', q:'Известно ли, где находятся резервные копии и дополнительные хранилища?',
+        why:'Копии часто «утекают» за периметр.', gap:'Учесть резервные копии в карте размещения.'},
+      {id:'s9q4', q:'Выявлены ли сценарии доступа или передачи данных за пределы России?',
+        why:'Трансграничность регулируется отдельно.', gap:'Выявить трансграничные сценарии.'},
+      {id:'s9q5', q:'Для трансграничных сценариев проверены условия, ограничения и уведомления?',
+        why:'Нужна отдельная правовая проверка.', gap:'Проверить условия трансграничной передачи.'},
+      {id:'s9q6', q:'Есть ли процедура проверки нового сервиса до подключения к нему данных?',
+        why:'Новый SaaS без проверки — типичный источник нарушений.', gap:'Ввести чек-лист перед подключением сервиса.', critical:true},
+    ]
+  },
+  {
+    id:'s10', name:'Доступ и защита',
+    when:()=>true,
+    qs:[
+      {id:'s10q1', q:'Учтены ли информационные системы и бумажные места хранения ПДн?',
+        why:'Защита без периметра бессмысленна.', gap:'Включить все системы и бумажные носители в контур защиты.'},
+      {id:'s10q2', q:'Определены ли применимые требования защиты для используемых систем?',
+        why:'Требования зависят от системы и уровня защищённости.', gap:'Определить требования защиты по системам.'},
+      {id:'s10q3', q:'Соответствуют ли права доступа рабочим задачам конкретных людей?',
+        why:'Избыточные права — риск.', gap:'Пересмотреть матрицу доступа.', critical:true},
+      {id:'s10q4', q:'Исключены ли неконтролируемые общие учётные записи и передача паролей?',
+        why:'Общий пароль мешает отзыву доступа.', gap:'Отказаться от общих учёток там, где это возможно.', critical:true},
+      {id:'s10q5', q:'Управляются ли обновления, резервное копирование и восстановление?',
+        why:'Технические меры нужно не только «иметь», но и проверять.', gap:'Зафиксировать и проверять ключевые технические меры.'},
+      {id:'s10q6', q:'Ограничен ли доступ к бумажным документам, устройствам и помещениям?',
+        why:'Бумага — тоже носитель ПДн.', gap:'Описать физический доступ к носителям.'},
+    ]
+  },
+  {
+    id:'s11', name:'Сроки, обращения, уничтожение',
+    when:()=>true,
+    qs:[
+      {id:'s11q1', q:'Установлены ли сроки хранения для целей и категорий документов?',
+        why:'Без сроков нельзя законно уничтожать и нельзя хранить бесконечно.', gap:'Утвердить таблицу сроков хранения.', critical:true},
+      {id:'s11q2', q:'Проводится ли проверка, какие данные уже не нужны для заявленных целей?',
+        why:'Иначе архивы разрастаются.', gap:'Ввести периодический пересмотр необходимости хранения.'},
+      {id:'s11q3', q:'Известно ли, как удалить или прекратить обработку во всех связанных системах?',
+        why:'Удаление в одной системе при копии в другой — не удаление.', gap:'Описать процедуру прекращения обработки по системам.', critical:true},
+      {id:'s11q4', q:'Оформляются ли необходимые подтверждения уничтожения?',
+        why:'Требования к подтверждению уничтожения установлены отдельно.', gap:'Внедрить акты / журналы уничтожения по применимым правилам.'},
+      {id:'s11q5', q:'Есть ли понятный канал обращений субъектов и проверки полномочий заявителя?',
+        why:'Без канала права субъектов не исполняются.', gap:'Опубликовать канал и регламент обращений.'},
+      {id:'s11q6', q:'Можете обработать запрос, отзыв согласия или требование о прекращении в применимые сроки?',
+        why:'Сроки ответа установлены законом.', gap:'Отработать сценарии запросов и отзывов на практике.', critical:true},
+    ]
+  },
+  {
+    id:'s12', name:'Инциденты и контроль',
+    when:()=>true,
+    qs:[
+      {id:'s12q1', q:'Определено ли, какие события считаются инцидентами и кому о них сообщать?',
+        why:'Без определения инциденты «не замечают».', gap:'Определить признаки инцидента и канал сообщения.', critical:true},
+      {id:'s12q2', q:'Есть ли ответственные и рабочий порядок расследования инцидента?',
+        why:'Нужна практическая готовность, не только текст регламента.', gap:'Назначить ответственных и прописать порядок расследования.'},
+      {id:'s12q3', q:'Позволяет ли процедура своевременно подготовить уведомления (в т.ч. 24ч / 72ч, где применимо)?',
+        why:'Сжатые сроки уведомления.', gap:'Проверить готовность уложиться в сроки уведомлений.', critical:true},
+      {id:'s12q4', q:'Проведена ли применимая оценка вреда субъектам и оформлены ли результаты?',
+        why:'Оценка вреда — отдельная обязанность по методике.', gap:'Провести и оформить оценку вреда по применимым правилам.'},
+      {id:'s12q5', q:'Проводится ли периодическая проверка исполнения документов и настроек?',
+        why:'Внутренний контроль предусмотрен законом.', gap:'Запустить периодические внутренние проверки.'},
+      {id:'s12q6', q:'Отслеживается ли устранение выявленных проблем с ответственными и сроками?',
+        why:'Проверка без устранения бесполезна.', gap:'Вести план устранения с повторной проверкой.'},
+    ]
+  },
+];
+
+// State
+const state = {
+  profile: {},
+  answers: {}, // id -> {value, confirm?}
+  profileIdx: 0,
+  sectionIdx: 0,
+  questionIdx: 0,
+  activeSections: [],
+  multiTmp: new Set(),
+};
+
+function $(id){ return document.getElementById(id); }
+function show(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  $(id).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+/* ----- Profile ----- */
+function startProfile(){
+  state.profileIdx = 0;
+  state.profile = {};
+  renderProfile();
+  show('screen-profile');
+}
+
+function renderProfile(){
+  const q = PROFILE[state.profileIdx];
+  $('prof-step-label').textContent = `Профиль ${state.profileIdx+1} / ${PROFILE.length}`;
+  $('prof-bar').style.width = ((state.profileIdx)/PROFILE.length*100)+'%';
+  $('prof-q').textContent = q.q;
+  $('prof-sub').textContent = q.sub || '';
+  $('prof-back').disabled = state.profileIdx === 0;
+  state.multiTmp = new Set(Array.isArray(state.profile[q.id]) ? state.profile[q.id] : (state.profile[q.id] ? [state.profile[q.id]] : []));
+
+  const box = $('prof-opts');
+  box.innerHTML = '';
+  q.opts.forEach(opt=>{
+    const div = document.createElement('div');
+    div.className = 'opt' + (q.type==='multi'?' multi':'') + (isSelected(q,opt)?' selected':'');
+    div.innerHTML = `<div class="mark"></div><div>${opt}</div>`;
+    div.onclick = ()=> selectProfile(q, opt, div);
+    box.appendChild(div);
+  });
+  updateProfNext();
+}
+
+function isSelected(q, opt){
+  if(q.type==='multi') return state.multiTmp.has(opt);
+  return state.profile[q.id] === opt;
+}
+
+function selectProfile(q, opt, el){
+  if(q.type==='multi'){
+    if(state.multiTmp.has(opt)) state.multiTmp.delete(opt);
+    else {
+      // exclusive "none" style options
+      if(opt.startsWith('Нет')) state.multiTmp.clear();
+      else [...state.multiTmp].forEach(x=>{ if(x.startsWith('Нет')) state.multiTmp.delete(x); });
+      state.multiTmp.add(opt);
+    }
+    state.profile[q.id] = [...state.multiTmp];
+    renderProfile();
+  } else {
+    state.profile[q.id] = opt;
+    document.querySelectorAll('#prof-opts .opt').forEach(o=>o.classList.remove('selected'));
+    el.classList.add('selected');
+    updateProfNext();
+  }
+}
+
+function updateProfNext(){
+  const q = PROFILE[state.profileIdx];
+  const val = state.profile[q.id];
+  const ok = q.type==='multi' ? (Array.isArray(val)&&val.length) : !!val;
+  $('prof-next').disabled = !ok;
+}
+
+function profBack(){
+  if(state.profileIdx>0){ state.profileIdx--; renderProfile(); }
+}
+function profNext(){
+  if(state.profileIdx < PROFILE.length-1){
+    state.profileIdx++;
+    renderProfile();
+  } else {
+    startSections();
+  }
+}
+
+/* ----- Sections ----- */
+function startSections(){
+  state.activeSections = SECTIONS.filter(s => s.when(state.profile));
+  state.sectionIdx = 0;
+  state.questionIdx = 0;
+  state.answers = {};
+  renderSectionQ();
+  show('screen-sections');
+}
+
+function currentQ(){
+  const sec = state.activeSections[state.sectionIdx];
+  return {sec, q: sec.qs[state.questionIdx]};
+}
+
+function totalQuestions(){
+  return state.activeSections.reduce((n,s)=>n+s.qs.length,0);
+}
+function answeredCount(){
+  let n=0;
+  for(let si=0; si<state.sectionIdx; si++) n += state.activeSections[si].qs.length;
+  n += state.questionIdx;
+  return n;
+}
+
+function renderSectionQ(){
+  const {sec, q} = currentQ();
+  const total = totalQuestions();
+  const done = answeredCount();
+  $('sec-step-label').textContent = sec.name;
+  $('sec-name').textContent = `Раздел: ${sec.name}`;
+  $('sec-counter').textContent = `${done+1} / ${total}`;
+  $('sec-bar').style.width = (done/total*100)+'%';
+  $('sec-q').textContent = q.q;
+  $('sec-sub').textContent = q.why || '';
+  $('sec-followup').classList.add('hidden');
+
+  const box = $('sec-opts');
+  box.innerHTML = '';
+  const prev = state.answers[q.id];
+  SCALE.forEach(s=>{
+    const div = document.createElement('div');
+    div.className = 'opt' + (prev && prev.value===s.v ? ' selected' : '');
+    div.innerHTML = `<div class="mark"></div><div>${s.t}</div>`;
+    div.onclick = ()=> selectAnswer(q, s.v, div);
+    box.appendChild(div);
+  });
+  $('sec-next').disabled = !prev;
+  $('sec-back').disabled = state.sectionIdx===0 && state.questionIdx===0;
+
+  if(prev && prev.value==='yes') showFollowup(prev);
+}
+
+function selectAnswer(q, value, el){
+  document.querySelectorAll('#sec-opts .opt').forEach(o=>o.classList.remove('selected'));
+  el.classList.add('selected');
+  state.answers[q.id] = {value, confirm: state.answers[q.id]?.confirm};
+  $('sec-next').disabled = false;
+  if(value==='yes') showFollowup(state.answers[q.id]);
+  else $('sec-followup').classList.add('hidden');
+}
+
+function showFollowup(ans){
+  const fu = $('sec-followup');
+  fu.classList.remove('hidden');
+  $('sec-follow-label').textContent = 'Чем это можно подтвердить? (необязательно на этапе самооценки)';
+  const box = $('sec-follow-opts');
+  box.innerHTML = '';
+  CONFIRM.forEach(c=>{
+    const div = document.createElement('div');
+    div.className = 'opt' + (ans.confirm===c.v?' selected':'');
+    div.innerHTML = `<div class="mark"></div><div>${c.t}</div>`;
+    div.onclick = ()=>{
+      ans.confirm = c.v;
+      box.querySelectorAll('.opt').forEach(o=>o.classList.remove('selected'));
+      div.classList.add('selected');
+    };
+    box.appendChild(div);
+  });
+}
+
+function secBack(){
+  if(state.questionIdx>0) state.questionIdx--;
+  else if(state.sectionIdx>0){
+    state.sectionIdx--;
+    state.questionIdx = state.activeSections[state.sectionIdx].qs.length-1;
+  }
+  renderSectionQ();
+}
+
+function secNext(){
+  const sec = state.activeSections[state.sectionIdx];
+  if(state.questionIdx < sec.qs.length-1){
+    state.questionIdx++;
+    renderSectionQ();
+  } else if(state.sectionIdx < state.activeSections.length-1){
+    state.sectionIdx++;
+    state.questionIdx = 0;
+    renderSectionQ();
+  } else {
+    buildResults();
+  }
+}
+
+/* ----- Results ----- */
+function scoreAnswer(v){
+  if(v==='yes') return 2;
+  if(v==='partial') return 1;
+  return 0; // no, unknown = 0; na excluded
+}
+
+function buildResults(){
+  const sectionScores = [];
+  const gaps = [];
+  const actions = [];
+  const docs = [];
+  let totalPts=0, totalMax=0, unknown=0, criticalGaps=0;
+
+  state.activeSections.forEach(sec=>{
+    let pts=0, max=0, na=0;
+    const issues=[];
+    sec.qs.forEach(q=>{
+      const a = state.answers[q.id];
+      if(!a) return;
+      if(a.value==='na'){ na++; return; }
+      max += 2;
+      pts += scoreAnswer(a.value);
+      if(a.value==='unknown') unknown++;
+      if(a.value==='no' || a.value==='partial' || a.value==='unknown'){
+        issues.push(q);
+        if(q.critical && a.value!=='partial') criticalGaps++;
+        gaps.push({
+          section: sec.name,
+          q: q.q,
+          value: a.value,
+          gap: q.gap,
+          critical: !!q.critical && a.value!=='partial'
+        });
+        actions.push({
+          action: q.gap,
+          why: q.why || sec.name,
+          priority: (q.critical && a.value!=='partial') ? 'Высокий' : (a.value==='no'?'Высокий':'Плановый')
+        });
+      }
+    });
+    const pct = max ? Math.round(pts/max*100) : null;
+    sectionScores.push({name:sec.name, pts, max, pct, issues:issues.length});
+    totalPts += pts; totalMax += max;
+  });
+
+  // Docs suggestions based on gaps + profile
+  const docSet = new Set();
+  if(gaps.some(g=>g.section==='Данные и цели')) docSet.add('Карта (реестр) обработки: цели, субъекты, данные, системы, основания, сроки');
+  if(gaps.some(g=>g.section==='Политика и ответственность')) {
+    docSet.add('Политика обработки персональных данных');
+    docSet.add('Назначение ответственного / фиксация функций (с учётом статуса оператора)');
+  }
+  if(gaps.some(g=>g.section==='Основания и согласия')) docSet.add('Формы согласий (где применимо) и способ фиксации получения');
+  if(gaps.some(g=>g.section==='Уведомления Роскомнадзора')) docSet.add('Уведомление РКН / сверка с реестром');
+  if(gaps.some(g=>g.section==='Подрядчики и передачи')) docSet.add('Договоры поручения / перечень получателей');
+  if(gaps.some(g=>g.section==='Сроки, обращения, уничтожение')) {
+    docSet.add('Таблица сроков хранения и порядок уничтожения');
+    docSet.add('Регламент обращений субъектов');
+  }
+  if(gaps.some(g=>g.section==='Инциденты и контроль')) docSet.add('Регламент реагирования на инциденты');
+  if(state.profile.p4 && !(state.profile.p4.includes('Нет работников и соискателей')))
+    docSet.add('Порядок доступа и ознакомления работников');
+
+  const overall = totalMax ? Math.round(totalPts/totalMax*100) : 0;
+  let title='Требуется системная работа', desc='Много процессов не описаны или не подтверждены.';
+  if(overall>=75){ title='Базовая организованность есть'; desc='Есть каркас процессов, но остаются пробелы и зоны «не знаю».'; }
+  else if(overall>=45){ title='Частичная организованность'; desc='Отдельные практики работают, единой системы пока нет.'; }
+  if(criticalGaps>=4){ title='Существенные пробелы'; desc='Есть критичные темы без управления: основания, доступы, маршруты, инциденты.'; }
+
+  // Старые экранные блоки оценки и списка пробелов удалены из отчёта.
+  // Расчёты сохраняются для внутренней логики, но не обращаются к отсутствующим DOM-элементам.
+
+  // Unique actions
+  const seen = new Set();
+  const uniqActions = [];
+  actions.forEach(a=>{
+    if(seen.has(a.action)) return;
+    seen.add(a.action);
+    uniqActions.push(a);
+  });
+  uniqActions.sort((a,b)=>{
+    const o={Срочно:0,Высокий:1,Плановый:2};
+    return (o[a.priority]||3)-(o[b.priority]||3);
+  });
+  $('actions').innerHTML = uniqActions.slice(0,15).map(a=>`
+    <tr>
+      <td>${a.action}</td>
+      <td>${a.why}</td>
+      <td><strong>${a.priority}</strong></td>
+    </tr>`).join('') || '<tr><div colspan="3">Нет сформированных действий</div></tr>';
+
+  $('docs-list').innerHTML = docSet.size ? `<ul style="margin:8px 0 0 18px;font-size:14px;color:var(--text)">`+
+    [...docSet].map(d=>`<li style="margin-bottom:6px">${d}</li>`).join('')+`</ul>` :
+    '<p style="font-size:14px;color:var(--text)">По ответам отдельный обязательный перечень документов не сформирован — уточните пробелы.</p>';
+
+  $('limitations-text').textContent =
+    `Выводы основаны на ответах (${Object.keys(state.answers).length} вопросов, ${state.activeSections.length} разделов). `+
+    `Документы, настройки и фактическое исполнение не проверялись. `+
+    (unknown?`На ${unknown} вопросов дан ответ «Не знаю». `:'')+
+    `Статус оператора: ${state.profile.p1||'—'}.`;
+
+  // store report
+  window.__pdnReport = {
+    version: '1.0.0-pdnscan',
+    date: new Date().toISOString(),
+    profile: state.profile,
+    overall,
+    title, desc,
+    sectionScores,
+    gaps: [],
+    actions: uniqActions.slice(0,15),
+    documents: [...docSet],
+    unknown,
+    criticalGaps,
+    disclaimer: 'Самооценка. Не юридическое заключение и не подтверждённый аудит.'
+  };
+
+  show('screen-results');
+}
+
+
+async function downloadPdf(){
+  const report = window.__pdnReport;
+  if(!report) return;
+  if(typeof html2canvas !== 'function' || !window.jspdf){
+    alert('Библиотеки PDF не загрузились. Проверьте подключение к интернету и обновите страницу.');
+    return;
+  }
+  const btn = document.querySelector('#screen-results .btn-row .btn');
+  const oldLabel = btn ? btn.textContent : '';
+  let host = null;
+  try {
+    if(btn){ btn.disabled = true; btn.textContent = 'Формируем PDF…'; }
+    if(document.fonts && document.fonts.ready) await document.fonts.ready;
+
+    // Отчёт копируется в отдельную область фиксированной ширины —
+    // тот же клиентский принцип html2canvas + jsPDF, что и в KONTURSCAN.
+    host = document.createElement('div');
+    host.style.cssText = 'position:fixed;left:-12000px;top:0;width:794px;background:#fff;z-index:-1;';
+    const source = document.getElementById('screen-results');
+    const clone = source.cloneNode(true);
+    clone.classList.add('active');
+    clone.style.cssText = 'display:block!important;width:794px;max-width:794px;background:#fff;';
+    const card = clone.querySelector('.card');
+    if(card) card.style.cssText += ';width:100%;max-width:none;border:0;border-radius:0;box-shadow:none;padding:34px 42px;background:#fff;';
+    const controls = clone.querySelector('.btn-row');
+    if(controls) controls.remove();
+    const footer = clone.querySelector('.report-footer');
+    if(footer) footer.style.display = 'block';
+    clone.querySelectorAll('a').forEach(a=>{ a.style.color='#956A0A'; a.style.textDecoration='none'; });
+    clone.querySelectorAll('.page-break').forEach(el=>{ el.style.breakBefore='auto'; el.style.pageBreakBefore='auto'; });
+    host.appendChild(clone);
+    document.body.appendChild(host);
+
+    await Promise.all([...clone.querySelectorAll('img')].map(im=>im.decode ? im.decode().catch(()=>{}) : Promise.resolve()));
+    const canvas = await html2canvas(clone, {
+      scale: 2, backgroundColor: '#ffffff', useCORS: true, logging: false,
+      width: 794, windowWidth: 794, scrollX: 0, scrollY: 0
+    });
+
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF({ unit:'mm', format:'a4', orientation:'portrait', compress:true });
+    pdf.setProperties({ title:'KONTURSCAN ПДн — отчёт самооценки', author:'KONTURBIZ', subject:'Самооценка организации обработки персональных данных' });
+    // Делим длинный снимок на страницы A4, не уменьшая весь отчёт до нечитаемого размера.
+    const pageHeightPx = Math.floor(canvas.width * 297 / 210);
+    let pageIndex = 0;
+    for(let y=0; y<canvas.height; y+=pageHeightPx){
+      const sliceHeight = Math.min(pageHeightPx, canvas.height-y);
+      const pageCanvas = document.createElement('canvas');
+      pageCanvas.width = canvas.width;
+      pageCanvas.height = sliceHeight;
+      const ctx = pageCanvas.getContext('2d');
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0,0,pageCanvas.width,pageCanvas.height);
+      ctx.drawImage(canvas, 0,y,canvas.width,sliceHeight, 0,0,canvas.width,sliceHeight);
+      if(pageIndex>0) pdf.addPage();
+      // Последняя неполная страница сохраняет масштаб и выравнивается по верхнему краю.
+      const renderedHeight = 297 * sliceHeight / pageHeightPx;
+      pdf.addImage(pageCanvas.toDataURL('image/jpeg',0.94),'JPEG',0,0,210,renderedHeight,undefined,'FAST');
+      pageIndex++;
+    }
+    const date = new Date().toISOString().slice(0,10);
+    pdf.save(`konturscan-pdn-report-${date}.pdf`);
+  } catch(err){
+    console.error('PDF error:',err);
+    alert('Не удалось сформировать PDF. ' + (err && err.message ? err.message : String(err)) + '\nПопробуйте Chrome или Edge и проверьте подключение к интернету.');
+  } finally {
+    if(host) host.remove();
+    if(btn){ btn.disabled=false; btn.textContent=oldLabel; }
+  }
+}
+
+function restart(){
+  state.profile = {};
+  state.answers = {};
+  state.profileIdx = 0;
+  show('screen-intro');
+}
+</script>
+</body>
+</html>

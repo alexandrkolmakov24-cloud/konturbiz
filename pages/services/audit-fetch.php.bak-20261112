@@ -1,0 +1,238 @@
+<?php
+/**
+ * KONTURBIZ · proxy для демо SEO/AEO/GEO сканера одной страницы.
+ * Кладётся на тот же домен, что и страница аудита (same-origin для JS).
+ *
+ * Пример: /pages/services/audit-fetch.php?url=https://example.ru/
+ *
+ * Защита: только http/https, порты 80/443, без private/localhost IP (в т.ч. после DNS),
+ * лимит размера и времени, без follow на «внутренние» цели через ручную обработку редиректов.
+ */
+declare(strict_types=1);
+
+header('Content-Type: application/json; charset=utf-8');
+header('X-Content-Type-Options: nosniff');
+header('Cache-Control: no-store');
+
+// При необходимости ограничить origin своей схемой/доменом:
+// header('Access-Control-Allow-Origin: https://konturbiz.ru');
+
+const MAX_URL_LEN = 2000;
+const MAX_BYTES = 1_500_000; // ~1.5 MB HTML
+const TIMEOUT_SEC = 12;
+const MAX_REDIRECTS = 5;
+
+function fail(int $code, string $msg): void {
+    http_response_code($code);
+    echo json_encode(['ok' => false, 'error' => $msg], JSON_UNESCAPED_UNICODE);
+    exit;
+}
+
+function is_public_ip(string $ip): bool {
+    if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
+        return (bool) filter_var(
+            $ip,
+            FILTER_VALIDATE_IP,
+            FILTER_FLAG_IPV4 | FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE
+        );
+    }
+    if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)) {
+        return (bool) filter_var(
+            $ip,
+            FILTER_VALIDATE_IP,
+            FILTER_FLAG_IPV6 | FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE
+        );
+    }
+    return false;
+}
+
+function host_resolves_public(string $host): bool {
+    $host = strtolower(trim($host, '[]'));
+    if ($host === '' || $host === 'localhost' || str_ends_with($host, '.localhost') || str_ends_with($host, '.local')) {
+        return false;
+    }
+    // IP literal
+    if (filter_var($host, FILTER_VALIDATE_IP)) {
+        return is_public_ip($host);
+    }
+    $records = @dns_get_record($host, DNS_A + DNS_AAAA);
+    if (!$records) {
+        // fallback
+        $ips = @gethostbynamel($host) ?: [];
+        if (!$ips) {
+            return false;
+        }
+        foreach ($ips as $ip) {
+            if (!is_public_ip($ip)) {
+                return false;
+            }
+        }
+        return true;
+    }
+    $found = false;
+    foreach ($records as $r) {
+        if (!empty($r['ip'])) {
+            $found = true;
+            if (!is_public_ip($r['ip'])) {
+                return false;
+            }
+        }
+        if (!empty($r['ipv6'])) {
+            $found = true;
+            if (!is_public_ip($r['ipv6'])) {
+                return false;
+            }
+        }
+    }
+    return $found;
+}
+
+function normalize_url(string $raw): string {
+    $raw = trim($raw);
+    if ($raw === '' || strlen($raw) > MAX_URL_LEN) {
+        fail(400, 'Некорректный адрес.');
+    }
+    if (!preg_match('#^[a-z][a-z0-9+.-]*://#i', $raw)) {
+        $raw = 'https://' . $raw;
+    }
+    $p = parse_url($raw);
+    if (!$p || empty($p['scheme']) || empty($p['host'])) {
+        fail(400, 'Некорректный адрес.');
+    }
+    $scheme = strtolower($p['scheme']);
+    if ($scheme !== 'http' && $scheme !== 'https') {
+        fail(400, 'Только http и https.');
+    }
+    if (!empty($p['user']) || !empty($p['pass'])) {
+        fail(400, 'Адрес не должен содержать логин и пароль.');
+    }
+    $port = $p['port'] ?? ($scheme === 'https' ? 443 : 80);
+    if ($port !== 80 && $port !== 443) {
+        fail(400, 'Разрешены только порты 80 и 443.');
+    }
+    $host = strtolower($p['host']);
+    if (!host_resolves_public($host)) {
+        fail(400, 'Этот адрес недоступен для проверки.');
+    }
+    $path = $p['path'] ?? '/';
+    $query = isset($p['query']) ? ('?' . $p['query']) : '';
+    return $scheme . '://' . $host . ($port !== 80 && $port !== 443 ? ':' . $port : '') . $path . $query;
+}
+
+function fetch_once(string $url): array {
+    if (!function_exists('curl_init')) {
+        fail(500, 'На хостинге нет cURL.');
+    }
+    $ch = curl_init($url);
+    curl_setopt_array($ch, [
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_FOLLOWLOCATION => false,
+        CURLOPT_CONNECTTIMEOUT => 6,
+        CURLOPT_TIMEOUT => TIMEOUT_SEC,
+        CURLOPT_PROTOCOLS => CURLPROTO_HTTP | CURLPROTO_HTTPS,
+        CURLOPT_REDIR_PROTOCOLS => CURLPROTO_HTTP | CURLPROTO_HTTPS,
+        CURLOPT_MAXFILESIZE => MAX_BYTES,
+        CURLOPT_USERAGENT => 'KonturbizAuditDemo/1.0 (+https://konturbiz.ru/pages/services/seo-aeo-geo-audit.html)',
+        CURLOPT_HTTPHEADER => [
+            'Accept: text/html,application/xhtml+xml;q=0.9,*/*;q=0.8',
+            'Accept-Language: ru,en;q=0.8',
+        ],
+        CURLOPT_SSL_VERIFYPEER => true,
+        CURLOPT_SSL_VERIFYHOST => 2,
+        CURLOPT_ENCODING => '',
+    ]);
+    $body = curl_exec($ch);
+    $errno = curl_errno($ch);
+    $err = curl_error($ch);
+    $code = (int) curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
+    $ctype = (string) curl_getinfo($ch, CURLINFO_CONTENT_TYPE);
+    $redir = (string) curl_getinfo($ch, CURLINFO_REDIRECT_URL);
+    curl_close($ch);
+
+    if ($errno) {
+        return ['ok' => false, 'error' => 'Сеть: ' . ($err ?: 'ошибка запроса'), 'code' => $code];
+    }
+    return [
+        'ok' => true,
+        'code' => $code,
+        'ctype' => $ctype,
+        'body' => is_string($body) ? $body : '',
+        'redirect' => $redir,
+    ];
+}
+
+// --- main ---
+if ($_SERVER['REQUEST_METHOD'] !== 'GET' && $_SERVER['REQUEST_METHOD'] !== 'POST') {
+    fail(405, 'Метод не поддерживается.');
+}
+
+$raw = $_GET['url'] ?? $_POST['url'] ?? '';
+if (is_array($raw)) {
+    fail(400, 'Некорректный адрес.');
+}
+
+$url = normalize_url((string) $raw);
+$current = $url;
+$html = '';
+$final = $url;
+$code = 0;
+
+for ($i = 0; $i <= MAX_REDIRECTS; $i++) {
+    // re-validate every hop (SSRF)
+    $current = normalize_url($current);
+    $res = fetch_once($current);
+    if (empty($res['ok'])) {
+        fail(502, $res['error'] ?? 'Не удалось загрузить страницу.');
+    }
+    $code = (int) $res['code'];
+    if (in_array($code, [301, 302, 303, 307, 308], true)) {
+        $next = trim((string) ($res['redirect'] ?? ''));
+        if ($next === '' && preg_match('/^Location:\s*(.+)$/im', $res['body'] ?? '', $m)) {
+            $next = trim($m[1]);
+        }
+        if ($next === '') {
+            fail(502, 'Редирект без адреса.');
+        }
+        // relative redirect
+        if (!preg_match('#^https?://#i', $next)) {
+            $base = parse_url($current);
+            $origin = ($base['scheme'] ?? 'https') . '://' . ($base['host'] ?? '');
+            if (str_starts_with($next, '//')) {
+                $next = ($base['scheme'] ?? 'https') . ':' . $next;
+            } elseif (str_starts_with($next, '/')) {
+                $next = $origin . $next;
+            } else {
+                $next = $origin . '/' . $next;
+            }
+        }
+        $current = $next;
+        continue;
+    }
+    if ($code < 200 || $code >= 400) {
+        fail(502, 'Страница вернула HTTP ' . $code);
+    }
+    $html = (string) $res['body'];
+    $final = $current;
+    break;
+}
+
+if ($html === '') {
+    fail(502, 'Пустой ответ сервера.');
+}
+if (strlen($html) > MAX_BYTES) {
+    $html = substr($html, 0, MAX_BYTES);
+}
+
+// грубая проверка, что это похоже на HTML
+if (!preg_match('/<html|<body|<title|<meta|<div/i', $html)) {
+    fail(422, 'Ответ не похож на HTML-страницу.');
+}
+
+echo json_encode([
+    'ok' => true,
+    'url' => $final,
+    'requested' => $url,
+    'status' => $code,
+    'length' => strlen($html),
+    'html' => $html,
+], JSON_UNESCAPED_UNICODE);

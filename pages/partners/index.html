@@ -6,6 +6,8 @@
     <title>Партнёрские продукты — каталог решений | KONTURBIZ</title>
     <meta name="description" content="Каталог партнёрских продуктов KONTURBIZ: СКБ Контур (Эльба, Диадок, Банк, Фокус), RC PAY и RC CITY, РДО, САМО. Подбор под задачу бизнеса.">
     <link rel="canonical" href="https://konturbiz.ru/pages/partners/">
+<link rel="alternate" hreflang="ru" href="https://konturbiz.ru/pages/partners/">
+<link rel="alternate" hreflang="x-default" href="https://konturbiz.ru/pages/partners/">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Партнёрские продукты — KONTURBIZ">
     <meta property="og:description" content="СКБ Контур, RC, РДО, САМО — решения, которые подключаем к задаче бизнеса.">
@@ -223,6 +225,9 @@ html body .partners-hero .hero__actions { padding-top: 12px !important; }
   html body .partners-hero .partners-hero__chips { margin-top: 12px !important; }
 }
 </style>
+<link rel="stylesheet" href="/assets/css/buttons.css?v=20261026-hero-standard">
+<link rel="stylesheet" href="/assets/css/hero-layout-fix.css?v=20261028-hero-std">
+<link rel="stylesheet" href="/assets/css/tokens.css?v=20261105-tokens">
 </head>
 <body>
 <header class="header" role="banner">
@@ -353,22 +358,21 @@ html body .partners-hero .hero__actions { padding-top: 12px !important; }
 </header>
 
 <main id="main">
-  <section class="hero partners-hero" aria-labelledby="partners-hero-title" aria-label="Партнёрские продукты">
+  <section class="page-hero page-hero--dense" aria-labelledby="partners-hero-title" aria-label="Партнёрские продукты">
+    <div class="page-hero__media" aria-hidden="true">
+      <img src="/images/hero.webp" alt="" width="1200" height="400" decoding="async" fetchpriority="high">
+    </div>
+    <div class="page-hero__overlay" aria-hidden="true"></div>
     <div class="container">
-      <div class="hero__grid">
-        <div class="hero__content">
-          <p class="eyebrow eyebrow--gold hero__eyebrow">KONTURBIZ · Партнёрские продукты</p>
-          <h1 id="partners-hero-title">Решения, которые подключаем <span class="text-gold">к задаче бизнеса</span></h1>
-          <p class="lead hero__lead">Подбираем сервисы для учёта, ЭДО, банковских операций, лояльности и развития бизнеса — исходя из вашей задачи, а не списка продуктов.</p>
-          <nav class="partners-hero__chips" aria-label="Быстрые направления">
-            <a href="#kontur">Контур</a><a href="#rc">RC</a><a href="#community">РДО · САМО</a><a href="#infra">ИнФинТех</a>
-          </nav>
-          <div class="hero__actions button-group">
-            <a href="/pages/about/contacts.html" class="button button--gold">Обсудить задачу</a>
-            <a href="#kontur" class="button button--white-outline">Смотреть продукты</a>
-          </div>
-        </div>
-        <div class="hero__visual" aria-hidden="true"></div>
+      <span class="eyebrow eyebrow--gold">KONTURBIZ · Партнёрские продукты</span>
+      <h1 id="partners-hero-title">Решения, которые подключаем <span class="hero-accent">к задаче бизнеса</span></h1>
+      <p class="lead">Подбираем сервисы для учёта, ЭДО, банковских операций, лояльности и развития бизнеса — исходя из вашей задачи, а не списка продуктов.</p>
+      <nav class="partners-hero__chips" aria-label="Быстрые направления">
+        <a href="#kontur">Контур</a><a href="#rc">RC</a><a href="#community">РДО · САМО</a><a href="#infra">ИнФинТех</a>
+      </nav>
+      <div class="button-group page-hero__actions">
+        <a href="/pages/about/contacts.html" class="button button--gold">Обсудить задачу</a>
+        <a href="#kontur" class="button button--blue">Смотреть продукты</a>
       </div>
     </div>
   </section>
@@ -612,7 +616,7 @@ html body .partners-hero .hero__actions { padding-top: 12px !important; }
 
                                 <div class="footer__grid">
             <div>
-                <h4 class="footer__title">Решения</h4>
+                <p class="footer__title">Решения</p>
                 <ul class="footer__menu">
                     <li><a href="/pages/solutions/" class="footer__link">Все решения</a></li>
                     <li><a href="/pages/solutions/acquisition.html" class="footer__link">Привлечение клиентов</a></li>
@@ -625,7 +629,7 @@ html body .partners-hero .hero__actions { padding-top: 12px !important; }
             </div>
 
                                     <div>
-                <h4 class="footer__title">Услуги</h4>
+                <p class="footer__title">Услуги</p>
                 <ul class="footer__menu">
                     <li><a href="/pages/services/" class="footer__link">Все услуги</a></li>
                     <li><a href="/pages/services/digital-audit.html" class="footer__link">Цифровой аудит</a></li>
@@ -643,7 +647,7 @@ html body .partners-hero .hero__actions { padding-top: 12px !important; }
             </div>
 
             <div>
-                <h4 class="footer__title">Продукты</h4>
+                <p class="footer__title">Продукты</p>
                 <ul class="footer__menu">
                     <li><a href="/pages/partners/" class="footer__link">Все продукты</a></li>
                     <li><a href="/pages/partners/kontur/" class="footer__link">СКБ Контур</a></li>
@@ -661,7 +665,7 @@ html body .partners-hero .hero__actions { padding-top: 12px !important; }
             </div>
 
             <div>
-                <h4 class="footer__title">Русский цифровой</h4>
+                <p class="footer__title">Русский цифровой</p>
                 <ul class="footer__menu">
                     <li><a href="/pages/partners/rcbiz/" class="footer__link">Экосистема</a></li>
                     <li><a href="/pages/partners/rc-pay/" class="footer__link">Клиентский сервис</a></li>
@@ -680,7 +684,7 @@ html body .partners-hero .hero__actions { padding-top: 12px !important; }
             </div>
 
             <div>
-                <h4 class="footer__title">О KONTURBIZ</h4>
+                <p class="footer__title">О KONTURBIZ</p>
                 <ul class="footer__menu">
                     <li><a href="/pages/about/" class="footer__link">О компании</a></li>
                     <li><a href="/pages/about/team.html" class="footer__link">Команда</a></li>

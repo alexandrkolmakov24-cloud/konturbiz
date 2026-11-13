@@ -270,6 +270,8 @@
   <title>Цены и тарифы — услуги и продукты | KONTURBIZ</title>
   <meta name="description" content="Каталог цен KONTURBIZ: бесплатные инструменты, услуги от 1 200 ₽ (дизайн, гео, аудит, брендинг, Content Kit), RC CITY от 0 ₽. Цены «от» — итог после брифа.">
   <link rel="canonical" href="https://konturbiz.ru/pages/services/prices.html">
+<link rel="alternate" hreflang="ru" href="https://konturbiz.ru/pages/services/prices.html">
+<link rel="alternate" hreflang="x-default" href="https://konturbiz.ru/pages/services/prices.html">
   <meta property="og:title" content="Цены и тарифы | KONTURBIZ">
   <meta property="og:description" content="Сводный прайс: лояльность, брендинг, дизайн, SMM, банк, Фокус. Ссылки на подробные страницы.">
   <meta property="og:type" content="website">
@@ -342,6 +344,7 @@
 <script src="/assets/js/kb-motion.js?v=20261028-m5" defer></script>
 <link rel="stylesheet" href="/assets/css/buttons.css?v=20261026-hero-standard">
 <link rel="stylesheet" href="/assets/css/hero-layout-fix.css?v=20261028-hero-std">
+<link rel="stylesheet" href="/assets/css/tokens.css?v=20261105-tokens">
 </head>
 <body>
 <header class="header" role="banner">
@@ -492,11 +495,11 @@
 </header>
 <main>
   <section class="page-hero" aria-label="Цены и тарифы">
+    <div class="page-hero__media" aria-hidden="true">
+      <img src="/images/services/prices.webp" alt="" width="1200" height="400" decoding="async" fetchpriority="high">
+    </div>
+    <div class="page-hero__overlay" aria-hidden="true"></div>
     <div class="page-hero__shell">
-      <div class="page-hero__media" aria-hidden="true">
-        <img src="/images/services/prices.webp" alt="" width="1200" height="400" decoding="async" fetchpriority="high">
-      </div>
-      <div class="page-hero__overlay" aria-hidden="true"></div>
       <div class="page-hero__body">
         <nav class="kb-breadcrumbs" aria-label="Хлебные крошки"><ol><li><a href="/">Главная</a></li><li><a href="/pages/services/">Услуги</a></li><li aria-current="page">Цены и тарифы</li></ol></nav>
  <p class="eyebrow eyebrow--gold">Услуги · Цены и тарифы</p><h1>Цены и <span class="hero-accent">тарифы</span></h1>
@@ -581,7 +584,7 @@
             <p class="amount amount--free">0 ₽ / год</p>
             <p>Базовый тариф RC CITY: баллы, до 5 точек, размещение в RC PAY. Без абонентской платы.</p>
             <div class="card-actions">
-              <a class="button button--gold button--sm" href="https://rc.city/register-code?code=LYHHKKRK" target="_blank" rel="noopener noreferrer">Подключить Лайт</a>
+              <a class="button button--gold button--sm" href="https://rc.city/register-code?code=LYHHKKRK" target="_blank" rel="noopener noreferrer sponsored nofollow">Подключить Лайт</a>
               <a class="button button--navy-outline button--sm" href="/pages/services/loyalty.html">О программе</a>
             </div>
           </article>
@@ -833,7 +836,7 @@
               <li>Базовая аналитика, RC KASSA, RC PAY</li>
             </ul>
             <div class="card-actions">
-              <a class="button button--gold button--sm" href="https://rc.city/register-code?code=LYHHKKRK" target="_blank" rel="noopener noreferrer">Подключить</a>
+              <a class="button button--gold button--sm" href="https://rc.city/register-code?code=LYHHKKRK" target="_blank" rel="noopener noreferrer sponsored nofollow">Подключить</a>
               <a class="button button--navy-outline button--sm" href="/pages/services/tariffs.html">Сравнить тарифы</a>
             </div>
           </article>
@@ -846,7 +849,7 @@
               <li>Push, подарочные карты, поддержка</li>
             </ul>
             <div class="card-actions">
-              <a class="button button--gold button--sm" href="https://rc.city/register-code?code=LYHHKKRK" target="_blank" rel="noopener noreferrer">Подключить</a>
+              <a class="button button--gold button--sm" href="https://rc.city/register-code?code=LYHHKKRK" target="_blank" rel="noopener noreferrer sponsored nofollow">Подключить</a>
               <a class="button button--navy-outline button--sm" href="/pages/services/loyalty-calculator.html">Расчёт ROI</a>
             </div>
           </article>
@@ -859,7 +862,7 @@
               <li>Рассылки, полный CRM-контур</li>
             </ul>
             <div class="card-actions">
-              <a class="button button--gold button--sm" href="https://rc.city/register-code?code=LYHHKKRK" target="_blank" rel="noopener noreferrer">Подключить</a>
+              <a class="button button--gold button--sm" href="https://rc.city/register-code?code=LYHHKKRK" target="_blank" rel="noopener noreferrer sponsored nofollow">Подключить</a>
               <a class="button button--navy-outline button--sm" href="/pages/services/loyalty.html">О программе</a>
             </div>
           </article>
@@ -895,6 +898,24 @@
   </section>
 
   <!-- HOW TO ORDER -->
+  <style>
+    /* Кнопки в блоке «Как заказать и оплатить»: один ряд, на всю ширину карточки */
+    #how-order .order-path > article { display: flex; flex-direction: column; }
+    #how-order .order-path .card-actions {
+      display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important;
+      gap: 10px !important; width: 100% !important; margin-top: auto !important;
+    }
+    #how-order .order-path .card-actions .button {
+      flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; max-width: none !important;
+      justify-content: center; text-align: center; white-space: nowrap; padding-left: 12px; padding-right: 12px;
+    }
+    /* RC PAY — шире соседней кнопки */
+    #how-order .order-path .card-actions .button--rcpay { flex: 1.6 1 0 !important; }
+    @media (max-width: 480px) {
+      #how-order .order-path .card-actions { flex-wrap: wrap !important; }
+      #how-order .order-path .card-actions .button { flex: 1 1 100% !important; }
+    }
+  </style>
   <section class="section" id="how-order">
     <div class="container">
       <h2 class="cat-head" style="text-align:center;">Как заказать и оплатить</h2>
@@ -912,8 +933,8 @@
           <h3>2. RC CITY</h3>
           <p>Тарифы лояльности: регистрация кабинета и запуск сценариев в цифровом контуре.</p>
           <div class="card-actions">
-            <a class="button button--gold" href="https://rc.city/register-code?code=LYHHKKRK" target="_blank" rel="noopener noreferrer">Подключить</a>
-            <a class="button button--navy-outline" href="/pages/services/tariffs.html">Сравнить тарифы</a>
+            <a class="button button--gold" href="https://rc.city/register-code?code=LYHHKKRK" target="_blank" rel="noopener noreferrer sponsored nofollow">Подключить</a>
+            <a class="button button--navy-outline" href="/pages/services/tariffs.html">Выбрать тариф</a>
           </div>
         </article>
         <article>
@@ -921,7 +942,7 @@
           <p>Счёт для ИП и ООО или RC PAY с кэшбэком баллами. Порядок — на странице оплаты.</p>
           <div class="card-actions">
             <a class="button button--gold" href="/pages/services/payment-methods.html">Способы оплаты</a>
-            <a class="button button--navy-outline" href="/pages/services/rc-pay-order.html">RC PAY</a>
+            <a class="button button--navy-outline button--rcpay" href="/pages/services/rc-pay-order.html">RC PAY</a>
           </div>
         </article>
       </div>
@@ -961,7 +982,7 @@
 
                                 <div class="footer__grid">
             <div>
-                <h4 class="footer__title">Решения</h4>
+                <p class="footer__title">Решения</p>
                 <ul class="footer__menu">
                     <li><a href="/pages/solutions/" class="footer__link">Все решения</a></li>
                     <li><a href="/pages/solutions/acquisition.html" class="footer__link">Привлечение клиентов</a></li>
@@ -974,7 +995,7 @@
             </div>
 
                                     <div>
-                <h4 class="footer__title">Услуги</h4>
+                <p class="footer__title">Услуги</p>
                 <ul class="footer__menu">
                     <li><a href="/pages/services/" class="footer__link">Все услуги</a></li>
                     <li><a href="/pages/services/digital-audit.html" class="footer__link">Цифровой аудит</a></li>
@@ -992,7 +1013,7 @@
             </div>
 
             <div>
-                <h4 class="footer__title">Продукты</h4>
+                <p class="footer__title">Продукты</p>
                 <ul class="footer__menu">
                     <li><a href="/pages/partners/" class="footer__link">Все продукты</a></li>
                     <li><a href="/pages/partners/kontur/" class="footer__link">СКБ Контур</a></li>
@@ -1010,7 +1031,7 @@
             </div>
 
             <div>
-                <h4 class="footer__title">Русский цифровой</h4>
+                <p class="footer__title">Русский цифровой</p>
                 <ul class="footer__menu">
                     <li><a href="/pages/partners/rcbiz/" class="footer__link">Экосистема</a></li>
                     <li><a href="/pages/partners/rc-pay/" class="footer__link">Клиентский сервис</a></li>
@@ -1029,7 +1050,7 @@
             </div>
 
             <div>
-                <h4 class="footer__title">О KONTURBIZ</h4>
+                <p class="footer__title">О KONTURBIZ</p>
                 <ul class="footer__menu">
                     <li><a href="/pages/about/" class="footer__link">О компании</a></li>
                     <li><a href="/pages/about/team.html" class="footer__link">Команда</a></li>

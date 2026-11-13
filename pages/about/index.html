@@ -8,6 +8,8 @@
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="keywords" content="KONTURBIZ, о компании, цифровой центр развития бизнеса, цифровизация бизнеса, команда KONTURBIZ">
     <link rel="canonical" href="https://konturbiz.ru/pages/about/">
+<link rel="alternate" hreflang="ru" href="https://konturbiz.ru/pages/about/">
+<link rel="alternate" hreflang="x-default" href="https://konturbiz.ru/pages/about/">
     <meta property="og:title" content="О компании KONTURBIZ — цифровой центр развития бизнеса">
     <meta property="og:description" content="Собираем экспертизу вокруг задачи бизнеса. Команда, метод, отрасли и партнёры единого цифрового контура.">
     <meta property="og:type" content="website">
@@ -554,6 +556,8 @@
 <link rel="stylesheet" href="/assets/css/kb-motion.css?v=20261022-m4">
 <script src="/assets/js/kb-motion.js?v=20261028-m5" defer></script>
 <link rel="stylesheet" href="/assets/css/buttons.css?v=20261026-hero-standard">
+<link rel="stylesheet" href="/assets/css/hero-layout-fix.css?v=20261028-hero-std">
+<link rel="stylesheet" href="/assets/css/tokens.css?v=20261105-tokens">
 </head>
 <body>
     <a class="skip-to-content" href="#main">Перейти к содержанию</a>
@@ -705,20 +709,19 @@
 </header>
 <main id="main">
         <!-- 01 HERO -->
-        <section class="about-hero" aria-labelledby="about-title">
-            <div class="about-hero__band">
-                <div class="about-hero__box">
-                    <div class="about-hero__media" role="img" aria-label="Команда KONTURBIZ и цифровой контур бизнеса"></div>
-                    <div class="about-hero__gradient" aria-hidden="true"></div>
-                    <div class="about-hero__content">
-                        <nav class="kb-breadcrumbs" aria-label="Хлебные крошки"><ol><li><a href="/">Главная</a></li><li><a href="/pages/about/">О компании</a></li><li aria-current="page">Собираем экспертизу и цифровые решения вокруг задачи бизнеса</li></ol></nav>
- <span class="eyebrow">О KONTURBIZ</span><h1 id="about-title">Собираем экспертизу<br>и цифровые решения<br>вокруг задачи бизнеса</h1>
-                        <p class="lead">KONTURBIZ — цифровой центр развития бизнеса. Помогаем определить приоритетную задачу, спроектировать решение и внедрить его вместе с профильными специалистами.</p>
-                        <div class="button-group page-hero__actions">
-                            <a href="/pages/about/team.html" class="button button--gold">Команда</a>
-                            <a href="/pages/about/contacts.html" class="button button--blue">Контакты</a>
-                        </div>
-                    </div>
+        <section class="page-hero page-hero--dense" aria-labelledby="about-title">
+            <div class="page-hero__media" aria-hidden="true">
+                <img src="/images/about/about.webp" alt="Команда KONTURBIZ и цифровой контур бизнеса" width="1200" height="400" decoding="async" fetchpriority="high">
+            </div>
+            <div class="page-hero__overlay" aria-hidden="true"></div>
+            <div class="container">
+                <nav class="kb-breadcrumbs" aria-label="Хлебные крошки"><ol><li><a href="/">Главная</a></li><li aria-current="page">О компании</li></ol></nav>
+                <span class="eyebrow eyebrow--gold">О KONTURBIZ</span>
+                <h1 id="about-title">Собираем экспертизу и цифровые решения <span class="hero-accent">вокруг задачи бизнеса</span></h1>
+                <p class="lead">KONTURBIZ — цифровой центр развития бизнеса. Помогаем определить приоритетную задачу, спроектировать решение и внедрить его вместе с профильными специалистами.</p>
+                <div class="button-group page-hero__actions">
+                    <a href="/pages/about/team.html" class="button button--gold">Команда</a>
+                    <a href="/pages/about/contacts.html" class="button button--blue">Контакты</a>
                 </div>
             </div>
         </section>
@@ -993,7 +996,7 @@
 
                                 <div class="footer__grid">
             <div>
-                <h4 class="footer__title">Решения</h4>
+                <p class="footer__title">Решения</p>
                 <ul class="footer__menu">
                     <li><a href="/pages/solutions/" class="footer__link">Все решения</a></li>
                     <li><a href="/pages/solutions/acquisition.html" class="footer__link">Привлечение клиентов</a></li>
@@ -1006,7 +1009,7 @@
             </div>
 
                                     <div>
-                <h4 class="footer__title">Услуги</h4>
+                <p class="footer__title">Услуги</p>
                 <ul class="footer__menu">
                     <li><a href="/pages/services/" class="footer__link">Все услуги</a></li>
                     <li><a href="/pages/services/digital-audit.html" class="footer__link">Цифровой аудит</a></li>
@@ -1024,7 +1027,7 @@
             </div>
 
             <div>
-                <h4 class="footer__title">Продукты</h4>
+                <p class="footer__title">Продукты</p>
                 <ul class="footer__menu">
                     <li><a href="/pages/partners/" class="footer__link">Все продукты</a></li>
                     <li><a href="/pages/partners/kontur/" class="footer__link">СКБ Контур</a></li>
@@ -1042,7 +1045,7 @@
             </div>
 
             <div>
-                <h4 class="footer__title">Русский цифровой</h4>
+                <p class="footer__title">Русский цифровой</p>
                 <ul class="footer__menu">
                     <li><a href="/pages/partners/rcbiz/" class="footer__link">Экосистема</a></li>
                     <li><a href="/pages/partners/rc-pay/" class="footer__link">Клиентский сервис</a></li>
@@ -1061,7 +1064,7 @@
             </div>
 
             <div>
-                <h4 class="footer__title">О KONTURBIZ</h4>
+                <p class="footer__title">О KONTURBIZ</p>
                 <ul class="footer__menu">
                     <li><a href="/pages/about/" class="footer__link">О компании</a></li>
                     <li><a href="/pages/about/team.html" class="footer__link">Команда</a></li>

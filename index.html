@@ -8,6 +8,8 @@
     <meta name="description" content="KONTURBIZ помогает малому и среднему бизнесу находить потери и выстраивать цифровые процессы: бренд, сайт, CRM, автоматизацию и лояльность. Работаем по всей России.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://konturbiz.ru/">
+<link rel="alternate" hreflang="ru" href="https://konturbiz.ru/">
+<link rel="alternate" hreflang="x-default" href="https://konturbiz.ru/">
 
     <link rel="icon" href="/favicons/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
@@ -501,10 +503,11 @@ body { margin: 0; padding-top: var(--header-height, 90px); background: #F6F8FB; 
   position: absolute !important;
   top: 0 !important;
   bottom: 0 !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  width: 100% !important;
-  max-width: 1200px !important;
+  left: calc(max(0px, (100% - 1200px) / 2) + min(100%, 1200px) * .30) !important;
+  right: max(0px, calc((100% - 1200px) / 2)) !important;
+  transform: none !important;
+  width: auto !important;
+  max-width: none !important;
   height: 400px !important;
   z-index: 0 !important;
   pointer-events: none !important;
@@ -520,23 +523,26 @@ body { margin: 0; padding-top: var(--header-height, 90px); background: #F6F8FB; 
   position: absolute !important;
   top: 0 !important;
   bottom: 0 !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
+  left: 0 !important;
+  right: 0 !important;
+  transform: none !important;
   width: 100% !important;
-  max-width: 1200px !important;
+  max-width: none !important;
   height: 400px !important;
   z-index: 1 !important;
   pointer-events: none !important;
   border: 0 !important;
   margin: 0 !important;
   padding: 0 !important;
+  --kb-sh: min(100%, 1200px);
+  --kb-x0: max(0px, calc((100% - 1200px) / 2));
   background: linear-gradient(
     90deg,
-    rgba(1, 9, 28, 0.82) 0%,
-    rgba(1, 9, 28, 0.62) 18%,
-    rgba(1, 9, 28, 0.38) 32%,
-    rgba(1, 9, 28, 0.14) 42%,
-    transparent 50%
+    #01091C 0%,
+    #01091C calc(var(--kb-x0) + var(--kb-sh) * .30),
+    rgba(1, 9, 28, 0.82) calc(var(--kb-x0) + var(--kb-sh) * .36),
+    rgba(1, 9, 28, 0.4) calc(var(--kb-x0) + var(--kb-sh) * .43),
+    transparent calc(var(--kb-x0) + var(--kb-sh) * .54)
   ) !important;
 }
 .hero .container {
@@ -707,6 +713,7 @@ body { margin: 0; padding-top: var(--header-height, 90px); background: #F6F8FB; 
 <meta name="twitter:image" content="https://konturbiz.ru/images/hero.webp">
 <link rel="stylesheet" href="/assets/css/kb-motion.css?v=20261022-m4">
 <script src="/assets/js/kb-motion.js?v=20261028-m5" defer></script>
+<link rel="stylesheet" href="/assets/css/tokens.css?v=20261105-tokens">
 </head>
 <body>
     <a class="skip-to-content" href="#main">Перейти к содержанию</a>
@@ -1139,32 +1146,32 @@ body { margin: 0; padding-top: var(--header-height, 90px); background: #F6F8FB; 
                     <article class="card card--hover-expand">
                         <div class="card-preview"><h3>Бонусы и кэшбэк</h3><p class="card__excerpt">Мотивируйте клиентов возвращаться с выгодой.</p><span class="expand-btn">Как работает</span></div>
                         <div class="card-expand"><p>Клиент получает понятную выгоду после покупки и возвращается за следующей — без постоянной рекламы.</p></div>
-                    <a href="/pages/solutions/retention.html" class="card-link">Подробнее</a>
+                    <a href="/pages/solutions/retention.html" class="card-link">Подробнее: Бонусы и кэшбэк</a>
                     </article>
                     <article class="card card--hover-expand card--gold">
                         <div class="card-preview"><h3>Накопительные программы</h3><p class="card__excerpt">Поощряйте регулярные покупки и увеличивайте LTV.</p><span class="expand-btn">Как работает</span></div>
                         <div class="card-expand"><p>Уровни и накопление создают привычку покупать у вас, а не у конкурента.</p></div>
-                    <a href="/pages/solutions/retention.html" class="card-link">Подробнее</a>
+                    <a href="/pages/solutions/retention.html" class="card-link">Подробнее: Накопительные программы</a>
                     </article>
                     <article class="card card--hover-expand">
                         <div class="card-preview"><h3>Персональные предложения</h3><p class="card__excerpt">Предлагайте то, что клиенту действительно нужно.</p><span class="expand-btn">Как работает</span></div>
                         <div class="card-expand"><p>Сегменты и сценарии на базе истории покупок повышают отклик без скидки «всем подряд».</p></div>
-                    <a href="/pages/solutions/retention.html" class="card-link">Подробнее</a>
+                    <a href="/pages/solutions/retention.html" class="card-link">Подробнее: Персональные предложения</a>
                     </article>
                     <article class="card card--hover-expand card--gold">
                         <div class="card-preview"><h3>Цифровая карта</h3><p class="card__excerpt">Удобный инструмент — всегда под рукой.</p><span class="expand-btn">Как работает</span></div>
                         <div class="card-expand"><p>Карта в телефоне упрощает участие в программе и снимает трение на кассе.</p></div>
-                    <a href="/pages/solutions/retention.html" class="card-link">Подробнее</a>
+                    <a href="/pages/solutions/retention.html" class="card-link">Подробнее: Цифровая карта</a>
                     </article>
                     <article class="card card--hover-expand">
                         <div class="card-preview"><h3>Уведомления</h3><p class="card__excerpt">Напоминайте о себе и возвращайте вовремя.</p><span class="expand-btn">Как работает</span></div>
                         <div class="card-expand"><p>Триггеры по срокам и событиям возвращают клиента в момент, когда он готов купить снова.</p></div>
-                    <a href="/pages/solutions/retention.html" class="card-link">Подробнее</a>
+                    <a href="/pages/solutions/retention.html" class="card-link">Подробнее: Уведомления</a>
                     </article>
                     <article class="card card--hover-expand card--gold">
                         <div class="card-preview"><h3>Реферальные механики</h3><p class="card__excerpt">Превращайте клиентов в источник новых заказов.</p><span class="expand-btn">Как работает</span></div>
                         <div class="card-expand"><p>Рекомендация друга снижает CAC и усиливает доверие к бренду.</p></div>
-                    <a href="/pages/solutions/retention.html" class="card-link">Подробнее</a>
+                    <a href="/pages/solutions/retention.html" class="card-link">Подробнее: Реферальные механики</a>
                     </article>
                 </div>
                 <div class="home-cta">
@@ -1356,7 +1363,7 @@ body { margin: 0; padding-top: var(--header-height, 90px); background: #F6F8FB; 
                         <div class="card-expand">
                             <p>Механики возврата, бонусы, персональные предложения и связь с CRM.</p>
                         </div>
-                        <a href="/pages/knowledge/loyalty/" class="card-link">Читать</a>
+                        <a href="/pages/knowledge/loyalty/" class="card-link">Читать: Лояльность</a>
                     </article>
                     <article class="card card--hover-expand card--gold">
                         <div class="card-preview">
@@ -1366,7 +1373,7 @@ body { margin: 0; padding-top: var(--header-height, 90px); background: #F6F8FB; 
                         <div class="card-expand">
                             <p>Воронка, SLA, распределение задач и прозрачный статус сделки.</p>
                         </div>
-                        <a href="/pages/knowledge/automation/" class="card-link">Читать</a>
+                        <a href="/pages/knowledge/automation/" class="card-link">Читать: CRM</a>
                     </article>
                     <article class="card card--hover-expand">
                         <div class="card-preview">
@@ -1376,7 +1383,7 @@ body { margin: 0; padding-top: var(--header-height, 90px); background: #F6F8FB; 
                         <div class="card-expand">
                             <p>Уведомления, задачи, интеграции и снижение ручного труда.</p>
                         </div>
-                        <a href="/pages/knowledge/automation/" class="card-link">Читать</a>
+                        <a href="/pages/knowledge/automation/" class="card-link">Читать: Автоматизация</a>
                     </article>
                     <article class="card card--hover-expand card--gold">
                         <div class="card-preview">
@@ -1386,7 +1393,7 @@ body { margin: 0; padding-top: var(--header-height, 90px); background: #F6F8FB; 
                         <div class="card-expand">
                             <p>Позиционирование, смыслы и визуальная система доверия.</p>
                         </div>
-                        <a href="/pages/knowledge/branding/" class="card-link">Читать</a>
+                        <a href="/pages/knowledge/branding/" class="card-link">Читать: Брендинг</a>
                     </article>
                     <article class="card card--hover-expand">
                         <div class="card-preview">
@@ -1396,7 +1403,7 @@ body { margin: 0; padding-top: var(--header-height, 90px); background: #F6F8FB; 
                         <div class="card-expand">
                             <p>Оффер, путь к заявке, скорость и связь с CRM.</p>
                         </div>
-                        <a href="/pages/knowledge/digitalization/" class="card-link">Читать</a>
+                        <a href="/pages/knowledge/digitalization/" class="card-link">Читать: Сайты</a>
                     </article>
                     <article class="card card--hover-expand card--gold">
                         <div class="card-preview">
@@ -1406,7 +1413,7 @@ body { margin: 0; padding-top: var(--header-height, 90px); background: #F6F8FB; 
                         <div class="card-expand">
                             <p>Аудит, приоритеты и маршрут без «внедрить всё сразу».</p>
                         </div>
-                        <a href="/pages/knowledge/digitalization/" class="card-link">Читать</a>
+                        <a href="/pages/knowledge/digitalization/" class="card-link">Читать: Цифровизация</a>
                     </article>
                 </div>
                 <div class="home-cta" style="text-align:center;margin-top:32px;">
@@ -1438,7 +1445,7 @@ body { margin: 0; padding-top: var(--header-height, 90px); background: #F6F8FB; 
 
                                 <div class="footer__grid">
             <div>
-                <h4 class="footer__title">Решения</h4>
+                <p class="footer__title">Решения</p>
                 <ul class="footer__menu">
                     <li><a href="/pages/solutions/" class="footer__link">Все решения</a></li>
                     <li><a href="/pages/solutions/acquisition.html" class="footer__link">Привлечение клиентов</a></li>
@@ -1451,7 +1458,7 @@ body { margin: 0; padding-top: var(--header-height, 90px); background: #F6F8FB; 
             </div>
 
                                     <div>
-                <h4 class="footer__title">Услуги</h4>
+                <p class="footer__title">Услуги</p>
                 <ul class="footer__menu">
                     <li><a href="/pages/services/" class="footer__link">Все услуги</a></li>
                     <li><a href="/pages/services/digital-audit.html" class="footer__link">Цифровой аудит</a></li>
@@ -1467,7 +1474,7 @@ body { margin: 0; padding-top: var(--header-height, 90px); background: #F6F8FB; 
             </div>
 
             <div>
-                <h4 class="footer__title">Продукты</h4>
+                <p class="footer__title">Продукты</p>
                 <ul class="footer__menu">
                     <li><a href="/pages/partners/" class="footer__link">Все продукты</a></li>
                     <li><a href="/pages/partners/kontur/" class="footer__link">СКБ Контур</a></li>
@@ -1485,7 +1492,7 @@ body { margin: 0; padding-top: var(--header-height, 90px); background: #F6F8FB; 
             </div>
 
             <div>
-                <h4 class="footer__title">Русский цифровой</h4>
+                <p class="footer__title">Русский цифровой</p>
                 <ul class="footer__menu">
                     <li><a href="/pages/partners/rcbiz/" class="footer__link">Экосистема</a></li>
                     <li><a href="/pages/partners/rc-pay/" class="footer__link">Клиентский сервис</a></li>
@@ -1504,7 +1511,7 @@ body { margin: 0; padding-top: var(--header-height, 90px); background: #F6F8FB; 
             </div>
 
             <div>
-                <h4 class="footer__title">О KONTURBIZ</h4>
+                <p class="footer__title">О KONTURBIZ</p>
                 <ul class="footer__menu">
                     <li><a href="/pages/about/" class="footer__link">О компании</a></li>
                     <li><a href="/pages/about/team.html" class="footer__link">Команда</a></li>

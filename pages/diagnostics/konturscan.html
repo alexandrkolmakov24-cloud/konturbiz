@@ -7,6 +7,8 @@
 <meta name="description" content="Что такое цифровой портрет бизнеса? Самооценка по стандарту Минцифры: 59 практик, уровень зрелости, PDF-отчёт и план цифровизации. Бесплатно онлайн.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://konturbiz.ru/pages/diagnostics/konturscan.html">
+<link rel="alternate" hreflang="ru" href="https://konturbiz.ru/pages/diagnostics/konturscan.html">
+<link rel="alternate" hreflang="x-default" href="https://konturbiz.ru/pages/diagnostics/konturscan.html">
 <meta property="og:title" content="Цифровой портрет бизнеса: диагностика по стандарту Минцифры">
 <meta property="og:description" content="Онлайн-диагностика цифровой зрелости по стандарту Минцифры: 59 вопросов, профиль по разделам, рекомендации и PDF.">
 <meta property="og:type" content="website">
@@ -91,9 +93,9 @@
 <link rel="stylesheet" href="/assets/css/header.css">
 <link rel="stylesheet" href="/assets/css/footer.css">
 <link rel="stylesheet" href="/assets/css/faq.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
 <style id="locator-css">
 
   :root{
@@ -1147,6 +1149,7 @@ main > .page-hero:first-child { margin-top: 0 !important; }
 </style>
 
 <link rel="stylesheet" href="/assets/css/hero-layout-fix.css?v=20261028-hero-std">
+<link rel="stylesheet" href="/assets/css/tokens.css?v=20261105-tokens">
 </head>
 <body>
 <header class="header" role="banner">
@@ -1297,17 +1300,55 @@ main > .page-hero:first-child { margin-top: 0 !important; }
 </header>
 
 <main id="main">
-  <section class="page-hero page-hero--scan" aria-label="Цифровой портрет бизнеса">    <div class="scan-hero-bg page-hero__media" aria-hidden="true">
+  <style>
+    /* Мягкий левый край картинки: без вертикальной границы на любой ширине экрана */
+    html body .page-hero.page-hero--scan > .page-hero__media img {
+      -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 22%);
+      mask-image: linear-gradient(90deg, transparent 0, #000 22%);
+    }
+    /* Типографика hero как на «Решениях» и главной: лёгкие начертания */
+    html body .page-hero.page-hero--scan h1,
+    html body .page-hero.page-hero--scan h1 .hero-accent { font-weight: 300 !important; }
+    html body .page-hero.page-hero--scan .lead,
+    html body .page-hero.page-hero--scan .page-hero__lead,
+    html body .page-hero.page-hero--scan .page-hero__body > p { font-weight: 300 !important; }
+    html body .page-hero.page-hero--scan .kb-breadcrumbs,
+    html body .page-hero.page-hero--scan .kb-breadcrumbs a,
+    html body .page-hero.page-hero--scan .kb-breadcrumbs li { font-weight: 300 !important; }
+    html body .page-hero.page-hero--scan .page-hero__actions .button { font-weight: 500 !important; }
+    /* Типографика всей страницы как на «Решениях»: заголовки разделов лёгкие, акценты средние */
+    html body main h2,
+    html body main .section__title,
+    html body .full-scan-head h2 { font-weight: 300 !important; }
+    html body #fp_screenIntro h2,
+    html body #full-scan h1,
+    html body .ks-embed h1,
+    html body #full-scan .sect-title,
+    html body .ks-embed .sect-title,
+    html body #full-scan .q-title,
+    html body .ks-embed .q-title,
+    html body #full-scan .level-name,
+    html body .ks-embed .level-name { font-weight: 500 !important; }
+    html body #full-scan .btn,
+    html body .ks-embed .btn,
+    html body main .btn { font-weight: 500 !important; }
+    html body main .section-label,
+    html body main .gap-item .num,
+    html body main .gap-item .fix,
+    html body main .route a { font-weight: 600 !important; }
+    html body main .gap-item .title,
+    html body main details > summary,
+    html body details.why summary { font-weight: 500 !important; }
+  </style>
+<section class="page-hero page-hero--scan" aria-label="Цифровой портрет бизнеса">    <div class="page-hero__media" aria-hidden="true">
       <img src="/images/services/konturscan.webp" alt="" width="1200" height="400" decoding="async" fetchpriority="high">
     </div>
-    <div class="scan-hero-grad page-hero__overlay" aria-hidden="true"></div>
+    <div class="page-hero__overlay" aria-hidden="true"></div>
     <div class="page-hero__body">
-      <div class="page-hero__inner">
-        <nav class="kb-breadcrumbs" aria-label="Хлебные крошки"><ol><li><a href="/">Главная</a></li><li><a href="/pages/diagnostics/">Диагностика</a></li><li aria-current="page">Цифровой портрет бизнеса</li></ol></nav>
+        <nav class="kb-breadcrumbs" aria-label="Хлебные крошки"><ol><li><a href="/">Главная</a></li><li><a href="/pages/diagnostics/">Диагностика</a></li><li aria-current="page">KONTURSCAN</li></ol></nav>
         <span class="eyebrow eyebrow--gold">Диагностика · Минцифры</span>
-        <h1 id="scan-h1">Цифровой <span class="hero-accent">портрет</span> бизнеса</h1>
-        <p class="page-hero__lead">59 практик стандарта → карта разрывов → маршрут развития и PDF-отчёт.</p><div class="button-group page-hero__actions"><a class="button button--gold" href="#full-scan">Начать диагностику</a><a class="button button--blue" href="/pages/about/contacts.html">Обсудить задачу</a></div>
-      </div>
+        <h1 id="scan-h1">KONTURSCAN: <span class="hero-accent">диагностика</span> бизнеса</h1>
+        <p class="lead page-hero__lead">59 практик стандарта → карта разрывов →<br>маршрут развития и PDF-отчёт.</p><div class="button-group page-hero__actions"><a class="button button--gold" href="#full-scan">Начать диагностику</a><a class="button button--blue" href="/pages/about/contacts.html">Обсудить задачу</a></div>
     </div>
   </section>
 
@@ -1535,7 +1576,7 @@ main > .page-hero:first-child { margin-top: 0 !important; }
 
                                 <div class="footer__grid">
             <div>
-                <h4 class="footer__title">Решения</h4>
+                <p class="footer__title">Решения</p>
                 <ul class="footer__menu">
                     <li><a href="/pages/solutions/" class="footer__link">Все решения</a></li>
                     <li><a href="/pages/solutions/acquisition.html" class="footer__link">Привлечение клиентов</a></li>
@@ -1548,7 +1589,7 @@ main > .page-hero:first-child { margin-top: 0 !important; }
             </div>
 
                                     <div>
-                <h4 class="footer__title">Услуги</h4>
+                <p class="footer__title">Услуги</p>
                 <ul class="footer__menu">
                     <li><a href="/pages/services/" class="footer__link">Все услуги</a></li>
                     <li><a href="/pages/services/digital-audit.html" class="footer__link">Цифровой аудит</a></li>
@@ -1566,7 +1607,7 @@ main > .page-hero:first-child { margin-top: 0 !important; }
             </div>
 
             <div>
-                <h4 class="footer__title">Продукты</h4>
+                <p class="footer__title">Продукты</p>
                 <ul class="footer__menu">
                     <li><a href="/pages/partners/" class="footer__link">Все продукты</a></li>
                     <li><a href="/pages/partners/kontur/" class="footer__link">СКБ Контур</a></li>
@@ -1584,7 +1625,7 @@ main > .page-hero:first-child { margin-top: 0 !important; }
             </div>
 
             <div>
-                <h4 class="footer__title">Русский цифровой</h4>
+                <p class="footer__title">Русский цифровой</p>
                 <ul class="footer__menu">
                     <li><a href="/pages/partners/rcbiz/" class="footer__link">Экосистема</a></li>
                     <li><a href="/pages/partners/rc-pay/" class="footer__link">Клиентский сервис</a></li>
@@ -1603,7 +1644,7 @@ main > .page-hero:first-child { margin-top: 0 !important; }
             </div>
 
             <div>
-                <h4 class="footer__title">О KONTURBIZ</h4>
+                <p class="footer__title">О KONTURBIZ</p>
                 <ul class="footer__menu">
                     <li><a href="/pages/about/" class="footer__link">О компании</a></li>
                     <li><a href="/pages/about/team.html" class="footer__link">Команда</a></li>
