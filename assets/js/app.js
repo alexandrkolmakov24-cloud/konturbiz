@@ -118,20 +118,34 @@
                 if (!column) return;
                 var menu = column.querySelector(".footer__menu");
                 if (!menu) return;
-                var existing = footer.querySelector('a[href="' + href + '"]');
+
+                var existing = Array.prototype.slice.call(footer.querySelectorAll("a[href]")).find(function (link) {
+                    return link.getAttribute("href") === href;
+                });
                 var item = existing ? existing.closest("li") : null;
+
                 if (!item) {
                     item = document.createElement("li");
                     var link = document.createElement("a");
-                    link.href = href;
+                    link.setAttribute("href", href);
                     link.className = "footer__link";
                     link.textContent = label;
                     item.appendChild(link);
                 }
-                var after = afterHref && menu.querySelector('a[href="' + afterHref + '"]');
-                if (after && after.parentNode === menu) {
-                    menu.insertBefore(item, after.nextSibling);
-                } else if (item.parentNode !== menu) {
+
+                if (afterHref) {
+                    var afterLink = menu.querySelector('a[href="' + afterHref + '"]');
+                    var afterItem = afterLink ? afterLink.closest("li") : null;
+                    if (afterItem && afterItem.parentNode === menu) {
+                        var nextItem = afterItem.nextElementSibling;
+                        if (nextItem !== item) {
+                            menu.insertBefore(item, nextItem);
+                        }
+                        return;
+                    }
+                }
+
+                if (item.parentNode !== menu) {
                     menu.appendChild(item);
                 }
             }
