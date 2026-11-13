@@ -109,11 +109,84 @@ textarea{min-height:70px;resize:vertical}
 .report-cta a { color:#956A0A; font-weight:700; }
 .legal-note { font-size:8.5pt; color:#52667A; margin:2mm 0 4mm; }
 
+
+/* KONTURBIZ page shell */
+body{background:#F7F8FA}
+.site-header{background:#fff;border-bottom:1px solid #E8EDF3}
+.header-inner,.footer-inner{max-width:1180px;margin:0 auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#112B4A}
+.brand-mark{width:38px;height:38px;border:2px solid #112B4A;border-radius:10px;display:grid;place-items:center;font:700 15px Montserrat,sans-serif;letter-spacing:-1px}
+.brand-name{font:700 16px Montserrat,sans-serif;letter-spacing:.14em}
+.brand-caption{display:block;font-size:9px;letter-spacing:.12em;color:#52667A;margin-bottom:2px}
+.site-nav{display:flex;align-items:center;gap:24px}
+.site-nav a{font-size:13px;font-weight:600;text-decoration:none;color:#52667A}
+.site-nav a:hover{color:#112B4A}
+.header-contact{padding:10px 16px;border:1px solid #E8EDF3;border-radius:8px;color:#112B4A!important}
+.wrap{max-width:1180px;padding:42px 24px 72px}
+#screen-intro .card{max-width:none;padding:52px 56px;border-radius:16px;box-shadow:0 18px 50px rgba(17,43,74,.07)}
+#screen-intro h1{max-width:790px;font-size:clamp(32px,4vw,48px);line-height:1.13;letter-spacing:-.04em}
+#screen-intro .lead{max-width:760px;font-size:17px;line-height:1.7}
+#screen-intro .note{max-width:760px}
+#screen-intro .btn{min-width:220px}
+.intro-content{margin-top:24px;display:grid;grid-template-columns:1.1fr .9fr;gap:20px}
+.info-panel{background:#fff;border:1px solid #E8EDF3;border-radius:14px;padding:28px}
+.info-panel h2{font:700 21px Montserrat,sans-serif;letter-spacing:-.02em;margin-bottom:12px}
+.info-panel p{color:#52667A;font-size:14px;line-height:1.7}
+.feature-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+.feature{padding:16px;background:#F7F8FA;border-radius:10px}
+.feature strong{display:block;font-size:14px;margin-bottom:5px}
+.feature span{font-size:12px;color:#52667A;line-height:1.5}
+.process-list{display:grid;gap:14px;margin-top:18px}
+.process-item{display:flex;gap:13px;align-items:flex-start}
+.process-num{width:28px;height:28px;flex:0 0 28px;border-radius:50%;background:#112B4A;color:#fff;display:grid;place-items:center;font-size:12px;font-weight:700}
+.process-item strong{display:block;font-size:13px;margin-bottom:3px}
+.process-item span{display:block;color:#52667A;font-size:12px;line-height:1.55}
+.disclaimer-panel{margin-top:20px;padding:18px 22px;background:#F1F4F7;border:1px solid #E1E7EE;border-radius:12px;color:#52667A;font-size:12px;line-height:1.65}
+#screen-profile,#screen-sections,#screen-results{max-width:860px;margin:0 auto}
+#screen-profile .card,#screen-sections .card,#screen-results .card{border-radius:16px;box-shadow:0 18px 50px rgba(17,43,74,.07)}
+.site-footer{background:#112B4A;color:#fff}
+.footer-inner{padding-top:28px;padding-bottom:28px}
+.footer-brand{font:700 15px Montserrat,sans-serif;letter-spacing:.14em}
+.footer-copy{font-size:12px;color:#C4D0DC;margin-top:6px}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap}
+.footer-links a{color:#E8EDF3;text-decoration:none;font-size:12px}
+@media(max-width:760px){
+ .header-inner,.footer-inner{padding:15px 18px;flex-wrap:wrap}
+ .site-nav{order:3;width:100%;overflow:auto;gap:18px;padding-top:8px}
+ .header-contact{margin-left:auto}
+ .wrap{padding:24px 14px 48px}
+ #screen-intro .card{padding:30px 22px}
+ #screen-intro .lead{font-size:15px}
+ .intro-content{grid-template-columns:1fr}
+ .feature-list{grid-template-columns:1fr}
+ .info-panel{padding:22px}
+ .footer-inner{align-items:flex-start}
+}
+@media print{
+ .site-header,.site-footer,.intro-content{display:none!important}
+ .wrap{max-width:none;padding:0}
+ #screen-intro{display:none!important}
+}
+
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
 </head>
 <body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="https://konturbiz.ru/" aria-label="KONTURBIZ — на главную">
+      <span class="brand-mark">K</span>
+      <span><span class="brand-caption">ЦЕНТР ЦИФРОВЫХ РЕШЕНИЙ</span><span class="brand-name">KONTURBIZ</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Основная навигация">
+      <a href="#about">О диагностике</a>
+      <a href="#method">Как это работает</a>
+      <a href="#limits">Ограничения</a>
+    </nav>
+    <a class="header-contact" href="https://konturbiz.ru/pages/about/contacts.html">Связаться</a>
+  </div>
+</header>
 <div class="wrap">
 
 <!-- ========== INTRO ========== -->
@@ -137,6 +210,29 @@ textarea{min-height:70px;resize:vertical}
       «Не знаю» — нормальный ответ: он покажет, что нужно выяснить.
     </div>
   </div>
+  <div class="intro-content" id="about">
+    <section class="info-panel">
+      <h2>Что покажет диагностика</h2>
+      <p>KONTURSCAN ПДн помогает структурированно оценить, как в организации выстроена работа с персональными данными: от определения целей и состава данных до документов, доступа, хранения и взаимодействия с подрядчиками.</p>
+      <div class="feature-list">
+        <div class="feature"><strong>Карта текущего состояния</strong><span>Ответы группируются по ключевым направлениям обработки персональных данных.</span></div>
+        <div class="feature"><strong>Зоны внимания</strong><span>Вы увидите вопросы, по которым не хватает подтверждений или требуется уточнение.</span></div>
+        <div class="feature"><strong>Приоритеты действий</strong><span>Результат помогает определить, какие организационные шаги стоит рассмотреть в первую очередь.</span></div>
+        <div class="feature"><strong>Отчёт для работы</strong><span>Сформируйте итоговый материал, чтобы обсудить дальнейшие действия внутри организации.</span></div>
+      </div>
+    </section>
+    <section class="info-panel" id="method">
+      <h2>Как проходит проверка</h2>
+      <p>Опрос построен так, чтобы учитывать особенности деятельности и не задавать всем организациям одинаковый набор вопросов.</p>
+      <div class="process-list">
+        <div class="process-item"><span class="process-num">1</span><div><strong>Профиль организации</strong><span>Уточните тип деятельности, категории субъектов и особенности обработки данных.</span></div></div>
+        <div class="process-item"><span class="process-num">2</span><div><strong>Тематические разделы</strong><span>Ответьте на вопросы о процессах, документах, системах и мерах защиты.</span></div></div>
+        <div class="process-item"><span class="process-num">3</span><div><strong>Результаты и рекомендации</strong><span>Изучите сводку, отметьте пробелы и используйте план действий как основу для дальнейшей проверки.</span></div></div>
+      </div>
+      <div class="disclaimer-panel"><strong>Время прохождения:</strong> ориентировочно 12–20 минут. В тесте предусмотрено 71 вопрос в 12 тематических разделах; фактический набор зависит от ответов в профиле.</div>
+    </section>
+  </div>
+  <div class="disclaimer-panel" id="limits"><strong>Важно:</strong> KONTURSCAN ПДн — инструмент предварительной самооценки. Он не проводит техническое обследование информационных систем, не проверяет подлинность документов и не является юридическим заключением или гарантией соответствия требованиям законодательства. Окончательные выводы требуют анализа фактических процессов, документов и настроек организации.</div>
 </div>
 
 <!-- ========== PROFILE ========== -->
