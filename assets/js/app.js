@@ -130,7 +130,7 @@
                 }
                 var after = afterHref && menu.querySelector('a[href="' + afterHref + '"]');
                 if (after && after.parentNode === menu) {
-                    if (item !== after.parentNode && item.previousElementSibling !== after) after.parentNode.insertBefore(item, after.nextSibling);
+                    menu.insertBefore(item, after.nextSibling);
                 } else if (item.parentNode !== menu) {
                     menu.appendChild(item);
                 }
