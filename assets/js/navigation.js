@@ -45,6 +45,14 @@
       return window.matchMedia('(max-width: 1024px)').matches;
     }
 
+    // Close drawer when viewport leaves mobile/tablet range (avoids stuck overlay)
+    var mqMobile = window.matchMedia('(max-width: 1024px)');
+    function onViewportChange(e) {
+      if (!e.matches && nav.classList.contains('is-open')) closeNav();
+    }
+    if (mqMobile.addEventListener) mqMobile.addEventListener('change', onViewportChange);
+    else if (mqMobile.addListener) mqMobile.addListener(onViewportChange);
+
     burger.addEventListener('click', function (e) {
       e.preventDefault();
       e.stopPropagation();
