@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Кейсы автоматизации бизнеса — проекты KONTURBIZ</title>
-    <meta name="description" content="Кейсы автоматизации: ситуация, задача, решение и результат. Без вымышленных метрик.">
+    <meta name="description" content="Кейсы автоматизации: ситуация, задача, решение и результат. Без вымышленных метрик. Раздел в подготовке.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://konturbiz.ru/pages/cases/automation/">
     <link rel="stylesheet" href="/assets/css/konturbiz.css">
@@ -15,7 +15,7 @@
       body { padding-top: var(--header-height, 90px); margin: 0; }
       .page-hero { background: #01091C; color: #fff; }
       .page-hero__body { max-width: 1200px; margin: 0 auto; padding: 36px 24px 44px; }
-      .page-hero .eyebrow { color: #C8A24A; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+      .page-hero .eyebrow { color: #C8A24A; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 8px; }
       .page-hero h1 { margin: 10px 0 12px; font-weight: 300; font-size: clamp(26px, 4vw, 40px); color: #fff !important; line-height: 1.2; }
       .page-hero p { margin: 0; color: rgba(255,255,255,.78); max-width: 42rem; line-height: 1.55; font-size: 16px; }
       .section { padding: 40px 0; }
@@ -27,74 +27,119 @@
       .button-group { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
       .card-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
       .card-list a { display: block; padding: 14px 16px; border: 1px solid #D9E1E8; border-radius: 4px; text-decoration: none; color: #112B4A; background: #fff; }
-      .kb-breadcrumbs ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; font-size: 13px; color: rgba(255,255,255,.55); }
+      .card-list strong { display: block; margin-bottom: 4px; }
+      .card-list span { font-size: 14px; color: #52667A; }
+      .kb-breadcrumbs ol { list-style: none; margin: 0 0 12px; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; font-size: 13px; color: rgba(255,255,255,.55); }
       .kb-breadcrumbs a { color: rgba(255,255,255,.75); text-decoration: none; }
       .kb-breadcrumbs li:not(:last-child)::after { content: "·"; margin-left: 6px; opacity: .6; }
-.header__burger{display:none;background:transparent;border:1px solid rgba(255,255,255,.35);color:#fff;padding:8px 12px;border-radius:4px;cursor:pointer;font-size:18px;line-height:1}
-@media (max-width:900px){
-  .header__burger{display:inline-flex;align-items:center;justify-content:center;margin-left:auto}
-  .header__nav{display:none}
-  .header__nav.is-open{display:block;position:absolute;left:0;right:0;top:var(--header-height,90px);background:#01091C;padding:16px 24px;z-index:50}
-  .header__menu{flex-direction:column;gap:12px}
-  .header__inner{display:flex;align-items:center;gap:12px;position:relative}
-}
+      .note-prep { margin: 0; padding: 14px 16px; background: #FFF8E8; border-left: 3px solid #C8A24A; font-size: 14px; color: #112B4A; max-width: 42rem; line-height: 1.5; }
     </style>
 </head>
 <body>
-<header class="header" role="banner"><div class="container header__inner">
-<a href="/" class="header__logo-link" aria-label="На главную"><img src="/images/logolight.svg" alt="KONTURBIZ" width="160" height="32"></a>
-<nav class="header__nav" id="main-nav" aria-label="Основное меню"><ul class="header__menu">
-<li><a href="/pages/solutions/" class="header__nav-link">Решения</a></li>
-<li><a href="/pages/services/" class="header__nav-link">Услуги</a></li>
-<li><a href="/pages/cases/" class="header__nav-link">Кейсы</a></li>
-<li><a href="/pages/about/contacts.html" class="header__nav-link">Контакты</a></li>
-</ul></nav>
-<button type="button" class="header__burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav" onclick="var n=document.getElementById('main-nav');var o=n.classList.toggle('is-open');this.setAttribute('aria-expanded',o?'true':'false');">☰</button>
-</div></header>
+<header class="header" role="banner">
+  <div class="container header__inner">
+    <a href="/" class="header__logo-link" aria-label="На главную">
+      <img src="/images/logolight.svg" alt="KONTURBIZ" width="160" height="32">
+    </a>
+    <nav class="header__nav" id="main-nav" aria-label="Основное меню">
+      <ul class="header__menu">
+        <li><a href="/pages/solutions/" class="header__nav-link">Решения</a></li>
+        <li><a href="/pages/services/" class="header__nav-link">Услуги</a></li>
+        <li><a href="/pages/cases/" class="header__nav-link">Кейсы</a></li>
+        <li><a href="/pages/about/contacts.html" class="header__nav-link">Контакты</a></li>
+      </ul>
+      <a href="/pages/diagnostics/konturscan.html" class="button--audit-mobile">Пройти диагностику</a>
+    </nav>
+    <div class="header__actions">
+      <a href="/pages/diagnostics/konturscan.html" class="button button--gold header-cta-button">Пройти диагностику</a>
+      <button class="burger-menu" id="burger-menu" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
 <section class="page-hero" aria-label="Кейсы автоматизации">
-<div class="page-hero__body">
-<p class="eyebrow">Кейсы · Автоматизация</p>
-<nav class="kb-breadcrumbs" aria-label="Хлебные крошки"><ol>
-<li><a href="/">Главная</a></li><li><a href="/pages/cases/">Кейсы</a></li><li aria-current="page">Автоматизация</li>
-</ol></nav>
-<h1>Кейсы автоматизации</h1>
-<p>Убрать ручной перенос данных и связать контур под задачу — не «внедрить всё сразу».</p>
-<div class="button-group">
-<a class="button button--gold" href="/pages/about/contacts.html?from=cases-automation">Обсудить задачу</a>
-<a class="button button--white-outline" href="/pages/solutions/automation.html">Решение: автоматизация</a>
-</div>
-</div>
+  <div class="page-hero__body">
+    <p class="eyebrow">Кейсы · Автоматизация</p>
+    <nav class="kb-breadcrumbs" aria-label="Хлебные крошки">
+      <ol>
+        <li><a href="/">Главная</a></li>
+        <li><a href="/pages/cases/">Кейсы</a></li>
+        <li aria-current="page">Автоматизация</li>
+      </ol>
+    </nav>
+    <h1>Кейсы автоматизации</h1>
+    <p>Убрать ручной перенос данных и связать контур под задачу — не «внедрить всё сразу».</p>
+    <div class="button-group">
+      <a class="button button--gold" href="/pages/about/contacts.html?from=cases-automation">Обсудить задачу</a>
+      <a class="button button--white-outline" href="/pages/solutions/automation.html">Решение: автоматизация</a>
+    </div>
+  </div>
 </section>
-<section class="section" style="padding-top:0"><div class="container">
-<p style="margin:0;padding:14px 16px;background:#FFF8E8;border-left:3px solid #C8A24A;font-size:14px;color:#112B4A;max-width:42rem;line-height:1.5">
-Раздел в подготовке: ниже — типовая схема разбора кейса (ситуация → задача → решение → результат). Публикуем подтверждённые проекты клиентов отдельно, без вымышленных цифр.
-</p>
-</div></section>
-<section class="section" id="case-structure"><div class="container">
-<h2>Как читаем этот раздел кейсов</h2>
-<div class="grid">
-<div><h3>Исходная ситуация</h3><p>Заявки, документы и статусы ведутся в разных окнах; ошибки и задержки на стыках.</p></div>
-<div><h3>Задача</h3><p>Сократить ручные операции на согласованном участке: CRM, ЭДО, уведомления, связка с учётом.</p></div>
-<div><h3>Решение</h3><p>Карта процесса, выбор инструментов (в т.ч. Контур / RC), настройка сценария, проверка на рабочих данных.</p></div>
-<div><h3>Результат</h3><p>Прозрачный маршрут данных на выбранном участке и понятная зона ответственности. Масштаб — после стабилизации первого контура. Цифры выручки публикуем только при подтверждённых данных клиента.</p></div>
-<div><h3>Следующий шаг</h3><p>Описать узкое место процесса и согласовать объём автоматизации.</p></div>
-</div>
-<div class="button-group">
-<a class="button button--gold" href="/pages/solutions/automation.html">Автоматизация</a>
-<a class="button button--blue" href="/pages/services/crm.html">CRM</a>
-<a class="button button--blue" href="/pages/about/contacts.html?from=cases-automation">Обсудить задачу</a>
-</div>
-</div></section>
-<section class="section" style="background:#F6F8FB"><div class="container">
-<h2>Связанные страницы</h2>
-<ul class="card-list">
-<li><a href="/pages/cases/"><strong>Все кейсы</strong><span>Хабы по направлениям</span></a></li>
-<li><a href="/pages/services/integration.html"><strong>Интеграции</strong><span>Связки сервисов и 1С</span></a></li>
-<li><a href="/pages/portfolio/"><strong>Портфолио</strong><span>Визуальные работы</span></a></li>
-</ul>
-</div></section>
-<footer class="footer" role="contentinfo"><div class="container" style="padding:32px 24px;color:#98A2B3;font-size:13px">
-<a href="/" style="color:#C8A24A">KONTURBIZ</a> · <a href="/pages/cases/" style="color:inherit">Кейсы</a> · <a href="/pages/about/contacts.html" style="color:inherit">Контакты</a>
-</div></footer>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <p class="note-prep">Раздел в подготовке: ниже — типовая схема разбора кейса (ситуация → задача → решение → результат). Публикуем подтверждённые проекты клиентов отдельно, без вымышленных цифр.</p>
+  </div>
+</section>
+
+<section class="section" id="case-structure">
+  <div class="container">
+    <h2>Как читаем этот раздел кейсов</h2>
+    <div class="grid">
+      <div>
+        <h3>Исходная ситуация</h3>
+        <p>Заявки, документы и статусы ведутся в разных окнах; ошибки и задержки на стыках.</p>
+      </div>
+      <div>
+        <h3>Задача</h3>
+        <p>Сократить ручные операции на согласованном участке: CRM, ЭДО, уведомления, связка с учётом.</p>
+      </div>
+      <div>
+        <h3>Решение</h3>
+        <p>Карта процесса, выбор инструментов (в т.ч. Контур / RC), настройка сценария, проверка на рабочих данных.</p>
+      </div>
+      <div>
+        <h3>Результат</h3>
+        <p>Прозрачный маршрут данных на выбранном участке и понятная зона ответственности. Масштаб — после стабилизации первого контура. Цифры выручки публикуем только при подтверждённых данных клиента.</p>
+      </div>
+      <div>
+        <h3>Следующий шаг</h3>
+        <p>Описать узкое место процесса и согласовать объём автоматизации.</p>
+      </div>
+    </div>
+    <div class="button-group">
+      <a class="button button--gold" href="/pages/solutions/automation.html">Автоматизация</a>
+      <a class="button button--blue" href="/pages/services/crm.html">CRM</a>
+      <a class="button button--blue" href="/pages/about/contacts.html?from=cases-automation">Обсудить задачу</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#F6F8FB">
+  <div class="container">
+    <h2>Связанные страницы</h2>
+    <ul class="card-list">
+      <li><a href="/pages/cases/"><strong>Все кейсы</strong><span>Хабы по направлениям</span></a></li>
+      <li><a href="/pages/services/integration.html"><strong>Интеграции</strong><span>Связки сервисов и 1С</span></a></li>
+      <li><a href="/pages/portfolio/"><strong>Портфолио</strong><span>Визуальные работы</span></a></li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container" style="padding:32px 24px;color:#98A2B3;font-size:13px">
+    <a href="/" style="color:#C8A24A">KONTURBIZ</a> ·
+    <a href="/pages/cases/" style="color:inherit">Кейсы</a> ·
+    <a href="/pages/about/contacts.html" style="color:inherit">Контакты</a>
+  </div>
+</footer>
+<script src="/assets/js/navigation.js" defer></script>
 <script src="/assets/js/app.js" defer></script>
-</body></html>
+</body>
+</html>
