@@ -30,6 +30,14 @@
       .kb-breadcrumbs ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; font-size: 13px; color: rgba(255,255,255,.55); }
       .kb-breadcrumbs a { color: rgba(255,255,255,.75); text-decoration: none; }
       .kb-breadcrumbs li:not(:last-child)::after { content: "·"; margin-left: 6px; opacity: .6; }
+.header__burger{display:none;background:transparent;border:1px solid rgba(255,255,255,.35);color:#fff;padding:8px 12px;border-radius:4px;cursor:pointer;font-size:18px;line-height:1}
+@media (max-width:900px){
+  .header__burger{display:inline-flex;align-items:center;justify-content:center;margin-left:auto}
+  .header__nav{display:none}
+  .header__nav.is-open{display:block;position:absolute;left:0;right:0;top:var(--header-height,90px);background:#01091C;padding:16px 24px;z-index:50}
+  .header__menu{flex-direction:column;gap:12px}
+  .header__inner{display:flex;align-items:center;gap:12px;position:relative}
+}
     </style>
 </head>
 <body>
@@ -41,6 +49,7 @@
 <li><a href="/pages/cases/" class="header__nav-link">Кейсы</a></li>
 <li><a href="/pages/about/contacts.html" class="header__nav-link">Контакты</a></li>
 </ul></nav>
+<button type="button" class="header__burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav" onclick="var n=document.getElementById('main-nav');var o=n.classList.toggle('is-open');this.setAttribute('aria-expanded',o?'true':'false');">☰</button>
 </div></header>
 <section class="page-hero" aria-label="Кейсы автоматизации">
 <div class="page-hero__body">
@@ -56,6 +65,11 @@
 </div>
 </div>
 </section>
+<section class="section" style="padding-top:0"><div class="container">
+<p style="margin:0;padding:14px 16px;background:#FFF8E8;border-left:3px solid #C8A24A;font-size:14px;color:#112B4A;max-width:42rem;line-height:1.5">
+Раздел в подготовке: ниже — типовая схема разбора кейса (ситуация → задача → решение → результат). Публикуем подтверждённые проекты клиентов отдельно, без вымышленных цифр.
+</p>
+</div></section>
 <section class="section" id="case-structure"><div class="container">
 <h2>Как читаем этот раздел кейсов</h2>
 <div class="grid">
